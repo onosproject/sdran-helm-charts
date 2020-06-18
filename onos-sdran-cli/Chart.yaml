@@ -1,5 +1,5 @@
 apiVersion: v2
-name: onos-cli
+name: onos-sdran-cli
 description: ONOS Command Line Interface
 kubeVersion: ">=1.17.0"
 type: application

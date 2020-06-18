@@ -25,16 +25,16 @@ spec:
       restartPolicy: Never
       containers:
         {{- if index .Values "import" "onos-topo" "enabled" }}
-          {{- if index .Values "onos-cli" "postInstall" "topo"}}
+          {{- if index .Values "onos-sdran-cli" "postInstall" "topo"}}
         - name: post-install-topo-job
-          image: {{ index .Values "onos-cli" "image" "repository" }}:{{ index .Values "onos-cli" "image" "tag" }}
-          imagePullPolicy: {{ index .Values "onos-cli" "image" "pullPolicy" }}
-          command: ["/usr/local/bin/onos"]
+          image: {{ index .Values "onos-sdran-cli" "image" "repository" }}:{{ index .Values "onos-sdran-cli" "image" "tag" }}
+          imagePullPolicy: {{ index .Values "onos-sdran-cli" "image" "pullPolicy" }}
+          command: ["/usr/local/bin/sdran"]
           args:
           - "topo"
           - "load"
           - "yaml"
-          - {{ index .Values "onos-cli" "postInstall" "topo" }}
+          - {{ index .Values "onos-sdran-cli" "postInstall" "topo" }}
           volumeMounts:
             - name: config
               mountPath: /home/onos
@@ -42,16 +42,16 @@ spec:
           {{- end }}
         {{- end }}
         {{- if index .Values "import" "onos-config" "enabled" }}
-          {{- if index .Values "onos-cli" "postInstall" "config" }}
+          {{- if index .Values "onos-sdran-cli" "postInstall" "config" }}
         - name: post-install-config-job
-          image: {{ index .Values "onos-cli" "image" "repository" }}:{{ index .Values "onos-cli" "image" "tag" }}
-          imagePullPolicy: {{ index .Values "onos-cli" "image" "pullPolicy" }}
-          command: ["/usr/local/bin/onos"]
+          image: {{ index .Values "onos-sdran-cli" "image" "repository" }}:{{ index .Values "onos-sdran-cli" "image" "tag" }}
+          imagePullPolicy: {{ index .Values "onos-sdran-cli" "image" "pullPolicy" }}
+          command: ["/usr/local/bin/sdran"]
           args:
             - "config"
             - "load"
             - "yaml"
-            {{- with index .Values "onos-cli" "postInstall" "config" }}
+            {{- with index .Values "onos-sdran-cli" "postInstall" "config" }}
             {{- range $filename := . }}
             - {{ $filename }}
             {{- end }}

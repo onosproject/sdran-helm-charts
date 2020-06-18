@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "onos-cli.fullname" . }}
+  name: {{ include "onos-sdran-cli.fullname" . }}
   labels:
-    {{- include "onos-cli.labels" . | nindent 4 }}
+    {{- include "onos-sdran-cli.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      name: {{ template "onos-cli.fullname" . }}
+      name: {{ template "onos-sdran-cli.fullname" . }}
       app: onos
       type: cli
-      resource: {{ template "onos-cli.fullname" . }}
-      {{- include "onos-cli.selectorLabels" . | nindent 6 }}
+      resource: {{ template "onos-sdran-cli.fullname" . }}
+      {{- include "onos-sdran-cli.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        name: {{ template "onos-cli.fullname" . }}
+        name: {{ template "onos-sdran-cli.fullname" . }}
         app: onos
         type: cli
-        resource: {{ template "onos-cli.fullname" . }}
-        {{- include "onos-cli.selectorLabels" . | nindent 8 }}
+        resource: {{ template "onos-sdran-cli.fullname" . }}
+        {{- include "onos-sdran-cli.selectorLabels" . | nindent 8 }}
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -56,7 +56,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: {{ template "onos-cli.fullname" . }}
+            name: {{ template "onos-sdran-cli.fullname" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

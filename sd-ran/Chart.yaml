@@ -60,7 +60,7 @@ dependencies:
     condition: import.ran-simulator.enabled
     repository: https://charts.onosproject.org
     version: 0.0.6
-  - name: onos-cli
-    condition: import.onos-cli.enabled
-    repository: https://charts.onosproject.org
+  - name: onos-sdran-cli
+    condition: import.onos-sdran-cli.enabled
+    repository: file://../onos-sdran-cli
     version: 0.0.3

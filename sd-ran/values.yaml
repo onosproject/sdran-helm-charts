@@ -46,7 +46,7 @@ import:
     enabled: true
   ran-simulator:
     enabled: true
-  onos-cli:
+  onos-sdran-cli:
     enabled: true
 
 # NEM-Monitoring
@@ -179,9 +179,9 @@ ran-simulator:
   stepDelayMs: 1000
   zoom: 13
 
-onos-cli:
+onos-sdran-cli:
   image:
-    repository: onosproject/onos-cli
+    repository: onosproject/onos-sdran-cli
     tag: v0.6.5
     pullPolicy: IfNotPresent
   postInstall:
