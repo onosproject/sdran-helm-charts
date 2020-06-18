@@ -1,4 +1,4 @@
-# ONOS Helm charts
+# ONOS SDRAN Helm charts
 [![Build Status](https://travis-ci.com/onosproject/onos-helm-charts.svg?branch=master)](https://travis-ci.com/onosproject/onos-helm-charts)
 [![Integration Test Status](https://img.shields.io/travis/onosproject/onos-helm-charts?label=Integration%20Tests&logo=Integration)](https://travis-ci.com/onosproject/onos-test)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/gojp/goreportcard/blob/master/LICENSE)
