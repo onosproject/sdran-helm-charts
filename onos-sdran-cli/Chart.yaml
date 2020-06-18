@@ -1,0 +1,16 @@
+apiVersion: v2
+name: onos-cli
+description: ONOS Command Line Interface
+kubeVersion: ">=1.17.0"
+type: application
+version: 0.0.3
+appVersion: v0.6.5
+keywords:
+  - onos
+  - sdn
+home: https://onosproject.org
+maintainers:
+  - name: Andrea Campanella
+    email: andrea@opennetworking.org
+  - name: kuujo
+    email: jordan@opennetworking.org
