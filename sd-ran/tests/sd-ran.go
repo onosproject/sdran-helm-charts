@@ -49,6 +49,13 @@ func (s *SDRANSuite) TestInstall(t *testing.T) {
 		Set("import.onos-gui.enabled", false).
 		Set("onos-ric.service.external.nodePort", 0).
 		Set("onos-ric-ho.service.external.nodePort", 0).
-		Set("onos-ric-mlb.service.external.nodePort", 0)
+		Set("onos-ric-mlb.service.external.nodePort", 0).
+		Set("onos-ric.image.tag", "latest").
+		Set("onos-ric-ho.image.tag", "latest").
+		Set("onos-ric-mlb.image.tag", "latest").
+		Set("onos-cli.image.tag", "latest").
+		Set("onos-topo.image.tag", "latest").
+		Set("onos-config.image.tag", "latest").
+		Set("ran-simulator.image.tag", "latest")
 	assert.NoError(t, sdran.Install(true))
 }

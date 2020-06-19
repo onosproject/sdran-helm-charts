@@ -20,7 +20,7 @@ import (
 	config "github.com/onosproject/onos-helm-charts/onos-config/tests"
 	ric "github.com/onosproject/onos-helm-charts/onos-ric/tests"
 	topo "github.com/onosproject/onos-helm-charts/onos-topo/tests"
-	sdran "github.com/onosproject/onos-helm-charts/sd-ran/tests"
+	sdran "github.com/onosproject/sdran-helm-charts/sd-ran/tests"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
 )
 
