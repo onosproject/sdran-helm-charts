@@ -38,11 +38,11 @@ dependencies:
     version: 0.0.8
   - name: onos-ric-ho
     condition: import.onos-ric-ho.enabled
-    repository: https://charts.onosproject.org
+    repository: file://../onos-ric-ho
     version: 0.0.6
   - name: onos-ric-mlb
     condition: import.onos-ric-mlb.enabled
-    repository: https://charts.onosproject.org
+    repository: file://../onos-ric-mlb
     version: 0.0.6
   - name: onos-topo
     condition: import.onos-topo.enabled
@@ -58,7 +58,7 @@ dependencies:
     version: 0.0.4
   - name: ran-simulator
     condition: import.ran-simulator.enabled
-    repository: https://charts.onosproject.org
+    repository: file://../ran-simulator
     version: 0.0.6
   - name: onos-sdran-cli
     condition: import.onos-sdran-cli.enabled
