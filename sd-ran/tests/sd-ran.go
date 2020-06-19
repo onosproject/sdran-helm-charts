@@ -38,11 +38,6 @@ func (s *SDRANSuite) TestInstall(t *testing.T) {
 		Set("scope", "Namespace")
 	assert.NoError(t, raft.Install(true))
 
-	cache := helm.Chart("cache-storage-controller", "https://charts.atomix.io").
-		Release("sd-ran-cache").
-		Set("scope", "Namespace")
-	assert.NoError(t, cache.Install(true))
-
 	sdran := helm.Chart("sd-ran").
 		Release("sd-ran").
 		Set("global.store.controller", "sd-ran-atomix-atomix-controller:5679").

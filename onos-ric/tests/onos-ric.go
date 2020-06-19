@@ -38,11 +38,6 @@ func (s *ONOSRICSuite) TestInstall(t *testing.T) {
 		Set("scope", "Namespace")
 	assert.NoError(t, raft.Install(true))
 
-	cache := helm.Chart("cache-storage-controller", "https://charts.atomix.io").
-		Release("onos-ric-cache").
-		Set("scope", "Namespace")
-	assert.NoError(t, cache.Install(true))
-
 	topo := helm.Chart("onos-topo", "https://charts.onosproject.org").
 		Release("onos-topo").
 		Set("store.controller", "onos-ric-atomix-atomix-controller:5679")
