@@ -7,8 +7,6 @@ global:
     controller: ""
     consensus:
       database: ""
-    cache:
-      database: ""
 
 replicaCount: 1
 
@@ -29,13 +27,6 @@ enableMetrics: false
 
 store:
   controller: "atomix-controller:5679"
-  cache:
-    enabled: true
-    database: ""
-    partitions: 1
-    clusters: 1
-    image: atomix/cache-storage-node:v0.2.0
-    imagePullPolicy: IfNotPresent
   consensus:
     enabled: true
     database: ""
