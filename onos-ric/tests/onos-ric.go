@@ -43,7 +43,7 @@ func (s *ONOSRICSuite) TestInstall(t *testing.T) {
 		Set("scope", "Namespace")
 	assert.NoError(t, cache.Install(true))
 
-	topo := helm.Chart("onos-topo").
+	topo := helm.Chart("onos-topo", "https://charts.onosproject.org").
 		Release("onos-topo").
 		Set("store.controller", "onos-ric-atomix-atomix-controller:5679")
 	assert.NoError(t, topo.Install(false))
