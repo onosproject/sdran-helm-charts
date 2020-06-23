@@ -94,7 +94,7 @@ nem-monitoring:
 onos-ric:
   image:
     repository: onosproject/onos-ric
-    tag: v0.6.6
+    tag: v0.6.9
     pullPolicy: IfNotPresent
   debug: false
   store:
@@ -106,14 +106,14 @@ onos-ric:
 onos-ric-ho:
   image:
     repository: onosproject/onos-ric-ho
-    tag: v0.6.5
+    tag: v0.6.9
     pullPolicy: IfNotPresent
 
 # ONOS-RIC-MLB
 onos-ric-mlb:
   image:
     repository: onosproject/onos-ric-mlb
-    tag: v0.6.5
+    tag: v0.6.9
     pullPolicy: IfNotPresent
 
 # ONOS-TOPO
