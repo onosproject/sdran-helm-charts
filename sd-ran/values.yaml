@@ -158,7 +158,7 @@ onos-gui:
 ran-simulator:
   image:
     repository: onosproject/ran-simulator
-    tag: v0.6.5
+    tag: v0.6.7
     pullPolicy: IfNotPresent
   fade: true
   googleApiKey: "YOUR_API_KEY_HERE"

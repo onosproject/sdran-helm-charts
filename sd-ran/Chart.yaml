@@ -59,7 +59,7 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: file://../ran-simulator
-    version: 0.0.6
+    version: 0.0.7
   - name: onos-sdran-cli
     condition: import.onos-sdran-cli.enabled
     repository: file://../onos-sdran-cli
