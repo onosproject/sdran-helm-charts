@@ -15,10 +15,8 @@ keywords:
   - ran
 home: https://onosproject.org
 maintainers:
-  - name: Woojoong Kim
-    email: woojoong@opennetworking.org
-  - name: Jordan Halterman
-    email: jordan@opennetworking.org
+  - name: ONOS Support
+    email: support@opennetworking.org
 dependencies:
   - name: nem-monitoring
     condition: import.nem-monitoring.enabled

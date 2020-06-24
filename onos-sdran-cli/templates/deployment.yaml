@@ -41,7 +41,7 @@ spec:
           stdin : true
           volumeMounts:
             - name: config
-              mountPath: /home/onos
+              mountPath: /home/onos/config
               readOnly: true
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
