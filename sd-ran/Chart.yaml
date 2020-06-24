@@ -61,4 +61,4 @@ dependencies:
   - name: onos-sdran-cli
     condition: import.onos-sdran-cli.enabled
     repository: file://../onos-sdran-cli
-    version: 0.0.4
+    version: 0.0.5
