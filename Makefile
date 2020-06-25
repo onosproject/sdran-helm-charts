@@ -6,8 +6,11 @@ license_check: # @HELP examine and ensure license headers exist
 	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
 	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0
 
+version_check: # @HELP run the version checker on the charts
+	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
+
 test: # @HELP run the integration tests
-test: license_check
+test: license_check version_check
 	helmit test ./test -c .
 
 publish: # @HELP publish version on github
