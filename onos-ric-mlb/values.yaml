@@ -22,6 +22,10 @@ fullnameOverride: "onos-ric-mlb"
 onosricaddr: "onos-ric:5150"
 enableMetrics: false
 
+mlbParams:
+  mlbPeriod: 10000
+  mlbThreshold: 1
+
 store: {}
 
 service:
