@@ -68,7 +68,8 @@ spec:
             - "-certPath=/etc/onos/certs/tls.crt"
             - "-onosricaddr={{ .Values.onosricaddr }}"
             - "-enableMetrics={{ .Values.enableMetrics }}"
-            - "-threshold=1"
+            - "-threshold={{ .Values.mlbParams.mlbThreshold }}"
+            - "-period={{ .Values.mlbParams.mlbPeriod }}"
           livenessProbe:
             exec:
               command:

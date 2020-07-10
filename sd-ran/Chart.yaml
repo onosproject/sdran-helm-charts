@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.13
+version: 0.0.14
 appVersion: v0.6.6
 keywords:
   - onos
@@ -21,7 +21,7 @@ dependencies:
   - name: nem-monitoring
     condition: import.nem-monitoring.enabled
     repository: https://charts.opencord.org
-    version: 1.3.19
+    version: 1.3.20
   - name: atomix-controller
     condition: import.atomix-controller.enabled
     repository: https://charts.atomix.io
@@ -41,7 +41,7 @@ dependencies:
   - name: onos-ric-mlb
     condition: import.onos-ric-mlb.enabled
     repository: file://../onos-ric-mlb
-    version: 0.0.7
+    version: 0.0.8
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
