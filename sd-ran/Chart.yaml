@@ -41,7 +41,7 @@ dependencies:
   - name: onos-ric-mlb
     condition: import.onos-ric-mlb.enabled
     repository: file://../onos-ric-mlb
-    version: 0.0.7
+    version: 0.0.8
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
