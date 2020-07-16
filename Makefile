@@ -8,6 +8,7 @@ license_check: # @HELP examine and ensure license headers exist
 
 version_check: # @HELP run the version checker on the charts
 	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
+	./../build-tools/chart_single_check
 
 test: # @HELP run the integration tests
 test: license_check version_check
