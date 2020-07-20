@@ -32,6 +32,8 @@ install:
 
 before_script:
   - pushd .. && git clone https://github.com/onosproject/build-tools.git && popd
+  - pushd .. && git clone https://github.com/onosproject/onos-helm-charts.git && popd
+  - pushd ../onos-helm-charts && go build -o build/_output/index2md ./build/cmd/index2md && popd
 
 
 jobs:
