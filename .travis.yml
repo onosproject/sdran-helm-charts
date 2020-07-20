@@ -6,7 +6,12 @@ branches:
 
 services:
   - docker
-  
+
+language: go
+
+go:
+  - '1.14.x'
+
 notifications:
   email: false
 
