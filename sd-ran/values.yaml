@@ -180,4 +180,5 @@ onos-sdran-cli:
   postInstall:
     placeholder: true
     topo: berlin-honeycomb-4-3-topo.yaml
+    toponew: berlin-honeycomb-4-3-toponew.yaml
     config: [ berlin-honeycomb-4-3-gnmi.yaml ]
