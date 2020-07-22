@@ -1,0 +1,178 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+topokinds:
+  - id: "E2Node"
+    type: 3
+    obj:
+      kind:
+        name: "E2Node"
+    attributes:
+      displayname: "E2 Node"
+      address: "0.0.0.0"
+      version: "1.0.0"
+      plmnid: "315010"
+      ecid: "0000000"
+      azimuth: "0"
+      arc: "120"
+      latitude: "00.000"
+      longitude: "00.000"
+      grpcport: "0"
+topoentities:
+  - id: 315010-0001420
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 0 Cell 0
+      address: ran-simulator:5152
+      ecid: "0001420"
+      azimuth: "0"
+      latitude: "52.485359"
+      longitude: "13.405000"
+      grpcport: "5152"
+  - id: 315010-0001421
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 0 Cell 1
+      address: ran-simulator:5153
+      ecid: "0001421"
+      azimuth: "120"
+      latitude: "52.485359"
+      longitude: "13.405000"
+      grpcport: "5153"
+  - id: 315010-0001422
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 0 Cell 2
+      address: ran-simulator:5154
+      ecid: "0001422"
+      azimuth: "240"
+      latitude: "52.485359"
+      longitude: "13.405000"
+      grpcport: "5154"
+  - id: 315010-0001423
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 1 Cell 0
+      address: ran-simulator:5155
+      ecid: "0001423"
+      azimuth: "0"
+      latitude: "52.502679"
+      longitude: "13.454303"
+      grpcport: "5155"
+  - id: 315010-0001424
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 1 Cell 1
+      address: ran-simulator:5156
+      ecid: "0001424"
+      azimuth: "120"
+      latitude: "52.502679"
+      longitude: "13.454303"
+      grpcport: "5156"
+  - id: 315010-0001425
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 1 Cell 2
+      address: ran-simulator:5157
+      ecid: "0001425"
+      azimuth: "240"
+      latitude: "52.502679"
+      longitude: "13.454303"
+      grpcport: "5157"
+  - id: 315010-0001426
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 2 Cell 0
+      address: ran-simulator:5158
+      ecid: "0001426"
+      azimuth: "0"
+      latitude: "52.502679"
+      longitude: "13.355697"
+      grpcport: "5158"
+  - id: 315010-0001427
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 2 Cell 1
+      address: ran-simulator:5159
+      ecid: "0001427"
+      azimuth: "120"
+      latitude: "52.502679"
+      longitude: "13.355697"
+      grpcport: "5159"
+  - id: 315010-0001428
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 2 Cell 2
+      address: ran-simulator:5160
+      ecid: "0001428"
+      azimuth: "240"
+      latitude: "52.502679"
+      longitude: "13.355697"
+      grpcport: "5160"
+  - id: 315010-0001429
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 3 Cell 0
+      address: ran-simulator:5161
+      ecid: "0001429"
+      azimuth: "0"
+      latitude: "52.520000"
+      longitude: "13.405000"
+      grpcport: "5161"
+  - id: 315010-000142a
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 3 Cell 1
+      address: ran-simulator:5162
+      ecid: 000142a
+      azimuth: "120"
+      latitude: "52.520000"
+      longitude: "13.405000"
+      grpcport: "5162"
+  - id: 315010-000142b
+    type: 1
+    obj:
+      entity:
+        kindid: "E2Node"
+    attributes:
+      displayname: Tower 3 Cell 2
+      address: ran-simulator:5163
+      ecid: 000142b
+      azimuth: "240"
+      latitude: "52.520000"
+      longitude: "13.405000"
+      grpcport: "5163"
