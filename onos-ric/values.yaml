@@ -63,4 +63,6 @@ tolerations: []
 
 affinity: {}
 
-logging: {}
+logging:
+  loggers: {}
+  sinks: {}

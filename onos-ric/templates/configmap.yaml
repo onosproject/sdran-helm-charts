@@ -34,5 +34,22 @@ data:
   logging.yaml: |-
 {{- if .Values.logging }}
     logging:
-{{ toYaml .Values.logging | indent 6 }}
+{{- if .Values.logging.loggers }}
+      loggers:
+{{- range $key, $value := .Values.logging.loggers }}
+        - {{ toYaml $value}}
+          name: {{ $key | quote }}
+{{- end }}
+{{- else }}
+      loggers: []
+{{- end }}
+{{- if .Values.logging.sinks }}
+      sinks:
+{{- range $key, $value := .Values.logging.sinks }}
+        - {{ toYaml $value}}
+          name: {{ $key | quote }}
+{{- end }}
+{{- else }}
+      sinks: []
+{{- end }}
 {{- end}}
