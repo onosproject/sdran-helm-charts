@@ -15,9 +15,8 @@ global:
 replicaCount: 1
 
 image:
-  depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
   repository: onosproject/onos-ric
-  tag: v0.6.9
+  tag: v0.6.11
   pullPolicy: IfNotPresent
   pullSecrets: []
 
