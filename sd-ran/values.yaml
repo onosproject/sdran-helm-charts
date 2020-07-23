@@ -90,53 +90,11 @@ nem-monitoring:
             access: proxy
             isDefault: true
 
-# ONOS-RIC
-onos-ric:
-  image:
-    repository: onosproject/onos-ric
-    tag: v0.6.9
-    pullPolicy: IfNotPresent
-  debug: false
-  store:
-    controller: ""
-    consensus:
-      enabled: false
-
-# ONOS-RIC-HO
-onos-ric-ho:
-  image:
-    repository: onosproject/onos-ric-ho
-    tag: v0.6.9
-    pullPolicy: IfNotPresent
-
-# ONOS-RIC-MLB
-onos-ric-mlb:
-  image:
-    repository: onosproject/onos-ric-mlb
-    tag: v0.6.9
-    pullPolicy: IfNotPresent
-
-# ONOS-TOPO
 onos-topo:
   image:
-    repository: onosproject/onos-topo
     tag: v0.6.11
-    pullPolicy: IfNotPresent
-  store:
-    controller: ""
-    consensus:
-      enabled: false
 
-# ONOS-CONFIG
 onos-config:
-  image:
-    repository: onosproject/onos-config
-    tag: v0.6.5
-    pullPolicy: IfNotPresent
-  store:
-    controller: ""
-    consensus:
-      enabled: false
   plugins:
     e2node:
       versions:
@@ -147,36 +105,8 @@ onos-config:
       versions: []
     testdevice:
       versions: []
-# ONOS-GUI
-onos-gui:
-  image:
-    repository: onosproject/onos-gui
-    tag: v0.6.8
-    pullPolicy: IfNotPresent
-
-# RAN-Simulator
-ran-simulator:
-  image:
-    repository: onosproject/ran-simulator
-    tag: v0.6.7
-    pullPolicy: IfNotPresent
-  fade: true
-  googleApiKey: "YOUR_API_KEY_HERE"
-  locationsScale: 1.25
-  maxUEs: 300
-  metricsAllHoEvents: false
-  metricsPort: 9090
-  minUEs: 3
-  showPower: true
-  showRoutes: true
-  stepDelayMs: 1000
-  zoom: 13
 
 onos-sdran-cli:
-  image:
-    repository: onosproject/onos-sdran-cli
-    tag: v0.6.10
-    pullPolicy: IfNotPresent
   postInstall:
     placeholder: true
     topo: berlin-honeycomb-4-3-topo.yaml
