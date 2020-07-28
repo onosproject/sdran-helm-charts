@@ -12,7 +12,7 @@ version_check: # @HELP run the version checker on the charts
 
 test: # @HELP run the integration tests
 test: license_check version_check
-	helmit test ./test -c .
+	./build/bin/run-sd-ran-test
 
 publish: # @HELP publish version on github
 	./../build-tools/publish-version ${VERSION}
