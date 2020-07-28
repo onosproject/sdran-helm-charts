@@ -1,0 +1,8 @@
+chart_dir=$(mktemp -d)
+
+cp -R ../onos-helm-charts/* ${chart_dir}
+cp -R ../sdran-helm-charts/* ${chart_dir}
+
+helmit test ./test -c ${chart_dir}
+
+# rm -rf ${chart_dir}
