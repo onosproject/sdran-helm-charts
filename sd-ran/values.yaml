@@ -14,7 +14,8 @@ global:
     consensus:
       enabled: true
       database: ""
-      image: atomix/raft-storage-node:v0.2.0
+      type: raft
+      image: ""
       imagePullPolicy: IfNotPresent
       partitions: 1
       replicas: 1
