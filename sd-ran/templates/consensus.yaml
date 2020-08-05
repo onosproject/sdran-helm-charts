@@ -20,6 +20,7 @@ spec:
     kind: RaftStorageClass
     name: {{ $name }}
 ---
+{{- if eq .Values.global.store.consensus.type "raft" }}
 apiVersion: storage.cloud.atomix.io/v1beta1
 kind: RaftStorageClass
 metadata:
@@ -30,7 +31,23 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  image: {{ .Values.global.store.consensus.image }}
+  image: {{ default .Values.global.store.consensus.image "atomix/raft-storage-node:v0.2.0" }}
   imagePullPolicy: {{ .Values.global.store.consensus.imagePullPolicy }}
   replicas: {{ .Values.global.store.consensus.replicas }}
   partitionsPerCluster: {{ .Values.global.store.consensus.partitionsPerCluster }}
+{{- else if eq .Values.global.store.consensus.type "cache" }}
+apiVersion: storage.cloud.atomix.io/v1beta1
+kind: CacheStorageClass
+metadata:
+  name: {{ $name }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  image: {{ default .Values.global.store.consensus.image "atomix/cache-storage-node:v0.2.0" }}
+  imagePullPolicy: {{ .Values.global.store.consensus.imagePullPolicy }}
+{{- else }}
+{{ fail ( printf "%s is not a valid store type" .Values.global.store.consensus.type ) }}
+{{- end }}

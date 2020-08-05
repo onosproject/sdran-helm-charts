@@ -14,7 +14,8 @@ global:
     consensus:
       enabled: true
       database: ""
-      image: atomix/raft-storage-node:v0.2.0
+      type: raft
+      image: ""
       imagePullPolicy: IfNotPresent
       partitions: 1
       replicas: 1
@@ -93,8 +94,14 @@ nem-monitoring:
 onos-topo:
   image:
     tag: v0.6.11
+  store:
+    consensus:
+      enabled: false
 
 onos-config:
+  store:
+    consensus:
+      enabled: false
   plugins:
     e2node:
       versions:
@@ -105,6 +112,11 @@ onos-config:
       versions: []
     testdevice:
       versions: []
+
+onos-ric:
+  store:
+    consensus:
+      enabled: false
 
 onos-sdran-cli:
   postInstall:
