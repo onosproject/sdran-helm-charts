@@ -30,11 +30,11 @@ func (s *ONOSRICSuite) TestInstall(t *testing.T) {
 
 	topo := helm.Chart("onos-topo", "https://charts.onosproject.org").
 		Release("onos-topo").
-		Set("store.controller", "onos-ric-atomix-atomix-controller:5679")
+		Set("storage.controller", "onos-ric-atomix-atomix-controller:5679")
 	assert.NoError(t, topo.Install(false))
 
 	ric := helm.Chart("onos-ric").
 		Release("onos-ric").
-		Set("store.controller", "onos-ric-atomix-atomix-controller:5679")
+		Set("storage.controller", "onos-ric-atomix-atomix-controller:5679")
 	assert.NoError(t, ric.Install(true))
 }
