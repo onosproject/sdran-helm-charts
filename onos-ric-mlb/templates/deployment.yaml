@@ -46,17 +46,16 @@ spec:
             - "-threshold={{ .Values.mlbParams.mlbThreshold }}"
             - "-period={{ .Values.mlbParams.mlbPeriod }}"
           livenessProbe:
-            exec:
-              command:
-                - /bin/sh
-            initialDelaySeconds: 5
-            periodSeconds: 5
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 30
+            periodSeconds: 10
           readinessProbe:
-            exec:
-              command:
-                - /bin/sh
-            initialDelaySeconds: 5
-            periodSeconds: 5
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 30
           volumeMounts:
             - name: secret
               mountPath: /etc/onos/certs
