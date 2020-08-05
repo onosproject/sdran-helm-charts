@@ -113,6 +113,11 @@ onos-config:
     testdevice:
       versions: []
 
+onos-ric:
+  store:
+    consensus:
+      enabled: false
+
 onos-sdran-cli:
   postInstall:
     placeholder: true
