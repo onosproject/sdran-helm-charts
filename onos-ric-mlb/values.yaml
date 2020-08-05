@@ -9,9 +9,8 @@
 replicaCount: 1
 
 image:
-  depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
   repository: onosproject/onos-ric-mlb
-  tag: v0.6.13
+  tag: v0.6.14
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -19,14 +18,21 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "onos-ric-mlb"
 
-onosricaddr: "onos-ric:5150"
+# Deprecated: Use metrics.enabled instead
 enableMetrics: false
+
+metrics:
+  enabled: false
 
 mlbParams:
   mlbPeriod: 10000
   mlbThreshold: 1
 
-store: {}
+storage: {}
+
+southbound:
+  onos-ric:
+    address: "onos-ric:5150"
 
 service:
   # TODO: External NodePort service should be disabled by default
