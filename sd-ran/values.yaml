@@ -9,11 +9,11 @@
 global:
   fullnameOverride: "onos"
   nameOverride: ""
-  store:
+  storage:
     controller: atomix-controller:5679
-    consensus:
+    config:
       enabled: true
-      database: ""
+      name: ""
       type: raft
       image: ""
       imagePullPolicy: IfNotPresent
@@ -92,15 +92,13 @@ nem-monitoring:
             isDefault: true
 
 onos-topo:
-  image:
-    tag: v0.6.11
-  store:
-    consensus:
+  storage:
+    config:
       enabled: false
 
 onos-config:
-  store:
-    consensus:
+  storage:
+    config:
       enabled: false
   plugins:
     e2node:
@@ -114,8 +112,8 @@ onos-config:
       versions: []
 
 onos-ric:
-  store:
-    consensus:
+  storage:
+    config:
       enabled: false
 
 onos-sdran-cli:
