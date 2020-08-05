@@ -29,11 +29,11 @@ dependencies:
   - name: onos-ric-ho
     condition: import.onos-ric-ho.enabled
     repository: "@sdran"
-    version: 0.0.8
+    version: 0.0.9
   - name: onos-ric-mlb
     condition: import.onos-ric-mlb.enabled
     repository: "@sdran"
-    version: 0.0.9
+    version: 0.0.10
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
