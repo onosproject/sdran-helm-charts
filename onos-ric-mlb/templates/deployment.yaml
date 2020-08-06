@@ -41,7 +41,7 @@ spec:
             - "-caPath=/etc/onos/certs/tls.cacrt"
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
-            - "-onosricaddr={{ index .Values "southbound.onos-ric.address" }}"
+            - "-onosricaddr={{ .Values.southbound.onosRic.address }}"
             - "-enableMetrics={{ default .Values.metrics.enabled .Values.enableMetrics }}"
             - "-threshold={{ .Values.mlbParams.mlbThreshold }}"
             - "-period={{ .Values.mlbParams.mlbPeriod }}"
