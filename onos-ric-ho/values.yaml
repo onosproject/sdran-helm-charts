@@ -32,7 +32,7 @@ hoParams:
 storage: {}
 
 southbound:
-  onos-ric:
+  onosRic:
     address: "onos-ric:5150"
 
 service:
