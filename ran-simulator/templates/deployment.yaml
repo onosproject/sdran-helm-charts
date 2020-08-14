@@ -80,6 +80,9 @@ spec:
             - name: secret
               mountPath: /etc/ran-simulator/certs
               readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           # Enable ptrace for debugging
@@ -93,6 +96,9 @@ spec:
         - name: secret
           secret:
             secretName: {{ template "ran-simulator.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "ran-simulator.fullname" . }}-config
       {{- with .Values.nodeSelector }}
     nodeSelector:
       {{- toYaml . | nindent 8 }}
