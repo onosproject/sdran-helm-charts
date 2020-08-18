@@ -41,7 +41,7 @@ jobs:
         - make version_check license_check
         - docker run -it --rm --name ct --volume $(pwd):/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-ric,charts/onos-ric-ho,charts/onos-ric-mlb,charts/onos-sdran-cli,charts/ran-simulator --debug --validate-maintainers=false"
     - stage: integration tests
-      if: type != pull_request
+      if: type != pull_request && fork == false
       script:
         - sh ../build-tools/build/travis/trigger-travis onosproject onos-test master "`git rev-parse --short HEAD`" $TRAVIS_ACCESS_TOKEN
     - stage: release
