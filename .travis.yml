@@ -22,8 +22,10 @@ before_install:
   - mv linux-amd64/helm helm
   - chmod u+x helm
   - mv helm /home/travis/bin/
-  - openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv -in .ssh/id_rsa.enc -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa;
+  - 'if [[ $TRAVIS_PULL_REQUEST == "false" && $TRAVIS_BRANCH == "master" && $TRAVIS_SECURE_ENV_VARS == "true" ]] ; then
+       openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv -in .ssh/id_rsa.enc -out ~/.ssh/id_rsa -d &&
+       chmod 600 ~/.ssh/id_rsa;
+     fi'
 
 install:
 - docker pull quay.io/helmpack/chart-testing:v2.4.0
