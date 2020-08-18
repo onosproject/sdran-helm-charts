@@ -43,7 +43,7 @@ jobs:
     - stage: integration tests
       if: type != pull_request && fork == false
       script:
-        - sh ../build-tools/build/travis/trigger-travis onosproject onos-test master "`git rev-parse --short HEAD`" $TRAVIS_ACCESS_TOKEN
+        - bash ../build-tools/build/travis/trigger-travis onosproject onos-test master "`git rev-parse --short HEAD`" $TRAVIS_ACCESS_TOKEN
     - stage: release
       if: type != pull_request && fork == false
       script:
