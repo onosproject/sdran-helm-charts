@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+setrequest:
+  prefix:
+    target: internal
+    elem:
+      - name: rbac
+  delete: []
+  replace: []
+  update:
+    - path:
+        elem:
+          - name: group
+            key:
+              groupid: administrators
+          - name: description
+      val:
+        stringvalue:
+          stringval: Aether Administrators group
+    - path:
+        elem:
+          - name: group
+            key:
+              groupid: powerusers
+          - name: description
+      val:
+        stringvalue:
+          stringval: Power Users
+    - path:
+        elem:
+          - name: group
+            key:
+              groupid: guest
+          - name: description
+      val:
+        stringvalue:
+          stringval: Guest user
+  extension:
+    - id: 101
+      value: 1.0.0
+    - id: 102
+      value: Rbac
