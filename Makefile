@@ -11,7 +11,7 @@ version_check: # @HELP run the version checker on the charts
 	./../build-tools/chart_single_check
 
 test: # @HELP run the integration tests
-test: license_check version_check
+test: license_check version_check deps
 	./build/bin/run-sd-ran-test
 
 publish: # @HELP publish version on github
