@@ -1,0 +1,68 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+# Default values for all Aether Helm charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+global:
+  fullnameOverride: "onos"
+  nameOverride: ""
+  storage:
+    controller: atomix-controller:5679
+    config:
+      enabled: true
+      name: ""
+      type: raft
+      image: ""
+      imagePullPolicy: IfNotPresent
+      partitions: 1
+      replicas: 1
+      partitionsPerCluster: 1
+
+import:
+  onos-topo:
+    enabled: true
+  onos-config:
+    enabled: true
+  onos-gui:
+    enabled: true
+  onos-sdran-cli:
+    enabled: true
+
+# ONOS-TOPO
+onos-topo:
+  storage:
+    controller: ""
+    config:
+      enabled: false
+
+# ONOS-CONFIG
+onos-config:
+  storage:
+    controller: ""
+    config:
+      enabled: false
+  plugins:
+    devicesim:
+      versions: []
+    stratum:
+      versions: []
+    testdevice:
+      versions: []
+    rbac:
+      versions: [1.0.0]
+#    aether:
+#      versions: [1.0.0]
+
+# ONOS-GUI
+onos-gui: {}
+
+# ONOS-CLI
+onos-sdran-cli:
+  postInstall:
+    placeholder: true
+#    topo:
+#    toponew:
+    config: [ set.example-groups.yaml ]
