@@ -3,6 +3,13 @@ chart_dir=$(mktemp -d)
 cp -R ../onos-helm-charts/* ${chart_dir}
 cp -R ../sdran-helm-charts/* ${chart_dir}
 
-helmit test ./test -c ${chart_dir}
+kubectl create ns onos-ric
+helmit test -n onos-ric ./test -c ${chart_dir} --suite onos-ric
 
-# rm -rf ${chart_dir}
+kubectl create ns sd-ran
+helmit test -n sd-ran ./test -c ${chart_dir} --suite sd-ran
+
+kubectl create ns aether-umbrella
+helmit test -n aether-umbrella ./test -c ${chart_dir} --suite aether-umbrella
+
+rm -rf ${chart_dir}
