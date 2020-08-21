@@ -7,6 +7,7 @@ package tests
 import (
 	"github.com/onosproject/helmit/pkg/helm"
 	"github.com/onosproject/helmit/pkg/test"
+	"github.com/onosproject/onos-test/pkg/onostest"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -16,21 +17,24 @@ type SDRANSuite struct {
 	test.Suite
 }
 
+const onosComponentName = "sd-ran"
+const testName = "chart-test"
+
 // TestInstall tests installing the sd-ran chart
 func (s *SDRANSuite) TestInstall(t *testing.T) {
-	atomix := helm.Chart("atomix-controller", "https://charts.atomix.io").
-		Release("sd-ran-atomix").
+	atomix := helm.Chart(onostest.ControllerChartName, onostest.AtomixChartRepo).
+		Release(onostest.AtomixName(testName, onosComponentName)).
 		Set("scope", "Namespace")
 	assert.NoError(t, atomix.Install(true))
 
-	raft := helm.Chart("raft-storage-controller", "https://charts.atomix.io").
-		Release("sd-ran-raft").
+	raft := helm.Chart(onostest.RaftStorageControllerChartName, onostest.AtomixChartRepo).
+		Release(onostest.RaftReleaseName(onosComponentName)).
 		Set("scope", "Namespace")
 	assert.NoError(t, raft.Install(true))
 
 	sdran := helm.Chart("sd-ran").
 		Release("sd-ran").
-		Set("global.storage.controller", "sd-ran-atomix-atomix-controller:5679").
+		Set("global.storage.controller", onostest.AtomixController(testName, onosComponentName)).
 		Set("import.onos-gui.enabled", false).
 		Set("onos-ric.service.external.nodePort", 0).
 		Set("onos-ric-ho.service.external.nodePort", 0).
