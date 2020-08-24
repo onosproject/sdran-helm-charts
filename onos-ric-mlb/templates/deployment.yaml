@@ -45,17 +45,21 @@ spec:
             - "-enableMetrics={{ default .Values.metrics.enabled .Values.enableMetrics }}"
             - "-threshold={{ .Values.mlbParams.mlbThreshold }}"
             - "-period={{ .Values.mlbParams.mlbPeriod }}"
-          livenessProbe:
+          startupProbe:
             tcpSocket:
               port: 5150
-            initialDelaySeconds: 30
-            periodSeconds: 10
+            periodSeconds: 5
+            failureThreshold: 60
           readinessProbe:
             tcpSocket:
               port: 5150
-            initialDelaySeconds: 30
+            initialDelaySeconds: 10
             periodSeconds: 10
-            failureThreshold: 30
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
           volumeMounts:
             - name: secret
               mountPath: /etc/onos/certs
