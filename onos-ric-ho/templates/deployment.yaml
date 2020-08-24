@@ -46,17 +46,21 @@ spec:
             - "-hystCqi={{ .Values.hoParams.hystCqi }}"
             - "-a3offsetCqi={{ .Values.hoParams.a3OffsetCqi }}"
             - "-timeToTrigger={{ .Values.hoParams.timeToTriggerMs }}"
-          livenessProbe:
+          startupProbe:
             tcpSocket:
               port: 5150
-            initialDelaySeconds: 30
-            periodSeconds: 10
+            periodSeconds: 5
+            failureThreshold: 60
           readinessProbe:
             tcpSocket:
               port: 5150
-            initialDelaySeconds: 30
+            initialDelaySeconds: 10
             periodSeconds: 10
-            failureThreshold: 30
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
           volumeMounts:
             - name: secret
               mountPath: /etc/onos/certs
