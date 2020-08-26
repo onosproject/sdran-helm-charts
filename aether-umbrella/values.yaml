@@ -65,4 +65,4 @@ onos-sdran-cli:
     placeholder: true
 #    topo:
 #    toponew:
-    config: [ set.example-groups.yaml ]
+    config: [ set.roles-aether-ops.gnmi, set.roles-aether-admin.gnmi, set.group-menlo-admins.gnmi]

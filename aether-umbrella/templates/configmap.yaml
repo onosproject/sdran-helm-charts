@@ -8,4 +8,4 @@ metadata:
   name: {{ .Release.Name }}-post
   namespace: {{ .Release.Namespace }}
 data:
-{{ (.Files.Glob "files/configs/*.yaml").AsConfig | indent 2 }}
+{{ (.Files.Glob "files/configs/*.*").AsConfig | indent 2 }}

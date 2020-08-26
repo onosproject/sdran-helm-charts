@@ -71,7 +71,7 @@ spec:
           args:
             - "config"
             - "load"
-            - "yaml"
+            - "proto"
             {{- with index .Values "onos-sdran-cli" "postInstall" "config" }}
             {{- range $filename := . }}
             - {{ $filename }}
