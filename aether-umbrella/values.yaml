@@ -53,8 +53,8 @@ onos-config:
       versions: []
     rbac:
       versions: [1.0.0]
-#    aether:
-#      versions: [1.0.0]
+    aether:
+      versions: [1.0.0]
 
 # ONOS-GUI
 onos-gui: {}
