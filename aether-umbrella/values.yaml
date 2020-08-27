@@ -30,7 +30,8 @@ import:
     enabled: true
   onos-sdran-cli:
     enabled: true
-
+  aether-roc-api:
+    enabled: true
 # ONOS-TOPO
 onos-topo:
   storage:
@@ -66,3 +67,6 @@ onos-sdran-cli:
 #    topo:
 #    toponew:
     config: [ set.roles-aether-ops.gnmi, set.roles-aether-admin.gnmi, set.group-menlo-admins.gnmi]
+
+# Aether ROC API
+aether-roc-api: {}
