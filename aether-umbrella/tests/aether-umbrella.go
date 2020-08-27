@@ -38,6 +38,7 @@ func (s *AetherUmbrellaSuite) TestInstall(t *testing.T) {
 		Set("import.onos-gui.enabled", false).
 		Set("import.onos-cli.enabled", false).
 		Set("onos-topo.image.tag", "latest").
-		Set("onos-config.image.tag", "latest")
+		Set("onos-config.image.tag", "latest").
+		Set("aether-roc-api.image.tag", "latest")
 	assert.NoError(t, onos.Install(true))
 }

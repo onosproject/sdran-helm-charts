@@ -18,3 +18,11 @@ If you are using KinD as a Kubernetes server, you will have to use a "port-forwa
 $ kubectl -n {{.Release.Namespace}} port-forward $(kubectl -n {{.Release.Namespace}} get pods -l type=gui -o name) 8182:80
 and then access the GUI at
 * http://localhost:8182
+
+Also you will have to add a "port-forward" to access the aether-roc-api e.g.
+$ kubectl -n {{.Release.Namespace}} port-forward $(kubectl -n {{.Release.Namespace}} get pods -l type=api -o name) 8181
+and then access the API with:
+
+curl http://localhost:8181/rbac/v1.0.0/rbac
+OR
+curl http://localhost:8181/aether/v1.0.0/subscriber
