@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: aether-roc-api
+description: Aether ROC API
+kubeVersion: ">=1.15.0"
+type: application
+version: 0.0.1
+appVersion: v0.6.3
+keywords:
+  - aether
+  - config
+home: https://www.opennetworking.org/aether/
+maintainers:
+  - name: Aether Ops team
+    email: support@opennetworking.org

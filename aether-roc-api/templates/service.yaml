@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "aether-roc-api.fullname" . }}
+  labels:
+    app: {{ template "aether-roc-api.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "aether-roc-api.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    name: {{ template "aether-roc-api.fullname" . }}
+    app: aether
+    type: api
+    resource: {{ template "aether-roc-api.fullname" . }}
+    {{- include "aether-roc-api.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: rest
+      port: 8181
