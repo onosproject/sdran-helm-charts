@@ -46,16 +46,18 @@ onos-config:
     config:
       enabled: false
   plugins:
-    devicesim:
-      versions: []
-    stratum:
-      versions: []
-    testdevice:
-      versions: []
-    rbac:
-      versions: [1.0.0]
-    aether:
-      versions: [1.0.0]
+    - name: rbac
+      version: 1.0.0
+      image:
+        repository: onosproject/config-model-rbac-1.0.0
+        tag: v0.6.10
+        pullPolicy: IfNotPresent
+    - name: aether
+      version: 1.0.0
+      image:
+        repository: onosproject/config-model-aether-1.0.0
+        tag: v0.6.10
+        pullPolicy: IfNotPresent
 
 # ONOS-GUI
 onos-gui: {}
