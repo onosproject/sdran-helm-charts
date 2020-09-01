@@ -25,7 +25,7 @@ dependencies:
   - name: onos-ric
     condition: import.onos-ric.enabled
     repository: "@sdran"
-    version: 0.0.14
+    version: 0.0.15
   - name: onos-ric-ho
     condition: import.onos-ric-ho.enabled
     repository: "@sdran"
