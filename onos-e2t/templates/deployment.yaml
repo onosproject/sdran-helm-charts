@@ -1,0 +1,96 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-e2t.fullname" . }}
+  labels:
+    {{- include "onos-e2t.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-e2t.fullname" . }}
+      app: onos
+      type: e2t
+      resource: {{ template "onos-e2t.fullname" . }}
+      {{- include "onos-e2t.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-e2t.fullname" . }}
+        app: onos
+        type: e2t
+        resource: {{ template "onos-e2t.fullname" . }}
+        {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: onos-e2t
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "-caPath=/etc/onos/certs/tls.cacrt"
+            - "-keyPath=/etc/onos/certs/tls.key"
+            - "-certPath=/etc/onos/certs/tls.crt"
+            - "-sctpport={{.Values.sctp.port}}"
+          ports:
+            - name: sctp
+              containerPort: {{.Values.sctp.port}}
+          startupProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "onos-e2t.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "onos-e2t.fullname" . }}-config
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
