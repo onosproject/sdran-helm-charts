@@ -27,7 +27,7 @@ update: <
             name: 'role'
             key:<
                 key:'roleid'
-                value:'aether-admins'
+                value:'aether-admin'
             >
         >
         elem: <
@@ -35,7 +35,7 @@ update: <
         >
     >
     val: <
-        string_val: 'As role Aether Admins'
+        string_val: 'As role Aether Admin'
     >
 >
 update: <
