@@ -101,7 +101,7 @@ onos-config:
       version: 1.0.0
       image:
         repository: onosproject/config-model-e2node-1.0.0
-        tag: v0.6.3
+        tag: v0.6.12
         pullPolicy: IfNotPresent
 
 onos-ric:
