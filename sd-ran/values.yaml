@@ -10,8 +10,8 @@ global:
   fullnameOverride: "onos"
   nameOverride: ""
   storage:
-    controller: atomix-controller:5679
-    config:
+    controller: "atomix-controller.kube-system.svc.cluster.local:5679"
+    consensus:
       enabled: true
       name: ""
       type: raft
@@ -22,10 +22,6 @@ global:
       partitionsPerCluster: 1
 
 import:
-  atomix-controller:
-    enabled: false
-  atomix-raft-storage-controller:
-    enabled: false
   nem-monitoring:
     enabled: true
   onos-ric:
@@ -93,24 +89,24 @@ nem-monitoring:
 
 onos-topo:
   storage:
-    config:
+    consensus:
       enabled: false
 
 onos-config:
   storage:
-    config:
+    consensus:
       enabled: false
   plugins:
     - name: e2node
       version: 1.0.0
       image:
         repository: onosproject/config-model-e2node-1.0.0
-        tag: v0.6.3
+        tag: v0.6.12
         pullPolicy: IfNotPresent
 
 onos-ric:
   storage:
-    config:
+    consensus:
       enabled: false
 
 onos-sdran-cli:
