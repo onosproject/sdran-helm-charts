@@ -10,8 +10,8 @@ global:
   fullnameOverride: "onos"
   nameOverride: ""
   storage:
-    controller: atomix-controller:5679
-    config:
+    controller: "atomix-controller.kube-system.svc.cluster.local:5679"
+    consensus:
       enabled: true
       name: ""
       type: raft
@@ -32,31 +32,32 @@ import:
     enabled: true
   aether-roc-api:
     enabled: true
+
 # ONOS-TOPO
 onos-topo:
   storage:
     controller: ""
-    config:
+    consensus:
       enabled: false
 
 # ONOS-CONFIG
 onos-config:
   storage:
     controller: ""
-    config:
+    consensus:
       enabled: false
   plugins:
     - name: rbac
       version: 1.0.0
       image:
         repository: onosproject/config-model-rbac-1.0.0
-        tag: v0.6.10
+        tag: v0.6.12
         pullPolicy: IfNotPresent
     - name: aether
       version: 1.0.0
       image:
         repository: onosproject/config-model-aether-1.0.0
-        tag: v0.6.10
+        tag: v0.6.12
         pullPolicy: IfNotPresent
 
 # ONOS-GUI
