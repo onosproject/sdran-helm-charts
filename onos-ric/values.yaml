@@ -16,7 +16,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/onos-ric
-  tag: v0.6.18
+  tag: v0.6.19
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -29,8 +29,8 @@ topoEndpoint: "onos-topo:5150"
 enableMetrics: false
 
 storage:
-  controller: "atomix-controller:5679"
-  config:
+  controller: "atomix-controller.kube-system.svc.cluster.local:5679"
+  consensus:
     enabled: true
     name: ""
     type: raft
