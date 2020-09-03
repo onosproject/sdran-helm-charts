@@ -66,6 +66,9 @@ spec:
             - name: secret
               mountPath: /etc/aether-roc-api/certs
               readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           # Enable ptrace for debugging
@@ -79,6 +82,9 @@ spec:
         - name: secret
           secret:
             secretName: {{ template "aether-roc-api.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "aether-roc-api.fullname" . }}-config
       {{- with .Values.nodeSelector }}
     nodeSelector:
       {{- toYaml . | nindent 8 }}
