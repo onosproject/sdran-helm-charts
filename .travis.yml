@@ -37,6 +37,7 @@ before_script:
 jobs:
   include:
     - stage: chart tests
+      if: type == pull_request || fork == false
       script:
         - make version_check license_check
         - docker run -it --rm --name ct --volume $(pwd):/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-ric,charts/onos-ric-ho,charts/onos-ric-mlb,charts/onos-sdran-cli,charts/ran-simulator --debug --validate-maintainers=false"
