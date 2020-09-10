@@ -39,6 +39,7 @@ metadata:
     {{- include "onos-ric.labels" . | nindent 4 }}
 spec:
   clusterIP: None
+  publishNotReadyAddresses: true
   selector:
     name: {{ template "onos-ric.fullname" . }}
     app: onos
