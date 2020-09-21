@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
 nameOverride: ""
 fullnameOverride: ""
 
@@ -18,13 +22,13 @@ resources:
 service:
   type: ClusterIP
 
-secure: false
+secure: true
 initialConfig: ""
+output: ""
 
 ports:
   gnmi:
-    secure: 10161
-    insecure: 11161
+    secure: 5150
 
 nodeSelector: {}
 

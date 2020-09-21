@@ -5,7 +5,7 @@ The certificates were generated with the
 https://github.com/onosproject/simulators/blob/master/pkg/certs/generate_certs.sh 
 script as
 ```bash
-generate_certs.sh sdcore-adapter.opennetworking.org
+generate_certs.sh sdcore-adapter
 ```
 
 In this folder they **must** be (re)named

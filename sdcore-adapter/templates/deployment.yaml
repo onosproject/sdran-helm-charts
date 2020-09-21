@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -39,14 +43,19 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-            - name: SECURE
-              value: "{{ .Values.secure }}"
-            - name: CONFIG
-              value: "{{ .Values.initialConfig }}"
-            {{- range $key, $port := .Values.ports.gnmi }}
-            - name: GNMI_{{ $key | upper }}_PORT
-              value: {{ $port | quote }}
-            {{- end}}
+          args:
+            - "/usr/local/bin/sdcore-adapter"
+            - "-bind_address=:{{ .Values.ports.gnmi.secure }}"
+            - "-key=/etc/sdcore-adapter/certs/tls.key"
+            - "-cert=/etc/sdcore-adapter/certs/tls.crt"
+            - "-ca=/etc/sdcore-adapter/certs/tls.cacert"
+            - "-alsologtostderr"
+            {{ if .Values.initialConfig }}
+            - "-config={{ .Values.initialConfig }}"
+            {{ end }}
+            {{ if .Values.Output }}
+            - " -output={{ .Values.Output }}"
+            {{ end }}
           ports:
             {{- range $key, $port := .Values.ports.gnmi }}
             - name: gnmi{{ $key }}
@@ -54,21 +63,12 @@ spec:
             {{- end}}
           readinessProbe:
             tcpSocket:
-              {{ if .Values.secure }}
               port: {{ .Values.ports.gnmi.secure }}
-              {{ else }}
-              port: {{ .Values.ports.gnmi.insecure }}
-              {{ end }}            
             initialDelaySeconds: 5
             periodSeconds: 10
           livenessProbe:
             tcpSocket:
-              {{ if .Values.secure }}
               port: {{ .Values.ports.gnmi.secure }}
-              {{ else }}
-              port: {{ .Values.ports.gnmi.insecure }}
-              {{ end }}
-
             initialDelaySeconds: 15
             periodSeconds: 20
           volumeMounts:
