@@ -1,0 +1,92 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "aether-roc-gui.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "aether-roc-gui.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "aether-roc-gui.fullname" . }}
+      app: aether
+      type: arg
+      resource: {{ template "aether-roc-gui.fullname" . }}
+      {{- include "aether-roc-gui.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "aether-roc-gui.fullname" . }}
+        app: aether
+        type: arg
+        resource: {{ template "aether-roc-gui.fullname" . }}
+        {{- include "aether-roc-gui.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: OPENIDCISSUER
+              value: {{ .Values.openidc.issuer }}
+          stdin : true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          ports:
+            {{- with .Values.ports }}
+            {{- range $key, $port := . }}
+            - name: {{ $key }}
+              {{ toYaml $port | nindent 14 }}
+            {{- end }}
+            {{- end }}
+          livenessProbe:
+            tcpSocket:
+              port: web
+            initialDelaySeconds: 30
+          readinessProbe:
+            tcpSocket:
+              port: web
+            initialDelaySeconds: 30
+          volumeMounts:
+            - name: config
+              mountPath: /etc/nginx/conf.d
+            - name: secret
+              mountPath: /usr/share/certs
+              readOnly: true
+
+      volumes:
+        - name: config
+          configMap:
+            name: {{ template "aether-roc-gui.fullname" . }}
+        - name: secret
+          secret:
+            secretName: {{ template "aether-roc-gui.fullname" . }}-secret
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

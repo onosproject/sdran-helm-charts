@@ -1,0 +1,98 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+# Default values for aether-roc-gui.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: onosproject/aether-roc-gui
+  tag: v0.6.0
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "aether-roc-gui"
+
+## Client service.
+service:
+  enabled: true
+  ## Service name is user-configurable for maximum service discovery flexibility.
+  name: aether-roc-gui
+  type: LoadBalancer
+  external:
+    nodePort: 31190
+
+ingress:
+  enabled: true
+
+ports:
+  web:
+    containerPort: 80
+    protocol: TCP
+
+# Enable by giving a value like http://dex:32000
+# make sure this is reachable at http://dex:32000/.well-known/openid-configuration
+openidc:
+  issuer:
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+aetherservices:
+  aether-roc-api:
+    http: 8181
+    streamTimeout: 3600
+
+Nginx:
+  templates:
+    server-block.conf: |-
+      server {
+          listen 80;
+          ssl_certificate /usr/share/certs/aether-roc-gui.crt;
+          ssl_certificate_key /usr/share/certs/aether-roc-gui.key;
+          location / {
+            root /usr/share/nginx/html;
+          }
+          location ~ \.(html|js|ico|map|css|png|woff|woff2)$ {
+            root /usr/share/nginx/html;
+          }
+          location /rs/nav/uiextensions {
+            root /usr/share/nginx/html;
+          }
+          location /kubernetes-api/ {
+              proxy_pass http://localhost:8001/;
+              proxy_http_version 1.1;
+          }
+          {{- range $key, $value := .Values.aetherservices }}
+          location /{{ $key }}/ {
+              proxy_pass http://aether-roc-api:{{ $value.http }}/;
+              proxy_http_version 1.1;
+              proxy_set_header Upgrade $http_upgrade;
+              proxy_set_header Connection "Upgrade";
+              proxy_connect_timeout       {{ $value.streamTimeout }};
+              proxy_send_timeout          {{ $value.streamTimeout }};
+              proxy_read_timeout          {{ $value.streamTimeout }};
+              send_timeout                {{ $value.streamTimeout }};
+          }
+          {{ end }}
+      }
