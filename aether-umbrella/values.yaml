@@ -32,6 +32,8 @@ import:
     enabled: true
   aether-roc-api:
     enabled: true
+  aether-roc-gui:
+    enabled: true
 
 # ONOS-TOPO
 onos-topo:
@@ -73,3 +75,6 @@ onos-sdran-cli:
 
 # Aether ROC API
 aether-roc-api: {}
+
+# Aether ROC GUI
+aether-roc-gui: {}
