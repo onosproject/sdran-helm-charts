@@ -1,0 +1,51 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "aether-roc-gui.fullname" . }}
+  labels:
+    app: {{ template "aether-roc-gui.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "aether-roc-gui.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    name: {{ template "aether-roc-gui.fullname" . }}
+    app: aether
+    type: arg
+    resource: {{ template "aether-roc-gui.fullname" . }}
+    {{- include "aether-roc-gui.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: web
+      port: 80
+---
+{{- if .Values.service.external.nodePort }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "aether-roc-gui.fullname" . }}-external
+  labels:
+    app: {{ template "aether-roc-gui.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "aether-roc-gui.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "aether-roc-gui.fullname" . }}
+    app: aether
+    type: arg
+    resource: {{ template "aether-roc-gui.fullname" . }}
+    {{- include "aether-roc-gui.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: web
+      port: 80
+      nodePort: {{ .Values.service.external.nodePort }}
+      protocol: TCP
+{{- end }}
