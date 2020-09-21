@@ -44,6 +44,8 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
           args:
+            {{- range $key, $corsorigin := .Values.corsOrigins }}
+            - {{ printf "-allowCorsOrigin=%s" $corsorigin }}{{end}}
           ports:
             - name: http
               containerPort: 8181

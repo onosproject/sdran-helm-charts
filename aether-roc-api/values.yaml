@@ -10,13 +10,17 @@ replicaCount: 1
 
 image:
   repository: onosproject/aether-roc-api
-  tag: v0.6.4
+  tag: v0.6.5
   pullPolicy: IfNotPresent
   pullSecrets: []
 
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "aether-roc-api"
+
+# Needed for development only - set to blank otherwise
+corsOrigins:
+  - http://localhost:4200
 
 store: {}
 
