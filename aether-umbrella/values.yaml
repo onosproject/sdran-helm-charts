@@ -34,6 +34,8 @@ import:
     enabled: true
   aether-roc-gui:
     enabled: true
+  sdcore-adapter:
+    enabled: true
 
 # ONOS-TOPO
 onos-topo:
@@ -78,3 +80,6 @@ aether-roc-api: {}
 
 # Aether ROC GUI
 aether-roc-gui: {}
+
+# SD-Core Adapter
+sdcore-adapter: {}
