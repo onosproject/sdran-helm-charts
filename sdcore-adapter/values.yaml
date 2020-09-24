@@ -25,6 +25,7 @@ service:
 secure: true
 initialConfig: ""
 output: ""
+spgwEndpoint: ""
 
 ports:
   gnmi:
