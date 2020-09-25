@@ -54,7 +54,10 @@ spec:
             - "-config={{ .Values.initialConfig }}"
             {{ end }}
             {{ if .Values.Output }}
-            - " -output={{ .Values.Output }}"
+            - " -output={{ .Values.output }}"
+            {{ end }}
+            {{ if .Values.spgwEndpoint }}
+            - "-spgw_endpoint={{ .Values.spgwEndpoint }}"
             {{ end }}
           ports:
             {{- range $key, $port := .Values.ports.gnmi }}
