@@ -12,16 +12,16 @@ import (
 	"testing"
 )
 
-// AetherUmbrellaSuite is the aether-umbrella chart test suite
-type AetherUmbrellaSuite struct {
+// AetherRocUmbrellaSuite is the aether-roc-umbrella chart test suite
+type AetherRocUmbrellaSuite struct {
 	test.Suite
 }
 
-const componentName = "aether-umbrella"
+const componentName = "aether-roc-umbrella"
 const testName = "aether-chart-test"
 
-// TestInstall tests installing the aether-umbrella chart
-func (s *AetherUmbrellaSuite) TestInstall(t *testing.T) {
+// TestInstall tests installing the aether-roc-umbrella chart
+func (s *AetherRocUmbrellaSuite) TestInstall(t *testing.T) {
 	atomix := helm.Chart("atomix-controller", onostest.AtomixChartRepo).
 		Release(onostest.AtomixName(testName, componentName)).
 		Set("scope", "Namespace")
@@ -32,8 +32,8 @@ func (s *AetherUmbrellaSuite) TestInstall(t *testing.T) {
 		Set("scope", "Namespace")
 	assert.NoError(t, raft.Install(true))
 
-	onos := helm.Chart("aether-umbrella").
-		Release("aether-umbrella").
+	onos := helm.Chart("aether-roc-umbrella").
+		Release("aether-roc-umbrella").
 		Set("global.storage.controller", onostest.AtomixController(testName, componentName)).
 		Set("import.onos-gui.enabled", false).
 		Set("import.onos-cli.enabled", false).
