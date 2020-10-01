@@ -22,11 +22,11 @@ bumponosdeps: # @HELP update "onosproject" go dependencies and push patch to git
 
 clean: # @HELP clean up temporary files.
 	rm -rf sd-ran/charts sd-ran/Chart.lock
-	rm -rf aether-umbrella/charts aether-umbrella/Chart.lock
+	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock
 
 deps: # @HELP build dependencies for local charts.
 	helm dep build sd-ran
-	helm dep build aether-umbrella
+	helm dep build aether-roc-umbrella
 
 help:
 	@grep -E '^.*: *# *@HELP' $(MAKEFILE_LIST) \

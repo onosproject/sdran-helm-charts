@@ -9,7 +9,7 @@ helmit test -n onos-ric ./test -c ${chart_dir} --suite onos-ric
 kubectl create ns sd-ran
 helmit test -n sd-ran ./test -c ${chart_dir} --suite sd-ran
 
-kubectl create ns aether-umbrella
-helmit test -n aether-umbrella ./test -c ${chart_dir} --suite aether-umbrella
+kubectl create ns aether-roc-umbrella
+helmit test -n aether-roc-umbrella ./test -c ${chart_dir} --suite aether-roc-umbrella
 
 rm -rf ${chart_dir}
