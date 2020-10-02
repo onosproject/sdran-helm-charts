@@ -73,7 +73,13 @@ onos-sdran-cli:
     placeholder: true
 #    topo:
 #    toponew:
-    config: [ set.roles-aether-ops.gnmi, set.roles-aether-admin.gnmi, set.group-menlo-admins.gnmi]
+    config:
+    - set.roles-sdcore-read-everything.gnmi
+    - set.roles-sdcore-all-everything.gnmi
+    - set.roles-sdcore-update-subscriber.gnmi
+    - set.group-menlo-admins.gnmi
+    - set.group-menlo-ops.gnmi
+    - set.group-menlo-guest.gnmi
 
 # Aether ROC API
 aether-roc-api: {}

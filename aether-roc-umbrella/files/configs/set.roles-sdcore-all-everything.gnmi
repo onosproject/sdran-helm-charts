@@ -7,7 +7,7 @@ prefix: <
         name: 'role'
         key:<
             key:'roleid'
-            value:'aether-ops'
+            value:'sd-core-all-everything'
          >
      >
 >
@@ -18,7 +18,7 @@ update: <
         >
     >
     val: <
-        string_val: 'Aether Operations'
+        string_val: 'SD CORE Adapter All Everything'
     >
 >
 update: <
@@ -31,7 +31,7 @@ update: <
         >
     >
     val: <
-        string_val: 'READ'
+        string_val: 'ALL'
     >
 >
 update: <
@@ -59,12 +59,9 @@ update: <
     val: <
         leaflist_val: <
           element: <
-            string_val: '/internal/aether/*'
+            string_val: '/spgw-1/*'
           >
-          element: <
-            string_val: '/internal/rbac/*'
-          >
-        >
+       >
     >
 >
 extension: <
