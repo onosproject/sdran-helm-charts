@@ -7,7 +7,7 @@ prefix: <
         name: 'role'
         key:<
             key:'roleid'
-            value:'aether-admin'
+            value:'sd-core-update-subscriber'
          >
      >
 >
@@ -18,7 +18,7 @@ update: <
         >
     >
     val: <
-        string_val: 'Aether Admin'
+        string_val: 'SD CORE Adapter Update Subscriber'
     >
 >
 update: <
@@ -59,12 +59,9 @@ update: <
     val: <
         leaflist_val: <
           element: <
-            string_val: '/internal/aether/*'
+            string_val: '/spgw-1/subscriber/ue/*'
           >
-          element: <
-            string_val: '/internal/rbac/*'
-          >
-        >
+       >
     >
 >
 extension: <

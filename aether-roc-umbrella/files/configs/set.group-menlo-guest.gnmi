@@ -7,7 +7,7 @@ prefix: <
         name: 'group'
         key:<
             key:'groupid'
-            value:'menlo-admins'
+            value:'menlo-guest'
          >
      >
 >
@@ -18,7 +18,7 @@ update: <
         >
     >
     val: <
-        string_val: 'Menlo Administrators group'
+        string_val: 'Menlo Guest group'
     >
 >
 update: <
@@ -27,7 +27,7 @@ update: <
             name: 'role'
             key:<
                 key:'roleid'
-                value:'sd-core-all-everything'
+                value:'sd-core-read-everything'
             >
         >
         elem: <
@@ -35,7 +35,7 @@ update: <
         >
     >
     val: <
-        string_val: 'All permission on everything in SD-CORE'
+        string_val: 'Read everything in SD-CORE'
     >
 >
 extension: <
