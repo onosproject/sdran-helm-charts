@@ -50,3 +50,20 @@ Selector labels
 app.kubernetes.io/name: {{ include "onos-ric-ho.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
+
+{{/*
+onos-ric-ho image name
+*/}}
+{{- define "onos-ric-ho.image-name" -}}
+{{- if .Values.global.image.registry -}}
+{{- .Values.global.image.registry -}}
+{{- else if .Values.image.registry -}}
+{{- .Values.image.registry -}}
+{{- end -}}
+{{- printf "%s:" .Values.image.repository -}}
+{{- if .Values.global.image.tag -}}
+{{- .Values.global.image.tag -}}
+{{- else -}}
+{{- .Values.image.tag -}}
+{{- end -}}
+{{- end -}}
