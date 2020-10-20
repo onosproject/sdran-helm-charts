@@ -7,8 +7,8 @@ name: onos-ric-mlb
 description: ONOS Radio Access Network Load Balancer
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.14
-appVersion: v0.6.17
+version: 0.0.15
+appVersion: v0.6.20
 keywords:
   - onos
   - sdn

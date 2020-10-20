@@ -61,3 +61,20 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+onos-ric-mlb image name
+*/}}
+{{- define "onos-ric-mlb.image-name" -}}
+{{- if .Values.global.image.registry -}}
+{{- .Values.global.image.registry -}}
+{{- else if .Values.image.registry -}}
+{{- .Values.image.registry -}}
+{{- end -}}
+{{- printf "%s:" .Values.image.repository -}}
+{{- if .Values.global.image.tag -}}
+{{- .Values.global.image.tag -}}
+{{- else -}}
+{{- .Values.image.tag -}}
+{{- end -}}
+{{- end -}}
