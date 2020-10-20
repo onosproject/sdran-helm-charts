@@ -16,7 +16,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/onos-ric
-  tag: v0.6.19
+  tag: v0.6.20
   pullPolicy: IfNotPresent
   pullSecrets: []
 
