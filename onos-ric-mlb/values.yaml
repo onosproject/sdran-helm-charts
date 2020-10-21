@@ -6,11 +6,16 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+global:
+  image:
+    registry: ""
+    tag: ""
+
 replicaCount: 1
 
 image:
   repository: onosproject/onos-ric-mlb
-  tag: v0.6.17
+  tag: v0.6.20
   pullPolicy: IfNotPresent
   pullSecrets: []
 
