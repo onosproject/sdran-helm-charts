@@ -38,7 +38,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  image: {{ default "atomix/raft-storage-node:v0.3.0" .Values.global.storage.consensus.image }}
+  image: {{ default "atomix/raft-storage-node:v0.4.0" .Values.global.storage.consensus.image }}
   imagePullPolicy: {{ .Values.global.storage.consensus.imagePullPolicy }}
   replicas: {{ .Values.global.storage.consensus.replicas }}
   partitionsPerCluster: {{ .Values.global.storage.consensus.partitionsPerCluster }}
@@ -53,7 +53,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  image: {{ default "atomix/cache-storage-node:v0.3.0" .Values.global.storage.consensus.image }}
+  image: {{ default "atomix/cache-storage-node:v0.4.0" .Values.global.storage.consensus.image }}
   imagePullPolicy: {{ .Values.global.storage.consensus.imagePullPolicy }}
 {{- else }}
 {{ fail ( printf "%s is not a valid storage type" .Values.global.storage.consensus.type ) }}
