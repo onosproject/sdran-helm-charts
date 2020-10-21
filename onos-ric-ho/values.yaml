@@ -8,6 +8,11 @@
 
 replicaCount: 1
 
+global:
+  image:
+    registry: ""
+    tag: ""
+
 image:
   repository: onosproject/onos-ric-ho
   tag: v0.6.20
