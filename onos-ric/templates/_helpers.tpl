@@ -54,11 +54,11 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{/*
 onos-ric image name
 */}}
-{{- define "onos-ric.image-name" -}}
+{{- define "onos-ric.imagename" -}}
 {{- if .Values.global.image.registry -}}
-{{- .Values.global.image.registry -}}
+{{- printf "%s/" .Values.global.image.registry -}}
 {{- else if .Values.image.registry -}}
-{{- .Values.image.registry -}}
+{{- printf "%s/" .Values.image.registry -}}
 {{- end -}}
 {{- printf "%s:" .Values.image.repository -}}
 {{- if .Values.global.image.tag -}}

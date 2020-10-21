@@ -51,7 +51,7 @@ spec:
               mountPath: /config
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ include "onos-ric.image-name" . | quote }}
+          image: {{ include "onos-ric.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             # *_NAMESPACE and *_NAME environment variables are recognized by onos-lib-go utilities.
