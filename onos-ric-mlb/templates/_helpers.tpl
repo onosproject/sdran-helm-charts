@@ -65,11 +65,11 @@ Create the name of the service account to use
 {{/*
 onos-ric-mlb image name
 */}}
-{{- define "onos-ric-mlb.image-name" -}}
+{{- define "onos-ric-mlb.imagename" -}}
 {{- if .Values.global.image.registry -}}
-{{- .Values.global.image.registry -}}
+{{- printf "%s/" .Values.global.image.registry -}}
 {{- else if .Values.image.registry -}}
-{{- .Values.image.registry -}}
+{{- printf "%s/" .Values.image.registry -}}
 {{- end -}}
 {{- printf "%s:" .Values.image.repository -}}
 {{- if .Values.global.image.tag -}}

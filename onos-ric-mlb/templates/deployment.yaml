@@ -35,7 +35,7 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ include "onos-ric-mlb.image-name" . | quote }}
+          image: {{ include "onos-ric-mlb.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - "-caPath=/etc/onos/certs/tls.cacrt"
