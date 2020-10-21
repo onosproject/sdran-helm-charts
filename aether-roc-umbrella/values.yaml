@@ -71,7 +71,7 @@ onos-gui: {}
 onos-sdran-cli:
   postInstall:
     placeholder: true
-#    topo:
+    topo: spgw-1-topo.yaml
 #    toponew:
     config:
     - set.roles-sdcore-read-everything.gnmi
@@ -88,4 +88,6 @@ aether-roc-api: {}
 aether-roc-gui: {}
 
 # SD-Core Adapter
-sdcore-adapter: {}
+sdcore-adapter:
+  nameOverride: sdcore-adapter
+  fullnameOverride: sdcore-adapter
