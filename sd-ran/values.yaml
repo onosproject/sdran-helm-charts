@@ -9,6 +9,9 @@
 global:
   fullnameOverride: "onos"
   nameOverride: ""
+  image:
+    registry: ""
+    tag: ""
   storage:
     controller: "atomix-controller.kube-system.svc.cluster.local:5679"
     consensus:
