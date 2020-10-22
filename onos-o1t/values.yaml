@@ -8,9 +8,20 @@
 
 replicaCount: 1
 
+global:
+  image:
+    registry: ""
+    tag: ""
+  storage:
+    controller: ""
+    config:
+      name: ""
+
+
 image:
   repository: onosproject/onos-o1t
   tag: v0.6.0
+  registry: ""
   pullPolicy: IfNotPresent
   pullSecrets: []
 
