@@ -65,7 +65,7 @@ Create the name of the service account to use
 {{/*
 onos-o1t image name
 */}}
-{{- define "onos-o1t.image-name" -}}
+{{- define "onos-o1t.imagename" -}}
 {{- if .Values.global.image.registry -}}
 {{- printf "%s/" .Values.global.image.registry -}}
 {{- else if .Values.image.registry -}}

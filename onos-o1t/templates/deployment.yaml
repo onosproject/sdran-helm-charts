@@ -29,7 +29,7 @@ spec:
       serviceAccountName: onos-o1t
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ include "onos-o1t.image-name" . | quote }}
+          image: {{ include "onos-o1t.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: grpc

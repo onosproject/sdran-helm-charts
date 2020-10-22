@@ -5,7 +5,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "onos-o1t.fullname" . }}
+  name: {{ include "onos-o1t.fullname" . }}-hs
   labels:
     {{- include "onos-o1t.labels" . | nindent 4 }}
 spec:
@@ -20,3 +20,21 @@ spec:
     - port: {{ .Values.service.port }}
       name: grpc
 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "onos-o1t.fullname" . }}
+  labels:
+        {{- include "onos-o1t.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-o1t.fullname" . }}
+    app: onos
+    type: o1t
+    resource: {{ template "onos-o1t.fullname" . }}
+        {{- include "onos-o1t.selectorLabels" . | nindent 4 }}
+  ports:
+    - port: {{ .Values.service.port }}
+      name: grpc
