@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-o1t.fullname" . }}
+  labels:
+    {{- include "onos-o1t.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-o1t.fullname" . }}
+      app: onos
+      type: o1t
+      resource: {{ template "onos-o1t.fullname" . }}
+      {{- include "onos-o1t.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-o1t.fullname" . }}
+        app: onos
+        type: o1t
+        resource: {{ template "onos-o1t.fullname" . }}
+        {{- include "onos-o1t.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: onos-o1t
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "onos-o1t.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: grpc
+              containerPort: {{.Values.service.port}}
+              protocol: TCP
+          startupProbe:
+            tcpSocket:
+              port: 5150
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "onos-o1t.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "onos-o1t.fullname" . }}-config
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
