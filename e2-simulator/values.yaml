@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+# Default values for e2-simulator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+image:
+  registry: ""
+  repository: onosproject/e2-simulator
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "e2-simulator"
+
+e2sim:
+  network:
+  # network implementation type: hostnetworking or DANM
+  # type: ["host"]|"danm"
+  # where e2sim should listen for SCTP connections:
+  # o if "address" is supplied, listen on that IP (v4 or v6) address
+  # o if "address" is not supplied and "interface" is supplied, listen on the
+  #   first globally-scoped address on that interface of family "addressFamily"
+  #   (default "inet")
+  # o if neither "address" nor "interface" is supplied, listen on the first
+  #   globally-scoped address of family "addressFamily" (default "inet") on
+  #   the interface associated with the container's default route, if any; if
+  #   the container does not have a default route, the first interface with
+  #   a globally-scoped address will be used.
+  # address: addr
+  # interface: ifname
+  # addressFamily: ["inet"]|"inet6"
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

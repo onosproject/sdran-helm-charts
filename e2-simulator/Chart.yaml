@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: e2-simulator
+description: ONOS E2 Simulator
+kubeVersion: ">=1.15.0"
+type: application
+version: 0.1.0
+appVersion: v0.1.0
+keywords:
+  - onos
+  - sdn
+  - ran
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org
