@@ -14,7 +14,7 @@ spec:
     matchLabels:
       name: {{ template "e2-simulator.fullname" . }}
       app: onos
-      type: ho
+      type: e2-simulator
       resource: {{ template "e2-simulator.fullname" . }}
       {{- include "e2-simulator.selectorLabels" . | nindent 6 }}
   template:
@@ -22,11 +22,15 @@ spec:
       labels:
         name: {{ template "e2-simulator.fullname" . }}
         app: onos
-        type: ho
+        type: e2-simulator
         resource: {{ template "e2-simulator.fullname" . }}
         {{- include "e2-simulator.selectorLabels" . | nindent 8 }}
     spec:
       hostNetwork: true
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: {{ include "e2-simulator.imagename" . | quote }}
@@ -56,6 +60,7 @@ spec:
               subPath: e2sim-run.sh
               mountPath: /e2sim-run.sh
           resources:
+            {{- toYaml .Values.resources | nindent 12 }}
       volumes:
         - name: dshm
           emptyDir:
