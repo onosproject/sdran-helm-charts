@@ -36,8 +36,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - /home/e2sim/build/e2sim
-            - "${E2_SERVICE:-onos-e2t}"
-            - "${E2_PORT:-36421}"
+            - "$(E2_SERVICE)"
+            - "$(E2_PORT)"
           env:
             - name: E2_SERVICE
               value: {{ .Values.service.name | default "onos-e2t" }}
