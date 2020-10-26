@@ -37,7 +37,7 @@ spec:
           command:
             - /home/e2sim/build/e2sim
             - "${E2_SERVICE:-onos-e2t}"
-            - "${E2SIM_PORT:-36421}"
+            - "${E2_PORT:-36421}"
           env:
             - name: E2_SERVICE
               value: {{ .Values.service.name | default "onos-e2t" }}
