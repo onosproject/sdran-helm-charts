@@ -37,8 +37,6 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
             - /run-e2-simulator.sh
-          ports:
-            - containerPort: {{ .Values.service.port }}
           env:
             - name: E2SIM_NETWORK_TYPE
               value: {{ .Values.e2sim.network.type | default "host" }}
