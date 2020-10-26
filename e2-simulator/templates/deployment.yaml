@@ -55,8 +55,8 @@ spec:
               mountPath: /etc/localtime
               readOnly: true
             - name: bin
-              subPath: e2sim-run.sh
-              mountPath: /e2sim-run.sh
+              subPath: run-e2-simulator.sh
+              mountPath: /run-e2-simulator.sh
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
