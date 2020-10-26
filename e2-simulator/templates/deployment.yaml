@@ -1,0 +1,84 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "e2-simulator.fullname" . }}
+  labels:
+    {{- include "e2-simulator.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "e2-simulator.fullname" . }}
+      app: onos
+      type: e2-simulator
+      resource: {{ template "e2-simulator.fullname" . }}
+      {{- include "e2-simulator.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "e2-simulator.fullname" . }}
+        app: onos
+        type: e2-simulator
+        resource: {{ template "e2-simulator.fullname" . }}
+        {{- include "e2-simulator.selectorLabels" . | nindent 8 }}
+    spec:
+      hostNetwork: true
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "e2-simulator.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command:
+            - /run-e2-simulator.sh
+          env:
+            - name: E2SIM_NETWORK_TYPE
+              value: {{ .Values.e2sim.network.type | default "host" }}
+            - name: E2SIM_PORT
+              value: {{ .Values.e2sim.network.port | default 36421 |quote}}
+            - name: E2SIM_BIND_ADDR
+              value: {{ .Values.e2sim.network.address }}
+            - name: E2SIM_BIND_IF
+              value: {{ .Values.e2sim.network.interface }}
+            - name: E2SIM_BIND_AF
+              value: {{ .Values.e2sim.network.addressFamily | default "inet" }}
+          volumeMounts:
+            - name: dshm
+              mountPath: /dev/shm
+            - name: localtime
+              mountPath: /etc/localtime
+              readOnly: true
+            - name: bin
+              subPath: run-e2-simulator.sh
+              mountPath: /run-e2-simulator.sh
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: dshm
+          emptyDir:
+            medium: Memory
+        - name: localtime
+          hostPath:
+            path: /etc/localtime
+        - name: bin
+          configMap:
+            name: {{ template "e2-simulator.fullname" . }}-config
+            defaultMode: 0755
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
