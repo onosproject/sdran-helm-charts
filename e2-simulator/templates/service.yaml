@@ -22,4 +22,4 @@ spec:
     {{- include "e2-simulator.selectorLabels" . | nindent 4 }}
   ports:
     - name: e2
-      port: 5150
+      port: {{ .Values.e2sim.network.port | default 36421 }}

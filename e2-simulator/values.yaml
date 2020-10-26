@@ -26,6 +26,7 @@ fullnameOverride: "e2-simulator"
 
 e2sim:
   network:
+    type:
   # network implementation type: hostnetworking or DANM
   # type: ["host"]|"danm"
   # where e2sim should listen for SCTP connections:
@@ -41,6 +42,9 @@ e2sim:
   # address: addr
   # interface: ifname
   # addressFamily: ["inet"]|"inet6"
+
+service:
+  type: ClusterIP
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
