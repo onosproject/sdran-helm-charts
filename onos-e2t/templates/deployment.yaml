@@ -45,6 +45,8 @@ spec:
           ports:
             - name: sctp
               containerPort: {{.Values.sctp.port}}
+            - name: grpc
+              containerPort: {{.Values.grpc.port}}
           startupProbe:
             exec:
               command:
