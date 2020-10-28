@@ -21,6 +21,9 @@ fullnameOverride: "onos-e2t"
 sctp:
   port: 36421
 
+grpc:
+  port: 5150
+
 storage: {}
 
 service:

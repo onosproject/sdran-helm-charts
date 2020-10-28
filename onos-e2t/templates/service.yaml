@@ -25,6 +25,8 @@ spec:
       port: {{.Values.sctp.port}}
     - name: exporter
       port: 7001
+    - name: grpc
+      port: 5150
 ---
 {{- if .Values.service.external.nodePort }}
 apiVersion: v1
