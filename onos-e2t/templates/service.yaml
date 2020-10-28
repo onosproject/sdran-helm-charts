@@ -22,7 +22,8 @@ spec:
     {{- include "onos-e2t.selectorLabels" . | nindent 4 }}
   ports:
     - name: sctp
-      port: {{.Values.sctp.port}}
+      port: {{ .Values.sctp.port | default 36421 }}
+      protocol: SCTP
     - name: exporter
       port: 7001
     - name: grpc
