@@ -26,7 +26,6 @@ spec:
         resource: {{ template "onos-e2t.fullname" . }}
         {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
     spec:
-      serviceAccountName: onos-e2t
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- with .Values.imagePullSecrets }}
@@ -35,18 +34,18 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: {{ include "onos-e2t.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - "-caPath=/etc/onos/certs/tls.cacrt"
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
-            - "-sctpport={{.Values.sctp.port}}"
+            - "-sctpport={{ .Values.sctp.port | default 36421 }}"
           ports:
             - name: sctp
-              containerPort: {{.Values.sctp.port}}
+              containerPort: {{ .Values.sctp.port | default 36421 }}
             - name: grpc
-              containerPort: {{.Values.grpc.port}}
+              containerPort: {{ .Values.grpc.port }}
           startupProbe:
             exec:
               command:
