@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+  #
+  # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-kpimon.fullname" . }}
+  labels:
+    app: {{ template "onos-kpimon.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-kpimon.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-kpimon.fullname" . }}
+    app: onos
+    type: kpimon
+    resource: {{ template "onos-kpimon.fullname" . }}
+  {{- include "onos-kpimon.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+    - name: grpc
+      port: {{ .Values.service.grpc.port }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-kpimon.fullname" . }}-external
+  labels:
+    app: {{ template "onos-kpimon.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-kpimon.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "onos-kpimon.fullname" . }}
+    app: onos
+    type: kpimon
+    resource: {{ template "onos-kpimon.fullname" . }}
+  {{- include "onos-kpimon.selectorLabels" . | nindent 4 }}
+  ports:
+{{- if .Values.service.exporter.nodePort.enabled }}
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+      nodePort: {{ .Values.service.exporter.nodePort.port }}
+      protocol: TCP
+{{- end }}
