@@ -40,6 +40,7 @@ spec:
             - "-caPath=/etc/onos/certs/tls.cacrt"
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
+            - "-e2tEndpoint={{ .Values.config.kpimon.e2tEndpoint }}"
           ports:
             - name: grpc
               containerPort: {{ .Values.service.grpc.port }}

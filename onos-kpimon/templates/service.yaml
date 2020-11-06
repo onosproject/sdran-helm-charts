@@ -25,6 +25,8 @@ spec:
       port: {{ .Values.service.exporter.port }}
     - name: grpc
       port: {{ .Values.service.grpc.port }}
+
+{{- if .Values.service.exporter.nodePort.enabled }}
 ---
 apiVersion: v1
 kind: Service
@@ -45,7 +47,6 @@ spec:
     resource: {{ template "onos-kpimon.fullname" . }}
   {{- include "onos-kpimon.selectorLabels" . | nindent 4 }}
   ports:
-{{- if .Values.service.exporter.nodePort.enabled }}
     - name: exporter
       port: {{ .Values.service.exporter.port }}
       nodePort: {{ .Values.service.exporter.nodePort.port }}

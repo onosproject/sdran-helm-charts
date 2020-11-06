@@ -24,9 +24,6 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "onos-kpimon"
 
-grpc:
-  port: 5150
-
 storage: {}
 
 service:
@@ -38,6 +35,10 @@ service:
     nodePort:
       enabled: false
       port: 31701
+
+config:
+  kpimon:
+    e2tEndpoint: "onos-e2t:5150"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
