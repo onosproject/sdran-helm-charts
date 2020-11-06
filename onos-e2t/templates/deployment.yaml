@@ -47,24 +47,18 @@ spec:
             - name: grpc
               containerPort: {{ .Values.grpc.port }}
           startupProbe:
-            exec:
-              command:
-              - cat
-              - /tmp/healthy
+            tcpSocket:
+              port: 5150
             periodSeconds: 5
             failureThreshold: 60
           readinessProbe:
-            exec:
-              command:
-              - cat
-              - /tmp/healthy
+            tcpSocket:
+              port: 5150
             initialDelaySeconds: 10
             periodSeconds: 10
           livenessProbe:
-            exec:
-              command:
-              - cat
-              - /tmp/healthy
+            tcpSocket:
+              port: 5150
             initialDelaySeconds: 10
             periodSeconds: 10
           volumeMounts:
