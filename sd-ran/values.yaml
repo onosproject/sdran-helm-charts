@@ -25,24 +25,24 @@ global:
       partitionsPerCluster: 1
 
 import:
-  nem-monitoring:
-    enabled: true
-  onos-ric:
-    enabled: true
-  onos-ric-ho:
-    enabled: true
-  onos-ric-mlb:
-    enabled: true
   onos-topo:
     enabled: true
+  onos-e2t:
+    enabled: true
+  onos-e2sub:
+    enabled: true
+  onos-o1t:
+    enabled: false
   onos-config:
-    enabled: true
-  onos-gui:
-    enabled: true
-  ran-simulator:
     enabled: true
   onos-sdran-cli:
     enabled: true
+  ran-simulator:
+    enabled: false
+  onos-gui:
+    enabled: false
+  nem-monitoring:
+    enabled: false
 
 # NEM-Monitoring
 nem-monitoring:
@@ -108,6 +108,16 @@ onos-config:
         pullPolicy: IfNotPresent
 
 onos-ric:
+  storage:
+    consensus:
+      enabled: false
+
+onos-e2t:
+  storage:
+    consensus:
+      enabled: false
+
+onos-e2sub:
   storage:
     consensus:
       enabled: false
