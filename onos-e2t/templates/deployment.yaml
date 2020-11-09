@@ -49,6 +49,10 @@ spec:
           env:
             # *_NAMESPACE and *_NAME environment variables are recognized by onos-lib-go utilities.
             # These variables should always be defined.
+            - name: POD_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
             - name: POD_NAMESPACE
               valueFrom:
                 fieldRef:
@@ -57,6 +61,10 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
             - name: SERVICE_NAMESPACE
               valueFrom:
                 fieldRef:
