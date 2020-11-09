@@ -5,7 +5,7 @@ The certificates were generated with the
 https://github.com/onosproject/simulators/blob/master/pkg/certs/generate_certs.sh 
 script as
 ```bash
-generate-certs.sh onos-e2t.opennetworking.org
+generate-certs.sh onos-e2sub.opennetworking.org
 ```
 
 In this folder they **must** be (re)named
@@ -15,6 +15,6 @@ In this folder they **must** be (re)named
 
 Use
 ```bash
-openssl x509 -in deployments/helm/onos-e2t/files/certs/tls.crt -text -noout
+openssl x509 -in deployments/helm/onos-e2sub/files/certs/tls.crt -text -noout
 ```
 to verify the contents (especially the subject).
