@@ -29,7 +29,7 @@ dependencies:
   - name: onos-e2sub
     condition: import.onos-e2sub.enabled
     repository: "@sdran"
-    version: 0.0.1
+    version: 0.0.2
   - name: onos-o1t
     condition: import.onos-o1t.enabled
     repository: "@sdran"
