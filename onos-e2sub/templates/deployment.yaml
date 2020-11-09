@@ -60,7 +60,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: SERVICE_NAME
-              value: {{ template "onos-ric.fullname" . }}
+              value: {{ template "onos-e2sub.fullname" . }}
             - name: NODE_NAME
               valueFrom:
                 fieldRef:

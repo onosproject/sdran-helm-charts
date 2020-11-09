@@ -17,7 +17,7 @@ spec:
   selector:
     name: {{ template "onos-e2sub.fullname" . }}
     app: onos
-    type: e2t
+    type: e2sub
     resource: {{ template "onos-e2sub.fullname" . }}
     {{- include "onos-e2sub.selectorLabels" . | nindent 4 }}
   ports:
@@ -42,7 +42,7 @@ spec:
   selector:
     name: {{ template "onos-e2sub.fullname" . }}
     app: onos
-    type: e2t
+    type: e2sub
     resource: {{ template "onos-e2sub.fullname" . }}
     {{- include "onos-e2sub.selectorLabels" . | nindent 4 }}
   ports:

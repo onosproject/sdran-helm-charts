@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
-# Default values for onos-e2t.
+# Default values for onos-e2sub.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -20,13 +20,13 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-e2sub
-  tag: v0.6.1
+  tag: latest
   pullPolicy: IfNotPresent
   pullSecrets: []
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "onos-e2t"
+fullnameOverride: "onos-e2sub"
 
 sctp:
   port: 36421
