@@ -40,7 +40,6 @@ spec:
             - "-caPath=/etc/onos/certs/tls.cacrt"
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
-            - "-sctpport={{ .Values.sctp.port | default 36421 }}"
           ports:
             - name: grpc
               containerPort: {{ .Values.grpc.port }}
