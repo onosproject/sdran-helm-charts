@@ -12,7 +12,7 @@ global:
     tag: ""
   storage:
     controller: ""
-    config:
+    consensus:
       name: ""
 
 replicaCount: 1
