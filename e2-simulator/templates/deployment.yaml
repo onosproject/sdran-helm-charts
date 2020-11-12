@@ -35,7 +35,7 @@ spec:
           image: {{ include "e2-simulator.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command:
-            - /home/e2sim/build/e2sim
+            - kpm_sim
             - "$(E2_SERVICE)"
             - "$(E2_PORT)"
           env:
