@@ -26,6 +26,7 @@ spec:
         resource: {{ template "onos-e2sub.fullname" . }}
         {{- include "onos-e2sub.selectorLabels" . | nindent 8 }}
     spec:
+      serviceAccountName: {{ template "onos-e2sub.fullname" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- with .Values.imagePullSecrets }}
