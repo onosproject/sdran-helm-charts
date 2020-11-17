@@ -20,7 +20,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-e2sub
-  tag: latest
+  tag: v0.6.4
   pullPolicy: IfNotPresent
   pullSecrets: []
 
