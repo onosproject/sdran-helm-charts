@@ -1,0 +1,89 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-kpimon.fullname" . }}
+  labels:
+  {{- include "onos-kpimon.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-kpimon.fullname" . }}
+      app: onos
+      type: kpimon
+      resource: {{ template "onos-kpimon.fullname" . }}
+  {{- include "onos-kpimon.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-kpimon.fullname" . }}
+        app: onos
+        type: kpimon
+        resource: {{ template "onos-kpimon.fullname" . }}
+    {{- include "onos-kpimon.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "onos-kpimon.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "-caPath=/etc/onos/certs/tls.cacrt"
+            - "-keyPath=/etc/onos/certs/tls.key"
+            - "-certPath=/etc/onos/certs/tls.crt"
+            - "-e2tEndpoint={{ .Values.config.kpimon.e2tEndpoint }}"
+          ports:
+            - name: grpc
+              containerPort: {{ .Values.service.grpc.port }}
+          startupProbe:
+            tcpSocket:
+              port: 5150
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "onos-kpimon.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "onos-kpimon.fullname" . }}-config
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}
