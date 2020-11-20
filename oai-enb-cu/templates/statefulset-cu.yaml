@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: oai-enb-cu
+  labels:
+{{ tuple "oai-enb-cu" . | include "oai-enb-cu.metadata_labels" | indent 4 }}
+spec:
+  replicas: 1
+  serviceName: oai-enb-cu
+  selector:
+    matchLabels:
+{{ tuple "oai-enb-cu" . | include "oai-enb-cu.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "oai-enb-cu" . | include "oai-enb-cu.metadata_labels" | indent 8 }}
+    spec:
+      hostNetwork: true
+      initContainers:
+      - name: oai-enb-cu-init
+        image: {{ include "oai-enb-cu.imagename" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+            - NET_ADMIN
+        command:
+        - /opt/oai/init_enb_cu.sh
+        env:
+        - name: ENB_LOCAL_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        volumeMounts:
+        - mountPath: /opt/oai/init_enb_cu.sh
+          name: script
+          subPath: init_enb_cu.sh
+        - mountPath: /opt/oai/conf_files/cu.conf
+          name: config
+          subPath: cu.conf
+        - mountPath: /opt/oai/share
+          name: pod-share
+      containers:
+      - name: oai-enb-cu
+        image: {{ include "oai-enb-cu.imagename" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        securityContext:
+          privileged: true
+        command:
+        - /opt/oai/run_enb_cu.sh
+        env:
+          - name: ENB_LOCAL_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+        volumeMounts:
+        - mountPath: /opt/oai/run_enb_cu.sh
+          name: script
+          subPath: run_enb_cu.sh
+        - mountPath: /opt/oai/share
+          name: pod-share
+      volumes:
+      - name: config
+        configMap:
+          name: oai-enb-cu
+          defaultMode: 420
+      - name: script
+        configMap:
+          name: oai-enb-cu
+          defaultMode: 493
+      - name: pod-share
+        emptyDir: {}
