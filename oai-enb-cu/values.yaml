@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+replicaCount: 1
+
+image:
+  registry: ""
+  repository: onosproject/oai-enb-cu
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+config:
+  oai-enb-cu:
+    enbID: 0xe00
+    tac: 1
+    plmnID:
+      mcc: "208"
+      mnc: "01"
+      length: 2
+    networks:
+      common:
+        port: 22100
+      f1:
+        interface: eno1
+        address: 127.0.0.2
+        portc: 501
+        portd: 601
+      s1mme:
+        interface: eno1
+        port: 36412
+      s1u:
+        interface: enb
+        port: 2152
+      x2c:
+        port: 36422
+      if5-ori:
+        port: 50000
+      if5-ecpri:
+        port: 50001
+      tcp-bridge:
+        port: 4043
+  oai-enb-du:
+    networks:
+      f1:
+        address: 127.0.0.3
+        portc: 500
+        portd: 600
+  mme:
+    address: 127.0.0.1
+  onos-e2t:
+    enabled: yes
+    networks:
+      e2:
+        address: 127.0.0.1
+        port: 36421
