@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+replicaCount: 1
+
+image:
+  registry: ""
+  repository: onosproject/oai-enb-du
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+initImages:
+  depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+  pullPolicy: IfNotPresent
+
+config:
+  oai-enb-du:
+    mode: nfapi #or local_L1 for USRP and BasicSim
+    networks:
+      f1:
+        interface: eno1
+        address: 127.0.0.3
+        portc: 500
+        portd: 600
+      nfapi:
+        interface: eno1
+        address: 127.0.0.3
+        portc: 50001
+        portd: 50011
+  oai-enb-cu:
+    enbID: 0xe00
+    tac: 1
+    plmnID:
+      mcc: "208"
+      mnc: "01"
+      length: 2
+    networks:
+      f1:
+        address: 127.0.0.2
+        portc: 501
+        portd: 601
+  oai-ue:
+    networks:
+      nfapi:
+        address: 127.0.0.4
+        portc: 50000
+        portd: 50010
