@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: oai-ue
+  labels:
+{{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 4 }}
+spec:
+  replicas: 1
+  serviceName: oai-ue
+  selector:
+    matchLabels:
+{{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 8 }}
+    spec:
+      hostNetwork: true
+      initContainers:
+      - name: oai-ue-init
+        image: {{ include "oai-ue.imagename" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        securityContext:
+          privileged: true
+          capabilities:
+            add:
+              - NET_ADMIN
+        command:
+        - /opt/oai-ue/init_ue.sh
+        volumeMounts:
+        - mountPath: /opt/oai-ue/gen_ue_sim.sh
+          name: script
+          subPath: gen_ue_sim.sh
+        - mountPath: /opt/oai-ue/init_ue.sh
+          name: script
+          subPath: init_ue.sh
+        - name: config
+          mountPath: /opt/oai-ue/conf_files/ue.conf
+          subPath: ue.conf
+        - name: config
+          mountPath: /opt/oai-ue/conf_files/ue_sim.conf
+          subPath: ue_sim.conf
+        - mountPath: /opt/oai-ue/share
+          name: pod-share
+      containers:
+      - name: oai-ue
+        image: {{ include "oai-ue.imagename" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        securityContext:
+          privileged: true
+        command:
+        - /opt/oai-ue/run_ue.sh
+        env:
+        - name: UE_LOCAL_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        volumeMounts:
+        - name: script
+          mountPath: /opt/oai-ue/run_ue.sh
+          subPath: run_ue.sh
+        - name: pod-share
+          mountPath: /opt/oai-ue/share
+      volumes:
+      - name: config
+        configMap:
+          name: oai-ue
+          defaultMode: 420
+      - name: script
+        configMap:
+          name: oai-ue
+          defaultMode: 493
+      - name: pod-share
+        emptyDir: {}
