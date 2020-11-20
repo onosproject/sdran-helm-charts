@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+replicaCount: 1
+
+image:
+  registry: ""
+  repository: onosproject/oai-ue
+  tag: latest
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+config:
+  oai-ue:
+    device:
+      imei: "356113022094149"
+      manufacturer: "OAISIM"
+      model: "OAISIM"
+      pin: "0000"
+    sim:
+      msin: "4567891201"
+      apiKey: "465b5ce8b199b49faa5f0a2ee238a6bc"
+      opc: "d4416644f6154936193433dd20a0ace0"
+      msisdn: "1122334456"
+    networks:
+      nfapi:
+        interface: eno1
+        address: 127.0.0.4
+        portc: 50000
+        portd: 50010
+  oai-enb-cu:
+    plmnID:
+      mcc: "208"
+      mnc: "01"
+      length: 2
+      fullName: "ONF Aether"
+      shortName: "Aether"
+  oai-enb-du:
+    networks:
+      nfapi:
+        address: 127.0.0.3
+        portc: 50001
+        portd: 50011
