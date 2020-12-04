@@ -53,8 +53,8 @@ spec:
             {{ if .Values.initialConfig }}
             - "-config={{ .Values.initialConfig }}"
             {{ end }}
-            {{ if .Values.Output }}
-            - " -output={{ .Values.output }}"
+            {{ if .Values.output }}
+            - "-output={{ .Values.output }}"
             {{ end }}
             {{ if .Values.spgwEndpoint }}
             - "-spgw_endpoint={{ .Values.spgwEndpoint }}"
