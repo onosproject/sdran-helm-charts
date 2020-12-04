@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-e2t
-  tag: v0.6.8
+  tag: v0.6.10
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -31,6 +31,20 @@ grpc:
   port: 5150
 
 storage: {}
+
+servicemodels:
+  - name: e2sm_kpm
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_kpm-1.0.0
+      tag: v0.6.5
+      pullPolicy: IfNotPresent
+#  - name: e2sm_ni
+#    version: 1.0.0
+#    image:
+#      repository: onosproject/service-model-docker-e2sm_ni-1.0.0
+#      tag: v0.6.5
+#      pullPolicy: IfNotPresent
 
 service:
   # TODO: External NodePort service should be disabled by default
