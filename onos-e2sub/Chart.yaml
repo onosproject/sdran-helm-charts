@@ -7,8 +7,8 @@ name: onos-e2sub
 description: ONOS E2 Subscription Manager
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.6
-appVersion: v0.6.4
+version: 0.0.7
+appVersion: v0.6.6
 keywords:
   - onos
   - sdn
