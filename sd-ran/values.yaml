@@ -121,6 +121,13 @@ onos-e2sub:
   storage:
     consensus:
       enabled: false
+  servicemodels:
+    - name: e2sm_kpm
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_kpm-1.0.0
+        tag: v0.6.5
+        pullPolicy: IfNotPresent
 
 onos-sdran-cli:
   postInstall:
