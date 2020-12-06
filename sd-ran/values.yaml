@@ -100,11 +100,11 @@ onos-config:
     consensus:
       enabled: false
   plugins:
-    - name: e2node
+    - name: ric
       version: 1.0.0
       image:
-        repository: onosproject/config-model-e2node-1.0.0
-        tag: v0.6.12
+        repository: onosproject/config-model-ric-1.0.0
+        tag: v0.6.18
         pullPolicy: IfNotPresent
 
 onos-ric:
