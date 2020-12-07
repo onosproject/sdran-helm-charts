@@ -9,12 +9,10 @@ global:
 
 replicaCount: 1
 
-image:
-  registry: ""
-  repository: onosproject/oai-enb-cu
-  tag: latest
+images:
+  tags:
+    oaicucp: onosproject/oai-enb-cu:latest
   pullPolicy: IfNotPresent
-  pullSecrets: []
 
 config:
   oai-enb-cu:
