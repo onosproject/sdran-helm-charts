@@ -23,8 +23,8 @@ spec:
       hostNetwork: true
       initContainers:
       - name: oai-ue-init
-        image: {{ include "oai-ue.imagename" . }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.images.tags.oaiue | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
         securityContext:
           privileged: true
           capabilities:
@@ -49,8 +49,8 @@ spec:
           name: pod-share
       containers:
       - name: oai-ue
-        image: {{ include "oai-ue.imagename" . }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.images.tags.oaiue | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
         securityContext:
           privileged: true
         command:

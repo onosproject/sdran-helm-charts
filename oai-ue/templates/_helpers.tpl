@@ -28,23 +28,6 @@ Render the given template.
 {{- end -}}
 
 {{/*
-Render image name
-*/}}
-{{- define "oai-ue.imagename" -}}
-{{- if .Values.global.image.registry -}}
-{{- printf "%s/" .Values.global.image.registry -}}
-{{- else if .Values.image.registry -}}
-{{- printf "%s/" .Values.image.registry -}}
-{{- end -}}
-{{- printf "%s:" .Values.image.repository -}}
-{{- if .Values.global.image.tag -}}
-{{- .Values.global.image.tag -}}
-{{- else -}}
-{{- .Values.image.tag -}}
-{{- end -}}
-{{- end -}}
-
-{{/*
 Return PLMN from MCC and MNC.
 */}}
 {{- define "oai-ue.plmnid" -}}
