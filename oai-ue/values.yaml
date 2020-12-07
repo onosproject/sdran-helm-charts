@@ -9,12 +9,10 @@ global:
 
 replicaCount: 1
 
-image:
-  registry: ""
-  repository: onosproject/oai-ue
-  tag: latest
+images:
+  tags:
+    oaiue: onosproject/oai-ue:latest
   pullPolicy: IfNotPresent
-  pullSecrets: []
 
 config:
   oai-ue:
