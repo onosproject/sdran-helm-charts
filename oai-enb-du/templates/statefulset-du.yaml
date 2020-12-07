@@ -23,8 +23,8 @@ spec:
       hostNetwork: true
       initContainers:
       - name: oai-enb-du-init
-        image: {{ include "oai-enb-du.imagename" . }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.images.tags.oaidu | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
         securityContext:
           privileged: true
           capabilities:
@@ -48,8 +48,8 @@ spec:
           name: pod-share
       containers:
       - name: oai-enb-du
-        image: {{ include "oai-enb-du.imagename" . }}
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: {{ .Values.images.tags.oaidu | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
         securityContext:
           privileged: true
         command:

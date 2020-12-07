@@ -9,15 +9,9 @@ global:
 
 replicaCount: 1
 
-image:
-  registry: ""
-  repository: onosproject/oai-enb-du
-  tag: latest
-  pullPolicy: IfNotPresent
-  pullSecrets: []
-
-initImages:
-  depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+images:
+  tags:
+    oaidu: onosproject/oai-enb-du:latest
   pullPolicy: IfNotPresent
 
 config:
