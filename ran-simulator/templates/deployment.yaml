@@ -36,7 +36,7 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: {{ include "ran-simulator.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: NAMESPACE
@@ -47,18 +47,6 @@ spec:
             - "-caPath=/etc/ran-simulator/certs/tls.cacrt"
             - "-keyPath=/etc/ran-simulator/certs/tls.key"
             - "-certPath=/etc/ran-simulator/certs/tls.crt"
-            - "-fade={{ .Values.fade }}"
-            - "-googleAPIKey={{ .Values.googleApiKey }}"
-            - "-locationsScale={{ .Values.locationsScale }}"
-            - "-maxUEs={{ .Values.maxUEs }}"
-            - "-metricsAllHoEvents={{ .Values.metricsAllHoEvents }}"
-            - "-metricsPort={{ .Values.metricsPort }}"
-            - "-minUEs={{ .Values.minUEs }}"
-            - "-showPower={{ .Values.showPower }}"
-            - "-showRoutes={{ .Values.showRoutes }}"
-            - "-stepDelayMs={{ .Values.stepDelayMs }}"
-            - "-zoom={{ .Values.zoom }}"
-            - "-maxNumUesPerCell={{ .Values.maxNumUesPerCell }}"
           ports:
             - name: grpc
               containerPort: 5150
