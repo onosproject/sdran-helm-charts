@@ -16,3 +16,5 @@ data:
 {{- if .Values.logging }}
 {{ toYaml .Values.logging | indent 4 }}
 {{- end}}
+  config.json: |-
+{{ .Files.Get "files/configs/config.json" | indent 4}}
