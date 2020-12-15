@@ -44,7 +44,7 @@ import:
   nem-monitoring:
     enabled: false
   onos-kpimon:
-    enabled: true
+    enabled: false
 
 # NEM-Monitoring
 nem-monitoring:
