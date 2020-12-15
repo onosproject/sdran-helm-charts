@@ -7,8 +7,8 @@ name: onos-kpimon
 description: ONOS KPIMON xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.2
-appVersion: v0.1.0
+version: 0.6.0
+appVersion: v0.1.3
 keywords:
   - onos
   - sdn
