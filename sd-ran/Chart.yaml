@@ -25,7 +25,7 @@ dependencies:
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: "@sdran"
-    version: 1.0.0
+    version: 1.0.1
   - name: onos-e2sub
     condition: import.onos-e2sub.enabled
     repository: "@sdran"
