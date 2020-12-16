@@ -123,7 +123,7 @@ onos-e2t:
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_kpm-1.0.0
-        tag: v0.6.6
+        tag: v0.7.0
         pullPolicy: IfNotPresent
 
 onos-e2sub:
