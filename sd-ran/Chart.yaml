@@ -25,11 +25,11 @@ dependencies:
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: "@sdran"
-    version: 0.0.9
+    version: 1.0.0
   - name: onos-e2sub
     condition: import.onos-e2sub.enabled
     repository: "@sdran"
-    version: 0.0.7
+    version: 1.0.0
   - name: onos-o1t
     condition: import.onos-o1t.enabled
     repository: "@sdran"
@@ -37,11 +37,11 @@ dependencies:
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
-    version: 0.0.16
+    version: 1.0.0
   - name: onos-config
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
-    version: 0.0.20
+    version: 1.0.0
   - name: onos-gui
     condition: import.onos-gui.enabled
     repository: https://charts.onosproject.org
@@ -49,11 +49,11 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: "@sdran"
-    version: 0.0.13
+    version: 1.0.0
   - name: onos-sdran-cli
     condition: import.onos-sdran-cli.enabled
     repository: "@sdran"
-    version: 0.0.13
+    version: 1.0.0
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: "@sdran"
