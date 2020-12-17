@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaiue: onosproject/oai-ue:latest
+    oaiue: docker.io/onosproject/oai-ue:v0.1.0
   pullPolicy: IfNotPresent
 
 config:
