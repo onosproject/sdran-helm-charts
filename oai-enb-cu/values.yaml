@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaicucp: onosproject/oai-enb-cu:latest
+    oaicucp: docker.io/onosproject/oai-enb-cu:v0.1.0
   pullPolicy: IfNotPresent
 
 config:
