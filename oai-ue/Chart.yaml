@@ -7,8 +7,8 @@ name: oai-ue
 description: OAI UE Chart
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.2
-appVersion: v0.0.2
+version: 0.1.0
+appVersion: v0.1.0
 keywords:
   - onos
   - oai
