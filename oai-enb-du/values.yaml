@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaidu: onosproject/oai-enb-du:latest
+    oaidu: docker.io/onosproject/oai-enb-du:v0.1.0
   pullPolicy: IfNotPresent
 
 config:
