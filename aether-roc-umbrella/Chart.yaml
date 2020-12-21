@@ -40,7 +40,7 @@ dependencies:
   - name: aether-roc-gui
     condition: import.aether-roc-gui.enabled
     repository: "@sdran"
-    version: 0.0.4
+    version: 0.0.5
   - name: sdcore-adapter
     condition: import.sdcore-adapter.enabled
     repository: "@sdran"
