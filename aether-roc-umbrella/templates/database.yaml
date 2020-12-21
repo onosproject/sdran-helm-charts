@@ -38,7 +38,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  image: {{ default .Values.global.storage.consensus.image "atomix/raft-storage-node:v0.2.0" }}
+  image: {{ .Values.global.storage.consensus.image | quote }}
   imagePullPolicy: {{ .Values.global.storage.consensus.imagePullPolicy }}
   replicas: {{ .Values.global.storage.consensus.replicas }}
   partitionsPerCluster: {{ .Values.global.storage.consensus.partitionsPerCluster }}
