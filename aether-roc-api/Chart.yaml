@@ -7,11 +7,14 @@ name: aether-roc-api
 description: Aether ROC API
 kubeVersion: ">=1.15.0"
 type: application
-version: 0.0.5
-appVersion: v0.6.8
+version: 0.0.6
+appVersion: v0.6.9
 keywords:
   - aether
   - config
+  - roc
+  - openapi3
+  - gnmi
 home: https://www.opennetworking.org/aether/
 maintainers:
   - name: Aether Ops team
