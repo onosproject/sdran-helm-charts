@@ -7,7 +7,7 @@ name: aether-roc-umbrella
 description: Aether ROC Umbrella chart to deploy all Aether ROC
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.18
+version: 0.0.19
 appVersion: v0.0.0
 keywords:
   - aether
@@ -20,11 +20,11 @@ dependencies:
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
-    version: 0.0.16
+    version: 1.0.0
   - name: onos-config
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
-    version: 0.0.19
+    version: 1.0.0
   - name: onos-gui
     condition: import.onos-gui.enabled
     repository: https://charts.onosproject.org
@@ -32,11 +32,11 @@ dependencies:
   - name: onos-sdran-cli
     condition: import.onos-sdran-cli.enabled
     repository: "@sdran"
-    version: 0.0.13
+    version: 1.0.0
   - name: aether-roc-api
     condition: import.aether-roc-api.enabled
     repository: "@sdran"
-    version: 0.0.5
+    version: 0.0.6
   - name: aether-roc-gui
     condition: import.aether-roc-gui.enabled
     repository: "@sdran"

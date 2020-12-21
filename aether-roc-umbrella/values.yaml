@@ -55,15 +55,20 @@ onos-config:
       version: 1.0.0
       image:
         repository: onosproject/config-model-rbac-1.0.0
-        tag: v0.6.16
+        tag: v0.6.18
         pullPolicy: IfNotPresent
     - name: aether
       version: 1.0.0
       image:
         repository: onosproject/config-model-aether-1.0.0
-        tag: v0.6.16
+        tag: v0.6.18
         pullPolicy: IfNotPresent
-
+    - name: aether
+      version: 2.0.0
+      image:
+        repository: onosproject/config-model-aether-2.0.0
+        tag: v0.6.18
+        pullPolicy: IfNotPresent
 # ONOS-GUI
 onos-gui: {}
 
@@ -71,8 +76,7 @@ onos-gui: {}
 onos-sdran-cli:
   postInstall:
     placeholder: true
-#    topo: spgw-1-topo.yaml
-#    toponew:
+    topo: spgw-1-topo-entities.yaml
     config:
     - set.roles-sdcore-read-everything.gnmi
     - set.roles-sdcore-all-everything.gnmi
