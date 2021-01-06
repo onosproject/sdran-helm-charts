@@ -14,7 +14,7 @@ topokinds:
       version: ""
       tls-insecure: ""
 topoentities:
-  - id: spgw-1
+  - id: connectivity-service-v2
     type: 1
     obj:
       entity:
@@ -22,7 +22,7 @@ topoentities:
     attributes:
       version: "2.0.0"
       displayname: "SPGW 1"
-      address: "spgw-1:5150"
+      address: "sdcore-adapter:5150"
       latitude: "52.5150"
       longitude: "13.3885"
       tls-insecure: "true"

@@ -40,14 +40,12 @@ import:
 # ONOS-TOPO
 onos-topo:
   storage:
-    controller: ""
     consensus:
       enabled: false
 
 # ONOS-CONFIG
 onos-config:
   storage:
-    controller: ""
     consensus:
       enabled: false
   plugins:
@@ -78,12 +76,19 @@ onos-sdran-cli:
     placeholder: true
     topo: spgw-1-topo-entities.yaml
     config:
-    - set.roles-sdcore-read-everything.gnmi
-    - set.roles-sdcore-all-everything.gnmi
-    - set.roles-sdcore-update-subscriber.gnmi
-    - set.group-menlo-admins.gnmi
-    - set.group-menlo-ops.gnmi
-    - set.group-menlo-guest.gnmi
+    - set.access-profile.gnmi
+    - set.apn-profile.gnmi
+    - set.qos-profile.gnmi
+    - set.security-profile.gnmi
+    - set.up-profile.gnmi
+    - set.connectivity-service.gnmi
+    - set.enterprise.gnmi
+#    - set.roles-sdcore-read-everything.gnmi
+#    - set.roles-sdcore-all-everything.gnmi
+#    - set.roles-sdcore-update-subscriber.gnmi
+#    - set.group-menlo-admins.gnmi
+#    - set.group-menlo-ops.gnmi
+#    - set.group-menlo-guest.gnmi
 
 # Aether ROC API
 aether-roc-api: {}
