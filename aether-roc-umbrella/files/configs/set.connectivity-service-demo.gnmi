@@ -28,7 +28,7 @@ update: <
         >
     >
     val: <
-        string_val: 'http://hostname:port/path/to/spgwc'
+        string_val: 'http://spgwc.omec:8080/v1/config'
     >
 >
 update: <
@@ -38,7 +38,7 @@ update: <
         >
     >
     val: <
-        string_val: 'http://hostname:port/path/to/hss'
+        string_val: 'http://hss.omec:8080/v1/config/imsis'
     >
 >
 extension: <
