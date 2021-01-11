@@ -7,7 +7,7 @@ name: aether-roc-umbrella
 description: Aether ROC Umbrella chart to deploy all Aether ROC
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.21
+version: 0.0.22
 appVersion: v0.0.0
 keywords:
   - aether
@@ -40,8 +40,8 @@ dependencies:
   - name: aether-roc-gui
     condition: import.aether-roc-gui.enabled
     repository: "@sdran"
-    version: 0.0.5
+    version: 0.0.6
   - name: sdcore-adapter
     condition: import.sdcore-adapter.enabled
     repository: "@sdran"
-    version: 0.0.5
+    version: 0.0.6
