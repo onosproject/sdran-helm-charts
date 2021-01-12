@@ -44,6 +44,8 @@ spec:
           ports:
             - name: grpc
               containerPort: {{ .Values.service.grpc.port }}
+            - name: gnmi
+              containerPort: {{ .Values.service.gnmi.port}}
           startupProbe:
             tcpSocket:
               port: 5150

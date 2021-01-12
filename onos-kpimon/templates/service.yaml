@@ -24,7 +24,9 @@ spec:
     - name: exporter
       port: {{ .Values.service.exporter.port }}
     - name: grpc
-      port: {{ .Values.service.grpc.port }}
+      port: {{ .Values.service.grpc.port}}
+    - name: gnmi
+      port: {{.Values.service.gnmi.port}}
 
 {{- if .Values.service.exporter.nodePort.enabled }}
 ---
@@ -52,3 +54,5 @@ spec:
       nodePort: {{ .Values.service.exporter.nodePort.port }}
       protocol: TCP
 {{- end }}
+---
+

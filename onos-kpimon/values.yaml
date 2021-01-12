@@ -30,6 +30,8 @@ service:
   # TODO: External NodePort service should be disabled by default
   grpc:
     port: 5150
+  gnmi:
+    port: 9339
   exporter:
     port: 7001
     nodePort:
