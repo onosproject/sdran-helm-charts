@@ -50,10 +50,10 @@ dependencies:
     condition: import.ran-simulator.enabled
     repository: "@sdran"
     version: 1.0.0
-  - name: onos-sdran-cli
-    condition: import.onos-sdran-cli.enabled
+  - name: onos-cli
+    condition: import.onos-cli.enabled
     repository: "@sdran"
-    version: 1.0.0
+    version: 1.0.1
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: "@sdran"
