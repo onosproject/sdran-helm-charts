@@ -52,7 +52,7 @@ dependencies:
     version: 1.0.0
   - name: onos-cli
     condition: import.onos-cli.enabled
-    repository: "@sdran"
+    repository: https://charts.onosproject.org
     version: 1.0.1
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
