@@ -12,5 +12,8 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
+  model.yaml: |-
+{{ toYaml .Values.model | indent 4}}
   logging.yaml: |-
 {{ toYaml .Values.logging | indent 4 }}
+
