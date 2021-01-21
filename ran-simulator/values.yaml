@@ -86,15 +86,11 @@ model:
     node2:
       ecgi: 90125-10002
       controllers:
-        - controller2
+        - controller1
       servicemodels:
         - kpm
   controllers:
     controller1:
-      id: E2T
-      address: onos-e2t
-      port: '36421'
-    controller2:
       id: E2T
       address: onos-e2t
       port: '36421'
