@@ -34,6 +34,21 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      initContainers:
+        # Run service model plugins as init containers to load plugins onto the shared volume
+        {{- range $key, $servicemodel := .Values.servicemodels }}
+        - name: {{ printf "service-model-%s-%s" $servicemodel.name $servicemodel.version | replace "." "-" | replace "_" "-" }}
+          image: {{ printf "%s:%s" $servicemodel.image.repository $servicemodel.image.tag }}
+          imagePullPolicy: {{ $servicemodel.image.pullPolicy }}
+          command:
+            - "/bin/cp"
+          args:
+            - {{ printf "%s.so.%s" $servicemodel.name $servicemodel.version }}
+            - {{ printf "/usr/local/lib/%s.so.%s" $servicemodel.name $servicemodel.version }}
+          volumeMounts:
+            - name: shared-data
+              mountPath: /usr/local/lib
+      {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: {{ include "ran-simulator.imagename" . | quote }}
@@ -47,6 +62,9 @@ spec:
             - "-caPath=/etc/ran-simulator/certs/tls.cacrt"
             - "-keyPath=/etc/ran-simulator/certs/tls.key"
             - "-certPath=/etc/ran-simulator/certs/tls.crt"
+            {{- range $key, $smplugin := .Values.servicemodels }}
+            - {{ printf "-serviceModel=/usr/local/lib/shared/%s.so.%s" $smplugin.name $smplugin.version }}
+              {{- end }}
           ports:
             - name: grpc
               containerPort: 5150
@@ -77,6 +95,8 @@ spec:
             - name: config
               mountPath: /etc/onos/config
               readOnly: true
+            - name: shared-data
+              mountPath: /usr/local/lib/shared
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           # Enable ptrace for debugging
@@ -93,6 +113,8 @@ spec:
         - name: config
           configMap:
             name: {{ template "ran-simulator.fullname" . }}-config
+        - name: shared-data
+          emptyDir: {}
       {{- with .Values.nodeSelector }}
     nodeSelector:
       {{- toYaml . | nindent 8 }}
