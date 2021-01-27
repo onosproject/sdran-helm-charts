@@ -21,3 +21,5 @@ spec:
     - name: gnmi{{ $key }}
       port: {{ $port }}
     {{- end}}
+    - name: prometheus
+      port: {{ .Values.ports.prometheus }}
