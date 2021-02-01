@@ -87,22 +87,26 @@ logging:
 model:
   nodes:
     node1:
-      ecgi: 90125-10001
+      enbID: 144470
       controllers:
         - controller1
       servicemodels:
         - kpm
     node2:
-      ecgi: 90125-10002
+      enbID: 144471
       controllers:
-        - controller1
+        - controller2
       servicemodels:
         - kpm
   controllers:
     controller1:
       id: E2T
       address: onos-e2t
-      port: '36421'
+      port: 36421
+    controller2:
+      id: E2T
+      address: onos-e2t
+      port: 36421
   servicemodels:
     kpm:
       id: 1
@@ -112,3 +116,5 @@ model:
       id: 2
       version: 1.0.0
       description: NI service model
+  ueCount: 12
+  plmnID: "onf"
