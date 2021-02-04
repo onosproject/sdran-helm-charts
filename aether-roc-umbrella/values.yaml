@@ -19,7 +19,9 @@ global:
       imagePullPolicy: IfNotPresent
       partitions: 1
       replicas: 1
-      partitionsPerCluster: 1
+      clusters: 1
+      class: ""
+      size: 1Gi
 
 import:
   onos-topo:
