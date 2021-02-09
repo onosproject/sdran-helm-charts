@@ -128,4 +128,4 @@ model:
       version: 1.0.0
       description: RC service model
   ueCount: 12
-  plmnID: "onf"
+  plmnID: 314
