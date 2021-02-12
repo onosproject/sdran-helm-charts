@@ -10,7 +10,7 @@ license_check: # @HELP examine and ensure license headers exist
 	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
 	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0
 
-version_check: # @HELP run the version checker on the charts
+version_check: build-tools # @HELP run the version checker on the charts
 	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
 	./../build-tools/chart_single_check
 
