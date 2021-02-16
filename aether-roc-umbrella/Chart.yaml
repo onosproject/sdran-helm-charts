@@ -44,4 +44,4 @@ dependencies:
   - name: sdcore-adapter
     condition: import.sdcore-adapter.enabled
     repository: "@sdran"
-    version: 0.0.7
+    version: 0.0.10
