@@ -5,7 +5,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: "{{ .Release.Name }}-job-post-install"
+  name: "{{ .Release.Name }}-job-post-install-topo"
   labels:
     app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
     app.kubernetes.io/instance: {{ .Release.Name | quote }}
@@ -20,7 +20,7 @@ metadata:
 spec:
   template:
     metadata:
-      name: "{{ .Release.Name }}-job-post-install"
+      name: "{{ .Release.Name }}-job-post-install-topo"
       labels:
         app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
         app.kubernetes.io/instance: {{ .Release.Name | quote }}
@@ -39,27 +39,6 @@ spec:
           - "load"
           - "yamlentities"
           - {{ index .Values "onos-sdran-cli" "postInstall" "topo" }}
-          volumeMounts:
-            - name: config
-              mountPath: /home/onos
-              readOnly: true
-          {{- end }}
-        {{- end }}
-        {{- if index .Values "import" "onos-config" "enabled" }}
-          {{- if index .Values "onos-sdran-cli" "postInstall" "config" }}
-        - name: post-install-config-job
-          image: {{ index .Values "onos-sdran-cli" "image" "repository" }}:{{ index .Values "onos-sdran-cli" "image" "tag" }}
-          imagePullPolicy: {{ index .Values "onos-sdran-cli" "image" "pullPolicy" }}
-          command: ["/usr/local/bin/sdran"]
-          args:
-            - "config"
-            - "load"
-            - "proto"
-            {{- with index .Values "onos-sdran-cli" "postInstall" "config" }}
-            {{- range $filename := . }}
-            - {{ $filename }}
-            {{- end }}
-            {{- end }}
           volumeMounts:
             - name: config
               mountPath: /home/onos
