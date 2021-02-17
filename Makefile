@@ -13,8 +13,7 @@ license_check: # @HELP examine and ensure license headers exist
 	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0 --skipped-dir ${SKIPPED_DIRS}
 
 jenkins_version_check: build-tools # @HELP run the version checker on the charts
-	git log --decorate -10
-	COMPARISON_BRANCH=origin/master ./../build-tools/chart_version_check
+	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./../build-tools/chart_version_check
 	./../build-tools/chart_single_check
 
 version_check: build-tools # @HELP run the version checker on the charts
