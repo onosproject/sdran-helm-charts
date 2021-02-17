@@ -4,13 +4,17 @@ SKIPPED_DIRS=ran-simulator/files
 
 all: test
 
-jenkins-test: version_check # @HELP run the jenkins verification tests
+jenkins-test: jenkins_version_check # @HELP run the jenkins verification tests
 	docker pull quay.io/helmpack/chart-testing:v2.4.0
 	docker run --rm --name ct --volume `pwd`:/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-e2sub,charts/onos-e2t,charts/ran-simulator,charts/onos-kpimon --debug --validate-maintainers=false"
 
 license_check: # @HELP examine and ensure license headers exist
 	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
 	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0 --skipped-dir ${SKIPPED_DIRS}
+
+jenkins_version_check: build-tools # @HELP run the version checker on the charts
+	COMPARISON_BRANCH=origin/master ./../build-tools/chart_version_check
+	./../build-tools/chart_single_check
 
 version_check: build-tools # @HELP run the version checker on the charts
 	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
