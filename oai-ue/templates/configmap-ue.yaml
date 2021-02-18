@@ -7,8 +7,8 @@
 {{- $plmnid := tuple $mcc $mnc | include "oai-ue.plmnid" | quote -}}
 {{- $numUEs := index .Values "config" "oai-ue" "numDevices" | int -}}
 {{- $startIMEI := index .Values "config" "oai-ue" "device" "imei" }}
-{{- $startMSIN := index .Values "config" "oai-ue" "sim" "msin" }}
-{{- $startMSISDN := index .Values "config" "oai-ue" "sim" "msisdn" }}
+{{- $startMSIN := index .Values "config" "oai-ue" "sim" "msinStart" }}
+{{- $startMSISDN := index .Values "config" "oai-ue" "sim" "msisdnStart" }}
 
 ---
 apiVersion: v1
