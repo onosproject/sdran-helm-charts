@@ -5,6 +5,10 @@
 {{- $mcc := index .Values "config" "oai-enb-cu" "plmnID" "mcc" -}}
 {{- $mnc := index .Values "config" "oai-enb-cu" "plmnID" "mnc" -}}
 {{- $plmnid := tuple $mcc $mnc | include "oai-ue.plmnid" | quote -}}
+{{- $numUEs := index .Values "config" "oai-ue" "numDevices" | int -}}
+{{- $startIMEI := index .Values "config" "oai-ue" "device" "imei" }}
+{{- $startMSIN := index .Values "config" "oai-ue" "sim" "msin" }}
+{{- $startMSISDN := index .Values "config" "oai-ue" "sim" "msisdn" }}
 
 ---
 apiVersion: v1
@@ -23,18 +27,19 @@ data:
              MNC={{ index .Values "config" "oai-enb-cu" "plmnID" "mnc" | quote }};
       };
     };
-    UE0: {
+{{- range $i, $e := until $numUEs }}
+    UE{{ $i }}: {
       USER: {
-            IMEI={{ index .Values "config" "oai-ue" "device" "imei" | quote }};
-            MANUFACTURER={{ index .Values "config" "oai-ue" "device" "manufacturer" | quote }};
-            MODEL={{ index .Values "config" "oai-ue" "device" "model" | quote }};
-            PIN={{ index .Values "config" "oai-ue" "device" "pin" | quote }};
+            IMEI={{ add $startIMEI $i | quote }};
+            MANUFACTURER={{ index $.Values "config" "oai-ue" "device" "manufacturer" | quote }};
+            MODEL={{ index $.Values "config" "oai-ue" "device" "model" | quote }};
+            PIN={{ index $.Values "config" "oai-ue" "device" "pin" | quote }};
       };
       SIM: {
-           MSIN={{ index .Values "config" "oai-ue" "sim" "msin" | quote }};
-           USIM_API_K={{ index .Values "config" "oai-ue" "sim" "apiKey" | quote }};
-           OPC={{ index .Values "config" "oai-ue" "sim" "opc" | quote }};
-           MSISDN={{ index .Values "config" "oai-ue" "sim" "msisdn" | quote }};
+           MSIN={{ add $startMSIN $i | quote }};
+           USIM_API_K={{ index $.Values "config" "oai-ue" "sim" "apiKey" | quote }};
+           OPC={{ index $.Values "config" "oai-ue" "sim" "opc" | quote }};
+           MSISDN={{ add $startMSISDN $i | quote }};
       };
       HPLMN= {{ $plmnid }};
       UCPLMN_LIST = ();
@@ -43,22 +48,23 @@ data:
       FPLMN_LIST = ();
       EHPLMN_LIST= ();
     };
+{{- end }}
   ue.conf: |
     log_config = {
-    global_log_level                      ="info";
-    global_log_verbosity                  ="full";
-    hw_log_level                          ="info";
-    hw_log_verbosity                      ="full";
-    phy_log_level                         ="info";
-    phy_log_verbosity                     ="full";
-    mac_log_level                         ="info";
-    mac_log_verbosity                     ="full";
-    rlc_log_level                         ="info";
-    rlc_log_verbosity                     ="full";
-    pdcp_log_level                        ="info";
-    pdcp_log_verbosity                    ="full";
-    rrc_log_level                         ="info";
-    rrc_log_verbosity                     ="full";
+    global_log_level                      ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    global_log_verbosity                  ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    hw_log_level                          ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    hw_log_verbosity                      ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    phy_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    phy_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    mac_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    mac_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    rlc_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    rlc_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    pdcp_log_level                        ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    pdcp_log_verbosity                    ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
+    rrc_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
+    rrc_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
     };
 
     L1s = (

@@ -11,27 +11,34 @@ replicaCount: 1
 
 images:
   tags:
-    oaiue: docker.io/onosproject/oai-ue:v0.1.0
+    oaiue: docker.io/onosproject/oai-ue:v0.1.1
   pullPolicy: IfNotPresent
 
 config:
   oai-ue:
+    numDevices: 1 # support up to 3
+    numRBs: 100 # support 25, 50, and 100
+    syncTimer: 0 # interval to sync threads in lte UE
+    numFramesRA: 30 # the number of Frames for RA
     device:
       imei: "356113022094149"
       manufacturer: "OAISIM"
       model: "OAISIM"
       pin: "0000"
     sim:
-      msin: "4567891201"
+      msinStart: "4567891201" # for UE0 - will increase for next UEs
       apiKey: "465b5ce8b199b49faa5f0a2ee238a6bc"
       opc: "d4416644f6154936193433dd20a0ace0"
-      msisdn: "1122334456"
+      msisdnStart: "1122334456" # for UE0 - will increase for next UEs
     networks:
       nfapi:
         interface: eno1
         address: 127.0.0.4
         portc: 50000
         portd: 50010
+    log:
+      level: "error"
+      verbosity: "full"
   oai-enb-cu:
     plmnID:
       mcc: "208"
