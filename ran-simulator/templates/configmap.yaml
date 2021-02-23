@@ -12,10 +12,10 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
+  metrics.yaml: |-
+  {{ .Files.Get "files/metrics/metrics.yaml" | indent 4}}
   model.yaml: |-
   {{ .Files.Get "files/model/model.yaml" | indent 4}}
-  pci.yaml: |-
-  {{ .Files.Get "files/metrics/pci.yaml" | indent 4}}
   logging.yaml: |-
 {{ toYaml .Values.logging | indent 4 }}
 
