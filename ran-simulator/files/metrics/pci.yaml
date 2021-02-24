@@ -1,0 +1,43 @@
+pcis:
+  cells:
+    84325717505:
+        cellSize: 9101
+        earfcn: 71
+        pci: 42
+        pciPool:
+          - min: 40
+            max: 50
+          - min: 80
+            max: 85
+    84325717506:
+      cellSize: 9102
+      earfcn: 72
+      pci: 27
+      pciPool:
+        - min: 20
+          max: 30
+    84325717761:
+      cellSize: 9103
+      earfcn: 73
+      pci: 62
+      pciPool:
+        - min: 60
+          max: 65
+        - min: 70
+          max: 80
+    84325717762:
+      cellSize: 9104
+      earfcn: 74
+      pci: 16
+      pciPool:
+        - min: 10
+          max: 20
+    84325717763:
+      cellSize: 9105
+      earfcn: 75
+      pci: 69
+      pciPool:
+        - min: 65
+          max: 70
+        - min: 85
+          max: 90
