@@ -1,0 +1,91 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-pci.fullname" . }}
+  labels:
+  {{- include "onos-pci.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-pci.fullname" . }}
+      app: onos
+      type: pci
+      resource: {{ template "onos-pci.fullname" . }}
+  {{- include "onos-pci.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-pci.fullname" . }}
+        app: onos
+        type: pci
+        resource: {{ template "onos-pci.fullname" . }}
+    {{- include "onos-pci.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "onos-pci.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "-caPath=/etc/onos/certs/tls.cacrt"
+            - "-keyPath=/etc/onos/certs/tls.key"
+            - "-certPath=/etc/onos/certs/tls.crt"
+            - "-e2tEndpoint={{ .Values.config.pci.e2tEndpoint }}"
+          ports:
+            - name: grpc
+              containerPort: {{ .Values.service.grpc.port }}
+            - name: gnmi
+              containerPort: {{ .Values.service.gnmi.port}}
+          startupProbe:
+            tcpSocket:
+              port: 5150
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "onos-pci.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "onos-pci.fullname" . }}-config
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+  {{- toYaml . | nindent 8 }}
+  {{- end }}
