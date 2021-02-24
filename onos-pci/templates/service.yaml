@@ -17,7 +17,7 @@ spec:
   selector:
     name: {{ template "onos-pci.fullname" . }}
     app: onos
-    type: kpimon
+    type: pci
     resource: {{ template "onos-pci.fullname" . }}
   {{- include "onos-pci.selectorLabels" . | nindent 4 }}
   ports:
@@ -45,7 +45,7 @@ spec:
   selector:
     name: {{ template "onos-pci.fullname" . }}
     app: onos
-    type: kpimon
+    type: pci
     resource: {{ template "onos-pci.fullname" . }}
   {{- include "onos-pci.selectorLabels" . | nindent 4 }}
   ports:
