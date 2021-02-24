@@ -13,7 +13,8 @@ model:
     node1:
       enbID: 144470
       controllers:
-        - controller1
+        - e2t-1
+        - e2t-2
       servicemodels:
         - kpm
         - rc
@@ -24,12 +25,13 @@ model:
     node2:
       enbID: 144471
       controllers:
-        - controller2
+        - e2t-2
       servicemodels:
         - kpm
       cells:
         - 84325717761
         - 84325717762
+        - 84325717763
 
   cells:
     cell1:
@@ -40,6 +42,9 @@ model:
           lng: 29.00
         arc: 180.0
         azimuth: 0.0
+      neighbors:
+        - 84325717506
+        - 84325717762
       color: red
     cell2:
       ecgi: 84325717506
@@ -49,6 +54,9 @@ model:
           lng: 29.00
         arc: 180.0
         azimuth: 180.0
+      neighbors:
+        - 84325717505
+        - 84325717761
       color: blue
     cell3:
       ecgi: 84325717761
@@ -56,8 +64,12 @@ model:
         center:
           lat: 44.00
           lng: 31.00
-        arc: 180.0
-        azimuth: 0.0
+        arc: 120.0
+        azimuth: 60.0
+      neighbors:
+        - 84325717762
+        - 84325717763
+        - 84325717505
       color: red
     cell4:
       ecgi: 84325717762
@@ -65,17 +77,33 @@ model:
         center:
           lat: 44.00
           lng: 31.00
-        arc: 180.0
+        arc: 120.0
         azimuth: 180.0
+      neighbors:
+        - 84325717761
+        - 84325717763
+        - 84325717506
       color: blue
-
+    cell5:
+      ecgi: 84325717763
+      sector:
+        center:
+          lat: 44.00
+          lng: 31.00
+        arc: 120.0
+        azimuth: 300.0
+      neighbors:
+        - 84325717761
+        - 84325717762
+        - 84325717506
+      color: pink
 
   controllers:
-    controller1:
+    e2t-1:
       id: E2T
       address: onos-e2t
       port: 36421
-    controller2:
+    e2t-2:
       id: E2T
       address: onos-e2t
       port: 36421
