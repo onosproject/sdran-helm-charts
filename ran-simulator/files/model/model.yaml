@@ -28,6 +28,7 @@ model:
         - e2t-2
       servicemodels:
         - kpm
+        - rc
       cells:
         - 84325717761
         - 84325717762
