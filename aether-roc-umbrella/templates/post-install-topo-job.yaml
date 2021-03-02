@@ -29,16 +29,15 @@ spec:
       restartPolicy: Never
       containers:
         {{- if index .Values "import" "onos-topo" "enabled" }}
-          {{- if index .Values "onos-sdran-cli" "postInstall" "topo"}}
+          {{- if index .Values "onos-cli" "postInstall" "topo"}}
         - name: post-install-topo-new-job
-          image: {{ index .Values "onos-sdran-cli" "image" "repository" }}:{{ index .Values "onos-sdran-cli" "image" "tag" }}
-          imagePullPolicy: {{ index .Values "onos-sdran-cli" "image" "pullPolicy" }}
-          command: ["/usr/local/bin/sdran"]
+          image: {{ index .Values "onos-cli" "image" "repository" }}:{{ index .Values "onos-cli" "image" "tag" }}
+          imagePullPolicy: {{ index .Values "onos-cli" "image" "pullPolicy" }}
+          command: ["/usr/local/bin/onos"]
           args:
           - "topo"
           - "load"
-          - "yamlentities"
-          - {{ index .Values "onos-sdran-cli" "postInstall" "topo" }}
+          - {{ index .Values "onos-cli" "postInstall" "topo" }}
           volumeMounts:
             - name: config
               mountPath: /home/onos

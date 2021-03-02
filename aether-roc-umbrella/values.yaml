@@ -30,7 +30,7 @@ import:
     enabled: true
   onos-gui:
     enabled: true
-  onos-sdran-cli:
+  onos-cli:
     enabled: true
   aether-roc-api:
     enabled: true
@@ -73,7 +73,7 @@ onos-config:
 onos-gui: {}
 
 # ONOS-CLI
-onos-sdran-cli:
+onos-cli:
   postInstall:
     placeholder: true
     topo: spgw-1-topo-entities.yaml
