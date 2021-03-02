@@ -1,5 +1,5 @@
 prefix: <
-    target: 'internal'
+    target: 'rbac'
     elem: <
         name: 'rbac'
     >
@@ -7,7 +7,7 @@ prefix: <
         name: 'group'
         key:<
             key:'groupid'
-            value:'menlo-ops'
+            value:'testGroup'
          >
      >
 >
