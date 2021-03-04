@@ -77,20 +77,6 @@ onos-cli:
   postInstall:
     placeholder: true
     topo: spgw-1-topo-entities.yaml
-    config:
-    - set.access-profile.gnmi
-    - set.apn-profile.gnmi
-    - set.qos-profile.gnmi
-    - set.security-profile.gnmi
-    - set.up-profile.gnmi
-    - set.connectivity-service-demo.gnmi
-    - set.enterprise.gnmi
-#    - set.roles-sdcore-read-everything.gnmi
-#    - set.roles-sdcore-all-everything.gnmi
-#    - set.roles-sdcore-update-subscriber.gnmi
-#    - set.group-menlo-admins.gnmi
-#    - set.group-menlo-ops.gnmi
-#    - set.group-menlo-guest.gnmi
 
 # Aether ROC API
 aether-roc-api: {}
