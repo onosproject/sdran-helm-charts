@@ -19,8 +19,8 @@ model:
         - kpm
         - rc
       cells:
-        - 84325717505
-        - 84325717506
+        - 3122801444701
+        - 3122801444702
 
     node2:
       enbID: 144471
@@ -30,13 +30,13 @@ model:
         - kpm
         - rc
       cells:
-        - 84325717761
-        - 84325717762
-        - 84325717763
+        - 3122801444711
+        - 3122801444712
+        - 3122801444713
 
   cells:
     cell1:
-      ecgi: 84325717505
+      ecgi: 3122801444701
       sector:
         center:
           lat: 46.00
@@ -44,11 +44,11 @@ model:
         arc: 180.0
         azimuth: 0.0
       neighbors:
-        - 84325717506
-        - 84325717762
+        - 3122801444702
+        - 3122801444703
       color: red
     cell2:
-      ecgi: 84325717506
+      ecgi: 3122801444702
       sector:
         center:
           lat: 46.00
@@ -56,11 +56,11 @@ model:
         arc: 180.0
         azimuth: 180.0
       neighbors:
-        - 84325717505
-        - 84325717761
+        - 3122801444701
+        - 3122801444703
       color: blue
     cell3:
-      ecgi: 84325717761
+      ecgi: 3122801444703
       sector:
         center:
           lat: 44.00
@@ -68,12 +68,11 @@ model:
         arc: 120.0
         azimuth: 60.0
       neighbors:
-        - 84325717762
-        - 84325717763
-        - 84325717505
+        - 3122801444701
+        - 3122801444702
       color: red
     cell4:
-      ecgi: 84325717762
+      ecgi: 3122801444711
       sector:
         center:
           lat: 44.00
@@ -81,12 +80,11 @@ model:
         arc: 120.0
         azimuth: 180.0
       neighbors:
-        - 84325717761
-        - 84325717763
-        - 84325717506
+        - 3122801444712
+        - 3122801444713
       color: blue
     cell5:
-      ecgi: 84325717763
+      ecgi: 3122801444712
       sector:
         center:
           lat: 44.00
@@ -94,10 +92,22 @@ model:
         arc: 120.0
         azimuth: 300.0
       neighbors:
-        - 84325717761
-        - 84325717762
-        - 84325717506
+        - 3122801444711
+        - 3122801444713
       color: pink
+    cell6:
+      ecgi: 3122801444713
+      sector:
+        center:
+          lat: 44.00
+          lng: 31.00
+        arc: 120.0
+        azimuth: 300.0
+      neighbors:
+        - 3122801444711
+        - 3122801444712
+      color: pink
+
 
   controllers:
     e2t-1:
@@ -122,4 +132,4 @@ model:
       version: 1.0.0
       description: RC service model
   ueCount: 12
-  plmnID: 314
+  plmnID: 312280
