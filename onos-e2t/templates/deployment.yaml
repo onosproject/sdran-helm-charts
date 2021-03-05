@@ -55,15 +55,15 @@ spec:
             - "-caPath=/etc/onos/certs/tls.cacrt"
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
-            - "-sctpport={{ .Values.sctp.port | default 36421 }}"
+            - "-sctpport={{ .Values.service.e2.port | default 36421 }}"
             {{- range $key, $smplugin := .Values.servicemodels }}
             - {{ printf "-serviceModel=/usr/local/lib/shared/%s.so.%s" $smplugin.name $smplugin.version }}
               {{- end }}
           ports:
             - name: sctp
-              containerPort: {{ .Values.sctp.port | default 36421 }}
+              containerPort: {{ .Values.service.e2.port | default 36421 }}
             - name: grpc
-              containerPort: {{ .Values.grpc.port }}
+              containerPort: {{ .Values.service.grpc.port }}
           env:
             # *_NAMESPACE and *_NAME environment variables are recognized by onos-lib-go utilities.
             # These variables should always be defined.
