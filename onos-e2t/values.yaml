@@ -49,10 +49,10 @@ servicemodels:
 service:
   # TODO: External NodePort service should be disabled by default
   external:
-    enabled: true
+    enabled: false
   e2:
     port: 36421
-    nodePort: 36421
+    nodePort: 30421
     protocol: SCTP
   grpc:
     port: 5150
