@@ -24,12 +24,6 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "onos-e2t"
 
-sctp:
-  port: 36421
-
-grpc:
-  port: 5150
-
 storage: {}
 
 servicemodels:
@@ -49,7 +43,14 @@ servicemodels:
 service:
   # TODO: External NodePort service should be disabled by default
   external:
-    nodePort:
+    enabled: false
+  e2:
+    port: 36421
+    nodePort: 30421
+    protocol: SCTP
+  grpc:
+    port: 5150
+    protocol: TCP
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
