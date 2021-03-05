@@ -22,12 +22,10 @@ spec:
     {{- include "onos-e2t.selectorLabels" . | nindent 4 }}
   ports:
     - name: sctp
-      port: {{ .Values.sctp.port | default 36421 }}
-      protocol: SCTP
-    - name: exporter
-      port: 7001
+      port: {{ .Values.service.e2.port | default 36421 }}
+      protocol: {{ .Values.service.e2.protocol }}
     - name: grpc
-      port: 5150
+      port: {{ .Values.service.grpc.port }}
 ---
 apiVersion: v1
 kind: Service
@@ -49,9 +47,9 @@ spec:
     {{- include "onos-e2t.selectorLabels" . | nindent 4 }}
   ports:
     - name: grpc
-      port: 5150
+      port: {{ .Values.service.grpc.port }}
 ---
-{{- if .Values.service.external.nodePort }}
+{{- if .Values.service.external.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -71,8 +69,8 @@ spec:
     resource: {{ template "onos-e2t.fullname" . }}
     {{- include "onos-e2t.selectorLabels" . | nindent 4 }}
   ports:
-    - name: exporter
-      port: 7001
-      nodePort: {{ .Values.service.external.nodePort }}
-      protocol: TCP
+    - name: sctp
+      port: {{ .Values.service.e2.port }}
+      nodePort: {{ .Values.service.e2.nodePort }}
+      protocol: {{ .Values.service.e2.protocol }}
 {{- end }}
