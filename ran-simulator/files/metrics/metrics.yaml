@@ -43,3 +43,12 @@ metrics:
               max: 70
             - min: 85
               max: 90
+        21458294227491:
+          cellSize: ENTERPRISE
+          earfcn: 76
+          pci: 66
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
