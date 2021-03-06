@@ -16,6 +16,7 @@ images:
 
 config:
   oai-ue:
+    enableUSRP: false
     device:
       imei: "356113022094149"
       manufacturer: "OAISIM"
