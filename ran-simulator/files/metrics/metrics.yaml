@@ -3,14 +3,14 @@ metrics:
     pci:
       cells:
         21458294227473:
-            cellSize: ENTERPRISE
-            earfcn: 71
-            pci: 42
-            pciPool:
-              - min: 40
-                max: 50
-              - min: 80
-                max: 85
+          cellSize: ENTERPRISE
+          earfcn: 71
+          pci: 42
+          pciPool:
+            - min: 40
+              max: 50
+            - min: 80
+              max: 85
         21458294227474:
           cellSize: OUTDOOR_SMALL
           earfcn: 72
@@ -52,3 +52,85 @@ metrics:
               max: 70
             - min: 85
               max: 90
+        21458294227537:
+          cellSize: ENTERPRISE
+          earfcn: 80
+          pci: 67
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227538:
+          cellSize: ENTERPRISE
+          earfcn: 81
+          pci: 67
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227539:
+          cellSize: ENTERPRISE
+          earfcn: 82
+          pci: 67
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227507:
+          cellSize: ENTERPRISE
+          earfcn: 83
+          pci: 67
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227506:
+          cellSize: ENTERPRISE
+          earfcn: 84
+          pci: 68
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227505:
+          cellSize: ENTERPRISE
+          earfcn: 85
+          pci: 69
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227553:
+          cellSize: ENTERPRISE
+          earfcn: 86
+          pci: 85
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227554:
+          cellSize: ENTERPRISE
+          earfcn: 87
+          pci: 86
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+        21458294227555:
+          cellSize: ENTERPRISE
+          earfcn: 88
+          pci: 87
+          pciPool:
+            - min: 65
+              max: 70
+            - min: 85
+              max: 90
+
