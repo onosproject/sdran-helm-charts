@@ -19,83 +19,16 @@ metadata:
 {{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 4 }}
 data:
   ue_sim.conf: |
-    PLMN: {
-      PLMN0: {
-             FULLNAME={{ index .Values "config" "oai-enb-cu" "plmnID" "fullName" | quote }};
-             SHORTNAME={{ index .Values "config" "oai-enb-cu" "plmnID" "shortName" | quote }};
-             MCC={{ index .Values "config" "oai-enb-cu" "plmnID" "mcc" | quote }};
-             MNC={{ index .Values "config" "oai-enb-cu" "plmnID" "mnc" | quote }};
-      };
-    };
-{{- range $i, $e := until $numUEs }}
-    UE{{ $i }}: {
-      USER: {
-            IMEI={{ add $startIMEI $i | quote }};
-            MANUFACTURER={{ index $.Values "config" "oai-ue" "device" "manufacturer" | quote }};
-            MODEL={{ index $.Values "config" "oai-ue" "device" "model" | quote }};
-            PIN={{ index $.Values "config" "oai-ue" "device" "pin" | quote }};
-      };
-      SIM: {
-           MSIN={{ add $startMSIN $i | quote }};
-           USIM_API_K={{ index $.Values "config" "oai-ue" "sim" "apiKey" | quote }};
-           OPC={{ index $.Values "config" "oai-ue" "sim" "opc" | quote }};
-           MSISDN={{ add $startMSISDN $i | quote }};
-      };
-      HPLMN= {{ $plmnid }};
-      UCPLMN_LIST = ();
-      OPLMN_LIST = ({{ $plmnid }});
-      OCPLMN_LIST = ();
-      FPLMN_LIST = ();
-      EHPLMN_LIST= ();
-    };
-{{- end }}
+{{ tuple "_ue_sim_conf.tpl" . | include "oai-ue.template" | indent 4 }}
   ue.conf: |
-    log_config = {
-    global_log_level                      ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    global_log_verbosity                  ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    hw_log_level                          ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    hw_log_verbosity                      ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    phy_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    phy_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    mac_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    mac_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    rlc_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    rlc_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    pdcp_log_level                        ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    pdcp_log_verbosity                    ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    rrc_log_level                         ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
-    rrc_log_verbosity                     ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
-    };
-
-    L1s = (
-    {
-    num_cc = 1;
-    tr_n_preference = "nfapi";
-    local_n_if_name  = {{ index .Values "config" "oai-ue" "networks" "nfapi" "interface" | quote }};
-    remote_n_address = {{ index .Values "config" "oai-enb-du" "networks" "nfapi" "address" | quote }};
-    local_n_address  = {{ index .Values "config" "oai-ue" "networks" "nfapi" "address" | quote }};
-    local_n_portc    = {{ index .Values "config" "oai-ue" "networks" "nfapi" "portc" }};
-    remote_n_portc   = {{ index .Values "config" "oai-enb-du" "networks" "nfapi" "portc" }};
-    local_n_portd    = {{ index .Values "config" "oai-ue" "networks" "nfapi" "portd" }};
-    remote_n_portd   = {{ index .Values "config" "oai-enb-du" "networks" "nfapi" "portd" }};
-    }
-    );
-
-    RUs = (
-    {
-    local_rf       = "yes"
-    nb_tx          = 1
-    nb_rx          = 1
-    att_tx         = 90
-    att_rx         = 0;
-    bands          = [7,38,42,43];
-    max_pdschReferenceSignalPower = -27;
-    max_rxgain                    = 125;
-    }
-    );
+{{ tuple "_ue_conf.tpl" . | include "oai-ue.template" | indent 4 }}
   gen_ue_sim.sh: |
 {{ tuple "bin/_gen_ue_sim.sh.tpl" . | include "oai-ue.template" | indent 4 }}
   init_ue.sh: |
 {{ tuple "bin/_init_ue.sh.tpl" . | include "oai-ue.template" | indent 4 }}
   run_ue.sh: |
+{{- if index .Values "config" "oai-ue" "enableUSRP" }}
+{{ tuple "bin/_run_ue_usrp.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+{{- else }}
 {{ tuple "bin/_run_ue.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+{{- end }}     
