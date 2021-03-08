@@ -16,6 +16,7 @@ images:
 
 config:
   oai-enb-du:
+    enableUSRP: false
     mode: nfapi #or local_L1 for USRP and BasicSim
     networks:
       f1:
