@@ -16,6 +16,7 @@ images:
 
 config:
   oai-ue:
+    enableUSRP: false
     numDevices: 1 # support up to 3
     numRBs: 100 # support 25, 50, and 100
     syncTimer: 0 # interval to sync threads in lte UE
