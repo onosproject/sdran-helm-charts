@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: config.onosproject.org/v1beta1
+kind: Model
+metadata:
+  name: {{ template "ricmodel.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "ricmodel.labels" . | nindent 4 }}
+spec:
+  plugin:
+    type: RIC
+    version: {{ .Chart.AppVersion | quote }}
+  modules:
+  - name: test1
+    organization: Open Networking Foundation
+    revision: 2020-11-18
+    file: test1@2020-11-18.yang
+  - name: xapp
+    organization: Open Networking Foundation
+    revision: 2020-11-24
+    file: xapp@2020-11-24.yang
+  files:
+    {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
+    {{ base $path }}: |
+{{ $.Files.Get $path | indent 6 }}
+    {{- end }}
