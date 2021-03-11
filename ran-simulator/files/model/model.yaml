@@ -796,4 +796,8 @@ model:
       description: "RC service model"
       id: 3
       version: "1.0.0"
+    kpm_v2:
+      description: "kpm v2 service model"
+      id: 4
+      version: "1.0.0"
   ueCount: 1
