@@ -26,6 +26,12 @@ global:
 import:
   onos-topo:
     enabled: true
+  config-model-aether-1.0.0:
+    enabled: false
+  config-model-aether-2.0.0:
+    enabled: true
+  config-model-rbac-1.0.0:
+    enabled: true
   onos-config:
     enabled: true
   onos-gui:
@@ -50,25 +56,7 @@ onos-config:
   storage:
     consensus:
       enabled: false
-  plugins:
-    - name: rbac
-      version: 1.0.0
-      image:
-        repository: onosproject/config-model-rbac-1.0.0
-        tag: v0.6.20
-        pullPolicy: IfNotPresent
-    - name: aether
-      version: 1.0.0
-      image:
-        repository: onosproject/config-model-aether-1.0.0
-        tag: v0.6.20
-        pullPolicy: IfNotPresent
-    - name: aether
-      version: 2.0.0
-      image:
-        repository: onosproject/config-model-aether-2.0.0
-        tag: v0.6.20
-        pullPolicy: IfNotPresent
+
 # ONOS-GUI
 onos-gui: {}
 
