@@ -7,7 +7,7 @@ name: aether-roc-umbrella
 description: Aether ROC Umbrella chart to deploy all Aether ROC
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.32
+version: 0.1.0
 appVersion: v0.0.0
 keywords:
   - aether
@@ -25,7 +25,7 @@ dependencies:
     condition: import.config-model-aether-2.0.0.enabled
     repository: https://charts.onosproject.org
     alias: aether-2-0-0
-    version: 2.0.1
+    version: 2.1.0
   - name: config-model-aether
     condition: import.config-model-aether-1.0.0.enabled
     repository: https://charts.onosproject.org
@@ -34,7 +34,7 @@ dependencies:
   - name: config-model-rbac
     condition: import.config-model-rbac-1.0.0.enabled
     repository: https://charts.onosproject.org
-    version: 1.0.0
+    version: 1.0.1
   - name: onos-config
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
