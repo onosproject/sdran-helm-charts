@@ -1,0 +1,23 @@
+{{- if eq .Values.prometheusEnabled true }}
+
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: sdcore-adapter
+  labels:
+    {{- include "sdcore-adapter.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "sdcore-adapter.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - port: prometheus
+    path: /metrics
+    scheme: HTTP
+{{ end }}
