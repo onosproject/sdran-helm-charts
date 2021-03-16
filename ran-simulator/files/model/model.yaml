@@ -11,6 +11,7 @@ model:
       servicemodels:
         - kpm
         - rc
+        - kpm2
       status: stopped
     node2:
       cells:
@@ -23,6 +24,7 @@ model:
       servicemodels:
         - kpm
         - rc
+        - kpm2
       status: stopped
   cells:
     cell1:
@@ -795,5 +797,9 @@ model:
     rc:
       description: "RC service model"
       id: 3
+      version: "1.0.0"
+    kpm2:
+      description: "kpm 2.0 service model"
+      id: 4
       version: "1.0.0"
   ueCount: 1
