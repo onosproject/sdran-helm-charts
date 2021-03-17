@@ -19,7 +19,19 @@ spec:
     metadata:
       labels:
 {{ tuple "oai-enb-du" . | include "oai-enb-du.metadata_labels" | indent 8 }}
+      {{- with index .Values "annotations" }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
     spec:
+      {{- with index .Values "tolerations" }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with index .Values "nodeSelector" }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       hostNetwork: true
       initContainers:
       - name: oai-enb-du-init
