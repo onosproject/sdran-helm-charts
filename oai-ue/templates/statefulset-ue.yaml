@@ -19,7 +19,19 @@ spec:
     metadata:
       labels:
 {{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 8 }}
+      {{- with .Values.annotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
     spec:
+      {{- with index .Values "tolerations" }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with index .Values "nodeSelector" }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       hostNetwork: true
       initContainers:
       - name: oai-ue-init
