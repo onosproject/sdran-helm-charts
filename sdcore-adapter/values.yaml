@@ -32,6 +32,8 @@ ports:
     secure: 5150
   prometheus: 9851
 
+prometheusEnabled: true
+
 nodeSelector: {}
 
 tolerations: []
