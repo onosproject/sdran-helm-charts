@@ -53,11 +53,8 @@ onos-config:
   models:
     aether:
       v1:
-        enabled: false
-      v2:
         enabled: true
-    rbac:
-      v1:
+      v2:
         enabled: true
 
 # ONOS-GUI
