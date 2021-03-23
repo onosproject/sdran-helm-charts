@@ -64,10 +64,6 @@ model:
       address: onos-e2t
       id: E2T
       port: 36421
-    e2t-2:
-      address: onos-e2t
-      id: E2T
-      port: 36421
   layout:
     center:
       lat: 52.52
