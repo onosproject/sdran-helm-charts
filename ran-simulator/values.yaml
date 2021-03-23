@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/ran-simulator
-  tag: v0.7.18
+  tag: v0.7.19
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -36,7 +36,7 @@ service:
 
 pci:
   modelName: "model"
-  metricName: "metric"
+  metricName: "metrics"
 
 
 servicemodels:
