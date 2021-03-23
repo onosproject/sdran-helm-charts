@@ -34,6 +34,10 @@ ingress:
 service:
   type: ClusterIP
 
+pci:
+  modelName: "model"
+  metricName: "metric"
+
 
 servicemodels:
   - name: e2sm_kpm

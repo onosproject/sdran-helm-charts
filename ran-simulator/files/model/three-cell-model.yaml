@@ -1,0 +1,58 @@
+model:
+  nodes:
+    node1:
+      cells:
+        - 21458294227473  # ECI: 82449 cid: 01
+        - 21458294227474  # ECI: 82450 cid: 02
+        - 21458294227475  # ECI: 82451 cid: 03
+      controllers:
+        - e2t-1
+      enbid: 5153
+      servicemodels:
+        - kpm
+        - rc
+        - kpm2
+      status: stopped
+  cells:
+    cell1:
+      color: green
+      ecgi: 21458294227473
+      maxues: 99999
+      neighbors:
+        - 21458294227474
+        - 21458294227475
+      sector:
+        arc: 120
+        azimuth: 0
+        center:
+          lat: 52.45071796924582
+          lng: 13.405
+      txpowerdb: 11
+    cell2:
+      color: green
+      ecgi: 21458294227474
+      maxues: 99999
+      neighbors:
+        - 21458294227473
+        - 21458294227475
+      sector:
+        arc: 120
+        azimuth: 120
+        center:
+          lat: 52.45071796924582
+          lng: 13.405
+      txpowerdb: 11
+    cell3:
+      color: green
+      ecgi: 21458294227475
+      maxues: 99999
+      neighbors:
+        - 21458294227473
+        - 21458294227474
+      sector:
+        arc: 120
+        azimuth: 240
+        center:
+          lat: 52.45071796924582
+          lng: 13.405
+      txpowerdb: 11

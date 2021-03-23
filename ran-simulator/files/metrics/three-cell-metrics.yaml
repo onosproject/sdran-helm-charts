@@ -1,0 +1,25 @@
+metrics:
+  rc:
+    pci:
+      cells:
+        21458294227473:
+          cellSize: FEMTO
+          earfcn: 52
+          pci: 1
+          pciPool:
+            - min: 1
+              max: 10
+        21458294227474:
+          cellSize: FEMTO
+          earfcn: 65
+          pci: 1
+          pciPool:
+            - min: 1
+              max: 10
+        21458294227475:
+          cellSize: OUTDOOR_SMALL
+          earfcn: 53
+          pci: 1
+          pciPool:
+            - min: 1
+              max: 10
