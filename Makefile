@@ -41,6 +41,7 @@ clean: # @HELP clean up temporary files.
 	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock
 
 deps: # @HELP build dependencies for local charts.
+deps: clean
 	helm dep build sd-ran
 	helm dep build aether-roc-umbrella
 
