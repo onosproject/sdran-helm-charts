@@ -12,17 +12,17 @@ metrics:
         21458294227474:
           cellSize: FEMTO
           earfcn: 65
-          pci: 2
+          pci: 11
           pciPool:
-            - min: 1
-              max: 10
+            - min: 11
+              max: 20
         21458294227475:
           cellSize: OUTDOOR_SMALL
           earfcn: 53
-          pci: 3
+          pci: 21
           pciPool:
-            - min: 1
-              max: 10
+            - min: 21
+              max: 30
         21458294227489:
           cellSize: OUTDOOR_SMALL
           earfcn: 45
@@ -33,14 +33,14 @@ metrics:
         21458294227490:
           cellSize: ENTERPRISE
           earfcn: 42
-          pci: 2
+          pci: 11
           pciPool:
-            - min: 1
-              max: 10
+            - min: 11
+              max: 20
         21458294227491:
           cellSize: OUTDOOR_SMALL
           earfcn: 61
-          pci: 3
+          pci: 21
           pciPool:
-            - min: 1
-              max: 10
+            - min: 21
+              max: 30
