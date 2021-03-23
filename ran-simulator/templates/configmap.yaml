@@ -13,7 +13,7 @@ metadata:
     heritage: "{{ .Release.Service }}"
 data:
   logging.yaml: |-
-  {{ toYaml .Values.logging | indent 4 }}
+{{ toYaml .Values.logging | indent 4 }}
 
   {{- $files := .Files }}
   {{- range $key, $value := .Files }}
