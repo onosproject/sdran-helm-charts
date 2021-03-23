@@ -59,3 +59,41 @@ model:
           lat: 52.45071796924582
           lng: 13.405
       txpowerdb: 11
+  controllers:
+    e2t-1:
+      address: onos-e2t
+      id: E2T
+      port: 36421
+    e2t-2:
+      address: onos-e2t
+      id: E2T
+      port: 36421
+  layout:
+    center:
+      lat: 52.52
+      lng: 13.405
+    fademap: false
+    locationsscale: 0
+    showpower: false
+    showroutes: false
+    zoom: 0
+  plmnID: "314628"
+  plmnNumber: 1279014
+  servicemodels:
+    kpm:
+      description: "kpm service model"
+      id: 1
+      version: "1.0.0"
+    ni:
+      description: "NI service model"
+      id: 2
+      version: "1.0.0"
+    rc:
+      description: "RC service model"
+      id: 3
+      version: "1.0.0"
+    kpm2:
+      description: "kpm 2.0 service model"
+      id: 4
+      version: "1.0.0"
+  ueCount: 1
