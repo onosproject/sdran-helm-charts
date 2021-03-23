@@ -33,6 +33,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       initContainers:
       - name: oai-enb-cu-init
         image: {{ .Values.images.tags.oaicucp | quote }}
