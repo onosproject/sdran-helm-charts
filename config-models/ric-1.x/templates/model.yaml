@@ -14,10 +14,10 @@ spec:
     type: RIC
     version: {{ .Chart.AppVersion | quote }}
   modules:
-  - name: test1
+  - name: kpimon-xapp
     organization: Open Networking Foundation
-    revision: 2020-11-18
-    file: test1@2020-11-18.yang
+    revision: 2020-12-04
+    file: kpimon-xapp@2020-12-04.yang
   - name: xapp
     organization: Open Networking Foundation
     revision: 2020-11-24
