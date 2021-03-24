@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
 apiVersion: v2
-name: config-model-aether-2.1.0
-version: 3.1.1
+name: config-model-aether
+version: 2.1.0
 kubeVersion: ">=1.18.0"
 appVersion: 2.1.0
 description: Aether config model
