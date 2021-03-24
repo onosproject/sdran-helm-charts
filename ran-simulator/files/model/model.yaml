@@ -11,7 +11,7 @@ model:
       servicemodels:
         - kpm
         - rc
-        - kpm2
+        #- kpm2
       status: stopped
     node2:
       cells:
@@ -24,7 +24,7 @@ model:
       servicemodels:
         - kpm
         - rc
-        - kpm2
+        #- kpm2
       status: stopped
   cells:
     cell1:
