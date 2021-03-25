@@ -1,46 +1,26 @@
-metrics:
-  rc:
-    pci:
-      cells:
-        21458294227473:
-          cellSize: FEMTO
-          earfcn: 52
-          pci: 1
-          pciPool:
-            - min: 1
-              max: 10
-        21458294227474:
-          cellSize: FEMTO
-          earfcn: 65
-          pci: 11
-          pciPool:
-            - min: 11
-              max: 20
-        21458294227475:
-          cellSize: OUTDOOR_SMALL
-          earfcn: 53
-          pci: 21
-          pciPool:
-            - min: 21
-              max: 30
-        21458294227489:
-          cellSize: OUTDOOR_SMALL
-          earfcn: 45
-          pci: 1
-          pciPool:
-            - min: 1
-              max: 10
-        21458294227490:
-          cellSize: ENTERPRISE
-          earfcn: 42
-          pci: 11
-          pciPool:
-            - min: 11
-              max: 20
-        21458294227491:
-          cellSize: OUTDOOR_SMALL
-          earfcn: 61
-          pci: 21
-          pciPool:
-            - min: 21
-              max: 30
+rc:
+  pci:
+    cells:
+      343332707639553:
+        cellSize: FEMTO
+        earfcn: 43
+        pci: 207
+        pciPool:
+        - min: 166
+          max: 248
+      343332707639554:
+        cellSize: OUTDOOR_SMALL
+        earfcn: 44
+        pci: 419
+        pciPool:
+        - min: 332
+          max: 414
+      343332707639555:
+        cellSize: OUTDOOR_SMALL
+        earfcn: 42
+        pci: 419
+        pciPool:
+        - min: 415
+          max: 497
+        - min: 332
+          max: 414

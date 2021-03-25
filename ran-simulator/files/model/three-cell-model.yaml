@@ -1,98 +1,85 @@
-model:
-  nodes:
-    node1:
-      cells:
-        - 21458294227473  # ECI: 82449 cid: 01
-        - 21458294227474  # ECI: 82450 cid: 02
-        - 21458294227475  # ECI: 82451 cid: 03
-      controllers:
-        - e2t-1
-      enbid: 5153
-      servicemodels:
-        - kpm
-        - rc
-        - kpm2
-      status: stopped
-  cells:
-    cell1:
-      color: green
-      ecgi: 21458294227473
-      maxues: 99999
-      neighbors:
-        - 21458294227473
-        - 21458294227474
-        - 21458294227475
-        - 21458294227489
-      sector:
-        arc: 120
-        azimuth: 0
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-      txpowerdb: 11
-    cell2:
-      color: green
-      ecgi: 21458294227474
-      maxues: 99999
-      neighbors:
-        - 21458294227473
-        - 21458294227474
-        - 21458294227475
-        - 21458294227490
-      sector:
-        arc: 120
-        azimuth: 120
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-      txpowerdb: 11
-    cell3:
-      color: green
-      ecgi: 21458294227475
-      maxues: 99999
-      neighbors:
-        - 21458294227473
-        - 21458294227474
-        - 21458294227475
-        - 21458294227491
-      sector:
-        arc: 120
-        azimuth: 240
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-      txpowerdb: 11
-  controllers:
-    e2t-1:
-      address: onos-e2t
-      id: E2T
-      port: 36421
-  layout:
-    center:
-      lat: 52.52
-      lng: 13.405
-    fademap: false
-    locationsscale: 0
-    showpower: false
-    showroutes: false
-    zoom: 0
-  plmnID: "314628"
-  plmnNumber: 1279014
-  servicemodels:
-    kpm:
-      description: "kpm service model"
-      id: 1
-      version: "1.0.0"
-    ni:
-      description: "NI service model"
-      id: 2
-      version: "1.0.0"
-    rc:
-      description: "RC service model"
-      id: 3
-      version: "1.0.0"
-    kpm2:
-      description: "kpm 2.0 service model"
-      id: 4
-      version: "1.0.0"
-  ueCount: 1
+layout:
+  center:
+    lat: 52.52
+    lng: 13.405
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+nodes:
+  node1:
+    enbid: 5153
+    controllers:
+    - e2t-1
+    servicemodels:
+    - rc
+    cells:
+    - 343332707639553
+    - 343332707639554
+    - 343332707639555
+    status: stopped
+cells:
+  cell1:
+    ecgi: 343332707639553
+    sector:
+      center:
+        lat: 52.48535898462291
+        lng: 13.405
+      azimuth: 0
+      arc: 120
+    color: green
+    maxues: 99999
+    neighbors:
+    - 343332707639554
+    - 343332707639555
+    txpowerdb: 11
+  cell2:
+    ecgi: 343332707639554
+    sector:
+      center:
+        lat: 52.48535898462291
+        lng: 13.405
+      azimuth: 120
+      arc: 120
+    color: green
+    maxues: 99999
+    neighbors:
+    - 343332707639553
+    - 343332707639555
+    txpowerdb: 11
+  cell3:
+    ecgi: 343332707639555
+    sector:
+      center:
+        lat: 52.48535898462291
+        lng: 13.405
+      azimuth: 240
+      arc: 120
+    color: green
+    maxues: 99999
+    neighbors:
+    - 343332707639553
+    - 343332707639554
+    txpowerdb: 11
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm:
+    id: 1
+    description: kpm service model
+    version: 1.0.0
+  ni:
+    id: 2
+    description: ni service model
+    version: 1.0.0
+  rc:
+    id: 3
+    description: rc service model
+    version: 1.0.0
+ueCount: 0
+plmnID: "314628"
+plmnNumber: 1279014
