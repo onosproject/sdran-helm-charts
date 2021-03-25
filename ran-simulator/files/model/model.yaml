@@ -1,148 +1,149 @@
-layout:
-  center:
-    lat: 52.52
-    lng: 13.405
-  zoom: 0
-  locationsscale: 1.25
-  fademap: false
-  showroutes: false
-  showpower: false
-nodes:
-  node1:
-    enbid: 5153
-    controllers:
-    - e2t-1
-    servicemodels:
-    - kpm
-    - ni
-    - rc
-    cells:
-    - 343332707639553
-    - 343332707639554
-    - 343332707639555
-    status: stopped
-  node2:
-    enbid: 5154
-    controllers:
-    - e2t-1
-    servicemodels:
-    - kpm
-    - ni
-    - rc
-    cells:
-    - 343332707639809
-    - 343332707639810
-    - 343332707639811
-    status: stopped
-cells:
-  cell1:
-    ecgi: 343332707639553
-    sector:
-      center:
-        lat: 52.48535898462291
-        lng: 13.405
-      azimuth: 0
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639555
-    - 343332707639809
-    - 343332707639554
-    txpowerdb: 11
-  cell2:
-    ecgi: 343332707639554
-    sector:
-      center:
-        lat: 52.48535898462291
-        lng: 13.405
-      azimuth: 120
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639553
-    - 343332707639555
-    - 343332707639810
-    txpowerdb: 11
-  cell3:
-    ecgi: 343332707639555
-    sector:
-      center:
-        lat: 52.48535898462291
-        lng: 13.405
-      azimuth: 240
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639811
-    - 343332707639553
-    - 343332707639554
-    txpowerdb: 11
-  cell4:
-    ecgi: 343332707639809
-    sector:
-      center:
-        lat: 52.50267949231146
-        lng: 13.454302819271017
-      azimuth: 0
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639553
-    - 343332707639810
-    - 343332707639811
-    txpowerdb: 11
-  cell5:
-    ecgi: 343332707639810
-    sector:
-      center:
-        lat: 52.50267949231146
-        lng: 13.454302819271017
-      azimuth: 120
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639809
-    - 343332707639811
-    - 343332707639554
-    txpowerdb: 11
-  cell6:
-    ecgi: 343332707639811
-    sector:
-      center:
-        lat: 52.50267949231146
-        lng: 13.454302819271017
-      azimuth: 240
-      arc: 120
-    color: green
-    maxues: 99999
-    neighbors:
-    - 343332707639555
-    - 343332707639809
-    - 343332707639810
-    txpowerdb: 11
-controllers:
-  e2t-1:
-    id: e2t-1
-    address: onos-e2t
-    port: 36421
-servicemodels:
-  kpm:
-    id: 1
-    description: kpm service model
-    version: 1.0.0
-  ni:
-    id: 2
-    description: ni service model
-    version: 1.0.0
-  rc:
-    id: 3
-    description: rc service model
-    version: 1.0.0
-ueCount: 0
-plmnID: "314628"
-plmnNumber: 1279014
+model:
+  layout:
+    center:
+      lat: 52.52
+      lng: 13.405
+    zoom: 0
+    locationsscale: 1.25
+    fademap: false
+    showroutes: false
+    showpower: false
+  nodes:
+    node1:
+      enbid: 5153
+      controllers:
+      - e2t-1
+      servicemodels:
+      - kpm
+      - ni
+      - rc
+      cells:
+      - 343332707639553
+      - 343332707639554
+      - 343332707639555
+      status: stopped
+    node2:
+      enbid: 5154
+      controllers:
+      - e2t-1
+      servicemodels:
+      - kpm
+      - ni
+      - rc
+      cells:
+      - 343332707639809
+      - 343332707639810
+      - 343332707639811
+      status: stopped
+  cells:
+    cell1:
+      ecgi: 343332707639553
+      sector:
+        center:
+          lat: 52.48535898462291
+          lng: 13.405
+        azimuth: 0
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639555
+      - 343332707639809
+      - 343332707639554
+      txpowerdb: 11
+    cell2:
+      ecgi: 343332707639554
+      sector:
+        center:
+          lat: 52.48535898462291
+          lng: 13.405
+        azimuth: 120
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639553
+      - 343332707639555
+      - 343332707639810
+      txpowerdb: 11
+    cell3:
+      ecgi: 343332707639555
+      sector:
+        center:
+          lat: 52.48535898462291
+          lng: 13.405
+        azimuth: 240
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639811
+      - 343332707639553
+      - 343332707639554
+      txpowerdb: 11
+    cell4:
+      ecgi: 343332707639809
+      sector:
+        center:
+          lat: 52.50267949231146
+          lng: 13.454302819271017
+        azimuth: 0
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639553
+      - 343332707639810
+      - 343332707639811
+      txpowerdb: 11
+    cell5:
+      ecgi: 343332707639810
+      sector:
+        center:
+          lat: 52.50267949231146
+          lng: 13.454302819271017
+        azimuth: 120
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639809
+      - 343332707639811
+      - 343332707639554
+      txpowerdb: 11
+    cell6:
+      ecgi: 343332707639811
+      sector:
+        center:
+          lat: 52.50267949231146
+          lng: 13.454302819271017
+        azimuth: 240
+        arc: 120
+      color: green
+      maxues: 99999
+      neighbors:
+      - 343332707639555
+      - 343332707639809
+      - 343332707639810
+      txpowerdb: 11
+  controllers:
+    e2t-1:
+      id: e2t-1
+      address: onos-e2t
+      port: 36421
+  servicemodels:
+    kpm:
+      id: 1
+      description: kpm service model
+      version: 1.0.0
+    ni:
+      id: 2
+      description: ni service model
+      version: 1.0.0
+    rc:
+      id: 3
+      description: rc service model
+      version: 1.0.0
+  ueCount: 0
+  plmnID: "314628"
+  plmnNumber: 1279014
