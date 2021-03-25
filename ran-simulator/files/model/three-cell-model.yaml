@@ -9,9 +9,7 @@ model:
         - e2t-1
       enbid: 5153
       servicemodels:
-        - kpm
         - rc
-        - kpm2
       status: stopped
   cells:
     cell1:
