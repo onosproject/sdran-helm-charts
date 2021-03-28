@@ -16,6 +16,7 @@ model:
       servicemodels:
       - kpm
       - rc
+      - kpm2
       cells:
       - 343332707639553
       - 343332707639554
@@ -28,6 +29,7 @@ model:
       servicemodels:
       - kpm
       - rc
+      - kpm2
       cells:
       - 343332707639809
       - 343332707639810
@@ -142,6 +144,10 @@ model:
       id: 3
       description: rc service model
       version: 1.0.0
-  ueCount: 0
+    kpm2:
+      id: 4
+      description: kpm v2 service model
+      version: 2.0.0
+  ueCount: 5
   plmnID: "314628"
   plmnNumber: 1279014
