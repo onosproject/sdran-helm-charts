@@ -1,0 +1,104 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "fb-ah-xapp.fullname" . }}
+  labels:
+  {{- include "fb-ah-xapp.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "fb-ah-xapp.fullname" . }}
+      app: airhop
+      type: pci
+      resource: {{ template "fb-ah-xapp.fullname" . }}
+  {{- include "fb-ah-xapp.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "fb-ah-xapp.fullname" . }}
+        app: airhop
+        type: pci
+        resource: {{ template "fb-ah-xapp.fullname" . }}
+    {{- include "fb-ah-xapp.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "airhop_pci/main.py"
+            - "--ca-path=/etc/onos/certs/tls.cacrt"
+            - "--key-path=/etc/onos/certs/tls.key"
+            - "--cert-path=/etc/onos/certs/tls.crt"
+            - "--e2t-endpoint={{ .Values.config.ric.e2tEndpoint }}"
+            - "--e2sub-endpoint={{ .Values.config.ric.e2subEndpoint }}"
+            - "--eson-endpoint={{ .Values.config.esonEndpoint }}"
+{{- if .Values.config.esonSubscribeEnabled }}
+            - "--pci-subscribe-delay=0"
+{{- end }}
+{{- if .Values.config.indicationTriggerPeriodicSeconds }}
+            - "--trigger-periodic-s={{ .Values.config.indicationTriggerPeriodicSeconds }}"
+{{- end }}
+{{- if .Values.config.processingDelay }}
+            - "--processing-delay={{ .Values.config.processingDelay }}"
+{{- end }}
+          ports:
+            - name: http
+              containerPort: 8080
+          startupProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "fb-ah-xapp.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "fb-ah-xapp.fullname" . }}-config
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}
