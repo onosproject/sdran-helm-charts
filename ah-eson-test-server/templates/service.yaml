@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "ah-eson-test-server.fullname" . }}
+  labels:
+    app: {{ template "ah-eson-test-server.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "ah-eson-test-server.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "ah-eson-test-server.fullname" . }}
+    app: ah-eson-test-server
+    type: ah-eson-test-server
+    resource: {{ template "ah-eson-test-server.fullname" . }}
+    {{- include "ah-eson-test-server.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: eson
+      port: {{ .Values.servicePort }}
