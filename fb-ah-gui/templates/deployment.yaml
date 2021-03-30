@@ -1,0 +1,78 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "fb-ah-gui.fullname" . }}
+  labels:
+  {{- include "fb-ah-gui.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "fb-ah-gui.fullname" . }}
+      app: airhop
+      type: gui
+      resource: {{ template "fb-ah-gui.fullname" . }}
+  {{- include "fb-ah-gui.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "fb-ah-gui.fullname" . }}
+        app: airhop
+        type: gui
+        resource: {{ template "fb-ah-gui.fullname" . }}
+    {{- include "fb-ah-gui.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          #args:
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.http.port }}
+          startupProbe:
+            httpGet:
+              path: /status
+              port: {{ .Values.service.http.port }}
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            httpGet:
+              path: /status
+              port: {{ .Values.service.http.port }}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /status
+              port: {{ .Values.service.http.port }}
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "fb-ah-gui.fullname" . }}-secret
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}

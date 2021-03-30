@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fb-ah-gui.fullname" . }}
+  labels:
+    app: {{ template "fb-ah-gui.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "fb-ah-gui.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "fb-ah-gui.fullname" . }}
+    app: airhop
+    type: gui
+    resource: {{ template "fb-ah-gui.fullname" . }}
+  {{- include "fb-ah-gui.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: http
+      port: {{ .Values.service.http.port }}
+
+{{- if .Values.service.http.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fb-ah-gui.fullname" . }}-external
+  labels:
+    app: {{ template "fb-ah-gui.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "fb-ah-gui.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "fb-ah-gui.fullname" . }}
+    app: airhop
+    type: gui
+    resource: {{ template "fb-ah-gui.fullname" . }}
+  {{- include "fb-ah-gui.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: http
+      port: {{ .Values.service.http.port }}
+      nodePort: {{ .Values.service.http.nodePort.port }}
+      protocol: TCP
+{{- end }}

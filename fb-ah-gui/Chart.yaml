@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: fb-ah-gui
+description: FB AirHop GUI
+kubeVersion: ">=1.17.0"
+type: application
+version: 0.0.1
+appVersion: 0.0.1
+keywords:
+  - fb
+home: https://connectivity.fb.com/
+maintainers:
+  - name: Maveric Team
+    email: fbc_maveric@fb.com
