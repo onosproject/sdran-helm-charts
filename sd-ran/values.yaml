@@ -45,6 +45,12 @@ import:
     enabled: false
   onos-kpimon:
     enabled: false
+  fb-ah-xapp:
+    enabled: false
+  fb-ah-gui:
+    enabled: false
+  ah-eson-test-server:
+    enabled: false
 
 # NEM-Monitoring
 nem-monitoring:
@@ -79,7 +85,7 @@ nem-monitoring:
   dashboards:
     nodeExporter: false
     sdran: true
-  kpi_exporter: 
+  kpi_exporter:
     enabled: false
   grafana:
     datasources:
