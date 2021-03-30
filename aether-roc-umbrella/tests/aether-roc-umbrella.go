@@ -35,7 +35,11 @@ func (s *AetherRocUmbrellaSuite) TestInstall(t *testing.T) {
 	onos := helm.Chart("aether-roc-umbrella").
 		Release("aether-roc-umbrella").
 		Set("global.storage.controller", onostest.AtomixController(testName, componentName)).
+		Set("onos-ric.service.external.nodePort", 0).
+		Set("onos-ric-ho.service.external.nodePort", 0).
+		Set("onos-ric-mlb.service.external.nodePort", 0).
 		Set("import.onos-gui.enabled", false).
+		Set("import.aether-roc-gui.enabled", false).
 		Set("import.onos-cli.enabled", false).
 		Set("onos-topo.image.tag", "latest").
 		Set("onos-config.image.tag", "latest").

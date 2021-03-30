@@ -16,6 +16,6 @@ import (
 func main() {
 	registry.RegisterTestSuite("onos-ric", &ric.ONOSRICSuite{})
 	registry.RegisterTestSuite("sd-ran", &sdran.SDRANSuite{})
-	registry.RegisterTestSuite("aether-umbrella", &tests.AetherRocUmbrellaSuite{})
+	registry.RegisterTestSuite("aether-roc-umbrella", &tests.AetherRocUmbrellaSuite{})
 	test.Main()
 }

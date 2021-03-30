@@ -1,15 +1,39 @@
+#!/bin/bash
+# Copyright 2020-present Open Networking Foundation.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Script to build and run all of the onos integration tests
+
+set -eu -o pipefail
+
 chart_dir=$(mktemp -d)
 
 cp -R ../onos-helm-charts/* ${chart_dir}
 cp -R ../sdran-helm-charts/* ${chart_dir}
 
+kubectl delete ns onos-ric || true
 kubectl create ns onos-ric
 helmit test -n onos-ric ./test -c ${chart_dir} --suite onos-ric
 
+kubectl delete ns sd-ran || true
 kubectl create ns sd-ran
 helmit test -n sd-ran ./test -c ${chart_dir} --suite sd-ran
 
+kubectl delete ns aether-roc-umbrella || true
 kubectl create ns aether-roc-umbrella
+# This test is currently not working - need to figure out why
 helmit test -n aether-roc-umbrella ./test -c ${chart_dir} --suite aether-roc-umbrella
 
 rm -rf ${chart_dir}
+
