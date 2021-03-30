@@ -50,11 +50,11 @@ spec:
     organization: Open Networking Foundation
     revision: 2021-03-04
     file: service-group@2021-03-04.yang
-  - name: security-policy
+  - name: service-policy
     organization: Open Networking Foundation
     revision: 2021-03-04
     file: service-policy@2021-03-04.yang
-  - name: security-rule
+  - name: service-rule
     organization: Open Networking Foundation
     revision: 2021-03-04
     file: service-rule@2021-03-04.yang
