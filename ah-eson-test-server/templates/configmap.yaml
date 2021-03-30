@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "ah-eson-test-server.fullname" . }}-config
+  labels:
+    app: {{ template "ah-eson-test-server.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"

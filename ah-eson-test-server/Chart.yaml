@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: ah-eson-test-server
+description: FB ah-eson-test-server
+kubeVersion: ">=1.17.0"
+type: application
+version: 0.0.1
+appVersion: 0.0.1
+keywords:
+  - onos
+  - sdn
+  - ric
+  - fb
+home: https://connectivity.fb.com/
+maintainers:
+  - name: Maveric Team
+    email: fbc_maveric@fb.com
