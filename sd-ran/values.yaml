@@ -107,15 +107,13 @@ onos-topo:
 
 onos-config:
   storage:
+    controller: ""
     consensus:
       enabled: false
-  plugins:
-    - name: ric
-      version: 1.0.0
-      image:
-        repository: onosproject/config-model-ric-1.0.0
-        tag: v0.6.18
-        pullPolicy: IfNotPresent
+  models:
+    ric:
+      v1:
+        enabled: true
 
 onos-ric:
   storage:
