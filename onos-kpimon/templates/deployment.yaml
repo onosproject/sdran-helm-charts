@@ -41,6 +41,7 @@ spec:
             - "-keyPath=/etc/onos/certs/tls.key"
             - "-certPath=/etc/onos/certs/tls.crt"
             - "-e2tEndpoint={{ .Values.config.kpimon.e2tEndpoint }}"
+            - "-smVersion={{ .Values.config.kpimon.kpmVersion }}"
           ports:
             - name: grpc
               containerPort: {{ .Values.service.grpc.port }}
