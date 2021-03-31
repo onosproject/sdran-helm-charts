@@ -57,12 +57,12 @@ dependencies:
   - name: onos-kpimon
     condition: import.onos-kpimon-v1.enabled
     repository: "@sdran"
-    version: 0.6.3
+    version: 0.6.4
     alias: onos-kpimon-v1
   - name: onos-kpimon
     condition: import.onos-kpimon-v2.enabled
     repository: "@sdran"
-    version: 0.6.3
+    version: 0.6.4
     alias: onos-kpimon-v2
   - name: onos-pci
     condition: import.onos-pci.enabled
