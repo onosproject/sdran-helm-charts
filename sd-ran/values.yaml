@@ -43,7 +43,9 @@ import:
     enabled: false
   nem-monitoring:
     enabled: false
-  onos-kpimon:
+  onos-kpimon-v1:
+    enabled: false
+  onos-kpimon-v2:
     enabled: false
   fb-ah-xapp:
     enabled: false
