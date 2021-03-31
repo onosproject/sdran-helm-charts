@@ -112,9 +112,6 @@ onos-config:
     ric:
       v1:
         enabled: true
-    e2node:
-      v1:
-        enabled: false
 
 onos-ric:
   storage:
