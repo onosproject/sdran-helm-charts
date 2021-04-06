@@ -32,6 +32,9 @@ images:
 
 config:
   oai-enb-cu:
+    log:
+      level: "info"
+      verbosity: "medium"
     enbID: 0xe00
     tac: 1
     plmnID:
