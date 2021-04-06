@@ -20,7 +20,7 @@ topoentities:
       entity:
         kindid: "Aether"
     attributes:
-      version: "2.0.0"
+      version: "2.1.0"
       displayname: "SPGW 1"
       address: "sdcore-adapter:5150"
       latitude: "52.5150"
