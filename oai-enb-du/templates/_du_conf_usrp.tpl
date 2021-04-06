@@ -99,18 +99,18 @@ RUs = (
 );
 
 log_config = {
-  global_log_level            = "info";
-  global_log_verbosity        = "medium";
-  hw_log_level                = "info";
-  hw_log_verbosity            = "medium";
-  phy_log_level               = "info";
-  phy_log_verbosity           = "medium";
-  mac_log_level               = "info";
-  mac_log_verbosity           = "high";
-  rlc_log_level               = "info";
-  rlc_log_verbosity           = "medium";
-  flexran_agent_log_level     = "info";
-  flexran_agent_log_verbosity = "medium";
+  global_log_level            ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  global_log_verbosity        ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
+  hw_log_level                ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  hw_log_verbosity            ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
+  phy_log_level               ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  phy_log_verbosity           ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
+  mac_log_level               ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  mac_log_verbosity           ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
+  rlc_log_level               ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  rlc_log_verbosity           ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
+  flexran_agent_log_level     ={{ index .Values "config" "oai-enb-du" "log" "level" | quote }};
+  flexran_agent_log_verbosity ={{ index .Values "config" "oai-enb-du" "log" "verbosity" | quote }};
 };
 
 NETWORK_CONTROLLER : {

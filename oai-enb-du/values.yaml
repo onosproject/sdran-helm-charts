@@ -32,6 +32,9 @@ images:
 
 config:
   oai-enb-du:
+    log:
+      level: "info"
+      verbosity: "medium"
     enableUSRP: false
     mode: nfapi #or local_L1 for USRP and BasicSim
     networks:
