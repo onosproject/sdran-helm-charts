@@ -93,6 +93,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
+            - name: GODEBUG
+              value: cgocheck=0
           startupProbe:
             tcpSocket:
               port: 5150
