@@ -7,7 +7,7 @@ name: onos-e2sub
 description: ONOS E2 Subscription Manager
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.0.2
+version: 1.0.3
 appVersion: v0.7.3
 keywords:
   - onos
