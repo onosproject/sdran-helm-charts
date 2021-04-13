@@ -50,6 +50,7 @@ spec:
             - "-cert=/etc/sdcore-adapter/certs/tls.crt"
             - "-ca=/etc/sdcore-adapter/certs/tls.cacert"
             - "-alsologtostderr"
+            - "-hostCheckDisabled"
             {{ if .Values.initialConfig }}
             - "-config={{ .Values.initialConfig }}"
             {{ end }}
