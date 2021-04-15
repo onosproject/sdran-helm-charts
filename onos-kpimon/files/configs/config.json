@@ -1,5 +1,6 @@
 {
   "report_period": {
-    "interval": 30
+    "interval": 1000,
+    "granularity": 1000
   }
 }
