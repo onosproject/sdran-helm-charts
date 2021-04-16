@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+
+{{- if index .Values "import" "prometheus-stack" "enabled" }}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-datasource
+  labels:
+     grafana_datasource: "1"
+data:
+  datasources-{{ .Release.Name }}.yaml: |-
+    apiVersion: 1
+    datasources:
+{{- range index .Values "prometheus-stack" "prometheusDatasources" }}
+    - name: {{ .name }}
+      type: prometheus
+      access: proxy
+      basicAuth: false
+      editable: false
+      isDefault: false
+      url: {{ .endpoint }}
+{{- end }}
+{{- range index .Values "prometheus-stack" "elasticsearchDatasources" }}
+    - name: {{ .name }}
+      url: {{ .endpoint }}
+      type: elasticsearch
+      access: proxy
+      database: "[fluentbit-]YYYY.MM.DD"
+      jsonData:
+        interval: Daily
+        timeField: "@timestamp"
+        esVersion: 70
+        logMessageField: log
+        logLevelField: logLevel
+{{- end }}
+
+{{- end }}
