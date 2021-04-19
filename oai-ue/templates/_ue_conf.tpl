@@ -2,6 +2,10 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
+{{- $maxpdschReferenceSignalPower := index .Values "config" "oai-ue" "radio" "max_pdschReferenceSignalPower" }}
+{{- $maxrxgain := index .Values "config" "oai-ue" "radio" "max_rxgain" }}
+
+
 log_config = {
 global_log_level                      ={{ index .Values "config" "oai-ue" "log" "level" | quote }};
 global_log_verbosity                  ={{ index .Values "config" "oai-ue" "log" "verbosity" | quote }};
@@ -41,7 +45,7 @@ nb_rx          = 1
 att_tx         = 90
 att_rx         = 0;
 bands          = [7,38,42,43];
-max_pdschReferenceSignalPower = -27;
-max_rxgain                    = 125;
+max_pdschReferenceSignalPower = {{ $maxpdschReferenceSignalPower }};
+max_rxgain                    = {{ $maxrxgain }};
 }
 );
