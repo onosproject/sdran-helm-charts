@@ -1408,10 +1408,22 @@ model:
       address: onos-e2t
       port: 36421
   servicemodels:
+    kpm:
+      id: 1
+      description: kpm service model
+      version: 1.0.0
+    ni:
+      id: 2
+      description: ni service model
+      version: 1.0.0
     rc:
-      id: 0
+      id: 3
       description: rc service model
       version: 1.0.0
+    kpm2:
+      id: 4
+      description: kpm v2 service model
+      version: 2.0.0
   ueCount: 0
   plmnID: "314628"
   plmnNumber: 1279014
