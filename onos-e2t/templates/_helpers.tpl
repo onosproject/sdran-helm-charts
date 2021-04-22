@@ -67,3 +67,14 @@ onos-e2t image name
 {{- .Values.image.tag -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+registry name
+*/}}
+{{- define "onos-e2t.registryname" -}}
+{{- if .Values.global.image.registry -}}
+{{- printf "%s/" .Values.global.image.registry -}}
+{{- else if .Values.image.registry -}}
+{{- printf "%s/" .Values.image.registry -}}
+{{- end -}}
+{{- end -}}
