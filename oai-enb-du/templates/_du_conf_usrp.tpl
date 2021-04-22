@@ -2,6 +2,11 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
+{{- $rxgain := index .Values "config" "oai-enb-du" "radio" "rx_gain" }}
+{{- $txgain := index .Values "config" "oai-enb-du" "radio" "tx_gain" }}
+{{- $maxrxgain := index .Values "config" "oai-enb-du" "radio" "max_rxgain" }}
+{{- $maxpdschReferenceSignalPower := index .Values "config" "oai-enb-du" "radio" "max_pdschReferenceSignalPower" }}
+
 Active_eNBs = ( "eNB-Eurecom-DU");
 # Asn1_verbosity, choice in: none, info, annoying
 Asn1_verbosity = "none";
@@ -40,8 +45,8 @@ eNBs =
         nb_antenna_ports        = 1;
         nb_antennas_tx          = 1;
         nb_antennas_rx          = 1;
-        tx_gain                 = 90;
-        rx_gain                 = 125;
+        tx_gain                 = {{ $txgain }};
+        rx_gain                 = {{ $rxgain }};
 
         pucch_deltaF_Format1    = "deltaF2";
         pucch_deltaF_Format1b   = "deltaF3";
@@ -92,8 +97,8 @@ RUs = (
     att_tx                        = 10;
     att_rx                        = 10;
     bands                         = [7];
-    max_pdschReferenceSignalPower = -25;
-    max_rxgain                    = 125;
+    max_pdschReferenceSignalPower = {{ $maxpdschReferenceSignalPower }};
+    max_rxgain                    = {{ $maxrxgain }};
     eNB_instances                 = [0];
   }
 );
