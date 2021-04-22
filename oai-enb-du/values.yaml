@@ -36,6 +36,11 @@ config:
       level: "info"
       verbosity: "medium"
     enableUSRP: false
+    radio:
+      max_rxgain: 125
+      max_pdschReferenceSignalPower: -25
+      rx_gain: 125
+      tx_gain: 90
     mode: nfapi #or local_L1 for USRP and BasicSim
     networks:
       f1:
