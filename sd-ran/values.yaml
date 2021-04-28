@@ -183,6 +183,7 @@ prometheus-stack:
 
   grafanaDashboards:
     - kubernetes-logs-pod.json
+    - sdran.json
 
 opendistro-es:
   elasticsearch:
