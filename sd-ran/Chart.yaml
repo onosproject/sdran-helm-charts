@@ -72,7 +72,7 @@ dependencies:
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: "@sdran"
-    version: 0.6.5
+    version: 0.6.6
   - name: fb-ah-xapp
     condition: import.fb-ah-xapp.enabled
     repository: "@sdran"
