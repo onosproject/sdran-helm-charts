@@ -35,9 +35,10 @@ spec:
       {{- end }}
       initContainers:
         # Run service model plugins as init containers to load plugins onto the shared volume
+        {{ $registry := include "ran-simulator.registryname" . }}
         {{- range $key, $servicemodel := .Values.servicemodels }}
         - name: {{ printf "service-model-%s-%s" $servicemodel.name $servicemodel.version | replace "." "-" | replace "_" "-" }}
-          image: {{ printf "%s:%s" $servicemodel.image.repository $servicemodel.image.tag }}
+          image: {{ printf "%s%s:%s" $registry $servicemodel.image.repository $servicemodel.image.tag }}
           imagePullPolicy: {{ $servicemodel.image.pullPolicy }}
           command:
             - "/bin/cp"

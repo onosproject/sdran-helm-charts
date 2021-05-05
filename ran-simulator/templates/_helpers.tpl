@@ -67,3 +67,14 @@ ran-simulator image name
 {{- .Values.image.tag -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+registry name
+*/}}
+{{- define "ran-simulator.registryname" -}}
+{{- if .Values.global.image.registry -}}
+{{- printf "%s/" .Values.global.image.registry -}}
+{{- else if .Values.image.registry -}}
+{{- printf "%s/" .Values.image.registry -}}
+{{- end -}}
+{{- end -}}
