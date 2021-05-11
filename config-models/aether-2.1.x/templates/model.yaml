@@ -17,47 +17,47 @@ spec:
   - name: aether-subscriber
     organization: Open Networking Foundation
     revision: 2020-10-22
-    file: aether-subscriber.yang
+    file: aether-subscriber@2020-10-22.yang
   - name: apn-profile
     organization: Open Networking Foundation
     revision: 2021-03-04
-    file: apn-profile.yang
+    file: apn-profile@2021-03-04.yang
   - name: up-profile
     organization: Open Networking Foundation
     revision: 2020-10-22
-    file: up-profile.yang
+    file: up-profile@2020-10-22.yang
   - name: qos-profile
     organization: Open Networking Foundation
     revision: 2020-10-22
-    file: qos-profile.yang
+    file: qos-profile@2020-10-22.yang
   - name: access-profile
     organization: Open Networking Foundation
     revision: 2020-10-22
-    file: access-profile.yang
+    file: access-profile@2020-10-22.yang
   - name: enterprise
     organization: Open Networking Foundation
     revision: 2020-11-30
-    file: enterprise.yang
+    file: enterprise@2020-11-30.yang
   - name: connectivity-service
     organization: Open Networking Foundation
     revision: 2021-03-18
-    file: connectivity-service.yang
+    file: connectivity-service@2021-03-18.yang
   - name: security-profile
     organization: Open Networking Foundation
     revision: 2020-11-30
-    file: security-profile.yang
+    file: security-profile@2020-11-30.yang
   - name: service-group
     organization: Open Networking Foundation
     revision: 2021-03-04
-    file: service-group.yang
+    file: service-group@2021-03-04.yang
   - name: service-policy
     organization: Open Networking Foundation
     revision: 2021-03-04
-    file: service-policy.yang
+    file: service-policy@2021-03-04.yang
   - name: service-rule
     organization: Open Networking Foundation
     revision: 2021-03-04
-    file: service-rule.yang
+    file: service-rule@2021-03-04.yang
   files:
     {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
     {{ base $path }}: |
