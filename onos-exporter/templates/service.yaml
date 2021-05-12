@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-exporter.fullname" . }}
+  labels:
+    app: {{ template "onos-exporter.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-exporter.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-exporter.fullname" . }}
+    app: onos
+    type: exporter
+    resource: {{ template "onos-exporter.fullname" . }}
+  {{- include "onos-exporter.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}

@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-exporter.fullname" . }}
+  labels:
+  {{- include "onos-exporter.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-exporter.fullname" . }}
+      app: onos
+      type: exporter
+      resource: {{ template "onos-exporter.fullname" . }}
+  {{- include "onos-exporter.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-exporter.fullname" . }}
+        app: onos
+        type: exporter
+        resource: {{ template "onos-exporter.fullname" . }}
+    {{- include "onos-exporter.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "onos-exporter.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "-e2tEndpoint={{ index .Values "config" "onos-exporter" "e2tEndpoint" }}"
+            - "-mode={{ index .Values "config" "onos-exporter" "mode" }}"
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}
