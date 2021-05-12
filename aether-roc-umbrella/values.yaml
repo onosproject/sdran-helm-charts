@@ -38,6 +38,8 @@ import:
     enabled: true
   sdcore-adapter:
     enabled: true
+  sdcore-test-dummy:
+    enabled: true
 
 # ONOS-TOPO
 onos-topo:
@@ -79,3 +81,38 @@ sdcore-adapter:
   nameOverride: sdcore-adapter
   fullnameOverride: sdcore-adapter
   prometheusEnabled: false
+
+# SD-Core Test Dummy
+# proxy_pass has to be added or nginx will not log the $request_body
+sdcore-test-dummy:
+  serviceType: NodePort
+  serverBlock: |-
+    log_format client '$remote_addr - $remote_user $request_time $upstream_response_time '
+                      '[$time_local] "$request" $status $body_bytes_sent $request_body "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    server {
+      listen 0.0.0.0:8080;
+      default_type application/json;
+      access_log /opt/bitnami/nginx/logs/access.log client;
+
+      # You can provide a special subPath or the root
+      location = /v1/config {
+        root /;
+        proxy_pass http://127.0.0.1:8080/post_dummy;
+      }
+      location = /v1/config/policies {
+        root /;
+        proxy_pass http://127.0.0.1:8080/post_dummy;
+      }
+      location = /v1/config/imsis {
+        root /;
+        proxy_pass http://127.0.0.1:8080/post_dummy;
+      }
+      location = /post_dummy {
+        # turn off logging here to avoid double logging
+        access_log off;
+        return 200;
+      }
+      error_page  405     =200 $uri;
+    }
