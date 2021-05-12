@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+{{- $mode := index .Values "config" "onos-exporter" "mode" }}
+{{- if eq $mode "prometheus" }}
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: onos-exporter
+  labels:
+    {{- include "onos-exporter.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "onos-exporter.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - port: exporter
+    path: /metrics
+    scheme: HTTP
+{{ end }}
