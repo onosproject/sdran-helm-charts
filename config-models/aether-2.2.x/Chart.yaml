@@ -4,7 +4,7 @@
 
 apiVersion: v2
 name: config-model-aether-local
-version: 2.2.0
+version: 2.2.1
 kubeVersion: ">=1.18.0"
 appVersion: 2.2.0
 description: Aether config model
