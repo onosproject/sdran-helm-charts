@@ -55,10 +55,12 @@ onos-config:
   models:
     aether:
       v1:
-        enabled: true
+        enabled: false
       v2:
         enabled: true
       v2_1:
+        enabled: true
+      v2_2:
         enabled: true
 
 # ONOS-GUI
