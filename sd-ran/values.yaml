@@ -151,6 +151,12 @@ onos-e2t:
         repository: onosproject/service-model-docker-e2sm_kpm_v2-1.0.0
         tag: v0.7.26
         pullPolicy: IfNotPresent
+    - name: e2sm_mho
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_mho-1.0.0
+        tag: v0.7.26
+        pullPolicy: IfNotPresent
 
 onos-e2sub:
   storage:
