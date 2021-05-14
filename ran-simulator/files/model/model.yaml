@@ -17,6 +17,7 @@ model:
       - kpm
       - rc
       - kpm2
+      - mho
       cells:
       - 343332707639553
       - 343332707639554
@@ -30,6 +31,7 @@ model:
       - kpm
       - rc
       - kpm2
+      - mho
       cells:
       - 343332707639809
       - 343332707639810
@@ -148,6 +150,10 @@ model:
       id: 4
       description: kpm v2 service model
       version: 2.0.0
+    mho:
+      id: 5
+      description: mho service model
+      version: 1.0.0
   ueCount: 5
   plmnID: "314628"
   plmnNumber: 1279014
