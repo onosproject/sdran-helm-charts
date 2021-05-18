@@ -42,6 +42,10 @@ config:
   kpimon:
     e2tEndpoint: "onos-e2t:5150"
     kpmVersion: "v2"
+    config_json:
+      report_period:
+        interval: 1000
+        granularity: 1000
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
