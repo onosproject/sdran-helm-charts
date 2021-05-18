@@ -53,6 +53,8 @@ import:
     enabled: false
   fb-ah-gui:
     enabled: false
+  onos-mho:
+    enabled: false
   ah-eson-test-server:
     enabled: false
   fluent-bit:
