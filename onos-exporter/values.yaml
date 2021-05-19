@@ -28,6 +28,9 @@ config:
   onos-exporter:
     mode: "prometheus"
     e2tEndpoint: "onos-e2t:5150"
+    e2subEndpoint: "onos-e2sub:5150"
+    xappPciEndpoint: "onos-pci:5150"
+    xappKpimonEndpoint: "onos-kpimon-v2:5150"
     
 resources: {}
 
