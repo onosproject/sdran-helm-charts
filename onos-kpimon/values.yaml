@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-kpimon
-  tag: v0.1.8
+  tag: v0.1.9
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -42,6 +42,10 @@ config:
   kpimon:
     e2tEndpoint: "onos-e2t:5150"
     kpmVersion: "v2"
+    config_json:
+      report_period:
+        interval: 1000
+        granularity: 1000
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
-# Default values for ran-simulator.
+# Default values for onos-mho.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -15,55 +15,32 @@ replicaCount: 1
 
 image:
   registry: ""
-  repository: onosproject/ran-simulator
-  tag: v0.7.30
+  repository: onosproject/onos-mho
+  tag: v0.0.2
   pullPolicy: IfNotPresent
   pullSecrets: []
 
-googleApiKey: "YOUR_API_KEY_HERE"
-
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "ran-simulator"
+fullnameOverride: "onos-mho"
 
-store: {}
-
-ingress:
-  enabled: false
+storage: {}
 
 service:
-  type: ClusterIP
+  # TODO: External NodePort service should be disabled by default
+  grpc:
+    port: 5150
+  gnmi:
+    port: 9339
+  exporter:
+    port: 7001
+    nodePort:
+      enabled: false
+      port: 31701
 
-pci:
-  modelName: "model"
-  metricName: "metrics"
-
-
-servicemodels:
-  - name: e2sm_kpm
-    version: 1.0.0
-    image:
-      repository: onosproject/service-model-ransim-e2sm_kpm-1.0.0
-      tag: v0.7.26
-      pullPolicy: IfNotPresent
-  - name: e2sm_rc_pre
-    version: 1.0.0
-    image:
-      repository: onosproject/service-model-ransim-e2sm_rc_pre-1.0.0
-      tag: v0.7.26
-      pullPolicy: IfNotPresent
-  - name: e2sm_kpm_v2
-    version: 1.0.0
-    image:
-      repository: onosproject/service-model-ransim-e2sm_kpm_v2-1.0.0
-      tag: v0.7.26
-      pullPolicy: IfNotPresent
-  - name: e2sm_mho
-    version: 1.0.0
-    image:
-      repository: onosproject/service-model-ransim-e2sm_mho-1.0.0
-      tag: v0.7.26
-      pullPolicy: IfNotPresent
+config:
+  mho:
+    e2tEndpoint: "onos-e2t:5150"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -75,7 +52,7 @@ resources: {}
   #   memory: 128Mi
   # requests:
   #   cpu: 100m
-  #   memory: 128Mi
+#   memory: 128Mi
 
 nodeSelector: {}
 

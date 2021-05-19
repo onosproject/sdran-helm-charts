@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-pci
-  tag: v0.1.4
+  tag: v0.1.6
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -41,6 +41,10 @@ service:
 config:
   pci:
     e2tEndpoint: "onos-e2t:5150"
+    config_json:
+      report_period:
+        interval: 1000 # ms
+
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
