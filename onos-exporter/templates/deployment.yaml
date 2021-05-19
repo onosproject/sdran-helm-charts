@@ -37,8 +37,11 @@ spec:
           image: {{ include "onos-exporter.imagename" . | quote }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
-            - "-e2tEndpoint={{ index .Values "config" "onos-exporter" "e2tEndpoint" }}"
             - "-mode={{ index .Values "config" "onos-exporter" "mode" }}"
+            - "-e2tEndpoint={{ index .Values "config" "onos-exporter" "e2tEndpoint" }}"
+            - "-e2subEndpoint={{ index .Values "config" "onos-exporter" "e2subEndpoint" }}"
+            - "-xappPciEndpoint={{ index .Values "config" "onos-exporter" "xappPciEndpoint" }}"
+            - "-xappKpimonEndpoint={{ index .Values "config" "onos-exporter" "xappKpimonEndpoint" }}"
           resources:
       {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
