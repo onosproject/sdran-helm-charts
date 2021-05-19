@@ -63,6 +63,8 @@ import:
     enabled: false
   prometheus-stack:
     enabled: false
+  onos-exporter:
+    enabled: false
 
 # NEM-Monitoring
 nem-monitoring:
@@ -183,6 +185,15 @@ onos-kpimon-v2:
   config:
     kpimon:
       kpmVersion: v2
+
+onos-exporter:
+  config:
+    onos-exporter:
+      mode: "prometheus"
+      e2tEndpoint: "onos-e2t:5150"
+      e2subEndpoint: "onos-e2sub:5150"
+      xappPciEndpoint: "onos-pci:5150"
+      xappKpimonEndpoint: "onos-kpimon-v2:5150"
 
 prometheus-stack:
   elasticsearchDatasources:
