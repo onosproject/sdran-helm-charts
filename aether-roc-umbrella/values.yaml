@@ -87,7 +87,8 @@ sdcore-adapter:
 # SD-Core Test Dummy
 # proxy_pass has to be added or nginx will not log the $request_body
 sdcore-test-dummy:
-  serviceType: NodePort
+  service:
+    type: NodePort
   serverBlock: |-
     log_format client '$remote_addr - $remote_user $request_time $upstream_response_time '
                       '[$time_local] "$request" $status $body_bytes_sent $request_body "$http_referer" '
