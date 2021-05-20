@@ -57,11 +57,11 @@ onos-config:
       v1:
         enabled: false
       v2:
-        enabled: true
+        enabled: false
       v2_1:
         enabled: true
       v2_2:
-        enabled: true
+        enabled: false
 
 # ONOS-GUI
 onos-gui: {}
@@ -70,7 +70,7 @@ onos-gui: {}
 onos-cli:
   postInstall:
     placeholder: true
-    topo: spgw-1-topo-entities.yaml
+    topo: spgw-1-topo-entities.json
 
 # Aether ROC API
 aether-roc-api: {}
