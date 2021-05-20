@@ -6,10 +6,6 @@
   "connectivity-service-v2": {
     "type": "entity",
     "kind": "Aether",
-    "labels": [
-      "test",
-      "something"
-    ],
     "onos.topo.Location": {
       "lat": 52.5150,
       "lng": 13.3885
