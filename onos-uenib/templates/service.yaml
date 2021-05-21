@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-uenib.fullname" . }}
+  labels:
+    app: {{ template "onos-uenib.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "onos-uenib.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-uenib.fullname" . }}
+    app: onos
+    type: uenib
+    resource: {{ template "onos-uenib.fullname" . }}
+    {{- include "onos-uenib.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: sctp
+      port: {{ .Values.service.e2.port | default 36421 }}
+      protocol: {{ .Values.service.e2.protocol }}
+    - name: grpc
+      port: {{ .Values.service.grpc.port }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "onos-uenib.fullname" . }}-hs
+  labels:
+    app: {{ template "onos-uenib.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "onos-uenib.labels" . | nindent 4 }}
+spec:
+  clusterIP: None
+  selector:
+    name: {{ template "onos-uenib.fullname" . }}
+    app: onos
+    type: uenib
+    resource: {{ template "onos-uenib.fullname" . }}
+    {{- include "onos-uenib.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: grpc
+      port: {{ .Values.service.grpc.port }}
+---
+{{- if .Values.service.external.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-uenib.fullname" . }}-external
+  labels:
+    app: {{ template "onos-uenib.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "onos-uenib.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "onos-uenib.fullname" . }}
+    app: onos
+    type: uenib
+    resource: {{ template "onos-uenib.fullname" . }}
+    {{- include "onos-uenib.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: sctp
+      port: {{ .Values.service.e2.port }}
+      nodePort: {{ .Values.service.e2.nodePort }}
+      protocol: {{ .Values.service.e2.protocol }}
+{{- end }}
