@@ -37,6 +37,10 @@ config:
       verbosity: "medium"
     enableUSRP: false
     radio:
+      eutra_band: 7
+      downlink_frequency: 2630000000L
+      uplink_frequency_offset: -120000000
+      rbs: 25
       max_rxgain: 125
       max_pdschReferenceSignalPower: -25
       rx_gain: 125
