@@ -2,6 +2,10 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
+{{- $eutraband := index .Values "config" "oai-enb-du" "radio" "eutra_band" }}
+{{- $downlinkfrequency := index .Values "config" "oai-enb-du" "radio" "downlink_frequency" }}
+{{- $uplinkfrequencyoffset := index .Values "config" "oai-enb-du" "radio" "uplink_frequency_offset" | int64 }}
+{{- $rbs := index .Values "config" "oai-enb-du" "radio" "rbs" }}
 {{- $rxgain := index .Values "config" "oai-enb-du" "radio" "rx_gain" }}
 {{- $txgain := index .Values "config" "oai-enb-du" "radio" "tx_gain" }}
 {{- $maxrxgain := index .Values "config" "oai-enb-du" "radio" "max_rxgain" }}
@@ -36,11 +40,11 @@ eNBs =
         tdd_config              = 3;
         tdd_config_s            = 0;
         prefix_type             = "NORMAL";
-        eutra_band              = 7;
-        downlink_frequency      = 2630000000L;
-        uplink_frequency_offset = -120000000;
+        eutra_band              = {{ $eutraband }};
+        downlink_frequency      = {{ $downlinkfrequency }};
+        uplink_frequency_offset = {{ $uplinkfrequencyoffset }};
         Nid_cell                = 0;
-        N_RB_DL                 = 25;
+        N_RB_DL                 = {{ $rbs }};
         Nid_cell_mbsfn          = 0;
         nb_antenna_ports        = 1;
         nb_antennas_tx          = 1;
