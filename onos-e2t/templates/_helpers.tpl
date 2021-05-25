@@ -78,3 +78,31 @@ registry name
 {{- printf "%s/" .Values.image.registry -}}
 {{- end -}}
 {{- end -}}
+
+{{/*
+onos-e2t consensus image name
+*/}}
+{{- define "onos-e2t.store.consensus.imagename" -}}
+{{- if .Values.global.store.consensus.image.registry -}}
+{{- printf "%s/" .Values.global.store.consensus.image.registry -}}
+{{- else if .Values.store.consensus.image.registry -}}
+{{- printf "%s/" .Values.store.consensus.image.registry -}}
+{{- end -}}
+{{- printf "%s:" .Values.store.consensus.image.repository -}}
+{{- if .Values.global.store.consensus.image.tag -}}
+{{- .Values.global.store.consensus.image.tag -}}
+{{- else -}}
+{{- .Values.store.consensus.image.tag -}}
+{{- end -}}
+{{- end -}}
+
+{{/*
+onos-e2t consensus store name
+*/}}
+{{- define "onos-e2t.store.consensus.name" -}}
+{{- if .Values.store.consensus.name -}}
+{{- printf "%s" .Values.store.consensus.name -}}
+{{- else -}}
+{{- printf "%s-consensus-store" ( include "onos-e2t.fullname" . ) -}}
+{{- end -}}
+{{- end -}}

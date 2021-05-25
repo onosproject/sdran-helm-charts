@@ -10,6 +10,12 @@ global:
   image:
     registry: ""
     tag: ""
+  store:
+    consensus:
+      name: ""
+      image:
+        registry: ""
+        tag: ""
 
 replicaCount: 1
 
@@ -24,7 +30,22 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "onos-e2t"
 
-storage: {}
+store:
+  consensus:
+    enabled: true
+    name: ""
+    image:
+      registry: ""
+      repository: atomix/atomix-raft-storage-node
+      tag: v0.6.6
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+    clusters: 1
+    replicas: 1
+    partitions: 1
+    persistence:
+      storageClass: ""
+      storageSize: 1Gi
 
 servicemodels:
   - name: e2sm_kpm
