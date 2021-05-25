@@ -25,7 +25,11 @@ spec:
         type: e2t
         resource: {{ template "onos-e2t.fullname" . }}
         {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
+      annotations:
+        broker.atomix.io/inject: "true"
+        raft.storage.atomix.io/inject: "true"
     spec:
+      serviceAccountName: {{ template "onos-e2t.fullname" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- with .Values.imagePullSecrets }}
