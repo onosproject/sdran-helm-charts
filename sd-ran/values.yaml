@@ -12,6 +12,23 @@ global:
   image:
     registry: ""
     tag: ""
+  store:
+    consensus:
+      enabled: true
+      name: ""
+      image:
+        registry: ""
+        repository: atomix/atomix-raft-storage-node
+        tag: v0.6.6
+        pullPolicy: IfNotPresent
+        pullSecrets: []
+      clusters: 1
+      replicas: 1
+      partitions: 1
+      persistence:
+        storageClass: ""
+        storageSize: 1Gi
+  # Deprecated: use 'store' instead
   storage:
     controller: "atomix-controller.kube-system.svc.cluster.local:5679"
     consensus:
@@ -113,6 +130,10 @@ nem-monitoring:
             isDefault: true
 
 onos-topo:
+  store:
+    consensus:
+      enabled: false
+  # Deprecated: use 'store' instead
   storage:
     consensus:
       enabled: false
@@ -133,6 +154,10 @@ onos-ric:
       enabled: false
 
 onos-e2t:
+  store:
+    consensus:
+      enabled: false
+  # Deprecated: use 'store' instead
   storage:
     consensus:
       enabled: false
