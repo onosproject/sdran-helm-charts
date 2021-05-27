@@ -13,5 +13,8 @@ rules:
   - primitives.atomix.io
   resources:
   - '*'
+  resourceNames:
+  - {{ template "onos-e2t.fullname" . }}-subscriptions
+  - {{ template "onos-e2t.fullname" . }}-tasks
   verbs:
   - '*'
