@@ -139,6 +139,10 @@ onos-topo:
       enabled: false
 
 onos-config:
+  store:
+    consensus:
+      enabled: false
+  # Deprecated: use 'store' instead
   storage:
     controller: ""
     consensus:
