@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+# A topology kind representing an E2 node
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: aether
+spec:
+  aspects: {}
+
+---
+# An entity representing an E2 termination point
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: connectivity-service-v2
+spec:
+  kind:
+    name: aether
+  aspects:
+    onos.topo.Configurable:
+      address: sdcore-adapter:5150
+      version: 2.1.0
+      type: Aether
+    onos.topo.TLSOptions:
+      insecure: true
+    onos.topo.Asset:
+      name: SPGW-1
+    onos.topo.MastershipState: {}
