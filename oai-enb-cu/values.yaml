@@ -51,9 +51,11 @@ config:
         portd: 601
       s1mme:
         interface: eno1
+        address:
         port: 36412
       s1u:
         interface: enb
+        address:
         port: 2152
       x2c:
         port: 36422
