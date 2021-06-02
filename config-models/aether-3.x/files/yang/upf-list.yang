@@ -2,6 +2,8 @@ module upf-list {
   namespace "http://opennetworking.org/aether/upf-list";
   prefix upf;
 
+  import ietf-inet-types { prefix inet; }  
+
   organization "Open Networking Foundation.";
   contact "Scott Baker";
   description "To generate JSON from this use command
@@ -32,9 +34,22 @@ module upf-list {
         description "ID for this upf.";
       }
 
-/*      leaf-list address {
-          type string;
-      }*/
+      list addresses {
+        key "address";
+        leaf address {
+          type inet:host;
+          description
+            "Address of UPF";
+        }
+        leaf allow {
+          type boolean;
+          default true;
+          description
+            "Allow or deny this UPF";
+        }
+        description
+          "List of UPF addresses";
+      }       
 
       leaf display-name {
         type string {

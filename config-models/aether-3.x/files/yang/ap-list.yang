@@ -2,14 +2,15 @@ module ap-list {
   namespace "http://opennetworking.org/aether/upf";
   prefix apl;
 
+  import ietf-inet-types { prefix inet; }
+
   organization "Open Networking Foundation.";
   contact "Scott Baker";
-  description "To generate JSON from this use command
-    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
-    Copied from YangUIComponents project";
+  description 
+    "A List of access points";
 
   revision "2021-06-02" {
-    description "An Aether User Plane Function";
+    description "An Aether Access Point List";
     reference "RFC 6087";
   }
 
@@ -32,9 +33,22 @@ module ap-list {
         description "ID for this ap-list.";
       }
 
-/*      leaf-list address {
-          type string;
-      }*/
+      list addresses {
+        key "address";
+        leaf address {
+          type inet:host;
+          description
+            "Address of access point";
+        }
+        leaf allow {
+          type boolean;
+          default true;
+          description
+            "Allow or deny this access point";
+        }
+        description
+          "List of access point addresses";
+      }        
 
       leaf display-name {
         type string {
