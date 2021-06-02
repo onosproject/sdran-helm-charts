@@ -1,6 +1,16 @@
 {
-  "report_period": {
-    "interval": 1000,
-    "granularity": 1000
+  "trigger": {
+    "periodic": {
+      "enabled": true,
+      "report_period": {
+        "interval": 1000
+      }
+    },
+    "upon_rcv_meas_report": {
+      "enabled": true
+    },
+    "upon_change_rrc_status": {
+      "enabled": true
+    }
   }
 }
