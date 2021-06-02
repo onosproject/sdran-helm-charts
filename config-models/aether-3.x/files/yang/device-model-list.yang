@@ -1,0 +1,67 @@
+module device-model-list {
+  namespace "http://opennetworking.org/aether/device-model-list";
+  prefix dml;
+
+  import aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "To generate JSON from this use command
+    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
+    Copied from YangUIComponents project";
+
+  revision "2020-10-22" {
+    description "An Aether List of Tacs";
+    reference "RFC 6087";
+  }
+
+  typedef device-model-list-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container device-model-list {
+    description "The top level container";
+
+    list device-model-list {
+      key "id";
+      description
+        "List of device-model-lists";
+
+      leaf id {
+        type device-model-list-id;
+        description "ID for this device-model-list.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      list tac {
+        key "tac";
+        leaf tac {
+          type at:tac;
+          description
+              "Type Allocation Code";
+        }
+        leaf allowed {
+          type boolean;
+          default true;
+          description
+            "Allow or disallow this ue to use this tac to use this device-model-list";
+        }
+      }
+  
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this device-model-list";
+      }
+    }
+  } 
+}

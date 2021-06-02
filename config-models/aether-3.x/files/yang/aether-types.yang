@@ -1,0 +1,70 @@
+module aether-types {
+  namespace "http://opennetworking.org/aether/aether-types";
+  prefix at;
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "To generate JSON from this use command
+    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
+    Copied from YangUIComponents project";
+
+  revision "2020-10-22" {
+    description "An Aether Subscriber";
+    reference "RFC 6087";
+  }
+
+  typedef mcc {
+      type uint32 {
+        range 0..999;
+      }
+  }
+
+  typedef mnc {
+      type uint32 {
+        range 0..999;
+      }
+  }
+
+  typedef tac {
+      type uint32 {
+        range 0..99999999;
+      }
+  }
+
+  typedef sst {
+      type uint8 {
+        range 1..255;
+      }
+  }
+
+  typedef sd {
+      type uint32 {
+        range 0..16777215;
+      }
+  }
+
+  // "TCP" or "UDP"
+  typedef protocol {
+      type string {
+        length 3;
+        pattern "TCP|UDP";
+      }
+      default "TCP";
+  }
+
+  // "ENABLE" | "MAINTENTANCE" | "DISABLE"
+  typedef admin-status {
+      type string {
+        length 0..16;
+        pattern "ENABLE|MAINTENANCE|DISABLE";
+      }
+      default "ENABLE";
+  }  
+
+  typedef mtu {
+      type uint16 {
+        range 0..65535;
+      }
+      default 1492;
+  }   
+}

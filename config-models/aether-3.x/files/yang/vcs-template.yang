@@ -1,0 +1,79 @@
+module vcs-template {
+  namespace "http://opennetworking.org/aether/vcs-template";
+  prefix st;
+
+  import aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "To generate JSON from this use command
+    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
+    Copied from YangUIComponents project";
+
+  revision "2021-05-21" {
+    description "An Aether Virtual Cellular Service Template";
+    reference "RFC 6087";
+  }
+
+  typedef vcs-template-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container vcs-template {
+    description "The top level container";
+
+    list vcs-template {
+      key "id";
+      description
+        "List of vcs templates";
+
+      leaf id {
+        type vcs-template-id;
+        description "ID for this vcs template.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      // not in SD-Core API... do we need this? reserved for future?
+      leaf sst {
+        type at:sst;
+        description "Slice/Service type";
+      }
+
+      // not in SD-Core API... do we need this? reserved for future?
+      leaf sd {
+        type at:sd;
+        description "Slice differentiator";
+      }
+
+      leaf uplink {
+        type uint32;
+        description "Uplink data rate in mbps";
+      }
+
+      leaf downlink {
+        type uint32;
+        description "Downlink data rate in mbps";
+      }
+
+      leaf traffic-class {
+        type string;
+        description "Downlink data rate in mbps";
+      }      
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this vcs template";
+      }
+    }
+  } 
+}

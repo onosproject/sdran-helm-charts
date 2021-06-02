@@ -1,0 +1,54 @@
+module ap-list {
+  namespace "http://opennetworking.org/aether/upf";
+  prefix apl;
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "To generate JSON from this use command
+    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
+    Copied from YangUIComponents project";
+
+  revision "2020-10-22" {
+    description "An Aether User Plane Function";
+    reference "RFC 6087";
+  }
+
+  typedef ap-list-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container ap-list {
+    description "The top level container";
+
+    list ap-list {
+      key "id";
+      description
+        "List of UPFs";
+
+      leaf id {
+        type ap-list-id;
+        description "ID for this ap-list.";
+      }
+
+/*      leaf-list address {
+          type string;
+      }*/
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this ap-list";
+      }
+    }
+  } 
+}
