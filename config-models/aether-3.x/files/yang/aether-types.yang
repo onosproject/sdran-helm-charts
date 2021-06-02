@@ -7,7 +7,7 @@ module aether-types {
   description "A set of base types for aether modeling.";
 
   revision "2021-06-02" {
-    description "An Aether Subscriber";
+    description "Aether Base Types";
     reference "RFC 6087";
   }
 

@@ -1,5 +1,5 @@
 module ap-list {
-  namespace "http://opennetworking.org/aether/upf";
+  namespace "http://opennetworking.org/aether/ap-list";
   prefix apl;
 
   import ietf-inet-types { prefix inet; }
@@ -26,7 +26,7 @@ module ap-list {
     list ap-list {
       key "id";
       description
-        "List of UPFs";
+        "A list of named ap-lists.";
 
       leaf id {
         type ap-list-id;

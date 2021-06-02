@@ -65,7 +65,7 @@ module vcs-template {
 
       leaf traffic-class {
         type string;
-        description "Downlink data rate in mbps";
+        description "Class of traffic";
       }      
 
       leaf description {

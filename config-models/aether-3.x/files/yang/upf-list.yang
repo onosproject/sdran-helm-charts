@@ -25,7 +25,7 @@ module upf-list {
     list upf-list {
       key "id";
       description
-        "List of UPFs";
+        "A list of named upf-lists.";
 
       leaf id {
         type upf-list-id;
