@@ -97,8 +97,8 @@ onos-gui: {}
 # ONOS-CLI
 onos-cli:
   postInstall:
-    placeholder: true
     topo: spgw-1-topo-entities.json
+# Use "--set onos-cli.postInstall=null" to disable
 
 # Aether ROC API
 aether-roc-api: {}

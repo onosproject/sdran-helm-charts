@@ -1,7 +1,8 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
-
+{{- if index .Values "onos-cli" "postInstall"}}
+{{- if index .Values "onos-cli" "postInstall" "topo"}}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -28,8 +29,6 @@ spec:
     spec:
       restartPolicy: Never
       containers:
-        {{- if index .Values "import" "onos-topo" "enabled" }}
-          {{- if index .Values "onos-cli" "postInstall" "topo"}}
         - name: post-install-topo-new-job
           image: {{ index .Values "onos-cli" "image" "repository" }}:{{ index .Values "onos-cli" "image" "tag" }}
           imagePullPolicy: {{ index .Values "onos-cli" "image" "pullPolicy" }}
@@ -42,9 +41,9 @@ spec:
             - name: config
               mountPath: /home/onos
               readOnly: true
-          {{- end }}
-        {{- end }}
       volumes:
         - name: config
           configMap:
             name: {{ .Release.Name }}-post
+      {{- end }}
+  {{- end }}
