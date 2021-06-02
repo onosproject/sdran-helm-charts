@@ -14,6 +14,7 @@ spec:
     type: Aether
     version: {{ .Chart.AppVersion | quote }}
   modules:
+# deprecated 4G models
   - name: aether-subscriber
     organization: Open Networking Foundation
     revision: 2020-10-22
@@ -34,14 +35,6 @@ spec:
     organization: Open Networking Foundation
     revision: 2020-10-22
     file: access-profile.yang
-  - name: enterprise
-    organization: Open Networking Foundation
-    revision: 2020-11-30
-    file: enterprise.yang
-  - name: connectivity-service
-    organization: Open Networking Foundation
-    revision: 2021-03-18
-    file: connectivity-service.yang
   - name: security-profile
     organization: Open Networking Foundation
     revision: 2021-05-10
@@ -58,6 +51,60 @@ spec:
     organization: Open Networking Foundation
     revision: 2021-03-04
     file: service-rule.yang
+# shared models
+  - name: connectivity-service
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: connectivity-service.yang
+  - name: enterprise
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: enterprise.yang
+# new 5G models
+  - name: aether-types
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: aether-types.yang
+  - name: ap-list
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: ap-list.yang
+  - name: application
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: application.yang
+  - name: device-group
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: device-group.yang
+  - name: device-model-list
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: device-model-list.yang
+  - name: ip-domain
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: ip-domain.yang
+  - name: network
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: network.yang
+  - name: site
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: site.yang
+  - name: upf-list
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: upf-list.yang
+  - name: vcs
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: vcs.yang
+  - name: vcs-template
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: vcs-template.yang
   files:
     {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
     {{ base $path }}: |

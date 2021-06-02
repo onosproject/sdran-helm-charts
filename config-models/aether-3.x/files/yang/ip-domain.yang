@@ -12,7 +12,7 @@ module ip-domain {
      that may be assigned to UEs, as well as DNS servers and other
      metadata";
 
-  revision "2021-03-04" {
+  revision "2021-06-02" {
     description "An Aether IP and Domain Specification";
     reference "RFC 6087";
   }

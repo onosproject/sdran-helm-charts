@@ -8,7 +8,7 @@ module ap-list {
     pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
     Copied from YangUIComponents project";
 
-  revision "2020-10-22" {
+  revision "2021-06-02" {
     description "An Aether User Plane Function";
     reference "RFC 6087";
   }
