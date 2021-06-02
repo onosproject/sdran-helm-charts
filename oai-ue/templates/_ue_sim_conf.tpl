@@ -9,6 +9,8 @@
 {{- $startIMEI := index .Values "config" "oai-ue" "device" "imei" }}
 {{- $startMSIN := index .Values "config" "oai-ue" "sim" "msinStart" }}
 {{- $startMSISDN := index .Values "config" "oai-ue" "sim" "msisdnStart" }}
+{{- $startMSINlen := index .Values "config" "oai-ue" "sim" "msinStart" | toString | len | int }}
+{{- $MSINlensub := sub 10 $startMSINlen | int }}
 
 PLMN: {
     PLMN0: {
@@ -27,7 +29,7 @@ UE{{ $i }}: {
         PIN={{ index $.Values "config" "oai-ue" "device" "pin" | quote }};
     };
     SIM: {
-        MSIN={{ add $startMSIN $i | quote }};
+        MSIN={{ add $startMSIN $i | printf "%010d" | substr $MSINlensub 10 | quote }};
         USIM_API_K={{ index $.Values "config" "oai-ue" "sim" "apiKey" | quote }};
         OPC={{ index $.Values "config" "oai-ue" "sim" "opc" | quote }};
         MSISDN={{ add $startMSISDN $i | quote }};
