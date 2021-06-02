@@ -20,9 +20,6 @@ type SDRANSuite struct {
 	c *input.Context
 }
 
-const onosComponentName = "sd-ran"
-const testName = "chart-test"
-
 func getCredentials() (string, string, error) {
 	kubClient, err := kubernetes.New()
 	if err != nil {
@@ -47,8 +44,8 @@ func (s *SDRANSuite) SetupTestSuite(c *input.Context) error {
 // TestInstall tests installing the sd-ran chart
 func (s *SDRANSuite) TestInstall(t *testing.T) {
 	username, password, err := getCredentials()
-	registry := s.c.GetArg("registry").String("")
 	assert.NoError(t, err)
+	registry := s.c.GetArg("registry").String("")
 
 	sdran := helm.Chart("sd-ran", onostest.SdranChartRepo).
 		Release("sd-ran").
