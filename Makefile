@@ -37,14 +37,19 @@ build-tools: # @HELP install the ONOS build tools if needed
 bumponosdeps: # @HELP update "onosproject" go dependencies and push patch to git.
 	./../build-tools/bump-onos-deps ${VERSION}
 
-clean: # @HELP clean up temporary files.
-	rm -rf sd-ran/charts sd-ran/Chart.lock
+clean-roc: # @HELP clean up temporary files for ROC umbrella.
 	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock
 
-deps: # @HELP build dependencies for local charts.
+deps-roc: # @HELP build dependencies for ROC Umbrella local charts.
+deps-roc: clean-roc
+	helm dep build aether-roc-umbrella
+
+clean: # @HELP clean up temporary files for SD-RAN umbrella.
+	rm -rf sd-ran/charts sd-ran/Chart.lock
+
+deps: # @HELP build dependencies for SD-RAN Umbrella local charts.
 deps: clean
 	helm dep build sd-ran
-	helm dep build aether-roc-umbrella
 
 help:
 	@grep -E '^.*: *# *@HELP' $(MAKEFILE_LIST) \
