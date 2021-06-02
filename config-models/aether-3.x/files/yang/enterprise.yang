@@ -6,9 +6,9 @@ module enterprise {
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
-  description "To generate JSON from this use command
-    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
-    Copied from YangUIComponents project";
+  description 
+    "An Aether Enterprise is an administration entity that
+     has ownership of resrouces.";
 
   revision "2021-06-02" {
     description "An Aether Enterprise. Used to distinguish ownership of devices and other resources as well as a domain of configuration.";

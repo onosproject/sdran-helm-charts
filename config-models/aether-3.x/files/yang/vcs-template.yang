@@ -6,9 +6,9 @@ module vcs-template {
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
-  description "To generate JSON from this use command
-    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
-    Copied from YangUIComponents project";
+  description 
+    "The aether vcs-template holds common parameters used
+     by a virtual connectivity service.";
 
   revision "2021-06-02" {
     description "An Aether Virtual Cellular Service Template";

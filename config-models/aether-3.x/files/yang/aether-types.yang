@@ -4,9 +4,7 @@ module aether-types {
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
-  description "To generate JSON from this use command
-    pyang -f jtoxx test1.yang | python3 -m json.tool > test1.json
-    Copied from YangUIComponents project";
+  description "A set of base types for aether modeling.";
 
   revision "2021-06-02" {
     description "An Aether Subscriber";
