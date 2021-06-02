@@ -22,10 +22,6 @@ chart_dir=$(mktemp -d)
 cp -R ../onos-helm-charts/* ${chart_dir}
 cp -R ../sdran-helm-charts/* ${chart_dir}
 
-kubectl delete ns onos-ric || true
-kubectl create ns onos-ric
-helmit test -n onos-ric ./test -c ${chart_dir} --suite onos-ric
-
 kubectl delete ns sd-ran || true
 kubectl create ns sd-ran
 helmit test -n sd-ran ./test -c ${chart_dir} --suite sd-ran
