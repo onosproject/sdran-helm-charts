@@ -101,7 +101,7 @@ spec:
     organization: Open Networking Foundation
     revision: 2021-06-02
     file: vcs.yang
-  - name: vcs-template
+  - name: template
     organization: Open Networking Foundation
     revision: 2021-06-02
     file: vcs-template.yang

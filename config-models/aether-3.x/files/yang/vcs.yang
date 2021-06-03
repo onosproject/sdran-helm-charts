@@ -2,7 +2,7 @@ module vcs {
   namespace "http://opennetworking.org/aether/vcs";
   prefix sl;
 
-  import vcs-template{ prefix vt; }
+  import template{ prefix vt; }
   import device-model-list{ prefix dml; }
   import network{ prefix net; }
   import upf-list{ prefix upf; }
@@ -57,7 +57,7 @@ module vcs {
 
       leaf template {
         type leafref {
-          path "/vt:vcs-template/vt:vcs-template/vt:id";
+          path "/vt:template/vt:template/vt:id";
         }          
         description
           "Link to user vcs template";

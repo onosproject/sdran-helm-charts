@@ -1,6 +1,6 @@
-module vcs-template {
-  namespace "http://opennetworking.org/aether/vcs-template";
-  prefix st;
+module template {
+  namespace "http://opennetworking.org/aether/template";
+  prefix tp;
 
   import aether-types{ prefix at; }
 
@@ -15,22 +15,22 @@ module vcs-template {
     reference "RFC 6087";
   }
 
-  typedef vcs-template-id {
+  typedef template-id {
         type string {
             length 1..32;
         }
   }
 
-  container vcs-template {
+  container template {
     description "The top level container";
 
-    list vcs-template {
+    list template {
       key "id";
       description
         "List of vcs templates";
 
       leaf id {
-        type vcs-template-id;
+        type template-id;
         description "ID for this vcs template.";
       }
 
