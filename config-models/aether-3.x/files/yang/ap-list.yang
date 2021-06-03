@@ -3,6 +3,8 @@ module ap-list {
   prefix apl;
 
   import ietf-inet-types { prefix inet; }
+  import aether-types { prefix at; }
+
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -33,18 +35,23 @@ module ap-list {
         description "ID for this ap-list.";
       }
 
-      list addresses {
+      list access-points {
         key "address";
         leaf address {
           type inet:host;
           description
             "Address of access point";
         }
-        leaf allow {
+        leaf tac {
+          type at:tac;
+          description
+              "Type Allocation Code";
+        }        
+        leaf enable {
           type boolean;
           default true;
           description
-            "Allow or deny this access point";
+            "Enable this access point";
         }
         description
           "List of access point addresses";
