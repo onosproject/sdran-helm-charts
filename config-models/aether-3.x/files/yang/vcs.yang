@@ -5,7 +5,7 @@ module vcs {
   import template{ prefix vt; }
   import device-model-list{ prefix dml; }
   import network{ prefix net; }
-  import upf-list{ prefix upf; }
+  import upf { prefix upf; }
   import ap-list{ prefix apl; }
   import application{ prefix app; }
   import device-group{ prefix dg; }
@@ -102,7 +102,7 @@ module vcs {
 
       leaf upf {
         type leafref {
-          path "/upf:upf-list/upf:upf-list/upf:id";
+          path "/upf:upf/upf:upf/upf:id";
         }          
         description
           "Link to user plane that implements this vcf";

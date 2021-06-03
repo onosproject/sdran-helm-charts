@@ -96,7 +96,7 @@ spec:
   - name: upf-list
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: upf-list.yang
+    file: upf.yang
   - name: vcs
     organization: Open Networking Foundation
     revision: 2021-06-02

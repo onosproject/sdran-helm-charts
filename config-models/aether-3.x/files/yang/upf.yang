@@ -1,53 +1,50 @@
-module upf-list {
-  namespace "http://opennetworking.org/aether/upf-list";
+module upf {
+  namespace "http://opennetworking.org/aether/upf";
   prefix upf;
 
   import ietf-inet-types { prefix inet; }  
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
-  description "A Aether UPF List is a named list of User Plane Functions.";
+  description "A Aether UPF List is a named User Plane Function.";
 
   revision "2021-06-02" {
     description "An Aether User Plane Function";
     reference "RFC 6087";
   }
 
-  typedef upf-list-id {
+  typedef upf-id {
         type string {
             length 1..32;
         }
   }
 
-  container upf-list {
+  container upf {
     description "The top level container";
 
-    list upf-list {
+    list upf {
       key "id";
       description
-        "A list of named upf-lists.";
+        "A list of named upfs.";
 
       leaf id {
-        type upf-list-id;
+        type upf-id;
         description "ID for this upf.";
       }
 
-      list addresses {
-        key "address";
-        leaf address {
-          type inet:host;
-          description
-            "Address of UPF";
-        }
-        leaf allow {
-          type boolean;
-          default true;
-          description
-            "Allow or deny this UPF";
-        }
+      leaf address {
+        type inet:host;
         description
-          "List of UPF addresses";
-      }       
+          "Address of UPF";
+      }
+
+      leaf port {
+        // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
+        // type ietf:port-number;
+        type uint32;
+        description
+            "First port in range";
+      }
 
       leaf display-name {
         type string {
