@@ -2,7 +2,8 @@ module site {
   namespace "http://opennetworking.org/aether/site";
   prefix st;
 
-  import enterprise{ prefix ent; }   
+  import enterprise{ prefix ent; }
+  import network{ prefix net; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -46,6 +47,14 @@ module site {
         }              
         description
           "Link to enterprise that owns this Usite";
+      }
+
+      leaf network {
+        type leafref {
+          path "/net:network/net:network/net:id";
+        }          
+        description
+          "Link to network for this vcs";
       }      
 
       leaf description {

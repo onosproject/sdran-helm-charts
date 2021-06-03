@@ -3,11 +3,10 @@ module vcs {
   prefix sl;
 
   import template{ prefix vt; }
-  import device-model-list{ prefix dml; }
-  import network{ prefix net; }
   import upf { prefix upf; }
-  import ap-list{ prefix apl; }
+  import ap-list{ prefix apl; }    
   import application{ prefix app; }
+  import aether-types{ prefix at; }
   import device-group{ prefix dg; }
 
   organization "Open Networking Foundation.";
@@ -63,21 +62,21 @@ module vcs {
           "Link to user vcs template";
       }
 
-      leaf network {
-        type leafref {
-          path "/net:network/net:network/net:id";
-        }          
-        description
-          "Link to network for this vcs";
-      }
+      // If unspecified, the template contains a default SD
+      leaf sd {
+        type at:sd;
+        description "Slice differentiator, optional override of template SD.";
+      }      
 
+/*    TODO: Drop this as unnecessary??
       leaf device-model-list {
         type leafref {
           path "/dml:device-model-list/dml:device-model-list/dml:id";
         }          
         description
           "Link to network for this device-model-list";
-      }      
+      }
+*/
 
       list application {
         key "application";   
