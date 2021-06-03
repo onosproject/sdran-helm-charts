@@ -23,3 +23,5 @@ spec:
     {{- end}}
     - name: prometheus
       port: {{ .Values.ports.prometheus }}
+    - name: diag-api
+      port: {{ .Values.ports.diagApi }}
