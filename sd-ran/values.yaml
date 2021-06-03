@@ -44,6 +44,8 @@ global:
 import:
   onos-topo:
     enabled: true
+  onos-uenib:
+    enabled: true
   onos-e2t:
     enabled: true
   onos-e2sub:
@@ -135,6 +137,11 @@ onos-topo:
       enabled: false
   # Deprecated: use 'store' instead
   storage:
+    consensus:
+      enabled: false
+
+onos-uenib:
+  store:
     consensus:
       enabled: false
 
