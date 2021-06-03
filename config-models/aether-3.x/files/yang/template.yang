@@ -41,13 +41,12 @@ module template {
         description "display name to use in GUI or CLI";
       }
 
-      // not in SD-Core API... do we need this? reserved for future?
       leaf sst {
         type at:sst;
         description "Slice/Service type";
       }
 
-      // not in SD-Core API... do we need this? reserved for future?
+      // This is a default that can be overridden in the VCS
       leaf sd {
         type at:sd;
         description "Slice differentiator";

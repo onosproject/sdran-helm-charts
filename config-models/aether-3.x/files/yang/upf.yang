@@ -2,7 +2,7 @@ module upf {
   namespace "http://opennetworking.org/aether/upf";
   prefix upf;
 
-  import ietf-inet-types { prefix inet; }  
+  import ietf-inet-types { prefix inet; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
