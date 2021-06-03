@@ -30,7 +30,8 @@ module aether-types {
   }
 
   typedef sst {
-      type uint8 {
+      // TODO: Aether-roc-api fails on uint8. AETHER-1859.
+      type uint32 {
         range 1..255;
       }
   }
@@ -60,7 +61,8 @@ module aether-types {
   }  
 
   typedef mtu {
-      type uint16 {
+      // TODO: Aether-roc-api fails on uint16. AETHER-1859.
+      type uint32 {
         range 0..65535;
       }
       default 1492;

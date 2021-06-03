@@ -63,12 +63,16 @@ module application {
               "Address of this endpoint. Either a hostname, and IP, or a subnet.";
         }
         leaf port-start {
-          type ietf:port-number;
+          // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
+          // type ietf:port-number;
+          type uint32;
           description
               "First port in range";
         }
         leaf port-end {
-          type ietf:port-number;
+          // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
+          // type ietf:port-number;
+          type uint32;
           description
               "Last port in range";
         }
