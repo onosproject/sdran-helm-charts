@@ -24,9 +24,6 @@ corsOrigins:
 
 store: {}
 
-ingress:
-  enabled: false
-
 service:
   type: ClusterIP
 
