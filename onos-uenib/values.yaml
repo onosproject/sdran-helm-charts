@@ -10,6 +10,12 @@ global:
   image:
     registry: ""
     tag: ""
+  store:
+    consensus:
+      name: ""
+      image:
+        registry: ""
+        tag: ""
 
 replicaCount: 1
 
