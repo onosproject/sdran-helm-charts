@@ -8,7 +8,8 @@ module template {
   contact "Scott Baker";
   description 
     "The aether vcs-template holds common parameters used
-     by a virtual connectivity service.";
+     by a virtual connectivity service. Templates are used to
+     populate a VCS.";
 
   revision "2021-06-02" {
     description "An Aether Virtual Cellular Service Template";
@@ -46,7 +47,6 @@ module template {
         description "Slice/Service type";
       }
 
-      // This is a default that can be overridden in the VCS
       leaf sd {
         type at:sd;
         description "Slice differentiator";

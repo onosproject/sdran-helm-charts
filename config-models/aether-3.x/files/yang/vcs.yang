@@ -59,14 +59,9 @@ module vcs {
           path "/vt:template/vt:template/vt:id";
         }          
         description
-          "Link to user vcs template";
+          "Link to user vcs template that was used to initialize
+           this VCS";
       }
-
-      // If unspecified, the template contains a default SD
-      leaf sd {
-        type at:sd;
-        description "Slice differentiator, optional override of template SD.";
-      }      
 
 /*    TODO: Drop this as unnecessary??
       leaf device-model-list {
@@ -121,6 +116,33 @@ module vcs {
         }
         description "description of this vcs";
       }
+
+      // the following are populated from the template
+      leaf sst {
+        type at:sst;
+        description "Slice/Service type. Immutable.";
+      }
+      
+      leaf sd {
+        type at:sd;
+        description "Slice differentiator. Immutable.";
+      }
+
+      leaf uplink {
+        type uint32;
+        description "Uplink data rate in mbps";
+      }
+
+      leaf downlink {
+        type uint32;
+        description "Downlink data rate in mbps";
+      }
+
+      leaf traffic-class {
+        type string;
+        description "Class of traffic";
+      }
+      // end of items populated from the template
     }
   } 
 }
