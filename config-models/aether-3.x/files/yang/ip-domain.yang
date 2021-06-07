@@ -53,19 +53,11 @@ module ip-domain {
         description "secondary dns server name";
       }
 
-      // Note: SD-Core API only allows one subnet at this time.
-      list subnets {
-        key "subnet";
-        leaf subnet {
-          type inet:ipv4-prefix;
-          description "subnet to allocate ip addresses from";
-        }
-        leaf enabled {
-          type boolean;
-          default true;
-          description
-            "Enable this subnet within the pool";
-        }        
+      // Note: Cannot use a subnet as a list key. Dropped support from a
+      // list of subnets to a single subnet. Revisit in the future.
+      leaf subnet {
+        type inet:ipv4-prefix;
+        description "subnet to allocate ip addresses from";
       }
 
       leaf admin-status {
