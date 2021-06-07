@@ -10,13 +10,19 @@ global:
   image:
     registry: ""
     tag: ""
+  store:
+    consensus:
+      name: ""
+      image:
+        registry: ""
+        tag: ""
 
 replicaCount: 1
 
 image:
   registry: ""
   repository: onosproject/onos-uenib
-  tag: v0.0.1
+  tag: v0.0.2
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -24,7 +30,22 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "onos-uenib"
 
-storage: {}
+store:
+  consensus:
+    enabled: true
+    name: ""
+    image:
+      registry: ""
+      repository: atomix/atomix-raft-storage-node
+      tag: v0.6.6
+      pullPolicy: IfNotPresent
+      pullSecrets: []
+    clusters: 1
+    replicas: 1
+    partitions: 1
+    persistence:
+      storageClass: ""
+      storageSize: 1Gi
 
 service:
   # TODO: External NodePort service should be disabled by default

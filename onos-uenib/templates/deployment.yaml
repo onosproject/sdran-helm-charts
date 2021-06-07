@@ -25,7 +25,12 @@ spec:
         type: uenib
         resource: {{ template "onos-uenib.fullname" . }}
         {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
+      annotations:
+        seccomp.security.alpha.kubernetes.io/pod: "unconfined"
+        broker.atomix.io/inject: "true"
+        raft.storage.atomix.io/inject: "true"
     spec:
+      serviceAccountName: {{ template "onos-uenib.fullname" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       {{- with .Values.imagePullSecrets }}
