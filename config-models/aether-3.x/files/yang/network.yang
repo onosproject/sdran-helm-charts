@@ -1,0 +1,61 @@
+module network {
+  namespace "http://opennetworking.org/aether/network";
+  prefix net;
+
+  import aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "An Aether Network is a cellular network, defined by its
+     MCC and MNC.";
+
+  revision "2021-06-02" {
+    description "An Aether Network";
+    reference "RFC 6087";
+  }
+
+  typedef network-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container network {
+    description "The top level container";
+
+    list network {
+      key "id";
+      description
+        "List of networks";
+
+      leaf id {
+        type network-id;
+        description "ID for this network.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf mcc {
+        type at:mcc;
+        description "mobile country code";
+      }
+      leaf mnc {
+        type at:mnc;
+        description "mobile network code";
+      }
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this network";
+      }
+    }
+  } 
+}

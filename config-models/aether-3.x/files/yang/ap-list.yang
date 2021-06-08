@@ -1,0 +1,75 @@
+module ap-list {
+  namespace "http://opennetworking.org/aether/ap-list";
+  prefix apl;
+
+  import ietf-inet-types { prefix inet; }
+  import aether-types { prefix at; }
+
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "An Aether AP List is a named list of access points.";
+
+  revision "2021-06-02" {
+    description "An Aether Access Point List";
+    reference "RFC 6087";
+  }
+
+  typedef ap-list-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container ap-list {
+    description "The top level container";
+
+    list ap-list {
+      key "id";
+      description
+        "A list of named ap-lists.";
+
+      leaf id {
+        type ap-list-id;
+        description "ID for this ap-list.";
+      }
+
+      list access-points {
+        key "address";
+        leaf address {
+          type inet:host;
+          description
+            "Address of access point";
+        }
+        leaf tac {
+          type at:tac;
+          description
+              "Type Allocation Code";
+        }        
+        leaf enable {
+          type boolean;
+          default true;
+          description
+            "Enable this access point";
+        }
+        description
+          "List of access point addresses";
+      }        
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this ap-list";
+      }
+    }
+  } 
+}

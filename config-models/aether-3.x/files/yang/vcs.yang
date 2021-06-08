@@ -1,0 +1,148 @@
+module vcs {
+  namespace "http://opennetworking.org/aether/vcs";
+  prefix sl;
+
+  import template{ prefix vt; }
+  import upf { prefix upf; }
+  import ap-list{ prefix apl; }    
+  import application{ prefix app; }
+  import aether-types{ prefix at; }
+  import device-group{ prefix dg; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "An Aether Virtual Cellular Service (VCS) is
+     used to connect UE devices with applications";
+
+  revision "2021-06-02" {
+    description "An Aether Virtual Cellular Service";
+    reference "RFC 6087";
+  }
+
+  typedef vcs-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container vcs {
+    description "The top level container";
+
+    list vcs {
+      key "id";
+      description
+        "List of virtual cellular services";
+
+      leaf id {
+        type vcs-id;
+        description "ID for this vcs.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf device-group {
+        type leafref {
+          path "/dg:device-group/dg:device-group/dg:id";
+        }          
+        description
+          "Link to device group";
+      }      
+
+      leaf template {
+        type leafref {
+          path "/vt:template/vt:template/vt:id";
+        }          
+        description
+          "Link to user vcs template that was used to initialize
+           this VCS";
+      }
+
+/*    TODO: Drop this as unnecessary??
+      leaf device-model-list {
+        type leafref {
+          path "/dml:device-model-list/dml:device-model-list/dml:id";
+        }          
+        description
+          "Link to network for this device-model-list";
+      }
+*/
+
+      list application {
+        key "application";   
+        leaf application {
+          type leafref {
+            path "/app:application/app:application/app:id";
+          }
+          description
+            "Link to application";
+        }
+        leaf allow {
+          type boolean;
+          default true;
+          description
+            "Allow or deny this application";
+        }
+        description
+          "An ordered list of applications to allow and deny. The deny rules
+           will be executed first, followed by the allow rules. The first rule
+           to match is returned. An implicit DENY ALL lies at the end.";
+      }      
+
+      leaf upf {
+        type leafref {
+          path "/upf:upf/upf:upf/upf:id";
+        }          
+        description
+          "Link to user plane that implements this vcf";
+      }
+
+      leaf ap {
+        type leafref {
+          path "/apl:ap-list/apl:ap-list/apl:id";
+        }          
+        description
+          "Link to access-point list";
+      }
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this vcs";
+      }
+
+      // the following are populated from the template
+      leaf sst {
+        type at:sst;
+        description "Slice/Service type. Immutable.";
+      }
+      
+      leaf sd {
+        type at:sd;
+        description "Slice differentiator. Immutable.";
+      }
+
+      leaf uplink {
+        type uint32;
+        description "Uplink data rate in mbps";
+      }
+
+      leaf downlink {
+        type uint32;
+        description "Downlink data rate in mbps";
+      }
+
+      leaf traffic-class {
+        type string;
+        description "Class of traffic";
+      }
+      // end of items populated from the template
+    }
+  } 
+}

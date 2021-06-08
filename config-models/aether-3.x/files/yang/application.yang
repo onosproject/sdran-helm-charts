@@ -1,0 +1,87 @@
+module application {
+  namespace "http://opennetworking.org/enterprise/application";
+  prefix app;
+
+  import ietf-inet-types{ prefix ietf; }
+  import aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "An Aether Application is an application that UE devices may
+     connect to. Includes a set of endpoints where services are
+     provided.";
+
+  revision "2021-06-02" {
+    description "Aether Application.";
+    reference "RFC 6087";
+  }
+
+  typedef application-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container application {
+    description "The top level container";
+
+    list application {
+      key "id";
+      description
+        "List of applications";
+
+      leaf id {
+        type application-id;
+        description "ID for this application.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this application";
+      }
+
+      list endpoint {
+        key "name";
+        leaf name {
+          type string;
+          description
+              "Name of this endpoint";
+        }
+        leaf address {
+          type ietf:host;
+          description
+              "Address of this endpoint. Either a hostname, and IP, or a subnet.";
+        }
+        leaf port-start {
+          // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
+          // type ietf:port-number;
+          type uint32;
+          description
+              "First port in range";
+        }
+        leaf port-end {
+          // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
+          // type ietf:port-number;
+          type uint32;
+          description
+              "Last port in range";
+        }
+        leaf protocol {
+          type at:protocol;
+          description
+              "Name of this endpoint";
+        }                   
+      }
+    }
+  } 
+}

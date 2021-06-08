@@ -1,0 +1,70 @@
+module aether-types {
+  namespace "http://opennetworking.org/aether/aether-types";
+  prefix at;
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "A set of base types for aether modeling.";
+
+  revision "2021-06-02" {
+    description "Aether Base Types";
+    reference "RFC 6087";
+  }
+
+  typedef mcc {
+      type uint32 {
+        range 0..999;
+      }
+  }
+
+  typedef mnc {
+      type uint32 {
+        range 0..999;
+      }
+  }
+
+  typedef tac {
+      type uint32 {
+        range 0..99999999;
+      }
+  }
+
+  typedef sst {
+      // TODO: Aether-roc-api fails on uint8. AETHER-1859.
+      type uint32 {
+        range 1..255;
+      }
+  }
+
+  typedef sd {
+      type uint32 {
+        range 0..16777215;
+      }
+  }
+
+  // "TCP" or "UDP"
+  typedef protocol {
+      type string {
+        length 3;
+        pattern "TCP|UDP";
+      }
+      default "TCP";
+  }
+
+  // "ENABLE" | "MAINTENTANCE" | "DISABLE"
+  typedef admin-status {
+      type string {
+        length 0..16;
+        pattern "ENABLE|MAINTENANCE|DISABLE";
+      }
+      default "ENABLE";
+  }  
+
+  typedef mtu {
+      // TODO: Aether-roc-api fails on uint16. AETHER-1859.
+      type uint32 {
+        range 0..65535;
+      }
+      default 1492;
+  }
+}

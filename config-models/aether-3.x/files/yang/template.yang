@@ -1,0 +1,78 @@
+module template {
+  namespace "http://opennetworking.org/aether/template";
+  prefix tp;
+
+  import aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "The aether vcs-template holds common parameters used
+     by a virtual connectivity service. Templates are used to
+     populate a VCS.";
+
+  revision "2021-06-02" {
+    description "An Aether Virtual Cellular Service Template";
+    reference "RFC 6087";
+  }
+
+  typedef template-id {
+        type string {
+            length 1..32;
+        }
+  }
+
+  container template {
+    description "The top level container";
+
+    list template {
+      key "id";
+      description
+        "List of vcs templates";
+
+      leaf id {
+        type template-id;
+        description "ID for this vcs template.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf sst {
+        type at:sst;
+        description "Slice/Service type";
+      }
+
+      leaf sd {
+        type at:sd;
+        description "Slice differentiator";
+      }
+
+      leaf uplink {
+        type uint32;
+        description "Uplink data rate in mbps";
+      }
+
+      leaf downlink {
+        type uint32;
+        description "Downlink data rate in mbps";
+      }
+
+      leaf traffic-class {
+        type string;
+        description "Class of traffic";
+      }      
+
+      leaf description {
+        type string {
+          length 1..100;
+        }
+        description "description of this vcs template";
+      }
+    }
+  } 
+}
