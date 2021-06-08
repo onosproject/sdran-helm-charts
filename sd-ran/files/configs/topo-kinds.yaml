@@ -1,0 +1,58 @@
+# A topology kind representing an E2 node
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-node
+spec:
+  aspects:
+    onos.topo.Location:
+      lat: 50.08834
+      lng: 14.40372
+    onos.topo.E2Node:
+      service_models:
+---
+# A topology kind representing an E2 cell
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-cell
+spec:
+  aspects:
+    onos.topo.Location:
+      lat: 50.08834
+      lng: 14.40372
+    onos.topo.E2Cell:
+      cid: 0
+      antenna_count: 1
+      earfcn: 0
+      cell_type: FEMTO
+    onos.topo.Coverage:
+      height: 0
+      arc_width: 120
+      azimuth: 0
+      tilt: 0
+---
+# A topology kind representing an E2 termination point
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-termination
+---
+# A topology kind representing an E2 connection relation
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-connection
+---
+# A topology kind representing a node-cell containment relation
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-node-cell
+---
+# A topology kind representing a cell neighbor relation
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: e2-cell-neighbor
+---
