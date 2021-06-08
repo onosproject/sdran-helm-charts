@@ -14,44 +14,6 @@ spec:
     type: Aether
     version: {{ .Chart.AppVersion | quote }}
   modules:
-# deprecated 4G models
-  - name: aether-subscriber
-    organization: Open Networking Foundation
-    revision: 2020-10-22
-    file: aether-subscriber.yang
-  - name: apn-profile
-    organization: Open Networking Foundation
-    revision: 2021-03-04
-    file: apn-profile.yang
-  - name: up-profile
-    organization: Open Networking Foundation
-    revision: 2020-10-22
-    file: up-profile.yang
-  - name: qos-profile
-    organization: Open Networking Foundation
-    revision: 2020-10-22
-    file: qos-profile.yang
-  - name: access-profile
-    organization: Open Networking Foundation
-    revision: 2020-10-22
-    file: access-profile.yang
-  - name: security-profile
-    organization: Open Networking Foundation
-    revision: 2021-05-10
-    file: security-profile.yang
-  - name: service-group
-    organization: Open Networking Foundation
-    revision: 2021-03-04
-    file: service-group.yang
-  - name: service-policy
-    organization: Open Networking Foundation
-    revision: 2021-03-04
-    file: service-policy.yang
-  - name: service-rule
-    organization: Open Networking Foundation
-    revision: 2021-03-04
-    file: service-rule.yang
-# shared models
   - name: connectivity-service
     organization: Open Networking Foundation
     revision: 2021-06-02
@@ -104,7 +66,7 @@ spec:
   - name: template
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: vcs-template.yang
+    file: template.yang
   files:
     {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
     {{ base $path }}: |
