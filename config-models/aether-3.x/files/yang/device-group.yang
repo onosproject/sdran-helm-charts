@@ -50,7 +50,11 @@ module device-group {
       }      
       
       list imsis {
-        key "imsi-range-from";
+        // TODO: imsi-range-from cannot be used as a list index
+        key "name";
+        leaf name {
+          type string;
+        }
         leaf imsi-range-from {
           type uint64;
         }
