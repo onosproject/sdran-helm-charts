@@ -22,5 +22,25 @@
       "name": "SPGW-1"
     },
     "onos.topo.MastershipState": {}
+  },
+  "connectivity-service-v3": {
+    "type": "entity",
+    "kind": "Aether",
+    "onos.topo.Location": {
+      "lat": 52.5150,
+      "lng": 13.3885
+    },
+    "onos.topo.Configurable": {
+      "address": "sdcore-adapter-new:5150",
+      "version": "3.0.0",
+      "type": "Aether"
+    },
+    "onos.topo.TLSOptions": {
+      "insecure": true
+    },
+    "onos.topo.Asset": {
+      "name": "5G Core"
+    },
+    "onos.topo.MastershipState": {}
   }
 }

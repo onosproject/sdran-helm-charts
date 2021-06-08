@@ -90,6 +90,8 @@ onos-config:
         enabled: true
       v2_2:
         enabled: false
+      v3:
+        enabled: true
 
 # ONOS-GUI
 onos-gui: {}
