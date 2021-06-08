@@ -7,12 +7,10 @@ To learn more about the release, try:
   $ helm -n {{.Release.Namespace}} status {{ .Release.Name }}
   $ helm -n {{.Release.Namespace}} get all {{ .Release.Name }}
 
-{{ .Release.Name }} depends on the "onos-config (with the RBAC 1.0.0 and Aether 1.0.0 model plugins and onos-topo" micro services.
+{{ .Release.Name }} depends on the "onos-config (with the Aether 2.1.0 and 3.0.0 model plugins and onos-topo" micro services.
 
 If you are using KinD as a Kubernetes server you will have to add a "port-forward" to access the aether-roc-api e.g.
 $ kubectl -n {{.Release.Namespace}} port-forward $(kubectl -n {{.Release.Namespace}} get pods -l type=api -o name) 8181
 and then access the API with:
 
-curl http://localhost:8181/rbac/v1.0.0/rbac
-OR
-curl http://localhost:8181/aether/v1.0.0/subscriber
+curl http://localhost:8181/aether/v3.0.0/connectivity-service-v3/enterprise
