@@ -67,6 +67,10 @@ spec:
     organization: Open Networking Foundation
     revision: 2021-06-02
     file: template.yang
+  - name: traffic-class
+    organization: Open Networking Foundation
+    revision: 2021-06-02
+    file: traffic-class.yang    
   files:
     {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
     {{ base $path }}: |
