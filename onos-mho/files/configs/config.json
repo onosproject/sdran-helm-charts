@@ -12,5 +12,12 @@
     "upon_change_rrc_status": {
       "enabled": true
     }
+  },
+  "hoParameters": {
+      "A3OffsetRange": 1,
+      "HysteresisRange": 2,
+      "CellIndividualOffset": 18,
+      "FrequencyOffset": 19,
+      "TimeToTrigger": 0
   }
 }
