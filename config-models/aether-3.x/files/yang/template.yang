@@ -3,6 +3,7 @@ module template {
   prefix tp;
 
   import aether-types{ prefix at; }
+  import traffic-class{ prefix tc; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -63,9 +64,12 @@ module template {
       }
 
       leaf traffic-class {
-        type string;
-        description "Class of traffic";
-      }      
+        type leafref {
+          path "/tc:traffic-class/tc:traffic-class/tc:id";
+        }          
+        description
+          "Link to traffic class";
+      } 
 
       leaf description {
         type string {

@@ -42,6 +42,27 @@ module aether-types {
       }
   }
 
+  typedef qci {
+      // TODO: Aether-roc-api fails on uint8. AETHER-1859.
+      type uint32 {
+        range 1..32;
+      }
+  }
+
+  typedef pelr {
+      // TODO: Aether-roc-api fails on integers. Had to implement as a positive number.
+      type uint32 {
+        range 0..10;
+      }
+  }
+
+  typedef pdb {
+      // TODO: Aether-roc-api fails on uint8. AETHER-1859.
+      type uint32 {
+        range 0..1000;
+      }
+  }  
+
   // "TCP" or "UDP"
   typedef protocol {
       type string {

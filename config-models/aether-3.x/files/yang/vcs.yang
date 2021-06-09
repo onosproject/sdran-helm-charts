@@ -8,6 +8,7 @@ module vcs {
   import application{ prefix app; }
   import aether-types{ prefix at; }
   import device-group{ prefix dg; }
+  import traffic-class{ prefix tc; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -139,8 +140,11 @@ module vcs {
       }
 
       leaf traffic-class {
-        type string;
-        description "Class of traffic";
+        type leafref {
+          path "/tc:traffic-class/tc:traffic-class/tc:id";
+        }          
+        description
+          "Link to traffic class";
       }
       // end of items populated from the template
     }
