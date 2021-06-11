@@ -62,9 +62,7 @@ import:
     enabled: false
   nem-monitoring:
     enabled: false
-  onos-kpimon-v1:
-    enabled: false
-  onos-kpimon-v2:
+  onos-kpimon:
     enabled: false
   onos-pci:
     enabled: false
@@ -210,17 +208,6 @@ onos-cli:
     toponew: berlin-honeycomb-4-3-toponew.yaml
     config: [ berlin-honeycomb-4-3-gnmi.yaml ]
 
-onos-kpimon-v1:
-  fullnameOverride: "onos-kpimon-v1"
-  config:
-    kpimon:
-      kpmVersion: v1
-
-onos-kpimon-v2:
-  fullnameOverride: "onos-kpimon-v2"
-  config:
-    kpimon:
-      kpmVersion: v2
 
 onos-exporter:
   config:
