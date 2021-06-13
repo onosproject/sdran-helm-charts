@@ -3,6 +3,7 @@ module upf {
   prefix upf;
 
   import ietf-inet-types { prefix inet; }
+  import enterprise{ prefix ent; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -59,6 +60,17 @@ module upf {
         }
         description "description of this UPF";
       }
+
+      // UPFs are always owned by an Enterprise, since they typically exist on the
+      // Enterprise's edge. TODO: Consider whether they should be owned by a Site
+      // instead of Enterprise.
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }              
+        description
+          "Link to enterprise that owns this Access Point List";
+      }      
     }
   } 
 }

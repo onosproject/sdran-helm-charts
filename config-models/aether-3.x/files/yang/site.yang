@@ -46,7 +46,7 @@ module site {
           path "/ent:enterprise/ent:enterprise/ent:id";
         }              
         description
-          "Link to enterprise that owns this Usite";
+          "Link to enterprise that owns this site";
       }
 
       leaf network {

@@ -3,6 +3,7 @@ module network {
   prefix net;
 
   import aether-types{ prefix at; }
+  import enterprise{ prefix ent; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -45,10 +46,11 @@ module network {
         type at:mcc;
         description "mobile country code";
       }
+
       leaf mnc {
         type at:mnc;
         description "mobile network code";
-      }
+      }   
 
       leaf description {
         type string {
@@ -56,6 +58,15 @@ module network {
         }
         description "description of this network";
       }
+
+      // Network may be owned by an Enterprise, or it may be a shared network provided by Aether.
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }              
+        description
+          "Link to enterprise that owns this Network. If this is set to None, then the Network is globally provided by Aether.";
+      }      
     }
   } 
 }

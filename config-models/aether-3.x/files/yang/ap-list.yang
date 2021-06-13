@@ -4,7 +4,7 @@ module ap-list {
 
   import ietf-inet-types { prefix inet; }
   import aether-types { prefix at; }
-
+  import enterprise{ prefix ent; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -62,7 +62,7 @@ module ap-list {
             length 1..80;
         }
         description "display name to use in GUI or CLI";
-      }
+      }     
 
       leaf description {
         type string {
@@ -70,6 +70,17 @@ module ap-list {
         }
         description "description of this ap-list";
       }
+
+      // Access point lists are always owned by an Enterprise, since they typically exist on the
+      // Enterprise's edge. An ApList is not owned by Site, to cover the case where a ApList may
+      // include access points that span multiple sites.
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }              
+        description
+          "Link to enterprise that owns this Access Point List";
+      }       
     }
   } 
 }
