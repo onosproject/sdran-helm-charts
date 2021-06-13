@@ -52,7 +52,13 @@ model:
       - 343332707639555
       - 343332707639809
       - 343332707639554
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell2:
       ecgi: 343332707639554
       sector:
@@ -67,7 +73,13 @@ model:
       - 343332707639553
       - 343332707639555
       - 343332707639810
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell3:
       ecgi: 343332707639555
       sector:
@@ -82,7 +94,13 @@ model:
       - 343332707639811
       - 343332707639553
       - 343332707639554
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell4:
       ecgi: 343332707639809
       sector:
@@ -97,7 +115,13 @@ model:
       - 343332707639553
       - 343332707639810
       - 343332707639811
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell5:
       ecgi: 343332707639810
       sector:
@@ -112,7 +136,13 @@ model:
       - 343332707639809
       - 343332707639811
       - 343332707639554
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell6:
       ecgi: 343332707639811
       sector:
@@ -127,7 +157,13 @@ model:
       - 343332707639555
       - 343332707639809
       - 343332707639810
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
   controllers:
     e2t-1:
       id: e2t-1
