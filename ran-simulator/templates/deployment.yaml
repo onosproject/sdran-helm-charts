@@ -66,6 +66,7 @@ spec:
             - "-certPath=/etc/ran-simulator/certs/tls.crt"
             - "-modelName={{ .Values.pci.modelName }}"
             - "-metricName={{ .Values.pci.metricName }}"
+            - "-hoLogic={{ .Values.mobility.hoLogic }}"
             {{- range $key, $smplugin := .Values.servicemodels }}
             - {{ printf "-serviceModel=/usr/local/lib/shared/%s.so.%s" $smplugin.name $smplugin.version }}
               {{- end }}

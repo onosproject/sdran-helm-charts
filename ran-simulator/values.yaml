@@ -38,6 +38,8 @@ pci:
   modelName: "model"
   metricName: "metrics"
 
+mobility:
+    hoLogic: "mho"
 
 servicemodels:
   - name: e2sm_kpm
