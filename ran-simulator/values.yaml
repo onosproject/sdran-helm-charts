@@ -39,8 +39,8 @@ pci:
   metricName: "metrics"
 
 mobility:
-    # hoLogic: "mho"
-    hoLogic: "local"
+  # hoLogic: "mho"
+  hoLogic: "local"
 
 servicemodels:
   - name: e2sm_kpm
