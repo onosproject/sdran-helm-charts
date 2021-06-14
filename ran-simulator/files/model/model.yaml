@@ -154,6 +154,6 @@ model:
       id: 5
       description: mho service model
       version: 1.0.0
-  ueCount: 5
+  ueCount: 50
   plmnID: "314628"
   plmnNumber: 1279014
