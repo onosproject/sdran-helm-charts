@@ -34,7 +34,13 @@ model:
       neighbors:
       - 343332707639554
       - 343332707639555
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell2:
       ecgi: 343332707639554
       sector:
@@ -48,7 +54,13 @@ model:
       neighbors:
       - 343332707639553
       - 343332707639555
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
     cell3:
       ecgi: 343332707639555
       sector:
@@ -62,7 +74,13 @@ model:
       neighbors:
       - 343332707639553
       - 343332707639554
-      txpowerdb: 11
+      txPower: 40
+      eventA3Params:
+        a3Offset: 0
+        a3TimeToTrigger: 0
+        a3Hysteresis: 0
+        a3CellOffset: 0
+        a3FrequencyOffset: 0
   controllers:
     e2t-1:
       id: e2t-1
