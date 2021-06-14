@@ -39,7 +39,7 @@ pci:
   metricName: "metrics"
 
 mobility:
-    #hoLogic: "mho"
+    # hoLogic: "mho"
     hoLogic: "local"
 
 servicemodels:
