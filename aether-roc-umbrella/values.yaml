@@ -70,29 +70,6 @@ onos-topo:
     consensus:
       enabled: false
 
-# ONOS-CONFIG
-onos-config:
-  store:
-    consensus:
-      enabled: false
-  # Deprecated: use 'store' instead
-  storage:
-    controller: ""
-    consensus:
-      enabled: false
-  models:
-    aether:
-      v1:
-        enabled: false
-      v2:
-        enabled: false
-      v2_1:
-        enabled: true
-      v2_2:
-        enabled: false
-      v3:
-        enabled: true
-
 # ONOS-GUI
 onos-gui: {}
 
@@ -149,3 +126,177 @@ sdcore-test-dummy:
       }
       error_page  405     =200 $uri;
     }
+
+# ONOS-CONFIG
+onos-config:
+  store:
+    consensus:
+      enabled: false
+  # Deprecated: use 'store' instead
+  storage:
+    controller: ""
+    consensus:
+      enabled: false
+  models:
+    aether:
+      v1:
+        enabled: false
+      v2:
+        enabled: false
+      v2_1:
+        enabled: true
+      v2_2:
+        enabled: false
+      v3:
+        enabled: true
+  openpolicyagent:
+    enabled: true
+    rego:
+      aether_3_0_0.rego: |-
+          # SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+          #
+          # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+          package aether_3_0_0
+
+          allowed[config] {
+            ap_list := input.ap_list.ap_list
+            application := input.application.application
+            connectivity_service := input.connectivity_service.connectivity_service
+            device_group := devicegroups # refer to rule below
+            enterprise := enterprises # refer to rule below
+            ip_domain := input.ip_domain.ip_domain
+            network := input.network.network
+            site := sites # refer to rule below
+            template := input.template.template
+            upf := input.upf.upf
+            vcs := vcss # refer to rule below
+            config := {
+              "ap-list": {
+                "ap-list": [
+                    ap_list
+                ]
+              },
+              "application": {
+                "application": [
+                    application
+                ]
+              },
+              "connectivity-service": {
+                "connectivity-service": [
+                    connectivity_service
+                ]
+              },
+              "device-group": {
+                "device-group": [
+                    device_group
+                ]
+              },
+              "enterprise": {
+                "enterprise": [
+                    enterprise
+                ]
+              },
+              "ip-domain": {
+                "ip-domain": [
+                    ip_domain
+                ]
+              },
+              "network": {
+                "network": [
+                    network
+                ]
+              },
+              "site": {
+                "site": [
+                    site
+                ]
+              },
+              "template": {
+                "template": [
+                    template
+                ]
+              },
+              "upf": {
+                "upf": [
+                    upf
+                ]
+              },
+              "vcs": {
+                "vcs": [
+                    vcs
+                ]
+              }
+            }
+          }
+
+          enterprises[enterprise] {
+            enterprise := input.enterprise.enterprise[_]
+            enterprise.id == input.groups[i]
+          }
+
+          connectivityservices[connectivity_service] {
+            enterprise := input.enterprise.enterprise[_]
+            enterprise_cs := enterprise.connectivity_service[_]
+            connectivity_service := input.connectivity_service.connectivity_service[_]
+            enterprise.id == input.groups[i]
+            enterprise_cs.connectivity_service == connectivity_service.id
+          }
+
+          can_update_enterprise = true {
+            update_enterprise := input.updates.enterprise.enterprise[_]
+            update_enterprise.id == input.groups[i]
+          }
+          #
+          #can_delete_enterprise = true {
+          #    false # Can't delete your own enterprise
+          #}
+          #
+          sites[site] {
+            site := input.site.site[_]
+            site.enterprise == input.groups[i]
+          }
+
+          #can_update_site = true {
+          #    update_sites := input.updates.site.site[_]
+          #    update_sites.enterprise == input.groups[i]
+          #}
+          #
+          #can_delete_site = true {
+          #    delete_site := input.deletes.site.site[_]
+          #    site := input.site.site[_]
+          #    site.id == delete_site.id
+          #    site.enterprise == input.groups[i]
+          #}
+
+          devicegroups[device_group] {
+            site := input.site.site[_] # the existing set of site(s)
+            device_group := input.device_group.device_group[_] # the existing set of device_group(s)
+            device_group.site == site.id # allow only the device_groups of a known site
+            site.enterprise == input.groups[i] # check a known site is for one of our groups
+          }
+
+          #can_update_devicegroups = true {
+          #    site := input.site.site[_] # the existing set of sites
+          #    update_device_group := input.updates.device_group.device_group[_] # the set of device_group(s) to be updated
+          #    update_device_group.site == site.id # check the device group is for a known site
+          #    site.enterprise == input.groups[i] # check a known site is for one of our groups
+          #}
+          #
+          #can_delete_devicegroups = true {
+          #    site := input.site.site[_] # the existing set of sites
+          #    device_group := input.device_group.device_group[_] # the existing set of device_groups
+          #    delete_device_group := input.deletes.device_group.device_group[_] # the device group(s) to be deleted
+          #    delete_device_group.id == device_group.id # check device_group to be deleted actually exists
+          #    site.id == device_group.site # check the device group is for known site
+          #    site.enterprise == input.groups[i] # check site is for one of our groups
+          #}
+
+          vcss[vcs] {
+            vcs := input.vcs.vcs[_]
+            site := input.site.site[_]
+            devicegroup := input.device_group.device_group[_]
+            devicegroup.site == site.id
+            vcs.device_group == devicegroup.id
+            site.enterprise == input.groups[i]
+          }
