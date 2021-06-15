@@ -92,7 +92,7 @@ spec:
                 fieldRef:
                   fieldPath: metadata.namespace
             - name: SERVICE_NAME
-              value: {{ template "onos-kpimon.fullname" . }}
+              value: {{ template "onos-pci.fullname" . }}
             - name: NODE_NAME
               valueFrom:
                 fieldRef:
