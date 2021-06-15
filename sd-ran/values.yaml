@@ -49,7 +49,7 @@ import:
   onos-e2t:
     enabled: true
   onos-e2sub:
-    enabled: true
+    enabled: false
   onos-o1t:
     enabled: false
   onos-config:
