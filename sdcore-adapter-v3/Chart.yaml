@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
 apiVersion: v2
-name: sdcore-adapter
+name: sdcore-adapter-v3
 kubeVersion: ">=1.17.0"
 type: application
 version: 0.0.19

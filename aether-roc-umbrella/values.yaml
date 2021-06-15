@@ -91,6 +91,11 @@ sdcore-adapter:
   fullnameOverride: sdcore-adapter
   prometheusEnabled: false
 
+sdcore-adapter-v3:
+  nameOverride: sdcore-adapter-v3
+  fullnameOverride: sdcore-adapter-v3
+  prometheusEnabled: false
+
 # SD-Core Test Dummy
 # proxy_pass has to be added or nginx will not log the $request_body
 sdcore-test-dummy:

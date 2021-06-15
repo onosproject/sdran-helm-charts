@@ -23,7 +23,7 @@ service:
   type: ClusterIP
 
 model:
-  version: v2
+  version: v3
 
 secure: true
 initialConfig: ""
