@@ -12,26 +12,6 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
-  name: "87893172902445059"
-spec:
-  kind:
-    name: e-cell
-  aspects:
-    onos.topo.Location:
-      lat: 52.486405
-      lng: 13.412234
-    onos.topo.E2Cell:
-      earfcn: 44
-      cell_type: ENTERPRISE
-    onos.topo.Coverage:
-      arc_width: 120
-      tilt: -10
-      height: 22
-      azimuth: 240
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Entity
-metadata:
   name: "87893172902445057"
 spec:
   kind:
@@ -42,7 +22,7 @@ spec:
       lng: 13.412234
     onos.topo.E2Cell:
       earfcn: 42
-      cell_type: OUTDOOR_SMALL
+      cell_type: MACRO
     onos.topo.Coverage:
       arc_width: 120
       tilt: 1
@@ -62,12 +42,32 @@ spec:
       lng: 13.412234
     onos.topo.E2Cell:
       earfcn: 43
-      cell_type: MACRO
+      cell_type: OUTDOOR_SMALL
     onos.topo.Coverage:
       arc_width: 120
       tilt: -10
       height: 28
       azimuth: 120
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "87893172902445059"
+spec:
+  kind:
+    name: e-cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.486405
+      lng: 13.412234
+    onos.topo.E2Cell:
+      earfcn: 44
+      cell_type: OUTDOOR_SMALL
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: -10
+      height: 22
+      azimuth: 240
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation

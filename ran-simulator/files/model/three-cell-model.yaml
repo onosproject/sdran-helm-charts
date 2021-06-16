@@ -16,6 +16,7 @@ nodes:
     - kpm
     - ni
     - rc
+    - kpm2
     cells:
     - 87893172902445057
     - 87893172902445058
@@ -60,8 +61,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445059
     - 87893172902445057
+    - 87893172902445059
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -69,7 +70,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 99
+    pci: 206
     earfcn: 43
     celltype: 3
   cell3:
@@ -94,7 +95,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 206
+    pci: 99
     earfcn: 44
     celltype: 1
 controllers:
@@ -106,6 +107,10 @@ servicemodels:
   kpm:
     id: 1
     description: kpm service model
+    version: 1.0.0
+  kpm2:
+    id: 4
+    description: kpm2 service model
     version: 1.0.0
   ni:
     id: 2
