@@ -54,9 +54,15 @@ import:
   aether-roc-api:
     enabled: true
   aether-roc-gui:
-    enabled: true
+    v2_1:
+      enabled: false
+    v3:
+      enabled: true
   sdcore-adapter:
-    enabled: true
+    v2_1:
+      enabled: true
+    v3:
+      enabled: false
   sdcore-test-dummy:
     enabled: true
 
@@ -86,9 +92,14 @@ aether-roc-api: {}
 aether-roc-gui: {}
 
 # SD-Core Adapter
-sdcore-adapter:
-  nameOverride: sdcore-adapter
-  fullnameOverride: sdcore-adapter
+sdcore-adapter-v21:
+  nameOverride: sdcore-adapter-v21
+  fullnameOverride: sdcore-adapter-v21
+  prometheusEnabled: false
+
+sdcore-adapter-v3:
+  nameOverride: sdcore-adapter-v3
+  fullnameOverride: sdcore-adapter-v3
   prometheusEnabled: false
 
 # SD-Core Test Dummy
@@ -139,16 +150,15 @@ onos-config:
       enabled: false
   models:
     aether:
-      v1:
-        enabled: false
-      v2:
-        enabled: false
       v2_1:
         enabled: true
       v2_2:
         enabled: false
       v3:
         enabled: true
+  plugin:
+    compiler:
+      target: ""
   openpolicyagent:
     enabled: true
     rego:
@@ -159,18 +169,22 @@ onos-config:
 
           package aether_3_0_0
 
+          echo[config] {
+            config := input
+          }
+
           allowed[config] {
-            ap_list := input.ap_list.ap_list
-            application := input.application.application
-            connectivity_service := input.connectivity_service.connectivity_service
-            device_group := devicegroups # refer to rule below
-            enterprise := enterprises # refer to rule below
-            ip_domain := input.ip_domain.ip_domain
-            network := input.network.network
-            site := sites # refer to rule below
-            template := input.template.template
-            upf := input.upf.upf
-            vcs := vcss # refer to rule below
+            ap_list := ap_lists # refer to rule below
+            application := applications
+            connectivity_service := connectivityservices
+            device_group := devicegroups
+            enterprise := enterprises
+            ip_domain := ip_domains
+            network := networks
+            site := sites
+            template := templates
+            upf := upfs
+            vcs := vcss
             config := {
               "ap-list": {
                 "ap-list": [
@@ -218,21 +232,26 @@ onos-config:
                 ]
               },
               "upf": {
-                "upf": [
-                    upf
-                ]
+                  "upf": [
+                      upf
+                  ]
               },
               "vcs": {
-                "vcs": [
-                    vcs
-                ]
+                  "vcs": [
+                      vcs
+                  ]
               }
             }
           }
 
-          enterprises[enterprise] {
-            enterprise := input.enterprise.enterprise[_]
-            enterprise.id == input.groups[i]
+          ap_lists[ap_list] {
+            ap_list := input.ap_list.ap_list[_]
+            ap_list.enterprise == input.groups[i]
+          }
+
+          applications[application] {
+            application := input.application.application[_]
+            application.enterprise == input.groups[i]
           }
 
           connectivityservices[connectivity_service] {
@@ -243,32 +262,6 @@ onos-config:
             enterprise_cs.connectivity_service == connectivity_service.id
           }
 
-          can_update_enterprise = true {
-            update_enterprise := input.updates.enterprise.enterprise[_]
-            update_enterprise.id == input.groups[i]
-          }
-          #
-          #can_delete_enterprise = true {
-          #    false # Can't delete your own enterprise
-          #}
-          #
-          sites[site] {
-            site := input.site.site[_]
-            site.enterprise == input.groups[i]
-          }
-
-          #can_update_site = true {
-          #    update_sites := input.updates.site.site[_]
-          #    update_sites.enterprise == input.groups[i]
-          #}
-          #
-          #can_delete_site = true {
-          #    delete_site := input.deletes.site.site[_]
-          #    site := input.site.site[_]
-          #    site.id == delete_site.id
-          #    site.enterprise == input.groups[i]
-          #}
-
           devicegroups[device_group] {
             site := input.site.site[_] # the existing set of site(s)
             device_group := input.device_group.device_group[_] # the existing set of device_group(s)
@@ -276,21 +269,33 @@ onos-config:
             site.enterprise == input.groups[i] # check a known site is for one of our groups
           }
 
-          #can_update_devicegroups = true {
-          #    site := input.site.site[_] # the existing set of sites
-          #    update_device_group := input.updates.device_group.device_group[_] # the set of device_group(s) to be updated
-          #    update_device_group.site == site.id # check the device group is for a known site
-          #    site.enterprise == input.groups[i] # check a known site is for one of our groups
-          #}
-          #
-          #can_delete_devicegroups = true {
-          #    site := input.site.site[_] # the existing set of sites
-          #    device_group := input.device_group.device_group[_] # the existing set of device_groups
-          #    delete_device_group := input.deletes.device_group.device_group[_] # the device group(s) to be deleted
-          #    delete_device_group.id == device_group.id # check device_group to be deleted actually exists
-          #    site.id == device_group.site # check the device group is for known site
-          #    site.enterprise == input.groups[i] # check site is for one of our groups
-          #}
+          enterprises[enterprise] {
+            enterprise := input.enterprise.enterprise[_]
+            enterprise.id == input.groups[i]
+          }
+
+          ip_domains[ip_domain] {
+            ip_domain := input.ip_domain.ip_domain[_]
+          }
+
+          networks[network] {
+            network := input.network.network[_]
+            network.enterprise == input.groups[i]
+          }
+
+          sites[site] {
+            site := input.site.site[_]
+            site.enterprise == input.groups[i]
+          }
+
+          templates[template] {
+            template := input.template.template[_]
+          }
+
+          upfs[upf] {
+            upf := input.upf.upf[_]
+            upf.enterprise == input.groups[i]
+          }
 
           vcss[vcs] {
             vcs := input.vcs.vcs[_]
@@ -300,3 +305,169 @@ onos-config:
             vcs.device_group == devicegroup.id
             site.enterprise == input.groups[i]
           }
+
+          can_update_enterprise = true {
+            update_enterprise := input.updates.enterprise.enterprise[_]
+            update_enterprise.id == input.groups[i]
+          }
+      aether_2_1_0.rego: |-
+          # SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+          #
+          # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+          package aether_2_1_0
+
+          echo[config] {
+            config := input
+          }
+
+          allowed[config] {
+            access_profile := access_profiles # refer to rule below
+            subscriber := subscribers
+            apn_profile := apn_profiles
+            connectivity_service := connectivityservices
+            enterprise := enterprises
+            qos_profile := qos_profiles
+            security_profile := security_profiles
+            service_profile := service_profiles
+            service_group := service_groups
+            service_policy := service_policies
+            service_rule := service_rules
+            up_profile := up_profiles
+            config := {
+              "access_profile": {
+                "access_profile": [
+                    access_profile
+                ]
+              },
+              "subscriber": {
+                "ue": [
+                    subscriber
+                ]
+              },
+              "apn_profile": {
+                "apn_profile": [
+                    apn_profile
+                ]
+              },
+              "connectivity-service": {
+                "connectivity-service": [
+                    connectivity_service
+                ]
+              },
+              "enterprise": {
+                "enterprise": [
+                    enterprise
+                ]
+              },
+              "qos_profile": {
+                "qos_profile": [
+                    qos_profile
+                ]
+              },
+              "security_profile": {
+                "security_profile": [
+                    security_profile
+                ]
+              },
+              "service_profile": {
+                "service_profile": [
+                    service_profile
+                ]
+              },
+              "service_group": {
+                "service_group": [
+                    service_group
+                ]
+              },
+              "service_policy": {
+                "service_policy": [
+                    service_policy
+                ]
+              },
+              "service_rule": {
+                "service_rule": [
+                    service_rule
+                ]
+              },
+              "up_profile": {
+                "up_profile": [
+                    up_profile
+                ]
+              },
+            }
+          }
+
+          access_profiles[access_profile] {
+            access_profile := input.access_profile.access_profile[_]
+          }
+
+          subscribers[subscriber] {
+            subscriber := input.subscriber.ue[_]
+          }
+
+          apn_profiles[apn_profile] {
+            apn_profile := input.apn_profile.apn_profile[_]
+          }
+
+          connectivityservices[connectivity_service] {
+            enterprise := input.enterprise.enterprise[_]
+            enterprise_cs := enterprise.connectivity_service[_]
+            connectivity_service := input.connectivity_service.connectivity_service[_]
+            enterprise.id == input.groups[i]
+            enterprise_cs.connectivity_service == connectivity_service.id
+          }
+
+          enterprises[enterprise] {
+            enterprise := input.enterprise.enterprise[_]
+            enterprise.id == input.groups[_]
+          }
+
+          qos_profiles[qos_profile] {
+            qos_profile := input.qos_profile.qos_profile[_]
+          }
+          security_profiles[security_profile] {
+            security_profile := input.security_profile.security_profile[_]
+          }
+          service_profiles[service_profile] {
+            service_profile := input.service_profile.service_profile[_]
+          }
+          service_groups[service_group] {
+            service_group := input.service_group.service_group[_]
+          }
+          service_policies[service_policy] {
+            service_policy := input.service_policy.service_policy[_]
+          }
+          service_rules[service_rule] {
+            service_rule := input.service_rule.service_rule[_]
+          }
+          up_profiles[up_profile] {
+            up_profile := input.up_profile.up_profile[_]
+          }
+
+      testdevice-1.0.0.rego: |-
+        package testdevice_1_0_0
+
+        countlist2a[numelems] {
+            numelems := count(input.cont1a.list2a)
+        }
+
+        countlist4[numelems] {
+            numelems := count(input.cont1a.list4)
+        }
+
+        allowed[config] {
+            list2a := input.cont1a.list2a[_]
+            list4 := input.cont1a.list4[_]
+            config := {
+                "cont1a": {
+                    "list2a": [
+                        list2a
+                    ],
+                    "list4": [
+                        list4
+                    ]
+                }
+            }
+            list2a.name == list4.id
+        }
