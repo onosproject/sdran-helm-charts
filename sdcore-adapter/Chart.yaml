@@ -6,7 +6,7 @@ apiVersion: v2
 name: sdcore-adapter
 kubeVersion: ">=1.17.0"
 type: application
-version: 3.0.0
+version: 3.0.1
 appVersion: v0.1.18
 description: ONOS SD-Core Adapter
 keywords:
