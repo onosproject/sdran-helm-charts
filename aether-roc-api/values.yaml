@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/aether-roc-api
-  tag: v0.6.32
+  tag: v0.6.33
   pullPolicy: IfNotPresent
   pullSecrets: []
 
