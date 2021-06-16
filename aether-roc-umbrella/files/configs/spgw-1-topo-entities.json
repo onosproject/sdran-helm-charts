@@ -31,7 +31,7 @@
       "lng": 13.3885
     },
     "onos.topo.Configurable": {
-      "address": "sdcore-adapter-v3:5150",
+      "address": "sdcore-adapter-new:5150",
       "version": "3.0.0",
       "type": "Aether"
     },
