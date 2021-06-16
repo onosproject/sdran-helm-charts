@@ -17,6 +17,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902445057
     - 87893172902445058
@@ -31,6 +32,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902461441
     - 87893172902461442
@@ -208,6 +210,10 @@ servicemodels:
   rc:
     id: 3
     description: rc service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
     version: 1.0.0
 ueCount: 0
 plmnID: "314628"
