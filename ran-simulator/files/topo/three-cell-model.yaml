@@ -22,20 +22,6 @@ nodes:
     - 87893172902445058
     - 87893172902445059
     status: stopped
-  node2:
-    gnbid: 5154
-    controllers:
-    - e2t-1
-    servicemodels:
-    - kpm
-    - ni
-    - rc
-    - kpm2
-    cells:
-    - 87893172902461441
-    - 87893172902461442
-    - 87893172902461443
-    status: stopped
 cells:
   cell1:
     ncgi: 87893172902445057
@@ -59,9 +45,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 44
+    pci: 5
     earfcn: 42
-    celltype: 2
+    celltype: 3
   cell2:
     ncgi: 87893172902445058
     sector:
@@ -84,9 +70,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 480
+    pci: 99
     earfcn: 43
-    celltype: 3
+    celltype: 2
   cell3:
     ncgi: 87893172902445059
     sector:
@@ -109,84 +95,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 218
+    pci: 99
     earfcn: 44
-    celltype: 0
-  cell4:
-    ncgi: 87893172902461441
-    sector:
-      center:
-        lat: 52.50431527434924
-        lng: 13.453261970488306
-      azimuth: 0
-      arc: 120
-      tilt: -15
-      height: 46
-    color: green
-    maxues: 99999
-    neighbors:
-    - 87893172902461442
-    - 87893172902461443
-    txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
-    pci: 480
-    earfcn: 45
     celltype: 2
-  cell5:
-    ncgi: 87893172902461442
-    sector:
-      center:
-        lat: 52.50431527434924
-        lng: 13.453261970488306
-      azimuth: 120
-      arc: 120
-      tilt: 10
-      height: 49
-    color: green
-    maxues: 99999
-    neighbors:
-    - 87893172902461443
-    - 87893172902461441
-    txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
-    pci: 148
-    earfcn: 46
-    celltype: 2
-  cell6:
-    ncgi: 87893172902461443
-    sector:
-      center:
-        lat: 52.50431527434924
-        lng: 13.453261970488306
-      azimuth: 240
-      arc: 120
-      tilt: -6
-      height: 29
-    color: green
-    maxues: 99999
-    neighbors:
-    - 87893172902461441
-    - 87893172902461442
-    txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
-    pci: 218
-    earfcn: 47
-    celltype: 3
 controllers:
   e2t-1:
     id: e2t-1

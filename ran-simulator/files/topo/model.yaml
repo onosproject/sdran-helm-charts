@@ -59,7 +59,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 44
+    pci: 480
     earfcn: 42
     celltype: 2
   cell2:
@@ -84,7 +84,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 480
+    pci: 44
     earfcn: 43
     celltype: 3
   cell3:
@@ -109,7 +109,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 218
+    pci: 148
     earfcn: 44
     celltype: 0
   cell4:
@@ -134,7 +134,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 480
+    pci: 44
     earfcn: 45
     celltype: 2
   cell5:
@@ -150,8 +150,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461443
     - 87893172902461441
+    - 87893172902461443
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -159,7 +159,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 148
+    pci: 480
     earfcn: 46
     celltype: 2
   cell6:
@@ -184,7 +184,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 218
+    pci: 148
     earfcn: 47
     celltype: 3
 controllers:
