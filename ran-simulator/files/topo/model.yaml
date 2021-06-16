@@ -17,6 +17,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902445057
     - 87893172902445058
@@ -31,6 +32,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902461441
     - 87893172902461442
@@ -200,6 +202,10 @@ servicemodels:
   kpm2:
     id: 4
     description: kpm2 service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
     version: 1.0.0
   ni:
     id: 2

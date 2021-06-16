@@ -17,6 +17,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902445057
     - 87893172902445058
@@ -34,6 +35,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902461441
     - 87893172902461442
@@ -51,6 +53,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902477825
     - 87893172902477826
@@ -68,6 +71,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902494209
     - 87893172902494210
@@ -85,6 +89,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902510593
     - 87893172902510594
@@ -102,6 +107,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902526977
     - 87893172902526978
@@ -119,6 +125,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902543361
     - 87893172902543362
@@ -136,6 +143,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902559745
     - 87893172902559746
@@ -153,6 +161,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902576129
     - 87893172902576130
@@ -170,6 +179,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902592513
     - 87893172902592514
@@ -187,6 +197,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902608897
     - 87893172902608898
@@ -204,6 +215,7 @@ nodes:
     - ni
     - rc
     - kpm2
+    - mho
     cells:
     - 87893172902625281
     - 87893172902625282
@@ -2242,6 +2254,10 @@ servicemodels:
   kpm2:
     id: 4
     description: kpm2 service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
     version: 1.0.0
   ni:
     id: 2
