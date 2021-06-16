@@ -62,7 +62,7 @@ import:
     v2_1:
       enabled: true
     v3:
-      enabled: false
+      enabled: true
   sdcore-test-dummy:
     enabled: true
 
