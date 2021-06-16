@@ -58,14 +58,8 @@ dependencies:
     version: 1.0.4
   - name: sdcore-adapter
     condition: import.sdcore-adapter.enabled
-    #repository: "@sdran"
-    repository: "file://./../sdcore-adapter/"
-    version: 0.0.19
-  - name: sdcore-adapter-v3
-    condition: import.sdcore-adapter.enabled
-    #repository: "@sdran"
-    repository: "file://./../sdcore-adapter-v3/"
-    version: 0.0.19
+    repository: "@sdran"
+    version: 0.0.18
   - name: nginx
     alias: sdcore-test-dummy
     condition: import.sdcore-test-dummy.enabled
