@@ -1,108 +1,279 @@
-model:
-  layout:
-    center:
-      lat: 52.52
-      lng: 13.405
-    zoom: 0
-    locationsscale: 1.25
-    fademap: false
-    showroutes: false
-    showpower: false
-  nodes:
-    node1:
-      enbid: 5153
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707639553
-      - 343332707639554
-      - 343332707639555
-      status: stopped
-  cells:
-    cell1:
-      ecgi: 343332707639553
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 0
-        arc: 120
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639554
-      - 343332707639555
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell2:
-      ecgi: 343332707639554
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 120
-        arc: 120
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639553
-      - 343332707639555
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell3:
-      ecgi: 343332707639555
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 240
-        arc: 120
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639553
-      - 343332707639554
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-  controllers:
-    e2t-1:
-      id: e2t-1
-      address: onos-e2t
-      port: 36421
-  servicemodels:
-    kpm:
-      id: 1
-      description: kpm service model
-      version: 1.0.0
-    ni:
-      id: 2
-      description: ni service model
-      version: 1.0.0
-    rc:
-      id: 3
-      description: rc service model
-      version: 1.0.0
-    kpm2:
-      id: 4
-      description: kpm v2 service model
-      version: 2.0.0
-  ueCount: 0
-  plmnID: "314628"
-  plmnNumber: 1279014
+layout:
+  center:
+    lat: 52.52
+    lng: 13.405
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+nodes:
+  node1:
+    gnbid: 5153
+    controllers:
+    - e2t-1
+    servicemodels:
+    - ni
+    - rc
+    - kpm
+    cells:
+    - 87893172902445057
+    - 87893172902445058
+    - 87893172902445059
+    - 87893172902445057
+    - 87893172902445058
+    - 87893172902445059
+    - 87893172902445057
+    - 87893172902445058
+    - 87893172902445059
+    status: stopped
+cells:
+  cell1:
+    ncgi: 87893172902445057
+    sector:
+      center:
+        lat: 52.486405366824926
+        lng: 13.412233915182187
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445059
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 294
+    earfcn: 42
+    celltype: 3
+  cell2:
+    ncgi: 87893172902445058
+    sector:
+      center:
+        lat: 52.486405366824926
+        lng: 13.412233915182187
+      azimuth: 120
+      arc: 120
+      tilt: -10
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445059
+    - 87893172902445057
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 403
+    earfcn: 43
+    celltype: 0
+  cell3:
+    ncgi: 87893172902445059
+    sector:
+      center:
+        lat: 52.486405366824926
+        lng: 13.412233915182187
+      azimuth: 240
+      arc: 120
+      tilt: -10
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 228
+    earfcn: 44
+    celltype: 1
+  cell4:
+    ncgi: 87893172902445057
+    sector:
+      center:
+        lat: 52.50431527434924
+        lng: 13.453261970488306
+      azimuth: 0
+      arc: 120
+      tilt: -15
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445059
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 294
+    earfcn: 45
+    celltype: 3
+  cell5:
+    ncgi: 87893172902445058
+    sector:
+      center:
+        lat: 52.50431527434924
+        lng: 13.453261970488306
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445059
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 403
+    earfcn: 46
+    celltype: 3
+  cell6:
+    ncgi: 87893172902445059
+    sector:
+      center:
+        lat: 52.50431527434924
+        lng: 13.453261970488306
+      azimuth: 240
+      arc: 120
+      tilt: -6
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445058
+    - 87893172902445057
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 228
+    earfcn: 47
+    celltype: 3
+  cell7:
+    ncgi: 87893172902445057
+    sector:
+      center:
+        lat: 52.50191686409655
+        lng: 13.358786500918614
+      azimuth: 0
+      arc: 120
+      tilt: -5
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445059
+    - 87893172902445059
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 294
+    earfcn: 48
+    celltype: 1
+  cell8:
+    ncgi: 87893172902445058
+    sector:
+      center:
+        lat: 52.50191686409655
+        lng: 13.358786500918614
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445059
+    - 87893172902445057
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 403
+    earfcn: 49
+    celltype: 2
+  cell9:
+    ncgi: 87893172902445059
+    sector:
+      center:
+        lat: 52.50191686409655
+        lng: 13.358786500918614
+      azimuth: 240
+      arc: 120
+      tilt: -5
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 228
+    earfcn: 50
+    celltype: 0
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm:
+    id: 1
+    description: kpm service model
+    version: 1.0.0
+  ni:
+    id: 2
+    description: ni service model
+    version: 1.0.0
+  rc:
+    id: 3
+    description: rc service model
+    version: 1.0.0
+ueCount: 10
+plmnID: "314628"
+plmnNumber: 1279014
+apiKey: ""

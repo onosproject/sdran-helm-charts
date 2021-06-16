@@ -1,1861 +1,2241 @@
-model:
-  layout:
-    center:
-      lat: 52.52
-      lng: 13.405
-    zoom: 0
-    locationsscale: 1.25
-    fademap: false
-    showroutes: false
-    showpower: false
-  nodes:
-    node1:
-      enbid: 5153
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707639553
-      - 343332707639554
-      - 343332707639555
-      - 343332707639556
-      - 343332707639557
-      - 343332707639558
-      status: stopped
-    node2:
-      enbid: 5154
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707639809
-      - 343332707639810
-      - 343332707639811
-      - 343332707639812
-      - 343332707639813
-      - 343332707639814
-      status: stopped
-    node3:
-      enbid: 5155
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707640065
-      - 343332707640066
-      - 343332707640067
-      - 343332707640068
-      - 343332707640069
-      - 343332707640070
-      status: stopped
-    node4:
-      enbid: 5156
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707640321
-      - 343332707640322
-      - 343332707640323
-      - 343332707640324
-      - 343332707640325
-      - 343332707640326
-      status: stopped
-    node5:
-      enbid: 5157
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707640577
-      - 343332707640578
-      - 343332707640579
-      - 343332707640580
-      - 343332707640581
-      - 343332707640582
-      status: stopped
-    node6:
-      enbid: 5158
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707640833
-      - 343332707640834
-      - 343332707640835
-      - 343332707640836
-      - 343332707640837
-      - 343332707640838
-      status: stopped
-    node7:
-      enbid: 5159
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707641089
-      - 343332707641090
-      - 343332707641091
-      - 343332707641092
-      - 343332707641093
-      - 343332707641094
-      status: stopped
-    node8:
-      enbid: 5160
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707641345
-      - 343332707641346
-      - 343332707641347
-      - 343332707641348
-      - 343332707641349
-      - 343332707641350
-      status: stopped
-    node9:
-      enbid: 5161
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707641601
-      - 343332707641602
-      - 343332707641603
-      - 343332707641604
-      - 343332707641605
-      - 343332707641606
-      status: stopped
-    node10:
-      enbid: 5162
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707641857
-      - 343332707641858
-      - 343332707641859
-      - 343332707641860
-      - 343332707641861
-      - 343332707641862
-      status: stopped
-    node11:
-      enbid: 5163
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707642113
-      - 343332707642114
-      - 343332707642115
-      - 343332707642116
-      - 343332707642117
-      - 343332707642118
-      status: stopped
-    node12:
-      enbid: 5164
-      controllers:
-      - e2t-1
-      servicemodels:
-      - rc
-      cells:
-      - 343332707642369
-      - 343332707642370
-      - 343332707642371
-      - 343332707642372
-      - 343332707642373
-      - 343332707642374
-      status: stopped
-  cells:
-    cell1:
-      ecgi: 343332707639553
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639557
-      - 343332707641606
-      - 343332707639555
-      - 343332707639554
-      - 343332707639558
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell2:
-      ecgi: 343332707639554
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639558
-      - 343332707639556
-      - 343332707639553
-      - 343332707639809
-      - 343332707639557
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell3:
-      ecgi: 343332707639555
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639553
-      - 343332707639557
-      - 343332707641606
-      - 343332707639554
-      - 343332707639558
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell4:
-      ecgi: 343332707639556
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639809
-      - 343332707639553
-      - 343332707639557
-      - 343332707639555
-      - 343332707639554
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell5:
-      ecgi: 343332707639557
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640322
-      - 343332707640324
-      - 343332707641857
-      - 343332707639553
-      - 343332707640835
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell6:
-      ecgi: 343332707639558
-      sector:
-        center:
-          lat: 52.45071796924582
-          lng: 13.405
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639556
-      - 343332707639553
-      - 343332707639557
-      - 343332707639555
-      - 343332707639554
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell7:
-      ecgi: 343332707639809
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639554
-      - 343332707639813
-      - 343332707639556
-      - 343332707639811
-      - 343332707639812
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell8:
-      ecgi: 343332707639810
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639813
-      - 343332707639811
-      - 343332707642116
-      - 343332707639812
-      - 343332707639809
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell9:
-      ecgi: 343332707639811
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639813
-      - 343332707639812
-      - 343332707639809
-      - 343332707640580
-      - 343332707639810
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell10:
-      ecgi: 343332707639812
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639811
-      - 343332707641094
-      - 343332707639809
-      - 343332707639810
-      - 343332707639814
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell11:
-      ecgi: 343332707639813
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639814
-      - 343332707640582
-      - 343332707641604
-      - 343332707639811
-      - 343332707639812
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell12:
-      ecgi: 343332707639814
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.454302819271017
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639810
-      - 343332707640067
-      - 343332707642118
-      - 343332707639813
-      - 343332707639811
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell13:
-      ecgi: 343332707640065
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642118
-      - 343332707639814
-      - 343332707640069
-      - 343332707640066
-      - 343332707640070
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell14:
-      ecgi: 343332707640066
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640069
-      - 343332707640070
-      - 343332707640065
-      - 343332707640068
-      - 343332707640067
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell15:
-      ecgi: 343332707640067
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642116
-      - 343332707640065
-      - 343332707640068
-      - 343332707642118
-      - 343332707639814
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell16:
-      ecgi: 343332707640068
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640069
-      - 343332707640066
-      - 343332707640070
-      - 343332707640065
-      - 343332707640067
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell17:
-      ecgi: 343332707640069
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640836
-      - 343332707640834
-      - 343332707640066
-      - 343332707640070
-      - 343332707640065
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell18:
-      ecgi: 343332707640070
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.503605638542036
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640067
-      - 343332707640068
-      - 343332707640069
-      - 343332707640066
-      - 343332707640065
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell19:
-      ecgi: 343332707640321
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640325
-      - 343332707640323
-      - 343332707640322
-      - 343332707640324
-      - 343332707640326
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell20:
-      ecgi: 343332707640322
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640323
-      - 343332707640325
-      - 343332707640837
-      - 343332707641859
-      - 343332707640324
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell21:
-      ecgi: 343332707640323
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640325
-      - 343332707641345
-      - 343332707640322
-      - 343332707640326
-      - 343332707640324
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell22:
-      ecgi: 343332707640324
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641604
-      - 343332707640322
-      - 343332707640326
-      - 343332707641857
-      - 343332707640835
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell23:
-      ecgi: 343332707640325
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640323
-      - 343332707641345
-      - 343332707640322
-      - 343332707640324
-      - 343332707640326
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell24:
-      ecgi: 343332707640326
-      sector:
-        center:
-          lat: 52.46803847693437
-          lng: 13.355697180728981
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640323
-      - 343332707640325
-      - 343332707641859
-      - 343332707641348
-      - 343332707640322
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell25:
-      ecgi: 343332707640577
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640582
-      - 343332707641859
-      - 343332707641348
-      - 343332707640326
-      - 343332707640578
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell26:
-      ecgi: 343332707640578
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640579
-      - 343332707640580
-      - 343332707640581
-      - 343332707640577
-      - 343332707640833
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell27:
-      ecgi: 343332707640579
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640326
-      - 343332707640580
-      - 343332707640578
-      - 343332707640581
-      - 343332707640577
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell28:
-      ecgi: 343332707640580
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640582
-      - 343332707639811
-      - 343332707640578
-      - 343332707640579
-      - 343332707640581
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell29:
-      ecgi: 343332707640581
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640837
-      - 343332707640580
-      - 343332707640578
-      - 343332707640579
-      - 343332707640577
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell30:
-      ecgi: 343332707640582
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.405
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639813
-      - 343332707639811
-      - 343332707640578
-      - 343332707640579
-      - 343332707640580
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell31:
-      ecgi: 343332707640833
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640834
-      - 343332707640837
-      - 343332707640578
-      - 343332707640580
-      - 343332707640835
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell32:
-      ecgi: 343332707640834
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642371
-      - 343332707640069
-      - 343332707640837
-      - 343332707640835
-      - 343332707640838
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell33:
-      ecgi: 343332707640835
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640838
-      - 343332707640833
-      - 343332707640836
-      - 343332707641602
-      - 343332707640834
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell34:
-      ecgi: 343332707640836
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640069
-      - 343332707640834
-      - 343332707640837
-      - 343332707642116
-      - 343332707640835
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell35:
-      ecgi: 343332707640837
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640834
-      - 343332707640322
-      - 343332707641857
-      - 343332707640835
-      - 343332707640581
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell36:
-      ecgi: 343332707640838
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.454302819271017
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640837
-      - 343332707641858
-      - 343332707641860
-      - 343332707640834
-      - 343332707640835
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell37:
-      ecgi: 343332707641089
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641092
-      - 343332707641091
-      - 343332707642371
-      - 343332707641093
-      - 343332707641860
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell38:
-      ecgi: 343332707641090
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641093
-      - 343332707641094
-      - 343332707641092
-      - 343332707641091
-      - 343332707641089
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell39:
-      ecgi: 343332707641091
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642371
-      - 343332707641093
-      - 343332707641860
-      - 343332707641090
-      - 343332707641094
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell40:
-      ecgi: 343332707641092
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641089
-      - 343332707641091
-      - 343332707641093
-      - 343332707641090
-      - 343332707641094
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell41:
-      ecgi: 343332707641093
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641089
-      - 343332707641091
-      - 343332707641090
-      - 343332707641094
-      - 343332707641092
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell42:
-      ecgi: 343332707641094
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.503605638542036
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641092
-      - 343332707641089
-      - 343332707641091
-      - 343332707641093
-      - 343332707641090
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell43:
-      ecgi: 343332707641345
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641347
-      - 343332707640323
-      - 343332707640325
-      - 343332707641350
-      - 343332707641348
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell44:
-      ecgi: 343332707641346
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641347
-      - 343332707641345
-      - 343332707641861
-      - 343332707641350
-      - 343332707641348
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell45:
-      ecgi: 343332707641347
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641345
-      - 343332707641348
-      - 343332707641350
-      - 343332707641349
-      - 343332707641346
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell46:
-      ecgi: 343332707641348
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641349
-      - 343332707640577
-      - 343332707641346
-      - 343332707641347
-      - 343332707641859
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell47:
-      ecgi: 343332707641349
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641345
-      - 343332707641348
-      - 343332707641350
-      - 343332707641346
-      - 343332707641347
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell48:
-      ecgi: 343332707641350
-      sector:
-        center:
-          lat: 52.48535898462291
-          lng: 13.306394361457963
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641603
-      - 343332707641347
-      - 343332707641601
-      - 343332707641345
-      - 343332707641348
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell49:
-      ecgi: 343332707641601
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641604
-      - 343332707641350
-      - 343332707641606
-      - 343332707641605
-      - 343332707641602
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell50:
-      ecgi: 343332707641602
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640322
-      - 343332707640324
-      - 343332707641857
-      - 343332707640835
-      - 343332707639557
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell51:
-      ecgi: 343332707641603
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641605
-      - 343332707641602
-      - 343332707641601
-      - 343332707641604
-      - 343332707641350
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell52:
-      ecgi: 343332707641604
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641601
-      - 343332707639813
-      - 343332707641857
-      - 343332707640324
-      - 343332707639557
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell53:
-      ecgi: 343332707641605
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641602
-      - 343332707641603
-      - 343332707641601
-      - 343332707641604
-      - 343332707641861
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell54:
-      ecgi: 343332707641606
-      sector:
-        center:
-          lat: 52.50267949231146
-          lng: 13.355697180728981
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639555
-      - 343332707641605
-      - 343332707641602
-      - 343332707641603
-      - 343332707641601
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell55:
-      ecgi: 343332707641857
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641602
-      - 343332707641604
-      - 343332707640837
-      - 343332707641858
-      - 343332707641859
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell56:
-      ecgi: 343332707641858
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640838
-      - 343332707641859
-      - 343332707641860
-      - 343332707641861
-      - 343332707641857
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell57:
-      ecgi: 343332707641859
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641861
-      - 343332707640322
-      - 343332707641348
-      - 343332707640326
-      - 343332707641857
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell58:
-      ecgi: 343332707641860
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640838
-      - 343332707641091
-      - 343332707641089
-      - 343332707642371
-      - 343332707641858
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell59:
-      ecgi: 343332707641861
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641858
-      - 343332707641859
-      - 343332707641860
-      - 343332707641857
-      - 343332707640579
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell60:
-      ecgi: 343332707641862
-      sector:
-        center:
-          lat: 52.52
-          lng: 13.405
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707641860
-      - 343332707641858
-      - 343332707641859
-      - 343332707641861
-      - 343332707641857
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell61:
-      ecgi: 343332707642113
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 0
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642116
-      - 343332707641862
-      - 343332707642114
-      - 343332707642117
-      - 343332707642118
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell62:
-      ecgi: 343332707642114
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 60
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707640836
-      - 343332707642117
-      - 343332707642118
-      - 343332707642113
-      - 343332707640069
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell63:
-      ecgi: 343332707642115
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 120
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642117
-      - 343332707642118
-      - 343332707642113
-      - 343332707642116
-      - 343332707641862
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell64:
-      ecgi: 343332707642116
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 180
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707639810
-      - 343332707640067
-      - 343332707642114
-      - 343332707642369
-      - 343332707640836
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell65:
-      ecgi: 343332707642117
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 240
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642116
-      - 343332707642373
-      - 343332707642114
-      - 343332707642118
-      - 343332707642113
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell66:
-      ecgi: 343332707642118
-      sector:
-        center:
-          lat: 52.53732050768855
-          lng: 13.454302819271017
-        azimuth: 300
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642116
-      - 343332707640065
-      - 343332707640067
-      - 343332707642114
-      - 343332707642117
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell67:
-      ecgi: 343332707642369
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 30
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642374
-      - 343332707642371
-      - 343332707642370
-      - 343332707640069
-      - 343332707640834
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell68:
-      ecgi: 343332707642370
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 90
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642373
-      - 343332707642372
-      - 343332707642369
-      - 343332707642374
-      - 343332707642371
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell69:
-      ecgi: 343332707642371
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 150
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642370
-      - 343332707640834
-      - 343332707641860
-      - 343332707642373
-      - 343332707640838
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell70:
-      ecgi: 343332707642372
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 210
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642373
-      - 343332707642369
-      - 343332707642374
-      - 343332707642370
-      - 343332707642371
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell71:
-      ecgi: 343332707642373
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 270
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642372
-      - 343332707642369
-      - 343332707642117
-      - 343332707642374
-      - 343332707641091
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-    cell72:
-      ecgi: 343332707642374
-      sector:
-        center:
-          lat: 52.55464101537709
-          lng: 13.503605638542036
-        azimuth: 330
-        arc: 60
-      color: green
-      maxues: 99999
-      neighbors:
-      - 343332707642370
-      - 343332707642371
-      - 343332707642373
-      - 343332707642372
-      - 343332707642369
-      txPower: 40
-      eventA3Params:
-        a3Offset: 0
-        a3TimeToTrigger: 0
-        a3Hysteresis: 0
-        a3CellOffset: 0
-        a3FrequencyOffset: 0
-  controllers:
-    e2t-1:
-      id: e2t-1
-      address: onos-e2t
-      port: 36421
-  servicemodels:
-    kpm:
-      id: 1
-      description: kpm service model
-      version: 1.0.0
-    ni:
-      id: 2
-      description: ni service model
-      version: 1.0.0
-    rc:
-      id: 3
-      description: rc service model
-      version: 1.0.0
-    kpm2:
-      id: 4
-      description: kpm v2 service model
-      version: 2.0.0
-  ueCount: 0
-  plmnID: "314628"
-  plmnNumber: 1279014
+layout:
+  center:
+    lat: 52.52
+    lng: 13.405
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+nodes:
+  node1:
+    gnbid: 5153
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902445057
+    - 87893172902445058
+    - 87893172902445059
+    - 87893172902445060
+    - 87893172902445061
+    - 87893172902445062
+    status: stopped
+  node2:
+    gnbid: 5154
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902461441
+    - 87893172902461442
+    - 87893172902461443
+    - 87893172902461444
+    - 87893172902461445
+    - 87893172902461446
+    status: stopped
+  node3:
+    gnbid: 5155
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902477825
+    - 87893172902477826
+    - 87893172902477827
+    - 87893172902477828
+    - 87893172902477829
+    - 87893172902477830
+    status: stopped
+  node4:
+    gnbid: 5156
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902494209
+    - 87893172902494210
+    - 87893172902494211
+    - 87893172902494212
+    - 87893172902494213
+    - 87893172902494214
+    status: stopped
+  node5:
+    gnbid: 5157
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902510593
+    - 87893172902510594
+    - 87893172902510595
+    - 87893172902510596
+    - 87893172902510597
+    - 87893172902510598
+    status: stopped
+  node6:
+    gnbid: 5158
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902526977
+    - 87893172902526978
+    - 87893172902526979
+    - 87893172902526980
+    - 87893172902526981
+    - 87893172902526982
+    status: stopped
+  node7:
+    gnbid: 5159
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902543361
+    - 87893172902543362
+    - 87893172902543363
+    - 87893172902543364
+    - 87893172902543365
+    - 87893172902543366
+    status: stopped
+  node8:
+    gnbid: 5160
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902559745
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559748
+    - 87893172902559749
+    - 87893172902559750
+    status: stopped
+  node9:
+    gnbid: 5161
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902576129
+    - 87893172902576130
+    - 87893172902576131
+    - 87893172902576132
+    - 87893172902576133
+    - 87893172902576134
+    status: stopped
+  node10:
+    gnbid: 5162
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902592513
+    - 87893172902592514
+    - 87893172902592515
+    - 87893172902592516
+    - 87893172902592517
+    - 87893172902592518
+    status: stopped
+  node11:
+    gnbid: 5163
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902608897
+    - 87893172902608898
+    - 87893172902608899
+    - 87893172902608900
+    - 87893172902608901
+    - 87893172902608902
+    status: stopped
+  node12:
+    gnbid: 5164
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - ni
+    - rc
+    cells:
+    - 87893172902625281
+    - 87893172902625282
+    - 87893172902625283
+    - 87893172902625284
+    - 87893172902625285
+    - 87893172902625286
+    status: stopped
+cells:
+  cell1:
+    ncgi: 87893172902445057
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 0
+      arc: 60
+      tilt: 0
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445061
+    - 87893172902510594
+    - 87893172902445058
+    - 87893172902445060
+    - 87893172902477829
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 160
+    earfcn: 42
+    celltype: 3
+  cell2:
+    ncgi: 87893172902445058
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 60
+      arc: 60
+      tilt: 5
+      height: 36
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445060
+    - 87893172902445057
+    - 87893172902445059
+    - 87893172902445062
+    - 87893172902477828
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 201
+    earfcn: 43
+    celltype: 2
+  cell3:
+    ncgi: 87893172902445059
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 120
+      arc: 60
+      tilt: 15
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445062
+    - 87893172902445061
+    - 87893172902445058
+    - 87893172902445060
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 126
+    earfcn: 44
+    celltype: 0
+  cell4:
+    ncgi: 87893172902445060
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 180
+      arc: 60
+      tilt: 5
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445058
+    - 87893172902445057
+    - 87893172902445059
+    - 87893172902445062
+    - 87893172902445061
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 211
+    earfcn: 45
+    celltype: 1
+  cell5:
+    ncgi: 87893172902445061
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 240
+      arc: 60
+      tilt: 5
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902445062
+    - 87893172902445059
+    - 87893172902510596
+    - 87893172902445058
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 46
+    earfcn: 46
+    celltype: 0
+  cell6:
+    ncgi: 87893172902445062
+    sector:
+      center:
+        lat: 52.451764351621584
+        lng: 13.412228220084474
+      azimuth: 300
+      arc: 60
+      tilt: -14
+      height: 36
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445060
+    - 87893172902576131
+    - 87893172902494209
+    - 87893172902461445
+    - 87893172902445057
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 66
+    earfcn: 47
+    celltype: 2
+  cell7:
+    ncgi: 87893172902461441
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 30
+      arc: 60
+      tilt: 1
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461442
+    - 87893172902461443
+    - 87893172902461444
+    - 87893172902461445
+    - 87893172902543364
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 394
+    earfcn: 48
+    celltype: 3
+  cell8:
+    ncgi: 87893172902461442
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 90
+      arc: 60
+      tilt: 6
+      height: 44
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461441
+    - 87893172902461445
+    - 87893172902477828
+    - 87893172902461446
+    - 87893172902461443
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 211
+    earfcn: 49
+    celltype: 1
+  cell9:
+    ncgi: 87893172902461443
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 150
+      arc: 60
+      tilt: 11
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461442
+    - 87893172902461444
+    - 87893172902461441
+    - 87893172902461445
+    - 87893172902461446
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 163
+    earfcn: 50
+    celltype: 1
+  cell10:
+    ncgi: 87893172902461444
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 210
+      arc: 60
+      tilt: 2
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461441
+    - 87893172902461445
+    - 87893172902494210
+    - 87893172902461446
+    - 87893172902510595
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 354
+    earfcn: 51
+    celltype: 1
+  cell11:
+    ncgi: 87893172902461445
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 270
+      arc: 60
+      tilt: 9
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445062
+    - 87893172902592515
+    - 87893172902576130
+    - 87893172902526980
+    - 87893172902461446
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 64
+    earfcn: 52
+    celltype: 3
+  cell12:
+    ncgi: 87893172902461446
+    sector:
+      center:
+        lat: 52.469674266705184
+        lng: 13.45322395948118
+      azimuth: 330
+      arc: 60
+      tilt: -12
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461442
+    - 87893172902461443
+    - 87893172902461444
+    - 87893172902461441
+    - 87893172902461445
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 370
+    earfcn: 53
+    celltype: 3
+  cell13:
+    ncgi: 87893172902477825
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 0
+      arc: 60
+      tilt: 0
+      height: 36
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902477828
+    - 87893172902477826
+    - 87893172902477827
+    - 87893172902477829
+    - 87893172902477830
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 153
+    earfcn: 54
+    celltype: 2
+  cell14:
+    ncgi: 87893172902477826
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 60
+      arc: 60
+      tilt: -2
+      height: 37
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902477825
+    - 87893172902477829
+    - 87893172902477830
+    - 87893172902477828
+    - 87893172902477827
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 129
+    earfcn: 55
+    celltype: 0
+  cell15:
+    ncgi: 87893172902477827
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 120
+      arc: 60
+      tilt: 8
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902477828
+    - 87893172902477826
+    - 87893172902477825
+    - 87893172902477829
+    - 87893172902477830
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 420
+    earfcn: 56
+    celltype: 0
+  cell16:
+    ncgi: 87893172902477828
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 180
+      arc: 60
+      tilt: -13
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445058
+    - 87893172902477825
+    - 87893172902477829
+    - 87893172902477830
+    - 87893172902461442
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 73
+    earfcn: 57
+    celltype: 2
+  cell17:
+    ncgi: 87893172902477829
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 240
+      arc: 60
+      tilt: -13
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445057
+    - 87893172902543364
+    - 87893172902477828
+    - 87893172902477826
+    - 87893172902477827
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 120
+    earfcn: 58
+    celltype: 0
+  cell18:
+    ncgi: 87893172902477830
+    sector:
+      center:
+        lat: 52.484561831846946
+        lng: 13.506594023326057
+      azimuth: 300
+      arc: 60
+      tilt: 2
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902477825
+    - 87893172902477829
+    - 87893172902608899
+    - 87893172902477828
+    - 87893172902477826
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 417
+    earfcn: 59
+    celltype: 2
+  cell19:
+    ncgi: 87893172902494209
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 30
+      arc: 60
+      tilt: 1
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445062
+    - 87893172902592515
+    - 87893172902494210
+    - 87893172902494212
+    - 87893172902494213
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 22
+    earfcn: 60
+    celltype: 1
+  cell20:
+    ncgi: 87893172902494210
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 90
+      arc: 60
+      tilt: -1
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902510596
+    - 87893172902494212
+    - 87893172902494213
+    - 87893172902494214
+    - 87893172902494209
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 199
+    earfcn: 61
+    celltype: 2
+  cell21:
+    ncgi: 87893172902494211
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 150
+      arc: 60
+      tilt: 8
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902494209
+    - 87893172902494210
+    - 87893172902494212
+    - 87893172902494213
+    - 87893172902494214
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 223
+    earfcn: 62
+    celltype: 1
+  cell22:
+    ncgi: 87893172902494212
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 210
+      arc: 60
+      tilt: 15
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902494213
+    - 87893172902559747
+    - 87893172902494214
+    - 87893172902494209
+    - 87893172902494211
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 289
+    earfcn: 63
+    celltype: 1
+  cell23:
+    ncgi: 87893172902494213
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 270
+      arc: 60
+      tilt: -3
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902576132
+    - 87893172902494210
+    - 87893172902494212
+    - 87893172902494214
+    - 87893172902494209
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 345
+    earfcn: 64
+    celltype: 2
+  cell24:
+    ncgi: 87893172902494214
+    sector:
+      center:
+        lat: 52.4636821407379
+        lng: 13.350122666669778
+      azimuth: 330
+      arc: 60
+      tilt: -3
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902494210
+    - 87893172902494212
+    - 87893172902494213
+    - 87893172902559745
+    - 87893172902592516
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 313
+    earfcn: 65
+    celltype: 3
+  cell25:
+    ncgi: 87893172902510593
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 0
+      arc: 60
+      tilt: 5
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902510597
+    - 87893172902510594
+    - 87893172902510598
+    - 87893172902510596
+    - 87893172902608900
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 78
+    earfcn: 66
+    celltype: 3
+  cell26:
+    ncgi: 87893172902510594
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 60
+      arc: 60
+      tilt: 2
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902477829
+    - 87893172902510595
+    - 87893172902526979
+    - 87893172902510593
+    - 87893172902543364
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 285
+    earfcn: 67
+    celltype: 3
+  cell27:
+    ncgi: 87893172902510595
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 120
+      arc: 60
+      tilt: 3
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461444
+    - 87893172902510593
+    - 87893172902510597
+    - 87893172902510594
+    - 87893172902510598
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 30
+    earfcn: 68
+    celltype: 3
+  cell28:
+    ncgi: 87893172902510596
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 180
+      arc: 60
+      tilt: 14
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902510595
+    - 87893172902510593
+    - 87893172902510597
+    - 87893172902445061
+    - 87893172902510594
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 259
+    earfcn: 69
+    celltype: 0
+  cell29:
+    ncgi: 87893172902510597
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 240
+      arc: 60
+      tilt: -13
+      height: 47
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902494214
+    - 87893172902510595
+    - 87893172902510593
+    - 87893172902510594
+    - 87893172902510598
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 336
+    earfcn: 70
+    celltype: 2
+  cell30:
+    ncgi: 87893172902510598
+    sector:
+      center:
+        lat: 52.48132863474187
+        lng: 13.401731008565841
+      azimuth: 300
+      arc: 60
+      tilt: -12
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902510593
+    - 87893172902510597
+    - 87893172902510594
+    - 87893172902510596
+    - 87893172902592516
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 226
+    earfcn: 71
+    celltype: 2
+  cell31:
+    ncgi: 87893172902526977
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 30
+      arc: 60
+      tilt: 6
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526978
+    - 87893172902625283
+    - 87893172902526982
+    - 87893172902526980
+    - 87893172902608898
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 207
+    earfcn: 72
+    celltype: 0
+  cell32:
+    ncgi: 87893172902526978
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 90
+      arc: 60
+      tilt: -8
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461441
+    - 87893172902526982
+    - 87893172902526977
+    - 87893172902526980
+    - 87893172902526979
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 348
+    earfcn: 73
+    celltype: 2
+  cell33:
+    ncgi: 87893172902526979
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 150
+      arc: 60
+      tilt: 3
+      height: 21
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526981
+    - 87893172902445057
+    - 87893172902510594
+    - 87893172902526978
+    - 87893172902526982
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 180
+    earfcn: 74
+    celltype: 2
+  cell34:
+    ncgi: 87893172902526980
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 210
+      arc: 60
+      tilt: -4
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526978
+    - 87893172902576130
+    - 87893172902526982
+    - 87893172902526977
+    - 87893172902526979
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 352
+    earfcn: 75
+    celltype: 3
+  cell35:
+    ncgi: 87893172902526981
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 270
+      arc: 60
+      tilt: 0
+      height: 47
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902510593
+    - 87893172902526978
+    - 87893172902526982
+    - 87893172902526977
+    - 87893172902526980
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 373
+    earfcn: 76
+    celltype: 3
+  cell36:
+    ncgi: 87893172902526982
+    sector:
+      center:
+        lat: 52.502819126892575
+        lng: 13.459435980962402
+      azimuth: 330
+      arc: 60
+      tilt: -2
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526977
+    - 87893172902526980
+    - 87893172902526979
+    - 87893172902543366
+    - 87893172902526981
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 265
+    earfcn: 77
+    celltype: 0
+  cell37:
+    ncgi: 87893172902543361
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 0
+      arc: 60
+      tilt: 9
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902543363
+    - 87893172902543364
+    - 87893172902543365
+    - 87893172902543362
+    - 87893172902543366
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 138
+    earfcn: 78
+    celltype: 2
+  cell38:
+    ncgi: 87893172902543362
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 60
+      arc: 60
+      tilt: 8
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902543366
+    - 87893172902543363
+    - 87893172902543364
+    - 87893172902543365
+    - 87893172902477825
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 175
+    earfcn: 79
+    celltype: 2
+  cell39:
+    ncgi: 87893172902543363
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 120
+      arc: 60
+      tilt: 13
+      height: 47
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526978
+    - 87893172902543361
+    - 87893172902543362
+    - 87893172902543366
+    - 87893172902543364
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 4
+    earfcn: 80
+    celltype: 3
+  cell40:
+    ncgi: 87893172902543364
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 180
+      arc: 60
+      tilt: 7
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902543361
+    - 87893172902477829
+    - 87893172902543362
+    - 87893172902543366
+    - 87893172902543363
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 43
+    earfcn: 81
+    celltype: 3
+  cell41:
+    ncgi: 87893172902543365
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 240
+      arc: 60
+      tilt: -4
+      height: 36
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902543361
+    - 87893172902461446
+    - 87893172902543362
+    - 87893172902543366
+    - 87893172902543363
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 172
+    earfcn: 82
+    celltype: 3
+  cell42:
+    ncgi: 87893172902543366
+    sector:
+      center:
+        lat: 52.51710328335154
+        lng: 13.501637983175804
+      azimuth: 300
+      arc: 60
+      tilt: -14
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902543365
+    - 87893172902526982
+    - 87893172902625284
+    - 87893172902543361
+    - 87893172902543362
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 271
+    earfcn: 83
+    celltype: 1
+  cell43:
+    ncgi: 87893172902559745
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 30
+      arc: 60
+      tilt: -14
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559750
+    - 87893172902494214
+    - 87893172902592516
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 394
+    earfcn: 84
+    celltype: 0
+  cell44:
+    ncgi: 87893172902559746
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 90
+      arc: 60
+      tilt: 5
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559747
+    - 87893172902559750
+    - 87893172902559745
+    - 87893172902559748
+    - 87893172902559749
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 381
+    earfcn: 85
+    celltype: 1
+  cell45:
+    ncgi: 87893172902559747
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 150
+      arc: 60
+      tilt: 15
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559750
+    - 87893172902559745
+    - 87893172902559748
+    - 87893172902559749
+    - 87893172902494212
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 51
+    earfcn: 86
+    celltype: 1
+  cell46:
+    ncgi: 87893172902559748
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 210
+      arc: 60
+      tilt: -10
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559749
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559750
+    - 87893172902559745
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 261
+    earfcn: 87
+    celltype: 3
+  cell47:
+    ncgi: 87893172902559749
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 270
+      arc: 60
+      tilt: -14
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559750
+    - 87893172902559745
+    - 87893172902559748
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 57
+    earfcn: 88
+    celltype: 3
+  cell48:
+    ncgi: 87893172902559750
+    sector:
+      center:
+        lat: 52.48349820310249
+        lng: 13.305965340984578
+      azimuth: 330
+      arc: 60
+      tilt: -6
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559745
+    - 87893172902559748
+    - 87893172902576133
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 267
+    earfcn: 89
+    celltype: 2
+  cell49:
+    ncgi: 87893172902576129
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 0
+      arc: 60
+      tilt: -11
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902576133
+    - 87893172902608901
+    - 87893172902576132
+    - 87893172902576130
+    - 87893172902576134
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 132
+    earfcn: 90
+    celltype: 2
+  cell50:
+    ncgi: 87893172902576130
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 60
+      arc: 60
+      tilt: 11
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902461445
+    - 87893172902576133
+    - 87893172902576132
+    - 87893172902592515
+    - 87893172902526980
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 30
+    earfcn: 91
+    celltype: 1
+  cell51:
+    ncgi: 87893172902576131
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 120
+      arc: 60
+      tilt: -12
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902445062
+    - 87893172902576132
+    - 87893172902576130
+    - 87893172902576134
+    - 87893172902576129
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 367
+    earfcn: 92
+    celltype: 2
+  cell52:
+    ncgi: 87893172902576132
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 180
+      arc: 60
+      tilt: 8
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902494213
+    - 87893172902576134
+    - 87893172902576131
+    - 87893172902576129
+    - 87893172902576133
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 48
+    earfcn: 93
+    celltype: 2
+  cell53:
+    ncgi: 87893172902576133
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 240
+      arc: 60
+      tilt: -8
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902576129
+    - 87893172902576132
+    - 87893172902576130
+    - 87893172902559750
+    - 87893172902576134
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 148
+    earfcn: 94
+    celltype: 3
+  cell54:
+    ncgi: 87893172902576134
+    sector:
+      center:
+        lat: 52.50049813456204
+        lng: 13.352320339997393
+      azimuth: 300
+      arc: 60
+      tilt: 12
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902576131
+    - 87893172902576129
+    - 87893172902576133
+    - 87893172902576132
+    - 87893172902576130
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 294
+    earfcn: 95
+    celltype: 1
+  cell55:
+    ncgi: 87893172902592513
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 30
+      arc: 60
+      tilt: -15
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902592516
+    - 87893172902592518
+    - 87893172902592514
+    - 87893172902592515
+    - 87893172902592517
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 256
+    earfcn: 96
+    celltype: 1
+  cell56:
+    ncgi: 87893172902592514
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 90
+      arc: 60
+      tilt: -10
+      height: 21
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902592515
+    - 87893172902592517
+    - 87893172902592513
+    - 87893172902461446
+    - 87893172902592516
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 249
+    earfcn: 97
+    celltype: 0
+  cell57:
+    ncgi: 87893172902592515
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 150
+      arc: 60
+      tilt: -3
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902576130
+    - 87893172902526980
+    - 87893172902592516
+    - 87893172902494209
+    - 87893172902592518
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 207
+    earfcn: 98
+    celltype: 3
+  cell58:
+    ncgi: 87893172902592516
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 210
+      arc: 60
+      tilt: 0
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902559745
+    - 87893172902592518
+    - 87893172902592514
+    - 87893172902592515
+    - 87893172902592517
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 273
+    earfcn: 99
+    celltype: 0
+  cell59:
+    ncgi: 87893172902592517
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 270
+      arc: 60
+      tilt: -5
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902592518
+    - 87893172902592514
+    - 87893172902592515
+    - 87893172902592513
+    - 87893172902592516
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 343
+    earfcn: 100
+    celltype: 2
+  cell60:
+    ncgi: 87893172902592518
+    sector:
+      center:
+        lat: 52.52179075660384
+        lng: 13.400374435355571
+      azimuth: 330
+      arc: 60
+      tilt: -3
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902592513
+    - 87893172902592516
+    - 87893172902592514
+    - 87893172902592515
+    - 87893172902592517
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 325
+    earfcn: 101
+    celltype: 2
+  cell61:
+    ncgi: 87893172902608897
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 0
+      arc: 60
+      tilt: -3
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902608901
+    - 87893172902608899
+    - 87893172902625285
+    - 87893172902608902
+    - 87893172902608898
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 90
+    earfcn: 102
+    celltype: 0
+  cell62:
+    ncgi: 87893172902608898
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 60
+      arc: 60
+      tilt: -10
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902608902
+    - 87893172902625283
+    - 87893172902526977
+    - 87893172902608900
+    - 87893172902608901
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 204
+    earfcn: 103
+    celltype: 3
+  cell63:
+    ncgi: 87893172902608899
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 120
+      arc: 60
+      tilt: -11
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902608900
+    - 87893172902608901
+    - 87893172902608897
+    - 87893172902608902
+    - 87893172902608898
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 4
+    earfcn: 104
+    celltype: 2
+  cell64:
+    ncgi: 87893172902608900
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 180
+      arc: 60
+      tilt: -11
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902526981
+    - 87893172902510593
+    - 87893172902608901
+    - 87893172902592514
+    - 87893172902608899
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 144
+    earfcn: 105
+    celltype: 3
+  cell65:
+    ncgi: 87893172902608901
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 240
+      arc: 60
+      tilt: 4
+      height: 44
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902608902
+    - 87893172902608898
+    - 87893172902608900
+    - 87893172902576129
+    - 87893172902608899
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 259
+    earfcn: 106
+    celltype: 0
+  cell66:
+    ncgi: 87893172902608902
+    sector:
+      center:
+        lat: 52.5343430585276
+        lng: 13.452031700182763
+      azimuth: 300
+      arc: 60
+      tilt: 1
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902608898
+    - 87893172902608900
+    - 87893172902608901
+    - 87893172902608899
+    - 87893172902608897
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 378
+    earfcn: 107
+    celltype: 2
+  cell67:
+    ncgi: 87893172902625281
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 30
+      arc: 60
+      tilt: -13
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902625282
+    - 87893172902625286
+    - 87893172902625285
+    - 87893172902625283
+    - 87893172902625284
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 46
+    earfcn: 108
+    celltype: 2
+  cell68:
+    ncgi: 87893172902625282
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 90
+      arc: 60
+      tilt: -7
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902625281
+    - 87893172902625283
+    - 87893172902625284
+    - 87893172902625286
+    - 87893172902625285
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 309
+    earfcn: 109
+    celltype: 0
+  cell69:
+    ncgi: 87893172902625283
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 150
+      arc: 60
+      tilt: -12
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902625286
+    - 87893172902625285
+    - 87893172902625281
+    - 87893172902625284
+    - 87893172902526977
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 348
+    earfcn: 110
+    celltype: 1
+  cell70:
+    ncgi: 87893172902625284
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 210
+      arc: 60
+      tilt: 10
+      height: 26
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902592513
+    - 87893172902625281
+    - 87893172902625283
+    - 87893172902526982
+    - 87893172902625282
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 141
+    earfcn: 111
+    celltype: 1
+  cell71:
+    ncgi: 87893172902625285
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 270
+      arc: 60
+      tilt: 6
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902625284
+    - 87893172902625282
+    - 87893172902625286
+    - 87893172902608897
+    - 87893172902625281
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 231
+    earfcn: 112
+    celltype: 2
+  cell72:
+    ncgi: 87893172902625286
+    sector:
+      center:
+        lat: 52.55530163926376
+        lng: 13.50964704629096
+      azimuth: 330
+      arc: 60
+      tilt: -10
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893172902625285
+    - 87893172902625281
+    - 87893172902625283
+    - 87893172902625284
+    - 87893172902625282
+    txpowerdb: 11
+    eventa3params:
+      a3offset: 0
+      a3timetotrigger: 0
+      a3hysteresis: 0
+      a3celloffset: 0
+      a3frequencyoffset: 0
+    pci: 82
+    earfcn: 113
+    celltype: 0
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm:
+    id: 1
+    description: kpm service model
+    version: 1.0.0
+  ni:
+    id: 2
+    description: ni service model
+    version: 1.0.0
+  rc:
+    id: 3
+    description: rc service model
+    version: 1.0.0
+ueCount: 10000
+plmnID: "314628"
+plmnNumber: 1279014
+apiKey: ""

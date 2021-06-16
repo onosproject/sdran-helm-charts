@@ -14,17 +14,14 @@ metadata:
 data:
   logging.yaml: |-
 {{ toYaml .Values.logging | indent 4 }}
-
   {{- $files := .Files }}
   {{- range $key, $value := .Files }}
   {{- if hasPrefix "files/metrics/" $key }}
   {{ $key | trimPrefix "files/metrics/" }}: |-
-  {{ $files.Get $key | indent 4 }}
+{{ $files.Get $key | indent 4 }}
   {{- end }}
   {{- if hasPrefix "files/model/" $key }}
   {{ $key | trimPrefix "files/model/" }}: |-
-  {{ $files.Get $key | indent 4}}
+{{ $files.Get $key | indent 4 }}
   {{- end }}
   {{- end }}
-
-
