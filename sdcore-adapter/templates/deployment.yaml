@@ -22,7 +22,7 @@ spec:
     spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+        {{- toYaml . | nindent 6 }}
     {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
@@ -51,6 +51,7 @@ spec:
             - "-ca=/etc/sdcore-adapter/certs/tls.cacert"
             - "-alsologtostderr"
             - "-hostCheckDisabled"
+            - "-model_version={{ .Values.model.version }}"
             {{ if .Values.initialConfig }}
             - "-config={{ .Values.initialConfig }}"
             {{ end }}

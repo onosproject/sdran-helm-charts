@@ -10,7 +10,7 @@ annotations: {}
 
 image:
   repository: onosproject/sdcore-adapter
-  tag: v0.1.17
+  tag: v0.1.18
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -21,6 +21,9 @@ resources:
 
 service:
   type: ClusterIP
+
+model:
+  version: v3
 
 secure: true
 initialConfig: ""
