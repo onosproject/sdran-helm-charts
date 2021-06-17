@@ -13,11 +13,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902445057
     - 87893172902445058
@@ -31,11 +31,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902461441
     - 87893172902461442
@@ -49,11 +49,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902477825
     - 87893172902477826
@@ -67,11 +67,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902494209
     - 87893172902494210
@@ -85,11 +85,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902510593
     - 87893172902510594
@@ -103,11 +103,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902526977
     - 87893172902526978
@@ -121,11 +121,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902543361
     - 87893172902543362
@@ -139,11 +139,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902559745
     - 87893172902559746
@@ -157,11 +157,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902576129
     - 87893172902576130
@@ -175,11 +175,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902592513
     - 87893172902592514
@@ -193,11 +193,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902608897
     - 87893172902608898
@@ -211,11 +211,11 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
+    - mho
     - kpm
     - ni
     - rc
     - kpm2
-    - mho
     cells:
     - 87893172902625281
     - 87893172902625282
@@ -238,11 +238,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902526979
-    - 87893172902445059
+    - 87893172902445060
     - 87893172902477829
-    - 87893172902445058
     - 87893172902510594
+    - 87893172902445059
+    - 87893172902445062
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -250,9 +250,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 66
+    pci: 267
     earfcn: 42
-    celltype: 3
+    celltype: 1
   cell2:
     ncgi: 87893172902445058
     sector:
@@ -266,11 +266,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445059
-    - 87893172902477828
-    - 87893172902445062
-    - 87893172902445061
     - 87893172902445057
+    - 87893172902445061
+    - 87893172902445060
+    - 87893172902445062
+    - 87893172902477828
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -278,9 +278,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 259
+    pci: 78
     earfcn: 43
-    celltype: 0
+    celltype: 3
   cell3:
     ncgi: 87893172902445059
     sector:
@@ -294,11 +294,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445062
-    - 87893172902445061
     - 87893172902445057
-    - 87893172902445060
+    - 87893172902445061
     - 87893172902445058
+    - 87893172902445060
+    - 87893172902445062
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -306,7 +306,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 334
+    pci: 381
     earfcn: 44
     celltype: 2
   cell4:
@@ -322,10 +322,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445062
-    - 87893172902445061
-    - 87893172902445057
     - 87893172902445059
+    - 87893172902445062
+    - 87893172902445057
+    - 87893172902445061
     - 87893172902445058
     txpowerdb: 11
     eventa3params:
@@ -334,9 +334,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 343
+    pci: 259
     earfcn: 45
-    celltype: 3
+    celltype: 2
   cell5:
     ncgi: 87893172902445061
     sector:
@@ -350,10 +350,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902445059
     - 87893172902445062
     - 87893172902445057
-    - 87893172902445060
-    - 87893172902445059
+    - 87893172902510596
     - 87893172902445058
     txpowerdb: 11
     eventa3params:
@@ -362,9 +362,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 207
+    pci: 22
     earfcn: 46
-    celltype: 3
+    celltype: 1
   cell6:
     ncgi: 87893172902445062
     sector:
@@ -378,11 +378,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445061
-    - 87893172902445057
-    - 87893172902445060
-    - 87893172902445059
+    - 87893172902494209
     - 87893172902445058
+    - 87893172902592515
+    - 87893172902445060
+    - 87893172902576131
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -390,9 +390,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 325
+    pci: 265
     earfcn: 47
-    celltype: 1
+    celltype: 0
   cell7:
     ncgi: 87893172902461441
     sector:
@@ -406,11 +406,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461445
-    - 87893172902461443
-    - 87893172902526978
     - 87893172902461444
+    - 87893172902461442
+    - 87893172902526978
     - 87893172902461446
+    - 87893172902461443
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -418,9 +418,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 378
+    pci: 256
     earfcn: 48
-    celltype: 2
+    celltype: 0
   cell8:
     ncgi: 87893172902461442
     sector:
@@ -434,9 +434,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461444
-    - 87893172902461441
     - 87893172902461446
+    - 87893172902461443
+    - 87893172902461441
     - 87893172902477828
     - 87893172902461445
     txpowerdb: 11
@@ -446,7 +446,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 30
+    pci: 82
     earfcn: 49
     celltype: 2
   cell9:
@@ -462,11 +462,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461444
-    - 87893172902461441
-    - 87893172902461446
-    - 87893172902461442
     - 87893172902461445
+    - 87893172902461444
+    - 87893172902461442
+    - 87893172902461446
+    - 87893172902461441
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -474,9 +474,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 148
+    pci: 48
     earfcn: 50
-    celltype: 3
+    celltype: 1
   cell10:
     ncgi: 87893172902461444
     sector:
@@ -491,10 +491,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902461445
-    - 87893172902461443
-    - 87893172902494210
+    - 87893172902461442
     - 87893172902510595
-    - 87893172902461441
+    - 87893172902461446
+    - 87893172902461443
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -502,9 +502,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 73
+    pci: 187
     earfcn: 51
-    celltype: 1
+    celltype: 0
   cell11:
     ncgi: 87893172902461445
     sector:
@@ -518,11 +518,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461441
-    - 87893172902461446
-    - 87893172902494209
-    - 87893172902592515
+    - 87893172902461444
     - 87893172902526980
+    - 87893172902494209
+    - 87893172902461442
+    - 87893172902592515
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -530,7 +530,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 354
+    pci: 207
     earfcn: 52
     celltype: 3
   cell12:
@@ -546,11 +546,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461444
-    - 87893172902592514
+    - 87893172902461443
     - 87893172902461441
-    - 87893172902543365
-    - 87893172902461442
+    - 87893172902608899
+    - 87893172902592514
+    - 87893172902461445
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -558,7 +558,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 394
+    pci: 46
     earfcn: 53
     celltype: 0
   cell13:
@@ -574,11 +574,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902477828
     - 87893172902477826
     - 87893172902477830
-    - 87893172902477829
-    - 87893172902543362
     - 87893172902477827
+    - 87893172902543362
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -586,9 +586,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 417
+    pci: 160
     earfcn: 54
-    celltype: 3
+    celltype: 2
   cell14:
     ncgi: 87893172902477826
     sector:
@@ -602,11 +602,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477827
     - 87893172902477828
-    - 87893172902477829
-    - 87893172902477825
     - 87893172902477830
+    - 87893172902477827
+    - 87893172902477825
+    - 87893172902477829
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -614,9 +614,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 267
+    pci: 394
     earfcn: 55
-    celltype: 1
+    celltype: 3
   cell15:
     ncgi: 87893172902477827
     sector:
@@ -630,9 +630,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902477825
     - 87893172902477829
     - 87893172902477828
-    - 87893172902477825
     - 87893172902477826
     - 87893172902477830
     txpowerdb: 11
@@ -642,9 +642,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 381
+    pci: 373
     earfcn: 56
-    celltype: 1
+    celltype: 0
   cell16:
     ncgi: 87893172902477828
     sector:
@@ -658,11 +658,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477827
     - 87893172902477829
-    - 87893172902445058
-    - 87893172902477825
     - 87893172902477826
+    - 87893172902477830
+    - 87893172902445058
+    - 87893172902477827
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -670,9 +670,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 211
+    pci: 141
     earfcn: 57
-    celltype: 0
+    celltype: 2
   cell17:
     ncgi: 87893172902477829
     sector:
@@ -686,9 +686,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902526979
+    - 87893172902477826
+    - 87893172902477830
     - 87893172902477827
-    - 87893172902477828
     - 87893172902477825
     - 87893172902543364
     txpowerdb: 11
@@ -698,9 +698,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 345
+    pci: 348
     earfcn: 58
-    celltype: 1
+    celltype: 2
   cell18:
     ncgi: 87893172902477830
     sector:
@@ -714,11 +714,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902477825
+    - 87893172902477829
     - 87893172902608899
     - 87893172902477828
-    - 87893172902477829
-    - 87893172902477827
-    - 87893172902477825
+    - 87893172902477826
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -726,7 +726,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 175
+    pci: 271
     earfcn: 59
     celltype: 2
   cell19:
@@ -742,11 +742,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494211
-    - 87893172902576131
-    - 87893172902592515
+    - 87893172902445062
+    - 87893172902494213
+    - 87893172902461445
     - 87893172902526980
-    - 87893172902494212
+    - 87893172902494211
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -754,9 +754,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 294
+    pci: 4
     earfcn: 60
-    celltype: 3
+    celltype: 2
   cell20:
     ncgi: 87893172902494210
     sector:
@@ -770,11 +770,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494212
-    - 87893172902461444
     - 87893172902494214
     - 87893172902494213
-    - 87893172902494211
+    - 87893172902510596
+    - 87893172902461444
+    - 87893172902494209
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -782,7 +782,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 46
+    pci: 399
     earfcn: 61
     celltype: 3
   cell21:
@@ -798,11 +798,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494209
     - 87893172902494212
-    - 87893172902494214
     - 87893172902494210
+    - 87893172902494214
     - 87893172902494213
+    - 87893172902494209
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -810,7 +810,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 289
+    pci: 66
     earfcn: 62
     celltype: 2
   cell22:
@@ -826,10 +826,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494214
-    - 87893172902494210
-    - 87893172902494213
+    - 87893172902494209
     - 87893172902494211
+    - 87893172902494210
+    - 87893172902494214
     - 87893172902559747
     txpowerdb: 11
     eventa3params:
@@ -838,9 +838,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 261
+    pci: 336
     earfcn: 63
-    celltype: 0
+    celltype: 1
   cell23:
     ncgi: 87893172902494213
     sector:
@@ -854,11 +854,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494211
     - 87893172902494209
+    - 87893172902494211
     - 87893172902494212
-    - 87893172902494214
     - 87893172902494210
+    - 87893172902494214
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -866,9 +866,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 126
+    pci: 294
     earfcn: 64
-    celltype: 0
+    celltype: 2
   cell24:
     ncgi: 87893172902494214
     sector:
@@ -882,9 +882,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494209
     - 87893172902494212
     - 87893172902494210
+    - 87893172902510597
     - 87893172902494213
     - 87893172902559745
     txpowerdb: 11
@@ -894,9 +894,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 117
+    pci: 199
     earfcn: 65
-    celltype: 3
+    celltype: 0
   cell25:
     ncgi: 87893172902510593
     sector:
@@ -910,10 +910,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902592514
-    - 87893172902608900
-    - 87893172902526981
     - 87893172902510595
+    - 87893172902510597
+    - 87893172902510594
+    - 87893172902592514
     - 87893172902510598
     txpowerdb: 11
     eventa3params:
@@ -922,7 +922,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 399
+    pci: 73
     earfcn: 66
     celltype: 1
   cell26:
@@ -938,10 +938,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477829
-    - 87893172902543364
-    - 87893172902510596
     - 87893172902445057
+    - 87893172902526979
+    - 87893172902510598
+    - 87893172902510596
     - 87893172902510595
     txpowerdb: 11
     eventa3params:
@@ -950,9 +950,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 132
+    pci: 201
     earfcn: 67
-    celltype: 1
+    celltype: 3
   cell27:
     ncgi: 87893172902510595
     sector:
@@ -966,11 +966,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461444
-    - 87893172902510598
-    - 87893172902510593
     - 87893172902510597
+    - 87893172902510594
+    - 87893172902510598
     - 87893172902510596
+    - 87893172902461444
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -978,9 +978,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 285
+    pci: 376
     earfcn: 68
-    celltype: 3
+    celltype: 2
   cell28:
     ncgi: 87893172902510596
     sector:
@@ -994,11 +994,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902510594
-    - 87893172902445061
     - 87893172902494210
-    - 87893172902510595
+    - 87893172902510597
+    - 87893172902510594
     - 87893172902510598
+    - 87893172902445061
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1006,9 +1006,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 313
+    pci: 144
     earfcn: 69
-    celltype: 0
+    celltype: 3
   cell29:
     ncgi: 87893172902510597
     sector:
@@ -1022,11 +1022,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902510596
-    - 87893172902510594
+    - 87893172902510595
+    - 87893172902510593
     - 87893172902559746
     - 87893172902494214
-    - 87893172902510595
+    - 87893172902510594
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1034,7 +1034,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 348
+    pci: 426
     earfcn: 70
     celltype: 2
   cell30:
@@ -1050,11 +1050,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902510595
     - 87893172902510597
-    - 87893172902510593
-    - 87893172902592516
+    - 87893172902510594
     - 87893172902510596
+    - 87893172902592516
+    - 87893172902510595
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1062,9 +1062,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 256
+    pci: 367
     earfcn: 71
-    celltype: 3
+    celltype: 0
   cell31:
     ncgi: 87893172902526977
     sector:
@@ -1078,10 +1078,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902526980
     - 87893172902526978
     - 87893172902608898
-    - 87893172902526981
-    - 87893172902526979
+    - 87893172902526982
     - 87893172902625283
     txpowerdb: 11
     eventa3params:
@@ -1090,9 +1090,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 420
+    pci: 126
     earfcn: 72
-    celltype: 2
+    celltype: 0
   cell32:
     ncgi: 87893172902526978
     sector:
@@ -1106,10 +1106,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902526977
-    - 87893172902526981
+    - 87893172902543363
     - 87893172902526979
-    - 87893172902461441
+    - 87893172902526981
+    - 87893172902526980
     - 87893172902526982
     txpowerdb: 11
     eventa3params:
@@ -1118,9 +1118,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 43
+    pci: 148
     earfcn: 73
-    celltype: 0
+    celltype: 3
   cell33:
     ncgi: 87893172902526979
     sector:
@@ -1134,11 +1134,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477829
-    - 87893172902526982
+    - 87893172902445057
+    - 87893172902526981
     - 87893172902526980
-    - 87893172902510594
     - 87893172902526978
+    - 87893172902526982
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1146,9 +1146,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 199
+    pci: 138
     earfcn: 74
-    celltype: 2
+    celltype: 3
   cell34:
     ncgi: 87893172902526980
     sector:
@@ -1162,11 +1162,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902526978
-    - 87893172902576130
-    - 87893172902526977
+    - 87893172902461445
     - 87893172902526981
-    - 87893172902526979
+    - 87893172902494209
+    - 87893172902526978
+    - 87893172902526982
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1174,9 +1174,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 144
+    pci: 169
     earfcn: 75
-    celltype: 3
+    celltype: 0
   cell35:
     ncgi: 87893172902526981
     sector:
@@ -1191,10 +1191,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902526978
-    - 87893172902608900
+    - 87893172902526982
+    - 87893172902510593
     - 87893172902526977
     - 87893172902526979
-    - 87893172902510593
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1202,7 +1202,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 336
+    pci: 273
     earfcn: 76
     celltype: 0
   cell36:
@@ -1218,10 +1218,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902592513
+    - 87893172902526981
     - 87893172902625284
     - 87893172902526980
-    - 87893172902592513
-    - 87893172902543366
     - 87893172902526978
     txpowerdb: 11
     eventa3params:
@@ -1230,7 +1230,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 180
+    pci: 30
     earfcn: 77
     celltype: 3
   cell37:
@@ -1247,10 +1247,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902543362
-    - 87893172902543365
     - 87893172902543364
-    - 87893172902543363
     - 87893172902543366
+    - 87893172902543363
+    - 87893172902543365
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1258,9 +1258,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 204
+    pci: 354
     earfcn: 78
-    celltype: 2
+    celltype: 0
   cell38:
     ncgi: 87893172902543362
     sector:
@@ -1274,11 +1274,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477825
     - 87893172902543364
+    - 87893172902543366
+    - 87893172902543363
     - 87893172902543365
     - 87893172902543361
-    - 87893172902543363
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1286,7 +1286,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 153
+    pci: 43
     earfcn: 79
     celltype: 2
   cell39:
@@ -1303,10 +1303,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902543361
-    - 87893172902543366
     - 87893172902526978
     - 87893172902543362
     - 87893172902543364
+    - 87893172902543366
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1314,9 +1314,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 30
+    pci: 289
     earfcn: 80
-    celltype: 2
+    celltype: 0
   cell40:
     ncgi: 87893172902543364
     sector:
@@ -1330,9 +1330,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461441
-    - 87893172902477829
-    - 87893172902543362
+    - 87893172902510594
+    - 87893172902543366
+    - 87893172902543363
     - 87893172902543365
     - 87893172902543361
     txpowerdb: 11
@@ -1342,9 +1342,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 51
+    pci: 169
     earfcn: 81
-    celltype: 1
+    celltype: 3
   cell41:
     ncgi: 87893172902543365
     sector:
@@ -1358,11 +1358,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902592514
-    - 87893172902461446
-    - 87893172902510593
-    - 87893172902543362
     - 87893172902543364
+    - 87893172902543366
+    - 87893172902592514
+    - 87893172902543363
+    - 87893172902543361
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1370,9 +1370,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 138
+    pci: 30
     earfcn: 82
-    celltype: 2
+    celltype: 0
   cell42:
     ncgi: 87893172902543366
     sector:
@@ -1386,11 +1386,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902543362
-    - 87893172902543364
     - 87893172902543365
-    - 87893172902526982
+    - 87893172902625284
     - 87893172902543361
+    - 87893172902526982
+    - 87893172902543362
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1398,9 +1398,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 187
+    pci: 348
     earfcn: 83
-    celltype: 1
+    celltype: 0
   cell43:
     ncgi: 87893172902559745
     sector:
@@ -1414,11 +1414,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902559749
     - 87893172902559748
+    - 87893172902559750
     - 87893172902559746
     - 87893172902494214
-    - 87893172902559750
-    - 87893172902559749
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1426,9 +1426,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 426
+    pci: 175
     earfcn: 84
-    celltype: 1
+    celltype: 3
   cell44:
     ncgi: 87893172902559746
     sector:
@@ -1442,11 +1442,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902559749
     - 87893172902559748
-    - 87893172902559745
     - 87893172902559750
     - 87893172902510597
-    - 87893172902559749
+    - 87893172902559747
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1454,7 +1454,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 376
+    pci: 343
     earfcn: 85
     celltype: 3
   cell45:
@@ -1470,10 +1470,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494212
-    - 87893172902559746
-    - 87893172902559748
     - 87893172902559745
+    - 87893172902559749
+    - 87893172902559748
+    - 87893172902494212
     - 87893172902559750
     txpowerdb: 11
     eventa3params:
@@ -1482,9 +1482,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 207
+    pci: 120
     earfcn: 86
-    celltype: 1
+    celltype: 2
   cell46:
     ncgi: 87893172902559748
     sector:
@@ -1499,10 +1499,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902559746
-    - 87893172902559745
-    - 87893172902559750
-    - 87893172902559749
     - 87893172902559747
+    - 87893172902559745
+    - 87893172902559749
+    - 87893172902559750
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1510,9 +1510,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 223
+    pci: 172
     earfcn: 87
-    celltype: 3
+    celltype: 2
   cell47:
     ncgi: 87893172902559749
     sector:
@@ -1526,11 +1526,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902559750
-    - 87893172902559745
-    - 87893172902559747
-    - 87893172902559746
     - 87893172902559748
+    - 87893172902559750
+    - 87893172902559746
+    - 87893172902559747
+    - 87893172902559745
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1538,9 +1538,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 201
+    pci: 249
     earfcn: 88
-    celltype: 2
+    celltype: 1
   cell48:
     ncgi: 87893172902559750
     sector:
@@ -1554,11 +1554,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902559746
-    - 87893172902559748
-    - 87893172902576133
+    - 87893172902559747
     - 87893172902559745
     - 87893172902559749
+    - 87893172902559748
+    - 87893172902559746
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1566,9 +1566,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 169
+    pci: 420
     earfcn: 89
-    celltype: 2
+    celltype: 1
   cell49:
     ncgi: 87893172902576129
     sector:
@@ -1582,11 +1582,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902576132
     - 87893172902576131
-    - 87893172902608901
     - 87893172902576133
     - 87893172902576130
-    - 87893172902576132
+    - 87893172902576134
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1594,9 +1594,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 48
+    pci: 204
     earfcn: 90
-    celltype: 0
+    celltype: 3
   cell50:
     ncgi: 87893172902576130
     sector:
@@ -1610,10 +1610,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461445
+    - 87893172902592515
+    - 87893172902576131
     - 87893172902576133
-    - 87893172902608900
-    - 87893172902576129
+    - 87893172902576134
     - 87893172902576132
     txpowerdb: 11
     eventa3params:
@@ -1622,9 +1622,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 160
+    pci: 345
     earfcn: 91
-    celltype: 0
+    celltype: 3
   cell51:
     ncgi: 87893172902576131
     sector:
@@ -1638,10 +1638,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902494209
     - 87893172902445062
-    - 87893172902576133
     - 87893172902576130
+    - 87893172902576134
+    - 87893172902576132
     - 87893172902576129
     txpowerdb: 11
     eventa3params:
@@ -1650,7 +1650,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 309
+    pci: 46
     earfcn: 92
     celltype: 1
   cell52:
@@ -1666,11 +1666,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902576134
-    - 87893172902494213
-    - 87893172902576129
     - 87893172902576131
     - 87893172902576133
+    - 87893172902576130
+    - 87893172902576134
+    - 87893172902576129
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1678,9 +1678,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 87
+    pci: 417
     earfcn: 93
-    celltype: 2
+    celltype: 1
   cell53:
     ncgi: 87893172902576133
     sector:
@@ -1694,11 +1694,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902576130
-    - 87893172902576129
-    - 87893172902576132
-    - 87893172902576134
     - 87893172902559750
+    - 87893172902576131
+    - 87893172902576130
+    - 87893172902576134
+    - 87893172902576132
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1706,9 +1706,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 259
+    pci: 285
     earfcn: 94
-    celltype: 3
+    celltype: 2
   cell54:
     ncgi: 87893172902576134
     sector:
@@ -1722,11 +1722,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902576131
     - 87893172902576133
     - 87893172902576130
-    - 87893172902576129
     - 87893172902576132
-    - 87893172902576131
+    - 87893172902576129
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1734,7 +1734,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 129
+    pci: 153
     earfcn: 95
     celltype: 2
   cell55:
@@ -1751,9 +1751,9 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902592515
-    - 87893172902625284
-    - 87893172902526982
     - 87893172902592514
+    - 87893172902592518
+    - 87893172902625284
     - 87893172902592517
     txpowerdb: 11
     eventa3params:
@@ -1762,7 +1762,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 163
+    pci: 57
     earfcn: 96
     celltype: 3
   cell56:
@@ -1778,11 +1778,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461446
-    - 87893172902510593
-    - 87893172902592518
-    - 87893172902592516
     - 87893172902543365
+    - 87893172902592517
+    - 87893172902608900
+    - 87893172902592516
+    - 87893172902461446
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1790,9 +1790,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 90
+    pci: 207
     earfcn: 97
-    celltype: 0
+    celltype: 3
   cell57:
     ncgi: 87893172902592515
     sector:
@@ -1806,11 +1806,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902592518
-    - 87893172902592516
-    - 87893172902494209
+    - 87893172902445062
+    - 87893172902576130
+    - 87893172902592514
     - 87893172902592513
-    - 87893172902526980
+    - 87893172902592518
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1818,9 +1818,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 370
+    pci: 57
     earfcn: 98
-    celltype: 3
+    celltype: 2
   cell58:
     ncgi: 87893172902592516
     sector:
@@ -1834,11 +1834,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902592515
     - 87893172902494214
     - 87893172902592514
-    - 87893172902592517
-    - 87893172902510598
-    - 87893172902559745
+    - 87893172902592513
+    - 87893172902592518
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1846,7 +1846,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 352
+    pci: 64
     earfcn: 99
     celltype: 2
   cell59:
@@ -1862,11 +1862,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902592518
+    - 87893172902592513
     - 87893172902592516
     - 87893172902592515
-    - 87893172902592513
     - 87893172902592514
-    - 87893172902592518
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1874,9 +1874,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 231
+    pci: 261
     earfcn: 100
-    celltype: 0
+    celltype: 2
   cell60:
     ncgi: 87893172902592518
     sector:
@@ -1891,8 +1891,8 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902592515
-    - 87893172902592513
     - 87893172902592514
+    - 87893172902592513
     - 87893172902592517
     - 87893172902592516
     txpowerdb: 11
@@ -1902,9 +1902,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 265
+    pci: 370
     earfcn: 101
-    celltype: 1
+    celltype: 3
   cell61:
     ncgi: 87893172902608897
     sector:
@@ -1918,11 +1918,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902608899
-    - 87893172902625285
-    - 87893172902608901
-    - 87893172902608902
+    - 87893172902608900
     - 87893172902608898
+    - 87893172902608902
+    - 87893172902608899
+    - 87893172902608901
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1930,9 +1930,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 57
+    pci: 90
     earfcn: 102
-    celltype: 2
+    celltype: 1
   cell62:
     ncgi: 87893172902608898
     sector:
@@ -1946,10 +1946,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902608900
     - 87893172902625283
-    - 87893172902608899
     - 87893172902608897
-    - 87893172902608901
+    - 87893172902526977
     - 87893172902608902
     txpowerdb: 11
     eventa3params:
@@ -1958,9 +1958,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 172
+    pci: 259
     earfcn: 103
-    celltype: 2
+    celltype: 0
   cell63:
     ncgi: 87893172902608899
     sector:
@@ -1974,11 +1974,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902477830
-    - 87893172902608897
     - 87893172902608901
-    - 87893172902608902
+    - 87893172902608900
+    - 87893172902477830
     - 87893172902608898
+    - 87893172902608897
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -1986,9 +1986,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 22
+    pci: 334
     earfcn: 104
-    celltype: 1
+    celltype: 2
   cell64:
     ncgi: 87893172902608900
     sector:
@@ -2002,11 +2002,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902510593
-    - 87893172902608899
-    - 87893172902608897
-    - 87893172902608901
     - 87893172902608902
+    - 87893172902608899
+    - 87893172902576130
+    - 87893172902592514
+    - 87893172902608901
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2014,9 +2014,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 57
+    pci: 132
     earfcn: 105
-    celltype: 2
+    celltype: 3
   cell65:
     ncgi: 87893172902608901
     sector:
@@ -2030,11 +2030,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902608899
-    - 87893172902608897
-    - 87893172902608902
+    - 87893172902576129
     - 87893172902608900
     - 87893172902608898
+    - 87893172902608897
+    - 87893172902608902
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2042,9 +2042,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 64
+    pci: 352
     earfcn: 106
-    celltype: 2
+    celltype: 1
   cell66:
     ncgi: 87893172902608902
     sector:
@@ -2058,11 +2058,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902608899
     - 87893172902608897
+    - 87893172902608899
     - 87893172902608901
-    - 87893172902608898
     - 87893172902608900
+    - 87893172902608898
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2070,9 +2070,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 249
+    pci: 226
     earfcn: 107
-    celltype: 0
+    celltype: 1
   cell67:
     ncgi: 87893172902625281
     sector:
@@ -2086,11 +2086,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893172902625282
+    - 87893172902625285
     - 87893172902625286
     - 87893172902625284
-    - 87893172902625282
     - 87893172902625283
-    - 87893172902625285
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2098,9 +2098,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 82
+    pci: 51
     earfcn: 108
-    celltype: 3
+    celltype: 1
   cell68:
     ncgi: 87893172902625282
     sector:
@@ -2114,11 +2114,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902625284
     - 87893172902625283
-    - 87893172902625285
     - 87893172902625281
+    - 87893172902625285
     - 87893172902625286
+    - 87893172902625284
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2126,9 +2126,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 394
+    pci: 378
     earfcn: 109
-    celltype: 0
+    celltype: 1
   cell69:
     ncgi: 87893172902625283
     sector:
@@ -2143,10 +2143,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902625282
-    - 87893172902625284
-    - 87893172902625285
     - 87893172902625281
-    - 87893172902608898
+    - 87893172902625285
+    - 87893172902625286
+    - 87893172902625284
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2154,7 +2154,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 169
+    pci: 4
     earfcn: 110
     celltype: 2
   cell70:
@@ -2171,10 +2171,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902526982
-    - 87893172902625282
     - 87893172902625283
-    - 87893172902592513
+    - 87893172902625282
     - 87893172902543366
+    - 87893172902625281
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2182,9 +2182,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 46
+    pci: 163
     earfcn: 111
-    celltype: 0
+    celltype: 2
   cell71:
     ncgi: 87893172902625285
     sector:
@@ -2198,11 +2198,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902625286
-    - 87893172902625284
-    - 87893172902625282
     - 87893172902625283
     - 87893172902608897
+    - 87893172902625282
+    - 87893172902625281
+    - 87893172902625286
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2210,7 +2210,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 348
+    pci: 211
     earfcn: 112
     celltype: 1
   cell72:
@@ -2227,10 +2227,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893172902625282
-    - 87893172902625283
-    - 87893172902625284
-    - 87893172902625285
     - 87893172902625281
+    - 87893172902625285
+    - 87893172902625284
+    - 87893172902625283
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -2238,9 +2238,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 226
+    pci: 313
     earfcn: 113
-    celltype: 0
+    celltype: 3
 controllers:
   e2t-1:
     id: e2t-1
@@ -2255,6 +2255,10 @@ servicemodels:
     id: 4
     description: kpm2 service model
     version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
+    version: 1.0.0
   ni:
     id: 2
     description: ni service model
@@ -2262,10 +2266,6 @@ servicemodels:
   rc:
     id: 3
     description: rc service model
-    version: 1.0.0
-  mho:
-    id: 5
-    description: mho service model
     version: 1.0.0
 ueCount: 0
 plmnID: "314628"

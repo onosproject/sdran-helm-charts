@@ -52,8 +52,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445058
     - 87893172902445059
+    - 87893172902445058
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -77,8 +77,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445057
     - 87893172902445059
+    - 87893172902445057
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -111,7 +111,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 218
+    pci: 148
     earfcn: 44
     celltype: 0
   cell4:
@@ -152,8 +152,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902461443
     - 87893172902461441
+    - 87893172902461443
     txpowerdb: 11
     eventa3params:
       a3offset: 0
@@ -161,7 +161,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 148
+    pci: 44
     earfcn: 46
     celltype: 2
   cell6:
@@ -186,7 +186,7 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 218
+    pci: 148
     earfcn: 47
     celltype: 3
 controllers:
@@ -203,6 +203,10 @@ servicemodels:
     id: 4
     description: kpm2 service model
     version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
+    version: 1.0.0
   ni:
     id: 2
     description: ni service model
@@ -210,10 +214,6 @@ servicemodels:
   rc:
     id: 3
     description: rc service model
-    version: 1.0.0
-  mho:
-    id: 5
-    description: mho service model
     version: 1.0.0
 ueCount: 0
 plmnID: "314628"

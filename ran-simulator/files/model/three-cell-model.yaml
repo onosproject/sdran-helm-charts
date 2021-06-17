@@ -46,9 +46,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 99
+    pci: 5
     earfcn: 42
-    celltype: 2
+    celltype: 3
   cell2:
     ncgi: 87893172902445058
     sector:
@@ -71,9 +71,9 @@ cells:
       a3hysteresis: 0
       a3celloffset: 0
       a3frequencyoffset: 0
-    pci: 206
+    pci: 99
     earfcn: 43
-    celltype: 3
+    celltype: 2
   cell3:
     ncgi: 87893172902445059
     sector:
@@ -98,7 +98,7 @@ cells:
       a3frequencyoffset: 0
     pci: 99
     earfcn: 44
-    celltype: 1
+    celltype: 2
 controllers:
   e2t-1:
     id: e2t-1
