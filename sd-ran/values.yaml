@@ -45,7 +45,7 @@ import:
   onos-topo:
     enabled: true
   onos-uenib:
-    enabled: false
+    enabled: true
   onos-e2t:
     enabled: true
   onos-e2sub:
