@@ -39,7 +39,6 @@ spec:
           args:
             - "-mode={{ index .Values "config" "onos-exporter" "mode" }}"
             - "-e2tEndpoint={{ index .Values "config" "onos-exporter" "e2tEndpoint" }}"
-            - "-e2subEndpoint={{ index .Values "config" "onos-exporter" "e2subEndpoint" }}"
             - "-xappPciEndpoint={{ index .Values "config" "onos-exporter" "xappPciEndpoint" }}"
             - "-xappKpimonEndpoint={{ index .Values "config" "onos-exporter" "xappKpimonEndpoint" }}"
           resources:
