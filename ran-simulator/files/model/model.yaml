@@ -215,7 +215,7 @@ servicemodels:
     id: 3
     description: rc service model
     version: 1.0.0
-ueCount: 0
+ueCount: 10
 plmnID: "314628"
 plmnNumber: 1279014
 apiKey: ""
