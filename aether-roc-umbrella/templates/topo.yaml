@@ -11,7 +11,7 @@ spec:
   aspects: {}
 
 ---
-# An entity representing an E2 termination point
+# The 4G v2.1.0 sdcore-adapter
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
@@ -21,11 +21,33 @@ spec:
     name: aether
   aspects:
     onos.topo.Configurable:
-      address: sdcore-adapter:5150
+      address: sdcore-adapter-v21:5150
       version: 2.1.0
       type: Aether
     onos.topo.TLSOptions:
       insecure: true
     onos.topo.Asset:
       name: SPGW-1
+    onos.topo.MastershipState: {}
+---
+# The 4G/5G v3.0.0 sdcore-adapter
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: connectivity-service-v3
+spec:
+  kind:
+    name: aether
+  aspects:
+    onos.topo.Configurable:
+      address: sdcore-adapter-v3:5150
+      version: 3.0.0
+      type: Aether
+    onos.topo.Location:
+      lat: 52.5150
+      lng: 13.3885
+    onos.topo.TLSOptions:
+      insecure: true
+    onos.topo.Asset:
+      name: 5G Core
     onos.topo.MastershipState: {}
