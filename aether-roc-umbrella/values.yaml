@@ -183,6 +183,7 @@ onos-config:
             network := networks
             site := sites
             template := templates
+            traffic_class := trafficclasses
             upf := upfs
             vcs := vcss
             config := {
@@ -231,34 +232,39 @@ onos-config:
                     template
                 ]
               },
+              "traffic_class": {
+                "traffic_class": {
+                                   traffic_class
+                }
+              },
               "upf": {
-                  "upf": [
-                      upf
-                  ]
+                "upf": [
+                    upf
+                ]
               },
               "vcs": {
-                  "vcs": [
-                      vcs
-                  ]
+                "vcs": [
+                    vcs
+                ]
               }
             }
           }
 
           ap_lists[ap_list] {
             ap_list := input.ap_list.ap_list[_]
-            ap_list.enterprise == input.groups[i]
+            ["AetherROCAdmin", ap_list.enterprise][_] == input.groups[i]
           }
 
           applications[application] {
             application := input.application.application[_]
-            application.enterprise == input.groups[i]
+            ["AetherROCAdmin", application.enterprise][_] == input.groups[i]
           }
 
           connectivityservices[connectivity_service] {
             enterprise := input.enterprise.enterprise[_]
             enterprise_cs := enterprise.connectivity_service[_]
             connectivity_service := input.connectivity_service.connectivity_service[_]
-            enterprise.id == input.groups[i]
+            ["AetherROCAdmin", enterprise.id][_] == input.groups[i]
             enterprise_cs.connectivity_service == connectivity_service.id
           }
 
@@ -266,12 +272,12 @@ onos-config:
             site := input.site.site[_] # the existing set of site(s)
             device_group := input.device_group.device_group[_] # the existing set of device_group(s)
             device_group.site == site.id # allow only the device_groups of a known site
-            site.enterprise == input.groups[i] # check a known site is for one of our groups
+            ["AetherROCAdmin", site.enterprise][_] == input.groups[i] # check a known site is for one of our groups
           }
 
           enterprises[enterprise] {
             enterprise := input.enterprise.enterprise[_]
-            enterprise.id == input.groups[i]
+            ["AetherROCAdmin", enterprise.id][_] == input.groups[i]
           }
 
           ip_domains[ip_domain] {
@@ -280,21 +286,25 @@ onos-config:
 
           networks[network] {
             network := input.network.network[_]
-            network.enterprise == input.groups[i]
+            ["AetherROCAdmin", network.enterprise][_] == input.groups[i]
           }
 
           sites[site] {
             site := input.site.site[_]
-            site.enterprise == input.groups[i]
+            ["AetherROCAdmin", site.enterprise][_] == input.groups[i]
           }
 
           templates[template] {
             template := input.template.template[_]
           }
 
+          trafficclasses[traffic_class] {
+            traffic_class := input.traffic_class.traffic_class[_]
+          }
+
           upfs[upf] {
             upf := input.upf.upf[_]
-            upf.enterprise == input.groups[i]
+            ["AetherROCAdmin", upf.enterprise][_] == input.groups[i]
           }
 
           vcss[vcs] {
@@ -303,12 +313,12 @@ onos-config:
             devicegroup := input.device_group.device_group[_]
             devicegroup.site == site.id
             vcs.device_group == devicegroup.id
-            site.enterprise == input.groups[i]
+            ["AetherROCAdmin", site.enterprise][_] == input.groups[i]
           }
 
           can_update_enterprise = true {
             update_enterprise := input.updates.enterprise.enterprise[_]
-            update_enterprise.id == input.groups[i]
+            ["AetherROCAdmin", update_enterprise.id][_] == input.groups[i]
           }
       aether_2_1_0.rego: |-
           # SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
@@ -414,13 +424,13 @@ onos-config:
             enterprise := input.enterprise.enterprise[_]
             enterprise_cs := enterprise.connectivity_service[_]
             connectivity_service := input.connectivity_service.connectivity_service[_]
-            enterprise.id == input.groups[i]
+            ["AetherROCAdmin", enterprise.id][_] == input.groups[i]
             enterprise_cs.connectivity_service == connectivity_service.id
           }
 
           enterprises[enterprise] {
             enterprise := input.enterprise.enterprise[_]
-            enterprise.id == input.groups[_]
+            ["AetherROCAdmin", enterprise.id][_] == input.groups[_]
           }
 
           qos_profiles[qos_profile] {
