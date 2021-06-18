@@ -1,0 +1,150 @@
+module: ap-list
+  +--rw ap-list
+     +--rw ap-list* [id]
+        +--rw id               ap-list-id
+        +--rw access-points* [address]
+        |  +--rw address    inet:host
+        |  +--rw tac?       at:tac
+        |  +--rw enable?    boolean
+        +--rw display-name?    string
+        +--rw description?     string
+        +--rw enterprise?      -> /ent:enterprise/enterprise/id
+
+module: application
+  +--rw application
+     +--rw application* [id]
+        +--rw id              application-id
+        +--rw display-name?   string
+        +--rw description?    string
+        +--rw endpoint* [name]
+        |  +--rw name          string
+        |  +--rw address?      ietf:host
+        |  +--rw port-start?   uint32
+        |  +--rw port-end?     uint32
+        |  +--rw protocol?     at:protocol
+        +--rw enterprise?     -> /ent:enterprise/enterprise/id
+
+module: connectivity-service
+  +--rw connectivity-service
+     +--rw connectivity-service* [id]
+        +--rw id                  connectivity-service-id
+        +--rw display-name?       string
+        +--rw description?        string
+        +--rw spgwc-endpoint?     inet:uri
+        +--rw hss-endpoint?       inet:uri
+        +--rw pcrf-endpoint?      inet:uri
+        +--rw core-5g-endpoint?   inet:uri
+
+module: device-group
+  +--rw device-group
+     +--rw device-group* [id]
+        +--rw id              device-group-id
+        +--rw display-name?   string
+        +--rw imsis* [name]
+        |  +--rw name               string
+        |  +--rw imsi-range-from?   uint64
+        |  +--rw imsi-range-to?     uint64
+        +--rw ip-domain?      -> /ipd:ip-domain/ip-domain/id
+        +--rw site?           -> /st:site/site/id
+
+module: device-model-list
+  +--rw device-model-list
+     +--rw device-model-list* [id]
+        +--rw id              device-model-list-id
+        +--rw display-name?   string
+        +--rw tac* [tac]
+        |  +--rw tac        at:tac
+        |  +--rw allowed?   boolean
+        +--rw description?    string
+
+module: enterprise
+  +--rw enterprise
+     +--rw enterprise* [id]
+        +--rw id                      enterprise-id
+        +--rw display-name?           string
+        +--rw description?            string
+        +--rw connectivity-service* [connectivity-service]
+           +--rw connectivity-service    -> /cs:connectivity-service/connectivity-service/id
+           +--rw enabled?                boolean
+
+module: ip-domain
+  +--rw ip-domain
+     +--rw ip-domain* [id]
+        +--rw id               ip-domain-id
+        +--rw display-name?    string
+        +--rw dns-primary?     inet:ip-address
+        +--rw dns-secondary?   inet:ip-address
+        +--rw subnet?          inet:ipv4-prefix
+        +--rw admin-status?    at:admin-status
+        +--rw mtu?             at:mtu
+        +--rw description?     string
+
+module: network
+  +--rw network
+     +--rw network* [id]
+        +--rw id              network-id
+        +--rw display-name?   string
+        +--rw mcc?            at:mcc
+        +--rw mnc?            at:mnc
+        +--rw description?    string
+        +--rw enterprise?     -> /ent:enterprise/enterprise/id
+
+module: site
+  +--rw site
+     +--rw site* [id]
+        +--rw id              site-id
+        +--rw display-name?   string
+        +--rw enterprise?     -> /ent:enterprise/enterprise/id
+        +--rw network?        -> /net:network/network/id
+        +--rw description?    string
+
+module: template
+  +--rw template
+     +--rw template* [id]
+        +--rw id               template-id
+        +--rw display-name?    string
+        +--rw sst?             at:sst
+        +--rw sd?              at:sd
+        +--rw uplink?          uint32
+        +--rw downlink?        uint32
+        +--rw traffic-class?   -> /tc:traffic-class/traffic-class/id
+        +--rw description?     string
+
+module: traffic-class
+  +--rw traffic-class
+     +--rw traffic-class* [id]
+        +--rw id              traffic-class-id
+        +--rw display-name?   string
+        +--rw pelr?           at:pelr
+        +--rw pdb?            at:pdb
+        +--rw qci?            at:qci
+        +--rw description?    string
+
+module: upf
+  +--rw upf
+     +--rw upf* [id]
+        +--rw id              upf-id
+        +--rw address?        inet:host
+        +--rw port?           uint32
+        +--rw display-name?   string
+        +--rw description?    string
+        +--rw enterprise?     -> /ent:enterprise/enterprise/id
+
+module: vcs
+  +--rw vcs
+     +--rw vcs* [id]
+        +--rw id               vcs-id
+        +--rw display-name?    string
+        +--rw device-group?    -> /dg:device-group/device-group/id
+        +--rw template?        -> /vt:template/template/id
+        +--rw application* [application]
+        |  +--rw application    -> /app:application/application/id
+        |  +--rw allow?         boolean
+        +--rw upf?             -> /upf:upf/upf/id
+        +--rw ap?              -> /apl:ap-list/ap-list/id
+        +--rw description?     string
+        +--rw sst?             at:sst
+        +--rw sd?              at:sd
+        +--rw uplink?          uint32
+        +--rw downlink?        uint32
+        +--rw traffic-class?   -> /tc:traffic-class/traffic-class/id
