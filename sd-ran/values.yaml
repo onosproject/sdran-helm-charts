@@ -32,7 +32,7 @@ global:
   storage:
     controller: "atomix-controller.kube-system.svc.cluster.local:5679"
     consensus:
-      enabled: false
+      enabled: true
       name: ""
       type: raft
       image: ""
@@ -49,7 +49,7 @@ import:
   onos-e2t:
     enabled: true
   onos-e2sub:
-    enabled: false
+    enabled: true
   onos-o1t:
     enabled: false
   onos-config:
