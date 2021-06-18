@@ -14,7 +14,7 @@ rules:
   resources:
   - '*'
   resourceNames:
+  - {{ template "onos-e2t.fullname" . }}-channels
   - {{ template "onos-e2t.fullname" . }}-subscriptions
-  - {{ template "onos-e2t.fullname" . }}-tasks
   verbs:
   - '*'
