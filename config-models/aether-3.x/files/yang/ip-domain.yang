@@ -4,6 +4,7 @@ module ip-domain {
 
   import ietf-inet-types { prefix inet; }
   import aether-types { prefix at; }
+  import enterprise{ prefix ent; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -57,6 +58,7 @@ module ip-domain {
       // list of subnets to a single subnet. Revisit in the future.
       leaf subnet {
         type inet:ipv4-prefix;
+        mandatory true;
         description "subnet to allocate ip addresses from";
       }
 
@@ -76,6 +78,16 @@ module ip-domain {
         }
         description "description of this ip domain";
       }
+
+      // Ip-Domain is always owned by an Enterprise, because it contains
+      // IP addresses relative to that Enterprise.
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }              
+        description
+          "Link to enterprise that owns this Access Point List";
+      }         
     }
   } 
 }

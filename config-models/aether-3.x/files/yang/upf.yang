@@ -35,6 +35,7 @@ module upf {
 
       leaf address {
         type inet:host;
+        mandatory true;
         description
           "Address of UPF";
       }
@@ -43,8 +44,9 @@ module upf {
         // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
         // type ietf:port-number;
         type uint32;
+        mandatory true;
         description
-            "First port in range";
+            "Port for UPF";
       }
 
       leaf display-name {
