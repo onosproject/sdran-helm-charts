@@ -52,8 +52,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116803
     - 87893173159116802
+    - 87893173159116803
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -66,7 +66,7 @@ cells:
         reportonleave: false
     pci: 480
     earfcn: 42
-    celltype: 3
+    celltype: 2
   cell2:
     ncgi: 87893173159116802
     sector:
@@ -92,9 +92,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 148
+    pci: 44
     earfcn: 43
-    celltype: 2
+    celltype: 3
   cell3:
     ncgi: 87893173159116803
     sector:
@@ -120,9 +120,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 38
+    pci: 148
     earfcn: 44
-    celltype: 3
+    celltype: 0
   cell4:
     ncgi: 87893173159133185
     sector:
@@ -148,9 +148,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 38
+    pci: 44
     earfcn: 45
-    celltype: 0
+    celltype: 2
   cell5:
     ncgi: 87893173159133186
     sector:
@@ -206,7 +206,7 @@ cells:
         reportonleave: false
     pci: 148
     earfcn: 47
-    celltype: 2
+    celltype: 3
 controllers:
   e2t-1:
     id: e2t-1
