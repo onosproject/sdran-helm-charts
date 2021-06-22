@@ -6,7 +6,7 @@
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-node
+  name: E2NODE
 spec:
   aspects:
     onos.topo.Location:
@@ -19,7 +19,7 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-cell
+  name: E2CELL
 spec:
   aspects:
     onos.topo.Location:
@@ -40,23 +40,23 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-termination
+  name: E2T
 ---
-# A topology kind representing an E2 connection relation
+# A topology kind representing one entity controlling another, e.g. E2T and E2NODE E2 connection relation
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-connection
+  name: CONTROLS
 ---
-# A topology kind representing a node-cell containment relation
+# A topology kind representing one entity containing another, logically or physically, e.g. node-cell containment relation
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-node-cell
+  name: CONTAINS
 ---
-# A topology kind representing a cell neighbor relation
+# A topology kind representing a neighbor relation, e.g. E2CELL neighboring another E2CELL
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
-  name: e2-cell-neighbor
+  name: NEIGHBORS
 ---
