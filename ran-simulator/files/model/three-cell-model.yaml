@@ -9,7 +9,7 @@ layout:
   showpower: false
 nodes:
   node1:
-    gnbid: 5153
+    gnbid: 20819
     controllers:
     - e2t-1
     servicemodels:
@@ -19,13 +19,13 @@ nodes:
     - kpm2
     - mho
     cells:
-    - 87893172902445057
-    - 87893172902445058
-    - 87893172902445059
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
     status: stopped
 cells:
   cell1:
-    ncgi: 87893172902445057
+    ncgi: 87893173159116801
     sector:
       center:
         lat: 52.486405366824926
@@ -37,20 +37,23 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445058
-    - 87893172902445059
+    - 87893173159116802
+    - 87893173159116803
     txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
-    pci: 5
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 99
     earfcn: 42
-    celltype: 3
+    celltype: 2
   cell2:
-    ncgi: 87893172902445058
+    ncgi: 87893173159116802
     sector:
       center:
         lat: 52.486405366824926
@@ -62,20 +65,23 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445057
-    - 87893172902445059
+    - 87893173159116801
+    - 87893173159116803
     txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
-    pci: 99
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 206
     earfcn: 43
-    celltype: 2
+    celltype: 3
   cell3:
-    ncgi: 87893172902445059
+    ncgi: 87893173159116803
     sector:
       center:
         lat: 52.486405366824926
@@ -87,18 +93,21 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893172902445057
-    - 87893172902445058
+    - 87893173159116801
+    - 87893173159116802
     txpowerdb: 11
-    eventa3params:
-      a3offset: 0
-      a3timetotrigger: 0
-      a3hysteresis: 0
-      a3celloffset: 0
-      a3frequencyoffset: 0
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
     pci: 99
     earfcn: 44
-    celltype: 2
+    celltype: 1
 controllers:
   e2t-1:
     id: e2t-1
