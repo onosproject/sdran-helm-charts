@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/aether-roc-gui
-  tag: v0.7.0
+  tag: v0.7.1
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -61,7 +61,14 @@ affinity: {}
 aetherservices:
   aether-roc-api:
     http: 8181
+    protocol: http
     streamTimeout: 3600
+
+grafana:
+  proxyEnabled: true
+  service: grafana
+  protocol: http
+  port: 80
 
 Nginx:
   templates:
@@ -70,10 +77,14 @@ Nginx:
           listen 80;
           ssl_certificate /usr/share/certs/aether-roc-gui.crt;
           ssl_certificate_key /usr/share/certs/aether-roc-gui.key;
+          {{- if .Values.grafana.proxyEnabled }}
+          location /grafana/ {
+              proxy_pass {{ .Values.grafana.protocol }}://{{ .Values.grafana.service }}:{{ .Values.grafana.port }}/;
+              proxy_http_version 1.1;
+              proxy_hide_header 'X-Frame-Options';
+              add_header X-Frame-Options SAMEORIGIN;
+          }{{end}}
           location / {
-            root /usr/share/nginx/html;
-          }
-          location ~ \.(html|js|ico|map|css|png|woff|woff2)$ {
             root /usr/share/nginx/html;
           }
           location /rs/nav/uiextensions {
@@ -85,7 +96,7 @@ Nginx:
           }
           {{- range $key, $value := .Values.aetherservices }}
           location /{{ $key }}/ {
-              proxy_pass http://aether-roc-api:{{ $value.http }}/;
+              proxy_pass {{ $value.protocol}}://{{$key}}:{{ $value.http }}/;
               proxy_http_version 1.1;
               proxy_set_header Upgrade $http_upgrade;
               proxy_set_header Connection "Upgrade";
