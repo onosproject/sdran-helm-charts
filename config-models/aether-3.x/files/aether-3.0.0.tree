@@ -4,7 +4,7 @@ module: ap-list
         +--rw id               ap-list-id
         +--rw access-points* [address]
         |  +--rw address    inet:host
-        |  +--rw tac?       at:tac
+        |  +--rw tac        at:tac
         |  +--rw enable?    boolean
         +--rw display-name?    string
         +--rw description?     string
@@ -18,8 +18,8 @@ module: application
         +--rw description?    string
         +--rw endpoint* [name]
         |  +--rw name          string
-        |  +--rw address?      ietf:host
-        |  +--rw port-start?   uint32
+        |  +--rw address       ietf:host
+        |  +--rw port-start    uint32
         |  +--rw port-end?     uint32
         |  +--rw protocol?     at:protocol
         +--rw enterprise?     -> /ent:enterprise/enterprise/id
@@ -47,16 +47,6 @@ module: device-group
         +--rw ip-domain?      -> /ipd:ip-domain/ip-domain/id
         +--rw site?           -> /st:site/site/id
 
-module: device-model-list
-  +--rw device-model-list
-     +--rw device-model-list* [id]
-        +--rw id              device-model-list-id
-        +--rw display-name?   string
-        +--rw tac* [tac]
-        |  +--rw tac        at:tac
-        |  +--rw allowed?   boolean
-        +--rw description?    string
-
 module: enterprise
   +--rw enterprise
      +--rw enterprise* [id]
@@ -74,18 +64,19 @@ module: ip-domain
         +--rw display-name?    string
         +--rw dns-primary?     inet:ip-address
         +--rw dns-secondary?   inet:ip-address
-        +--rw subnet?          inet:ipv4-prefix
+        +--rw subnet           inet:ipv4-prefix
         +--rw admin-status?    at:admin-status
         +--rw mtu?             at:mtu
         +--rw description?     string
+        +--rw enterprise?      -> /ent:enterprise/enterprise/id
 
 module: network
   +--rw network
      +--rw network* [id]
         +--rw id              network-id
         +--rw display-name?   string
-        +--rw mcc?            at:mcc
-        +--rw mnc?            at:mnc
+        +--rw mcc             at:mcc
+        +--rw mnc             at:mnc
         +--rw description?    string
         +--rw enterprise?     -> /ent:enterprise/enterprise/id
 
@@ -124,8 +115,8 @@ module: upf
   +--rw upf
      +--rw upf* [id]
         +--rw id              upf-id
-        +--rw address?        inet:host
-        +--rw port?           uint32
+        +--rw address         inet:host
+        +--rw port            uint32
         +--rw display-name?   string
         +--rw description?    string
         +--rw enterprise?     -> /ent:enterprise/enterprise/id
@@ -143,8 +134,8 @@ module: vcs
         +--rw upf?             -> /upf:upf/upf/id
         +--rw ap?              -> /apl:ap-list/ap-list/id
         +--rw description?     string
-        +--rw sst?             at:sst
-        +--rw sd?              at:sd
+        +--rw sst              at:sst
+        +--rw sd               at:sd
         +--rw uplink?          uint32
         +--rw downlink?        uint32
-        +--rw traffic-class?   -> /tc:traffic-class/traffic-class/id
+        +--rw traffic-class    -> /tc:traffic-class/traffic-class/id

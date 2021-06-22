@@ -53,6 +53,7 @@ module application {
 
       list endpoint {
         key "name";
+        max-elements 1;
         leaf name {
           type string;
           description
@@ -60,6 +61,7 @@ module application {
         }
         leaf address {
           type ietf:host;
+          mandatory true;
           description
               "Address of this endpoint. Either a hostname, and IP, or a subnet.";
         }
@@ -67,6 +69,7 @@ module application {
           // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
           // type ietf:port-number;
           type uint32;
+          mandatory true;
           description
               "First port in range";
         }

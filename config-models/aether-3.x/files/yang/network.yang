@@ -44,11 +44,13 @@ module network {
 
       leaf mcc {
         type at:mcc;
+        mandatory true;
         description "mobile country code";
       }
 
       leaf mnc {
         type at:mnc;
+        mandatory true;
         description "mobile network code";
       }   
 

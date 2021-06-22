@@ -64,16 +64,6 @@ module vcs {
            this VCS";
       }
 
-/*    TODO: Drop this as unnecessary??
-      leaf device-model-list {
-        type leafref {
-          path "/dml:device-model-list/dml:device-model-list/dml:id";
-        }          
-        description
-          "Link to network for this device-model-list";
-      }
-*/
-
       list application {
         key "application";   
         leaf application {
@@ -121,11 +111,13 @@ module vcs {
       // the following are populated from the template
       leaf sst {
         type at:sst;
+        mandatory true;
         description "Slice/Service type. Immutable.";
       }
       
       leaf sd {
         type at:sd;
+        mandatory true;
         description "Slice differentiator. Immutable.";
       }
 
@@ -142,7 +134,8 @@ module vcs {
       leaf traffic-class {
         type leafref {
           path "/tc:traffic-class/tc:traffic-class/tc:id";
-        }          
+        }
+        mandatory true;
         description
           "Link to traffic class";
       }

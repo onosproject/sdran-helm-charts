@@ -44,6 +44,7 @@ module ap-list {
         }
         leaf tac {
           type at:tac;
+          mandatory true;
           description
               "Type Allocation Code";
         }        
