@@ -13,6 +13,7 @@ import (
 	"github.com/onosproject/onos-test/pkg/onostest"
 	"github.com/stretchr/testify/assert"
 	"testing"
+	"time"
 )
 
 // SDRANSuite is the sd-ran chart test suite
@@ -52,6 +53,7 @@ func (s *SDRANSuite) TestInstall(t *testing.T) {
 		Release("sd-ran").
 		SetUsername(username).
 		SetPassword(password).
+		WithTimeout(15 * time.Minute).
 		Set("import.onos-gui.enabled", false).
 		Set("onos-ric.service.external.nodePort", 0).
 		Set("onos-ric-ho.service.external.nodePort", 0).

@@ -13,6 +13,7 @@ import (
 	"github.com/onosproject/onos-test/pkg/onostest"
 	"github.com/stretchr/testify/assert"
 	"testing"
+	"time"
 )
 
 // AetherRocUmbrellaSuite is the aether-roc-umbrella chart test suite
@@ -52,6 +53,7 @@ func (s *AetherRocUmbrellaSuite) TestInstall(t *testing.T) {
 		Release("aether-roc-umbrella").
 		SetUsername(username).
 		SetPassword(password).
+		WithTimeout(15 * time.Minute).
 		Set("onos-ric.service.external.nodePort", 0).
 		Set("onos-ric-ho.service.external.nodePort", 0).
 		Set("onos-ric-mlb.service.external.nodePort", 0).
