@@ -16,7 +16,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159116801
     - 87893173159116802
@@ -33,7 +33,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159133185
     - 87893173159133186
@@ -50,7 +50,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159149569
     - 87893173159149570
@@ -67,7 +67,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159165953
     - 87893173159165954
@@ -84,7 +84,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159182337
     - 87893173159182338
@@ -101,7 +101,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159198721
     - 87893173159198722
@@ -118,7 +118,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159215105
     - 87893173159215106
@@ -135,7 +135,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159231489
     - 87893173159231490
@@ -152,7 +152,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159247873
     - 87893173159247874
@@ -169,7 +169,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159264257
     - 87893173159264258
@@ -186,7 +186,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159280641
     - 87893173159280642
@@ -203,7 +203,7 @@ nodes:
     - kpm2
     - mho
     - kpm
-    - rc
+    - rcpre2
     cells:
     - 87893173159297025
     - 87893173159297026
@@ -2463,9 +2463,9 @@ servicemodels:
     id: 5
     description: mho service model
     version: 1.0.0
-  rc:
+  rcpre2:
     id: 3
-    description: rc service model
+    description: rcpre2 service model
     version: 1.0.0
 ueCount: 100
 plmnID: "314628"

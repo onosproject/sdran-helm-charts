@@ -14,7 +14,7 @@ nodes:
     - e2t-1
     servicemodels:
     - kpm
-    - rc
+    - rcpre2
     - kpm2
     - mho
     cells:
@@ -28,7 +28,7 @@ nodes:
     - e2t-1
     servicemodels:
     - kpm
-    - rc
+    - rcpre2
     - kpm2
     - mho
     cells:
@@ -223,9 +223,9 @@ servicemodels:
     id: 5
     description: mho service model
     version: 1.0.0
-  rc:
+  rcpre2:
     id: 3
-    description: rc service model
+    description: rcpre2 service model
     version: 1.0.0
 ueCount: 10
 plmnID: "314628"
