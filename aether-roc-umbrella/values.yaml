@@ -48,7 +48,7 @@ import:
   onos-config:
     enabled: true
   onos-gui:
-    enabled: true
+    enabled: false
   onos-cli:
     enabled: true
   aether-roc-api:
@@ -65,6 +65,10 @@ import:
       enabled: true
   sdcore-test-dummy:
     enabled: true
+  grafana:
+    enabled: true #also enable the proxy below
+  prometheus:
+    enabled: true #also enable the proxy below
 
 # ONOS-TOPO
 onos-topo:
@@ -89,7 +93,13 @@ onos-cli:
 aether-roc-api: {}
 
 # Aether ROC GUI
-aether-roc-gui: {}
+aether-roc-gui-v3:
+  grafana:
+    proxyEnabled: true
+    service: aether-roc-umbrella-grafana # the grafana hostname - use FQDN for other namespaces
+  prometheus:
+    proxyEnabled: true
+    service: aether-roc-umbrella-prometheus-server
 
 # SD-Core Adapter
 sdcore-adapter-v21:
@@ -102,11 +112,54 @@ sdcore-adapter-v3:
   fullnameOverride: sdcore-adapter-v3
   prometheusEnabled: false
 
+grafana:
+  grafana.ini:
+    server:
+      domain: aether-roc-gui
+      root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
+      serve_from_sub_path: true
+    auth.anonymous:
+      enabled: true
+      org_name: Main Org.
+      org_role: Viewer
+      hide_version: true
+  datasources:
+    datasources.yaml:
+      apiVersion: 1
+      datasources:
+      - name: Prometheus
+        type: prometheus
+        url: http://aether-roc-umbrella-prometheus-server
+        access: proxy
+        isDefault: true
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+      - name: 'default'
+        orgId: 1
+        folder: ''
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /var/lib/grafana/dashboards/default
+  dashboardsConfigMaps:
+    default: aether-roc-umbrella-dashboards
+
+prometheus:
+  pushgateway:
+    enabled: false
+  nodeExporter:
+    enabled: false
+  kubeStateMetrics:
+    enabled: false
+
 # SD-Core Test Dummy
 # proxy_pass has to be added or nginx will not log the $request_body
 sdcore-test-dummy:
   service:
-    type: NodePort
+    type: ClusterIP
   serverBlock: |-
     log_format client '$remote_addr - $remote_user $request_time $upstream_response_time '
                       '[$time_local] "$request" $status $body_bytes_sent $request_body "$http_referer" '
