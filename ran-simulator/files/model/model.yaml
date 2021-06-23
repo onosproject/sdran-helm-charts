@@ -14,7 +14,6 @@ nodes:
     - e2t-1
     servicemodels:
     - kpm
-    - ni
     - rc
     - kpm2
     - mho
@@ -29,7 +28,6 @@ nodes:
     - e2t-1
     servicemodels:
     - kpm
-    - ni
     - rc
     - kpm2
     - mho
@@ -52,8 +50,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116802
     - 87893173159116803
+    - 87893173159116802
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -64,9 +62,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 480
+    pci: 148
     earfcn: 42
-    celltype: 2
+    celltype: 3
   cell2:
     ncgi: 87893173159116802
     sector:
@@ -92,9 +90,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 44
+    pci: 218
     earfcn: 43
-    celltype: 3
+    celltype: 0
   cell3:
     ncgi: 87893173159116803
     sector:
@@ -122,7 +120,7 @@ cells:
         reportonleave: false
     pci: 148
     earfcn: 44
-    celltype: 0
+    celltype: 2
   cell4:
     ncgi: 87893173159133185
     sector:
@@ -136,8 +134,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133186
     - 87893173159133187
+    - 87893173159133186
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -148,7 +146,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 44
+    pci: 115
     earfcn: 45
     celltype: 2
   cell5:
@@ -176,9 +174,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 480
+    pci: 115
     earfcn: 46
-    celltype: 2
+    celltype: 3
   cell6:
     ncgi: 87893173159133187
     sector:
@@ -192,8 +190,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133185
     - 87893173159133186
+    - 87893173159133185
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -204,9 +202,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 148
+    pci: 218
     earfcn: 47
-    celltype: 3
+    celltype: 2
 controllers:
   e2t-1:
     id: e2t-1
@@ -224,10 +222,6 @@ servicemodels:
   mho:
     id: 5
     description: mho service model
-    version: 1.0.0
-  ni:
-    id: 2
-    description: ni service model
     version: 1.0.0
   rc:
     id: 3

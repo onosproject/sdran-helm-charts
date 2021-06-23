@@ -4,7 +4,7 @@ metadata:
   name: "5153"
 spec:
   kind:
-    name: E2NODE
+    name: e2node
   aspects:
     onos.topo.E2Node:
       service_models:
@@ -15,7 +15,7 @@ metadata:
   name: "5154"
 spec:
   kind:
-    name: E2NODE
+    name: e2node
   aspects:
     onos.topo.E2Node:
       service_models:
@@ -23,105 +23,17 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
-  name: "14550002"
-spec:
-  kind:
-    name: E2CELL
-  aspects:
-    onos.topo.Location:
-      lat: 52.504315
-      lng: 13.453262
-    onos.topo.E2Cell:
-      earfcn: 46
-      cell_type: OUTDOOR_SMALL
-    onos.topo.Coverage:
-      arc_width: 120
-      tilt: 10
-      height: 49
-      azimuth: 120
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "14550002-14550001"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "14550002"
-  target:
-    name: "14550001"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "14550002-14550003"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "14550002"
-  target:
-    name: "14550003"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Entity
-metadata:
-  name: "14550003"
-spec:
-  kind:
-    name: E2CELL
-  aspects:
-    onos.topo.Location:
-      lat: 52.504315
-      lng: 13.453262
-    onos.topo.E2Cell:
-      earfcn: 47
-      cell_type: MACRO
-    onos.topo.Coverage:
-      arc_width: 120
-      tilt: -6
-      height: 29
-      azimuth: 240
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "14550003-14550001"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "14550003"
-  target:
-    name: "14550001"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "14550003-14550002"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "14550003"
-  target:
-    name: "14550002"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Entity
-metadata:
   name: "1454c001"
 spec:
   kind:
-    name: E2CELL
+    name: e2cell
   aspects:
     onos.topo.Location:
       lat: 52.486405
       lng: 13.412234
     onos.topo.E2Cell:
       earfcn: 42
-      cell_type: OUTDOOR_SMALL
+      cell_type: MACRO
     onos.topo.Coverage:
       arc_width: 120
       tilt: 1
@@ -131,26 +43,26 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "1454c001-1454c002"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "1454c001"
-  target:
-    name: "1454c002"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
   name: "1454c001-1454c003"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "1454c001"
   target:
     name: "1454c003"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c001-1454c002"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c001"
+  target:
+    name: "1454c002"
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
@@ -158,14 +70,14 @@ metadata:
   name: "1454c002"
 spec:
   kind:
-    name: E2CELL
+    name: e2cell
   aspects:
     onos.topo.Location:
       lat: 52.486405
       lng: 13.412234
     onos.topo.E2Cell:
       earfcn: 43
-      cell_type: MACRO
+      cell_type: FEMTO
     onos.topo.Coverage:
       arc_width: 120
       tilt: -10
@@ -178,7 +90,7 @@ metadata:
   name: "1454c002-1454c001"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "1454c002"
   target:
@@ -190,7 +102,7 @@ metadata:
   name: "1454c002-1454c003"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "1454c002"
   target:
@@ -202,14 +114,14 @@ metadata:
   name: "1454c003"
 spec:
   kind:
-    name: E2CELL
+    name: e2cell
   aspects:
     onos.topo.Location:
       lat: 52.486405
       lng: 13.412234
     onos.topo.E2Cell:
       earfcn: 44
-      cell_type: FEMTO
+      cell_type: OUTDOOR_SMALL
     onos.topo.Coverage:
       arc_width: 120
       tilt: -10
@@ -222,7 +134,7 @@ metadata:
   name: "1454c003-1454c001"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "1454c003"
   target:
@@ -234,7 +146,7 @@ metadata:
   name: "1454c003-1454c002"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "1454c003"
   target:
@@ -246,7 +158,7 @@ metadata:
   name: "14550001"
 spec:
   kind:
-    name: E2CELL
+    name: e2cell
   aspects:
     onos.topo.Location:
       lat: 52.504315
@@ -263,22 +175,10 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "14550001-14550002"
-spec:
-  kind:
-    name: NEIGHBORS
-  source:
-    name: "14550001"
-  target:
-    name: "14550002"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
   name: "14550001-14550003"
 spec:
   kind:
-    name: NEIGHBORS
+    name: neighbors
   source:
     name: "14550001"
   target:
@@ -287,10 +187,110 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
+  name: "14550001-14550002"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "14550001"
+  target:
+    name: "14550002"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "14550002"
+spec:
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.504315
+      lng: 13.453262
+    onos.topo.E2Cell:
+      earfcn: 46
+      cell_type: MACRO
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: 10
+      height: 49
+      azimuth: 120
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "14550002-14550001"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "14550002"
+  target:
+    name: "14550001"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "14550002-14550003"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "14550002"
+  target:
+    name: "14550003"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "14550003"
+spec:
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.504315
+      lng: 13.453262
+    onos.topo.E2Cell:
+      earfcn: 47
+      cell_type: OUTDOOR_SMALL
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: -6
+      height: 29
+      azimuth: 240
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "14550003-14550002"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "14550003"
+  target:
+    name: "14550002"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "14550003-14550001"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "14550003"
+  target:
+    name: "14550001"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
   name: "5153-1454c001"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5153"
   target:
@@ -302,7 +302,7 @@ metadata:
   name: "5153-1454c002"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5153"
   target:
@@ -314,7 +314,7 @@ metadata:
   name: "5153-1454c003"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5153"
   target:
@@ -326,7 +326,7 @@ metadata:
   name: "5154-14550001"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5154"
   target:
@@ -338,7 +338,7 @@ metadata:
   name: "5154-14550002"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5154"
   target:
@@ -350,7 +350,7 @@ metadata:
   name: "5154-14550003"
 spec:
   kind:
-    name: CONTAINS
+    name: contains
   source:
     name: "5154"
   target:
