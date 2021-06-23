@@ -5,6 +5,7 @@
 package tests
 
 import (
+	"context"
 	"github.com/onosproject/helmit/pkg/helm"
 	"github.com/onosproject/helmit/pkg/input"
 	"github.com/onosproject/helmit/pkg/kubernetes"
@@ -31,7 +32,7 @@ func getCredentials() (string, string, error) {
 	if err != nil {
 		return "", "", err
 	}
-	secrets, err := kubClient.CoreV1().Secrets().Get(onostest.SecretsName)
+	secrets, err := kubClient.CoreV1().Secrets().Get(context.Background(), onostest.SecretsName)
 	if err != nil {
 		return "", "", err
 	}
