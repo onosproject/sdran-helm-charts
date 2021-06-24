@@ -47,13 +47,25 @@ module vcs {
         description "display name to use in GUI or CLI";
       }
 
-      leaf device-group {
-        type leafref {
-          path "/dg:device-group/dg:device-group/dg:id";
-        }          
+      list device-group {
+        key "device-group";   
+        leaf device-group {
+          type leafref {
+            path "/dg:device-group/dg:device-group/dg:id";
+          }          
+          description
+            "Link to device group";          
+        }
+        leaf enable {
+          type boolean;
+          default true;
+          description
+            "Enable this device group";
+        }
         description
-          "Link to device group";
-      }      
+          "A list of device groups. Groups will only participate in
+           the VCS if the enable field is set to True";
+      }         
 
       leaf template {
         type leafref {
