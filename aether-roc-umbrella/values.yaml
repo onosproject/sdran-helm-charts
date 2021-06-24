@@ -123,6 +123,9 @@ grafana:
       org_name: Main Org.
       org_role: Viewer
       hide_version: true
+    auth.ldap:
+      enabled: true
+      config_file: /etc/grafana/ldap.toml
   datasources:
     datasources.yaml:
       apiVersion: 1
@@ -146,6 +149,46 @@ grafana:
           path: /var/lib/grafana/dashboards/default
   dashboardsConfigMaps:
     default: aether-roc-umbrella-dashboards
+  ldap:
+    enabled: true
+    config: |-
+      verbose_logging = true
+      [[servers]]
+      host = "dex-ldap-umbrella-openldap"
+      port = 389
+      use_ssl = false
+      start_tls = false
+      ssl_skip_verify = false
+      bind_dn = "cn=admin,dc=opennetworking,dc=org"
+      bind_password = 'password'
+      search_filter = "(uid=%s)"
+      search_base_dns = ["cn=users,dc=opennetworking,dc=org"]
+
+      group_search_filter = "(&(objectClass=posixGroup)(memberUid=%s))"
+      group_search_base_dns = ["cn=groups,dc=opennetworking,dc=org"]
+      group_search_filter_user_attribute = "uid"
+
+      [servers.attributes]
+      member_of = "memberOf"
+      email = "mail"
+      first_name = "sn"
+      surname = "givenName"
+      username = "cn"
+
+      [[servers.group_mappings]]
+      group_dn = "cn=AetherROCAdmin,cn=groups,dc=opennetworking,dc=org"
+      org_role = "Admin"
+      org_id = 1
+
+      [[servers.group_mappings]]
+      group_dn = "cn=acme,cn=groups,dc=opennetworking,dc=org"
+      org_role = "Viewer"
+      org_id = 2
+
+      [[servers.group_mappings]]
+      group_dn = "cn=starbucks,cn=groups,dc=opennetworking,dc=org"
+      org_role = "Viewer"
+      org_id = 3
 
 prometheus:
   pushgateway:
