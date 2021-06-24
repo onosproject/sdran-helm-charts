@@ -48,8 +48,6 @@ import:
     enabled: true
   onos-e2t:
     enabled: true
-  onos-e2sub:
-    enabled: true
   onos-o1t:
     enabled: false
   onos-config:
@@ -196,10 +194,6 @@ onos-e2t:
         tag: v0.7.43
         pullPolicy: IfNotPresent
 
-onos-e2sub:
-  storage:
-    consensus:
-      enabled: false
 
 onos-cli:
   postInstall:
