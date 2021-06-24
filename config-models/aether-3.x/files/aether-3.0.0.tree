@@ -126,7 +126,9 @@ module: vcs
      +--rw vcs* [id]
         +--rw id               vcs-id
         +--rw display-name?    string
-        +--rw device-group?    -> /dg:device-group/device-group/id
+        +--rw device-group* [device-group]
+        |  +--rw device-group    -> /dg:device-group/device-group/id
+        |  +--rw enable?         boolean
         +--rw template?        -> /vt:template/template/id
         +--rw application* [application]
         |  +--rw application    -> /app:application/application/id
