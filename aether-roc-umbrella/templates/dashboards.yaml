@@ -8,7 +8,7 @@ metadata:
   name: {{ .Release.Name }}-dashboards
   namespace: {{ .Release.Namespace }}
 data:
-  dashboard1.json: |-
+  vcs_starbucks_newyork_cameras.json: |-
     {
       "annotations": {
         "list": [
@@ -23,14 +23,15 @@ data:
           }
         ]
       },
-      "editable": false,
+      "description": "",
+      "editable": true,
       "gnetId": null,
       "graphTooltip": 0,
-      "id": null,
       "links": [],
       "panels": [
         {
           "datasource": null,
+          "description": "",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -82,12 +83,13 @@ data:
             "overrides": []
           },
           "gridPos": {
-            "h": 9,
+            "h": 8,
             "w": 12,
             "x": 0,
             "y": 0
           },
           "id": 2,
+          "links": [],
           "options": {
             "legend": {
               "calcs": [],
@@ -101,16 +103,33 @@ data:
           "targets": [
             {
               "exemplar": true,
-              "expr": "prometheus_tsdb_reloads_total{}",
+              "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
               "interval": "",
-              "legendFormat": "",
+              "legendFormat": "Jitter (ms)",
               "refId": "A"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Latency (ms)",
+              "refId": "B"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Throughput (kb/s)",
+              "refId": "C"
             }
           ],
-          "title": "TSDB Reloads",
+          "title": "VCS New York Cameras",
           "type": "timeseries"
         }
       ],
+      "refresh": "",
       "schemaVersion": 30,
       "style": "dark",
       "tags": [],
@@ -123,7 +142,283 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "ROC Dashboard 1",
-      "uid": "ROC1",
-      "version": 0
+      "title": "VCS New York Cameras",
+      "uid": "vcs_starbucks_newyork_cameras",
+      "version": 1
+    }
+  vcs_starbucks_seattle_cameras.json: |-
+    {
+      "annotations": {
+        "list": [
+          {
+            "builtIn": 1,
+            "datasource": "-- Grafana --",
+            "enable": true,
+            "hide": true,
+            "iconColor": "rgba(0, 211, 255, 1)",
+            "name": "Annotations & Alerts",
+            "type": "dashboard"
+          }
+        ]
+      },
+      "description": "",
+      "editable": true,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "links": [],
+      "panels": [
+        {
+          "datasource": null,
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 0
+          },
+          "id": 2,
+          "links": [],
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom"
+            },
+            "tooltip": {
+              "mode": "single"
+            }
+          },
+          "targets": [
+            {
+              "exemplar": true,
+              "expr": "vcs_jitter{vcs_id=\"starbucks_seattle_cameras\"}",
+              "interval": "",
+              "legendFormat": "Jitter (ms)",
+              "refId": "A"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_latency{vcs_id=\"starbucks_seattle_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Latency (ms)",
+              "refId": "B"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_throughput{vcs_id=\"starbucks_seattle_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Throughput (kb/s)",
+              "refId": "C"
+            }
+          ],
+          "title": "VCS Seattle Cameras",
+          "type": "timeseries"
+        }
+      ],
+      "refresh": "",
+      "schemaVersion": 30,
+      "style": "dark",
+      "tags": [],
+      "templating": {
+        "list": []
+      },
+      "time": {
+        "from": "now-6h",
+        "to": "now"
+      },
+      "timepicker": {},
+      "timezone": "",
+      "title": "VCS Seattle Cameras",
+      "uid": "vcs_starbucks_seattle_cameras",
+      "version": 1
+    }
+  vcs_acme_chicago_robots.json: |-
+    {
+      "annotations": {
+        "list": [
+          {
+            "builtIn": 1,
+            "datasource": "-- Grafana --",
+            "enable": true,
+            "hide": true,
+            "iconColor": "rgba(0, 211, 255, 1)",
+            "name": "Annotations & Alerts",
+            "type": "dashboard"
+          }
+        ]
+      },
+      "description": "",
+      "editable": true,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "links": [],
+      "panels": [
+        {
+          "datasource": null,
+          "description": "",
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "auto",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 8,
+            "w": 12,
+            "x": 0,
+            "y": 0
+          },
+          "id": 2,
+          "links": [],
+          "options": {
+            "legend": {
+              "calcs": [],
+              "displayMode": "list",
+              "placement": "bottom"
+            },
+            "tooltip": {
+              "mode": "single"
+            }
+          },
+          "targets": [
+            {
+              "exemplar": true,
+              "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
+              "interval": "",
+              "legendFormat": "Jitter (ms)",
+              "refId": "A"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Latency (ms)",
+              "refId": "B"
+            },
+            {
+              "exemplar": true,
+              "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+              "hide": false,
+              "interval": "",
+              "legendFormat": "Throughput (kb/s)",
+              "refId": "C"
+            }
+          ],
+          "title": "VCS Chicago Robots",
+          "type": "timeseries"
+        }
+      ],
+      "refresh": "",
+      "schemaVersion": 30,
+      "style": "dark",
+      "tags": [],
+      "templating": {
+        "list": []
+      },
+      "time": {
+        "from": "now-6h",
+        "to": "now"
+      },
+      "timepicker": {},
+      "timezone": "",
+      "title": "VCS Chicago Robots",
+      "uid": "vcs_acme_chicago_robots",
+      "version": 1
     }
