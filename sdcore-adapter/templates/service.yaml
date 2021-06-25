@@ -25,3 +25,21 @@ spec:
       port: {{ .Values.ports.prometheus }}
     - name: diag-api
       port: {{ .Values.ports.diagApi }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "sdcore-adapter.fullname" . }}-exporter
+  labels:
+    app: {{ template "sdcore-adapter.fullname" . }}-exporter
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+    {{- include "sdcore-adapter.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    name: {{ template "sdcore-adapter.fullname" . }}
+  ports:
+  - name: metrics
+    port: 2112
