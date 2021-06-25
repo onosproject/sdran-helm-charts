@@ -114,6 +114,8 @@ sdcore-adapter-v3:
 
 grafana:
   grafana.ini:
+    log:
+      level: debug
     server:
       domain: aether-roc-gui
       root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
@@ -126,6 +128,21 @@ grafana:
     auth.ldap:
       enabled: true
       config_file: /etc/grafana/ldap.toml
+    auth.generic_oauth:
+      enabled: true
+      client_id: aether-roc-gui
+      client_secret: YWV0aGVyLXJvYy1ndWkK
+      scopes: "openid profile email groups"
+#      empty_scopes: false
+      auth_url: "http://dex-ldap-umbrella:32000/auth"
+      token_url: "http://dex-ldap-umbrella:32000/token"
+      api_url: "http://dex-ldap-umbrella:32000/userinfo"
+      allowed_domains: dex-ldap-umbrella aether-roc-gui localhost
+      allow_sign_up: true
+#      tls_skip_verify_insecure = false
+#      tls_client_cert =
+#      tls_client_key =
+#      tls_client_ca =
   datasources:
     datasources.yaml:
       apiVersion: 1
@@ -161,7 +178,7 @@ grafana:
       ssl_skip_verify = false
       bind_dn = "cn=admin,dc=opennetworking,dc=org"
       bind_password = 'password'
-      search_filter = "(uid=%s)"
+      search_filter = "(cn=%s)"
       search_base_dns = ["cn=users,dc=opennetworking,dc=org"]
 
       group_search_filter = "(&(objectClass=posixGroup)(memberUid=%s))"
@@ -197,6 +214,13 @@ prometheus:
     enabled: false
   kubeStateMetrics:
     enabled: false
+  serverFiles:
+    prometheus.yml:
+      scrape_configs:
+        - job_name: sdcore-exporter
+          static_configs:
+            - targets:
+                - sdcore-adapter-v3-exporter:2112
 
 # SD-Core Test Dummy
 # proxy_pass has to be added or nginx will not log the $request_body
@@ -357,18 +381,13 @@ onos-config:
           }
 
           connectivityservices[connectivity_service] {
-            enterprise := input.enterprise.enterprise[_]
-            enterprise_cs := enterprise.connectivity_service[_]
             connectivity_service := input.connectivity_service.connectivity_service[_]
-            ["AetherROCAdmin", enterprise.id][_] == input.groups[i]
-            enterprise_cs.connectivity_service == connectivity_service.id
           }
 
           devicegroups[device_group] {
-            site := input.site.site[_] # the existing set of site(s)
-            device_group := input.device_group.device_group[_] # the existing set of device_group(s)
-            device_group.site == site.id # allow only the device_groups of a known site
-            ["AetherROCAdmin", site.enterprise][_] == input.groups[i] # check a known site is for one of our groups
+            device_group := input.device_group.device_group[_]
+            site := sites
+            device_group.site == site[_].id # allow only the device_groups of a known site
           }
 
           enterprises[enterprise] {
@@ -404,12 +423,9 @@ onos-config:
           }
 
           vcss[vcs] {
-            vcs := input.vcs.vcs[_]
-            site := input.site.site[_]
-            devicegroup := input.device_group.device_group[_]
-            devicegroup.site == site.id
-            vcs.device_group == devicegroup.id
-            ["AetherROCAdmin", site.enterprise][_] == input.groups[i]
+            vcs := input.vcs.vcs[i]
+            application := applications
+            vcs.application[_].application == application[_].id
           }
 
           can_update_enterprise = true {
