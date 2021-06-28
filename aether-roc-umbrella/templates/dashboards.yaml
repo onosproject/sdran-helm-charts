@@ -5,420 +5,439 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-dashboards
+  name: {{ .Release.Name }}-dashboards-starbucks
   namespace: {{ .Release.Namespace }}
 data:
   vcs_starbucks_newyork_cameras.json: |-
     {
-      "annotations": {
-        "list": [
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "description": "",
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
           {
-            "builtIn": 1,
-            "datasource": "-- Grafana --",
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "type": "dashboard"
-          }
-        ]
-      },
-      "description": "",
-      "editable": true,
-      "gnetId": null,
-      "graphTooltip": 0,
-      "links": [],
-      "panels": [
-        {
-          "datasource": null,
-          "description": "",
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "palette-classic"
-              },
-              "custom": {
-                "axisLabel": "",
-                "axisPlacement": "auto",
-                "barAlignment": 0,
-                "drawStyle": "line",
-                "fillOpacity": 0,
-                "gradientMode": "none",
-                "hideFrom": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
+            "datasource": "datasource-Starbucks",
+            "description": "",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
                 },
-                "lineInterpolation": "linear",
-                "lineWidth": 1,
-                "pointSize": 5,
-                "scaleDistribution": {
-                  "type": "linear"
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
                 },
-                "showPoints": "auto",
-                "spanNulls": false,
-                "stacking": {
-                  "group": "A",
-                  "mode": "none"
-                },
-                "thresholdsStyle": {
-                  "mode": "off"
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
                 }
               },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 2,
+            "links": [],
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
               }
             },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-          },
-          "id": 2,
-          "links": [],
-          "options": {
-            "legend": {
-              "calcs": [],
-              "displayMode": "list",
-              "placement": "bottom"
-            },
-            "tooltip": {
-              "mode": "single"
-            }
-          },
-          "targets": [
-            {
-              "exemplar": true,
-              "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
-              "interval": "",
-              "legendFormat": "Jitter (ms)",
-              "refId": "A"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Latency (ms)",
-              "refId": "B"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Throughput (kb/s)",
-              "refId": "C"
-            }
-          ],
-          "title": "VCS New York Cameras",
-          "type": "timeseries"
-        }
-      ],
-      "refresh": "",
-      "schemaVersion": 30,
-      "style": "dark",
-      "tags": [],
-      "templating": {
-        "list": []
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
+                "interval": "",
+                "legendFormat": "Jitter (ms)",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Latency (ms)",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Throughput (kb/s)",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS New York Cameras",
+            "type": "timeseries"
+          }
+        ],
+        "refresh": "",
+        "schemaVersion": 30,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-6h",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "VCS New York Cameras",
+        "uid": "vcs_starbucks_newyork_cameras",
+        "version": 1
       },
-      "time": {
-        "from": "now-6h",
-        "to": "now"
-      },
-      "timepicker": {},
-      "timezone": "",
-      "title": "VCS New York Cameras",
-      "uid": "vcs_starbucks_newyork_cameras",
-      "version": 1
+      "folderUid": "Starbucks",
+      "message": "Made changes to Starbucks"
     }
   vcs_starbucks_seattle_cameras.json: |-
     {
-      "annotations": {
-        "list": [
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "description": "",
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
           {
-            "builtIn": 1,
-            "datasource": "-- Grafana --",
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "type": "dashboard"
-          }
-        ]
-      },
-      "description": "",
-      "editable": true,
-      "gnetId": null,
-      "graphTooltip": 0,
-      "links": [],
-      "panels": [
-        {
-          "datasource": null,
-          "description": "",
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "palette-classic"
-              },
-              "custom": {
-                "axisLabel": "",
-                "axisPlacement": "auto",
-                "barAlignment": 0,
-                "drawStyle": "line",
-                "fillOpacity": 0,
-                "gradientMode": "none",
-                "hideFrom": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
+            "datasource": "datasource-Starbucks",
+            "description": "",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
                 },
-                "lineInterpolation": "linear",
-                "lineWidth": 1,
-                "pointSize": 5,
-                "scaleDistribution": {
-                  "type": "linear"
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
                 },
-                "showPoints": "auto",
-                "spanNulls": false,
-                "stacking": {
-                  "group": "A",
-                  "mode": "none"
-                },
-                "thresholdsStyle": {
-                  "mode": "off"
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
                 }
               },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 2,
+            "links": [],
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
               }
             },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-          },
-          "id": 2,
-          "links": [],
-          "options": {
-            "legend": {
-              "calcs": [],
-              "displayMode": "list",
-              "placement": "bottom"
-            },
-            "tooltip": {
-              "mode": "single"
-            }
-          },
-          "targets": [
-            {
-              "exemplar": true,
-              "expr": "vcs_jitter{vcs_id=\"starbucks_seattle_cameras\"}",
-              "interval": "",
-              "legendFormat": "Jitter (ms)",
-              "refId": "A"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_latency{vcs_id=\"starbucks_seattle_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Latency (ms)",
-              "refId": "B"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_throughput{vcs_id=\"starbucks_seattle_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Throughput (kb/s)",
-              "refId": "C"
-            }
-          ],
-          "title": "VCS Seattle Cameras",
-          "type": "timeseries"
-        }
-      ],
-      "refresh": "",
-      "schemaVersion": 30,
-      "style": "dark",
-      "tags": [],
-      "templating": {
-        "list": []
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "vcs_jitter{vcs_id=\"starbucks_seattle_cameras\"}",
+                "interval": "",
+                "legendFormat": "Jitter (ms)",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_latency{vcs_id=\"starbucks_seattle_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Latency (ms)",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_throughput{vcs_id=\"starbucks_seattle_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Throughput (kb/s)",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS Seattle Cameras",
+            "type": "timeseries"
+          }
+        ],
+        "refresh": "",
+        "schemaVersion": 30,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-6h",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "VCS Seattle Cameras",
+        "uid": "vcs_starbucks_seattle_cameras",
+        "version": 1
       },
-      "time": {
-        "from": "now-6h",
-        "to": "now"
-      },
-      "timepicker": {},
-      "timezone": "",
-      "title": "VCS Seattle Cameras",
-      "uid": "vcs_starbucks_seattle_cameras",
-      "version": 1
+      "folderUid": "Starbucks",
+      "message": "Made changes to Starbucks"
     }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-dashboards-acme-inc
+  namespace: {{ .Release.Namespace }}
+data:
   vcs_acme_chicago_robots.json: |-
     {
-      "annotations": {
-        "list": [
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "description": "",
+        "editable": true,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
           {
-            "builtIn": 1,
-            "datasource": "-- Grafana --",
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "type": "dashboard"
-          }
-        ]
-      },
-      "description": "",
-      "editable": true,
-      "gnetId": null,
-      "graphTooltip": 0,
-      "links": [],
-      "panels": [
-        {
-          "datasource": null,
-          "description": "",
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "palette-classic"
-              },
-              "custom": {
-                "axisLabel": "",
-                "axisPlacement": "auto",
-                "barAlignment": 0,
-                "drawStyle": "line",
-                "fillOpacity": 0,
-                "gradientMode": "none",
-                "hideFrom": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": false
+            "datasource": "datasource-Acme_Inc",
+            "description": "",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
                 },
-                "lineInterpolation": "linear",
-                "lineWidth": 1,
-                "pointSize": 5,
-                "scaleDistribution": {
-                  "type": "linear"
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
                 },
-                "showPoints": "auto",
-                "spanNulls": false,
-                "stacking": {
-                  "group": "A",
-                  "mode": "none"
-                },
-                "thresholdsStyle": {
-                  "mode": "off"
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
                 }
               },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 2,
+            "links": [],
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
               }
             },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-          },
-          "id": 2,
-          "links": [],
-          "options": {
-            "legend": {
-              "calcs": [],
-              "displayMode": "list",
-              "placement": "bottom"
-            },
-            "tooltip": {
-              "mode": "single"
-            }
-          },
-          "targets": [
-            {
-              "exemplar": true,
-              "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
-              "interval": "",
-              "legendFormat": "Jitter (ms)",
-              "refId": "A"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Latency (ms)",
-              "refId": "B"
-            },
-            {
-              "exemplar": true,
-              "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
-              "hide": false,
-              "interval": "",
-              "legendFormat": "Throughput (kb/s)",
-              "refId": "C"
-            }
-          ],
-          "title": "VCS Chicago Robots",
-          "type": "timeseries"
-        }
-      ],
-      "refresh": "",
-      "schemaVersion": 30,
-      "style": "dark",
-      "tags": [],
-      "templating": {
-        "list": []
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
+                "interval": "",
+                "legendFormat": "Jitter (ms)",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Latency (ms)",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Throughput (kb/s)",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS Chicago Robots",
+            "type": "timeseries"
+          }
+        ],
+        "refresh": "",
+        "schemaVersion": 30,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-6h",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "VCS Chicago Robots",
+        "uid": "vcs_acme_chicago_robots",
+        "version": 1
       },
-      "time": {
-        "from": "now-6h",
-        "to": "now"
-      },
-      "timepicker": {},
-      "timezone": "",
-      "title": "VCS Chicago Robots",
-      "uid": "vcs_acme_chicago_robots",
-      "version": 1
+      "folderUid": "Acme_Inc",
+      "message": "Made changes to Acme"
     }
