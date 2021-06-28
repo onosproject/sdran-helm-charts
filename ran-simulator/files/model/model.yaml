@@ -52,7 +52,7 @@ cells:
     neighbors:
     - 87893173159116803
     - 87893173159116802
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -80,7 +80,7 @@ cells:
     neighbors:
     - 87893173159116801
     - 87893173159116803
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -108,7 +108,7 @@ cells:
     neighbors:
     - 87893173159116801
     - 87893173159116802
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -136,7 +136,7 @@ cells:
     neighbors:
     - 87893173159133187
     - 87893173159133186
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -164,7 +164,7 @@ cells:
     neighbors:
     - 87893173159133185
     - 87893173159133187
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -192,7 +192,7 @@ cells:
     neighbors:
     - 87893173159133186
     - 87893173159133185
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
