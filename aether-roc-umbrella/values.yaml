@@ -113,6 +113,10 @@ sdcore-adapter-v3:
   prometheusEnabled: false
 
 grafana:
+  orgs:
+    - "Acme Inc"
+    - "Starbucks"
+  tidyUpPostInstall: true
   grafana.ini:
     log:
       level: debug
@@ -120,11 +124,6 @@ grafana:
       domain: aether-roc-gui
       root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
       serve_from_sub_path: true
-    auth.anonymous:
-      enabled: true
-      org_name: Main Org.
-      org_role: Viewer
-      hide_version: true
     auth.ldap:
       enabled: true
       config_file: /etc/grafana/ldap.toml
@@ -143,29 +142,6 @@ grafana:
 #      tls_client_cert =
 #      tls_client_key =
 #      tls_client_ca =
-  datasources:
-    datasources.yaml:
-      apiVersion: 1
-      datasources:
-      - name: Prometheus
-        type: prometheus
-        url: http://aether-roc-umbrella-prometheus-server
-        access: proxy
-        isDefault: true
-  dashboardProviders:
-    dashboardproviders.yaml:
-      apiVersion: 1
-      providers:
-      - name: 'default'
-        orgId: 1
-        folder: ''
-        type: file
-        disableDeletion: false
-        editable: true
-        options:
-          path: /var/lib/grafana/dashboards/default
-  dashboardsConfigMaps:
-    default: aether-roc-umbrella-dashboards
   ldap:
     enabled: true
     config: |-
