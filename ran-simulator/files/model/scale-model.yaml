@@ -231,7 +231,7 @@ cells:
     - 87893173159116803
     - 87893173159182338
     - 87893173159116804
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -262,7 +262,7 @@ cells:
     - 87893173159116803
     - 87893173159116804
     - 87893173159116806
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -293,7 +293,7 @@ cells:
     - 87893173159116806
     - 87893173159116802
     - 87893173159116805
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -324,7 +324,7 @@ cells:
     - 87893173159116801
     - 87893173159116806
     - 87893173159116802
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -355,7 +355,7 @@ cells:
     - 87893173159182340
     - 87893173159116801
     - 87893173159116803
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -386,7 +386,7 @@ cells:
     - 87893173159116801
     - 87893173159116803
     - 87893173159133189
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -417,7 +417,7 @@ cells:
     - 87893173159133189
     - 87893173159133188
     - 87893173159133186
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -448,7 +448,7 @@ cells:
     - 87893173159133189
     - 87893173159133188
     - 87893173159133190
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -479,7 +479,7 @@ cells:
     - 87893173159133189
     - 87893173159133186
     - 87893173159133188
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -510,7 +510,7 @@ cells:
     - 87893173159165954
     - 87893173159133189
     - 87893173159133186
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -541,7 +541,7 @@ cells:
     - 87893173159133187
     - 87893173159198724
     - 87893173159133186
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -572,7 +572,7 @@ cells:
     - 87893173159280643
     - 87893173159133189
     - 87893173159264258
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -603,7 +603,7 @@ cells:
     - 87893173159149571
     - 87893173159149572
     - 87893173159149573
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -634,7 +634,7 @@ cells:
     - 87893173159149573
     - 87893173159149574
     - 87893173159149571
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -665,7 +665,7 @@ cells:
     - 87893173159149573
     - 87893173159149570
     - 87893173159149574
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -696,7 +696,7 @@ cells:
     - 87893173159149571
     - 87893173159149569
     - 87893173159133186
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -727,7 +727,7 @@ cells:
     - 87893173159149572
     - 87893173159182338
     - 87893173159116801
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -758,7 +758,7 @@ cells:
     - 87893173159280643
     - 87893173159149569
     - 87893173159149573
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -789,7 +789,7 @@ cells:
     - 87893173159165958
     - 87893173159198724
     - 87893173159165954
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -820,7 +820,7 @@ cells:
     - 87893173159165953
     - 87893173159133188
     - 87893173159165957
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -851,7 +851,7 @@ cells:
     - 87893173159165958
     - 87893173159165953
     - 87893173159165954
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -882,7 +882,7 @@ cells:
     - 87893173159165958
     - 87893173159165953
     - 87893173159165954
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -913,7 +913,7 @@ cells:
     - 87893173159165955
     - 87893173159165958
     - 87893173159247876
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -944,7 +944,7 @@ cells:
     - 87893173159165954
     - 87893173159165957
     - 87893173159165956
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -975,7 +975,7 @@ cells:
     - 87893173159215109
     - 87893173159182342
     - 87893173159264258
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1006,7 +1006,7 @@ cells:
     - 87893173159116801
     - 87893173159149573
     - 87893173159182339
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1037,7 +1037,7 @@ cells:
     - 87893173159182342
     - 87893173159182338
     - 87893173159133188
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1068,7 +1068,7 @@ cells:
     - 87893173159182337
     - 87893173159182341
     - 87893173159182342
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1099,7 +1099,7 @@ cells:
     - 87893173159182339
     - 87893173159231490
     - 87893173159182340
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1130,7 +1130,7 @@ cells:
     - 87893173159182339
     - 87893173159182340
     - 87893173159182337
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1161,7 +1161,7 @@ cells:
     - 87893173159198725
     - 87893173159280642
     - 87893173159198724
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1192,7 +1192,7 @@ cells:
     - 87893173159198721
     - 87893173159133185
     - 87893173159215107
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1223,7 +1223,7 @@ cells:
     - 87893173159198722
     - 87893173159198725
     - 87893173159198724
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1254,7 +1254,7 @@ cells:
     - 87893173159198721
     - 87893173159198722
     - 87893173159264259
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1285,7 +1285,7 @@ cells:
     - 87893173159198724
     - 87893173159198726
     - 87893173159198721
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1316,7 +1316,7 @@ cells:
     - 87893173159198724
     - 87893173159215110
     - 87893173159198721
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1347,7 +1347,7 @@ cells:
     - 87893173159215110
     - 87893173159215108
     - 87893173159215107
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1378,7 +1378,7 @@ cells:
     - 87893173159215109
     - 87893173159215110
     - 87893173159149569
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1409,7 +1409,7 @@ cells:
     - 87893173159198722
     - 87893173159215108
     - 87893173159215105
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1440,7 +1440,7 @@ cells:
     - 87893173159149573
     - 87893173159133185
     - 87893173159215107
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1471,7 +1471,7 @@ cells:
     - 87893173159215105
     - 87893173159215106
     - 87893173159215110
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1502,7 +1502,7 @@ cells:
     - 87893173159215107
     - 87893173159215105
     - 87893173159215106
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1533,7 +1533,7 @@ cells:
     - 87893173159231493
     - 87893173159231490
     - 87893173159231492
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1564,7 +1564,7 @@ cells:
     - 87893173159231494
     - 87893173159182341
     - 87893173159231491
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1595,7 +1595,7 @@ cells:
     - 87893173159231489
     - 87893173159231490
     - 87893173159231492
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1626,7 +1626,7 @@ cells:
     - 87893173159231494
     - 87893173159231491
     - 87893173159231493
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1657,7 +1657,7 @@ cells:
     - 87893173159231490
     - 87893173159231492
     - 87893173159231494
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1688,7 +1688,7 @@ cells:
     - 87893173159231489
     - 87893173159231490
     - 87893173159231492
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1719,7 +1719,7 @@ cells:
     - 87893173159247877
     - 87893173159247876
     - 87893173159247874
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1750,7 +1750,7 @@ cells:
     - 87893173159264259
     - 87893173159280644
     - 87893173159247875
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1781,7 +1781,7 @@ cells:
     - 87893173159247878
     - 87893173159247877
     - 87893173159247876
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1812,7 +1812,7 @@ cells:
     - 87893173159247874
     - 87893173159247873
     - 87893173159165957
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1843,7 +1843,7 @@ cells:
     - 87893173159247876
     - 87893173159231494
     - 87893173159247874
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1874,7 +1874,7 @@ cells:
     - 87893173159247877
     - 87893173159247876
     - 87893173159247874
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1905,7 +1905,7 @@ cells:
     - 87893173159264261
     - 87893173159198726
     - 87893173159264258
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1936,7 +1936,7 @@ cells:
     - 87893173159133190
     - 87893173159264257
     - 87893173159264262
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1967,7 +1967,7 @@ cells:
     - 87893173159264261
     - 87893173159247874
     - 87893173159198724
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -1998,7 +1998,7 @@ cells:
     - 87893173159264257
     - 87893173159264262
     - 87893173159165958
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2029,7 +2029,7 @@ cells:
     - 87893173159264257
     - 87893173159264262
     - 87893173159264260
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2060,7 +2060,7 @@ cells:
     - 87893173159264260
     - 87893173159264261
     - 87893173159264258
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2091,7 +2091,7 @@ cells:
     - 87893173159280645
     - 87893173159297029
     - 87893173159280643
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2122,7 +2122,7 @@ cells:
     - 87893173159280645
     - 87893173159280643
     - 87893173159280646
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2153,7 +2153,7 @@ cells:
     - 87893173159280646
     - 87893173159280641
     - 87893173159133190
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2184,7 +2184,7 @@ cells:
     - 87893173159247874
     - 87893173159280642
     - 87893173159280645
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2215,7 +2215,7 @@ cells:
     - 87893173159280643
     - 87893173159280641
     - 87893173159247873
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2246,7 +2246,7 @@ cells:
     - 87893173159280643
     - 87893173159280641
     - 87893173159280644
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2277,7 +2277,7 @@ cells:
     - 87893173159297026
     - 87893173159297027
     - 87893173159297028
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2308,7 +2308,7 @@ cells:
     - 87893173159297029
     - 87893173159297030
     - 87893173159297027
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2339,7 +2339,7 @@ cells:
     - 87893173159297025
     - 87893173159280642
     - 87893173159297029
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2370,7 +2370,7 @@ cells:
     - 87893173159297025
     - 87893173159297029
     - 87893173159297030
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2401,7 +2401,7 @@ cells:
     - 87893173159297025
     - 87893173159297030
     - 87893173159297026
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -2432,7 +2432,7 @@ cells:
     - 87893173159297027
     - 87893173159297028
     - 87893173159297025
-    txpowerdb: 11
+    txpowerdb: 40
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
