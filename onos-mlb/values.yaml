@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+# Default values for onos-mlb.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+replicaCount: 1
+
+image:
+  registry: ""
+  repository: onosproject/onos-mlb
+  tag: v0.0.1
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "onos-mlb"
+
+storage: {}
+
+service:
+  # TODO: External NodePort service should be disabled by default
+  grpc:
+    port: 5150
+  gnmi:
+    port: 9339
+  exporter:
+    port: 7001
+    nodePort:
+      enabled: false
+      port: 31701
+
+config:
+  mlb:
+    e2tEndpoint: "onos-e2t:5150"
+    thresholds:
+      overload: 100
+      target: 0
+    config_json:
+      controller:
+        interval: 10
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+#   cpu: 100m
+#   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+logging:
+  loggers:
+    root:
+      level: info
+      output:
+        stdout:
+          sink: stdout
+  sinks:
+    stdout:
+      type: stdout
+      stdout: {}
