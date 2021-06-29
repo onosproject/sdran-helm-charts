@@ -1,0 +1,5444 @@
+layout:
+  center:
+    lat: 52.52
+    lng: 13.405
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+nodes:
+  node1:
+    gnbid: 20819
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
+    status: stopped
+  node2:
+    gnbid: 20820
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159133185
+    - 87893173159133186
+    - 87893173159133187
+    status: stopped
+  node3:
+    gnbid: 20821
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159149569
+    - 87893173159149570
+    - 87893173159149571
+    status: stopped
+  node4:
+    gnbid: 20822
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159165953
+    - 87893173159165954
+    - 87893173159165955
+    status: stopped
+  node5:
+    gnbid: 20823
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159182337
+    - 87893173159182338
+    - 87893173159182339
+    status: stopped
+  node6:
+    gnbid: 20824
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159198721
+    - 87893173159198722
+    - 87893173159198723
+    status: stopped
+  node7:
+    gnbid: 20825
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159215105
+    - 87893173159215106
+    - 87893173159215107
+    status: stopped
+  node8:
+    gnbid: 20826
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159231489
+    - 87893173159231490
+    - 87893173159231491
+    status: stopped
+  node9:
+    gnbid: 20827
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159247873
+    - 87893173159247874
+    - 87893173159247875
+    status: stopped
+  node10:
+    gnbid: 20828
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159264257
+    - 87893173159264258
+    - 87893173159264259
+    status: stopped
+  node11:
+    gnbid: 20829
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159280641
+    - 87893173159280642
+    - 87893173159280643
+    status: stopped
+  node12:
+    gnbid: 20830
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159297025
+    - 87893173159297026
+    - 87893173159297027
+    status: stopped
+  node13:
+    gnbid: 20831
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159313409
+    - 87893173159313410
+    - 87893173159313411
+    status: stopped
+  node14:
+    gnbid: 20832
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159329793
+    - 87893173159329794
+    - 87893173159329795
+    status: stopped
+  node15:
+    gnbid: 20833
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159346177
+    - 87893173159346178
+    - 87893173159346179
+    status: stopped
+  node16:
+    gnbid: 20834
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159362561
+    - 87893173159362562
+    - 87893173159362563
+    status: stopped
+  node17:
+    gnbid: 20835
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159378945
+    - 87893173159378946
+    - 87893173159378947
+    status: stopped
+  node18:
+    gnbid: 20836
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159395329
+    - 87893173159395330
+    - 87893173159395331
+    status: stopped
+  node19:
+    gnbid: 20837
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159411713
+    - 87893173159411714
+    - 87893173159411715
+    status: stopped
+  node20:
+    gnbid: 20838
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159428097
+    - 87893173159428098
+    - 87893173159428099
+    status: stopped
+  node21:
+    gnbid: 20839
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159444481
+    - 87893173159444482
+    - 87893173159444483
+    status: stopped
+  node22:
+    gnbid: 20840
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159460865
+    - 87893173159460866
+    - 87893173159460867
+    status: stopped
+  node23:
+    gnbid: 20841
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159477249
+    - 87893173159477250
+    - 87893173159477251
+    status: stopped
+  node24:
+    gnbid: 20842
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159493633
+    - 87893173159493634
+    - 87893173159493635
+    status: stopped
+  node25:
+    gnbid: 20843
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159510017
+    - 87893173159510018
+    - 87893173159510019
+    status: stopped
+  node26:
+    gnbid: 20844
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159526401
+    - 87893173159526402
+    - 87893173159526403
+    status: stopped
+  node27:
+    gnbid: 20845
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159542785
+    - 87893173159542786
+    - 87893173159542787
+    status: stopped
+  node28:
+    gnbid: 20846
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159559169
+    - 87893173159559170
+    - 87893173159559171
+    status: stopped
+  node29:
+    gnbid: 20847
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159575553
+    - 87893173159575554
+    - 87893173159575555
+    status: stopped
+  node30:
+    gnbid: 20848
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159591937
+    - 87893173159591938
+    - 87893173159591939
+    status: stopped
+  node31:
+    gnbid: 20849
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159608321
+    - 87893173159608322
+    - 87893173159608323
+    status: stopped
+  node32:
+    gnbid: 20850
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159624705
+    - 87893173159624706
+    - 87893173159624707
+    status: stopped
+  node33:
+    gnbid: 20851
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159641089
+    - 87893173159641090
+    - 87893173159641091
+    status: stopped
+  node34:
+    gnbid: 20852
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159657473
+    - 87893173159657474
+    - 87893173159657475
+    status: stopped
+  node35:
+    gnbid: 20853
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159673857
+    - 87893173159673858
+    - 87893173159673859
+    status: stopped
+  node36:
+    gnbid: 20854
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159690241
+    - 87893173159690242
+    - 87893173159690243
+    status: stopped
+  node37:
+    gnbid: 20855
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159706625
+    - 87893173159706626
+    - 87893173159706627
+    status: stopped
+  node38:
+    gnbid: 20856
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159723009
+    - 87893173159723010
+    - 87893173159723011
+    status: stopped
+  node39:
+    gnbid: 20857
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159739393
+    - 87893173159739394
+    - 87893173159739395
+    status: stopped
+  node40:
+    gnbid: 20858
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159755777
+    - 87893173159755778
+    - 87893173159755779
+    status: stopped
+  node41:
+    gnbid: 20859
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159772161
+    - 87893173159772162
+    - 87893173159772163
+    status: stopped
+  node42:
+    gnbid: 20860
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159788545
+    - 87893173159788546
+    - 87893173159788547
+    status: stopped
+  node43:
+    gnbid: 20861
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159804929
+    - 87893173159804930
+    - 87893173159804931
+    status: stopped
+  node44:
+    gnbid: 20862
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159821313
+    - 87893173159821314
+    - 87893173159821315
+    status: stopped
+  node45:
+    gnbid: 20863
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159837697
+    - 87893173159837698
+    - 87893173159837699
+    status: stopped
+  node46:
+    gnbid: 20864
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159854081
+    - 87893173159854082
+    - 87893173159854083
+    status: stopped
+  node47:
+    gnbid: 20865
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159870465
+    - 87893173159870466
+    - 87893173159870467
+    status: stopped
+  node48:
+    gnbid: 20866
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159886849
+    - 87893173159886850
+    - 87893173159886851
+    status: stopped
+  node49:
+    gnbid: 20867
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159903233
+    - 87893173159903234
+    - 87893173159903235
+    status: stopped
+  node50:
+    gnbid: 20868
+    controllers:
+    - e2t-1
+    servicemodels:
+    - kpm
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
+    - 87893173159919617
+    - 87893173159919618
+    - 87893173159919619
+    status: stopped
+cells:
+  cell1:
+    ncgi: 87893173159116801
+    sector:
+      center:
+        lat: 52.38248232121404
+        lng: 13.412216856719835
+      azimuth: 0
+      arc: 120
+      tilt: -14
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116803
+    - 87893173159231490
+    - 87893173159116802
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 193
+    earfcn: 42
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell2:
+    ncgi: 87893173159116802
+    sector:
+      center:
+        lat: 52.38248232121404
+        lng: 13.412216856719835
+      azimuth: 120
+      arc: 120
+      tilt: 5
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    - 87893173159116803
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 84
+    earfcn: 43
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell3:
+    ncgi: 87893173159116803
+    sector:
+      center:
+        lat: 52.38248232121404
+        lng: 13.412216856719835
+      azimuth: 240
+      arc: 120
+      tilt: 15
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159313410
+    - 87893173159116801
+    - 87893173159116802
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 96
+    earfcn: 44
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell4:
+    ncgi: 87893173159133185
+    sector:
+      center:
+        lat: 52.40039225138059
+        lng: 13.453148116660335
+      azimuth: 0
+      arc: 120
+      tilt: -10
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159133186
+    - 87893173159247874
+    - 87893173159133187
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 69
+    earfcn: 45
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell5:
+    ncgi: 87893173159133186
+    sector:
+      center:
+        lat: 52.40039225138059
+        lng: 13.453148116660335
+      azimuth: 120
+      arc: 120
+      tilt: -14
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159133185
+    - 87893173159133187
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 202
+    earfcn: 46
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell6:
+    ncgi: 87893173159133187
+    sector:
+      center:
+        lat: 52.40039225138059
+        lng: 13.453148116660335
+      azimuth: 240
+      arc: 120
+      tilt: -6
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159133185
+    - 87893173159198721
+    - 87893173159329794
+    - 87893173159133186
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 96
+    earfcn: 47
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell7:
+    ncgi: 87893173159149569
+    sector:
+      center:
+        lat: 52.41527986957283
+        lng: 13.506434190460533
+      azimuth: 0
+      arc: 120
+      tilt: -11
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159149571
+    - 87893173159264258
+    - 87893173159149570
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 153
+    earfcn: 48
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell8:
+    ncgi: 87893173159149570
+    sector:
+      center:
+        lat: 52.41527986957283
+        lng: 13.506434190460533
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159149571
+    - 87893173159149569
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 210
+    earfcn: 49
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell9:
+    ncgi: 87893173159149571
+    sector:
+      center:
+        lat: 52.41527986957283
+        lng: 13.506434190460533
+      azimuth: 240
+      arc: 120
+      tilt: -12
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159346178
+    - 87893173159215105
+    - 87893173159149569
+    - 87893173159149570
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 130
+    earfcn: 50
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell10:
+    ncgi: 87893173159165953
+    sector:
+      center:
+        lat: 52.42896872406347
+        lng: 13.546969524083956
+      azimuth: 0
+      arc: 120
+      tilt: 8
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159280642
+    - 87893173159165955
+    - 87893173159165954
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 271
+    earfcn: 51
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell11:
+    ncgi: 87893173159165954
+    sector:
+      center:
+        lat: 52.42896872406347
+        lng: 13.546969524083956
+      azimuth: 120
+      arc: 120
+      tilt: -8
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159165955
+    - 87893173159165953
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 44
+    earfcn: 52
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell12:
+    ncgi: 87893173159165955
+    sector:
+      center:
+        lat: 52.42896872406347
+        lng: 13.546969524083956
+      azimuth: 240
+      arc: 120
+      tilt: 12
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159165954
+    - 87893173159165953
+    - 87893173159231489
+    - 87893173159362562
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 254
+    earfcn: 53
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell13:
+    ncgi: 87893173159182337
+    sector:
+      center:
+        lat: 52.44652943514514
+        lng: 13.598615849411102
+      azimuth: 0
+      arc: 120
+      tilt: -15
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159182339
+    - 87893173159182338
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 180
+    earfcn: 54
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell14:
+    ncgi: 87893173159182338
+    sector:
+      center:
+        lat: 52.44652943514514
+        lng: 13.598615849411102
+      azimuth: 120
+      arc: 120
+      tilt: -10
+      height: 21
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159182339
+    - 87893173159182337
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 225
+    earfcn: 55
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell15:
+    ncgi: 87893173159182339
+    sector:
+      center:
+        lat: 52.44652943514514
+        lng: 13.598615849411102
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159378946
+    - 87893173159182337
+    - 87893173159247873
+    - 87893173159182338
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 20
+    earfcn: 56
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell16:
+    ncgi: 87893173159198721
+    sector:
+      center:
+        lat: 52.39890038190153
+        lng: 13.360972982297541
+      azimuth: 0
+      arc: 120
+      tilt: 0
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159198723
+    - 87893173159133187
+    - 87893173159329794
+    - 87893173159198722
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 150
+    earfcn: 57
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell17:
+    ncgi: 87893173159198722
+    sector:
+      center:
+        lat: 52.39890038190153
+        lng: 13.360972982297541
+      azimuth: 120
+      arc: 120
+      tilt: -5
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159198721
+    - 87893173159198723
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 243
+    earfcn: 58
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell18:
+    ncgi: 87893173159198723
+    sector:
+      center:
+        lat: 52.39890038190153
+        lng: 13.360972982297541
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159198721
+    - 87893173159198722
+    - 87893173159428098
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 251
+    earfcn: 59
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell19:
+    ncgi: 87893173159215105
+    sector:
+      center:
+        lat: 52.41321957642421
+        lng: 13.403043443105306
+      azimuth: 0
+      arc: 120
+      tilt: -3
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159215106
+    - 87893173159215107
+    - 87893173159149571
+    - 87893173159346178
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 59
+    earfcn: 60
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell20:
+    ncgi: 87893173159215106
+    sector:
+      center:
+        lat: 52.41321957642421
+        lng: 13.403043443105306
+      azimuth: 120
+      arc: 120
+      tilt: -10
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159215107
+    - 87893173159215105
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 114
+    earfcn: 61
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell21:
+    ncgi: 87893173159215107
+    sector:
+      center:
+        lat: 52.41321957642421
+        lng: 13.403043443105306
+      azimuth: 240
+      arc: 120
+      tilt: -11
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159297025
+    - 87893173159444482
+    - 87893173159215106
+    - 87893173159215105
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 271
+    earfcn: 62
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell22:
+    ncgi: 87893173159231489
+    sector:
+      center:
+        lat: 52.43156803188019
+        lng: 13.453693535355692
+      azimuth: 0
+      arc: 120
+      tilt: -11
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159231490
+    - 87893173159231491
+    - 87893173159362562
+    - 87893173159165955
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 291
+    earfcn: 63
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell23:
+    ncgi: 87893173159231490
+    sector:
+      center:
+        lat: 52.43156803188019
+        lng: 13.453693535355692
+      azimuth: 120
+      arc: 120
+      tilt: 4
+      height: 44
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    - 87893173159231489
+    - 87893173159231491
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 11
+    earfcn: 64
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell24:
+    ncgi: 87893173159231491
+    sector:
+      center:
+        lat: 52.43156803188019
+        lng: 13.453693535355692
+      azimuth: 240
+      arc: 120
+      tilt: 1
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159313409
+    - 87893173159460866
+    - 87893173159231489
+    - 87893173159231490
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 51
+    earfcn: 65
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell25:
+    ncgi: 87893173159247873
+    sector:
+      center:
+        lat: 52.4485101780937
+        lng: 13.500050773696112
+      azimuth: 0
+      arc: 120
+      tilt: -13
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159182339
+    - 87893173159247874
+    - 87893173159247875
+    - 87893173159378946
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 199
+    earfcn: 66
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell26:
+    ncgi: 87893173159247874
+    sector:
+      center:
+        lat: 52.4485101780937
+        lng: 13.500050773696112
+      azimuth: 120
+      arc: 120
+      tilt: -7
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159247873
+    - 87893173159133185
+    - 87893173159247875
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 12
+    earfcn: 67
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell27:
+    ncgi: 87893173159247875
+    sector:
+      center:
+        lat: 52.4485101780937
+        lng: 13.500050773696112
+      azimuth: 240
+      arc: 120
+      tilt: -12
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159247873
+    - 87893173159329793
+    - 87893173159477250
+    - 87893173159247874
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 42
+    earfcn: 68
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell28:
+    ncgi: 87893173159264257
+    sector:
+      center:
+        lat: 52.46974291181592
+        lng: 13.54811945365961
+      azimuth: 0
+      arc: 120
+      tilt: 10
+      height: 26
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159395330
+    - 87893173159264258
+    - 87893173159264259
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 245
+    earfcn: 69
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell29:
+    ncgi: 87893173159264258
+    sector:
+      center:
+        lat: 52.46974291181592
+        lng: 13.54811945365961
+      azimuth: 120
+      arc: 120
+      tilt: 6
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159149569
+    - 87893173159264257
+    - 87893173159264259
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 48
+    earfcn: 70
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell30:
+    ncgi: 87893173159264259
+    sector:
+      center:
+        lat: 52.46974291181592
+        lng: 13.54811945365961
+      azimuth: 240
+      arc: 120
+      tilt: -10
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159264258
+    - 87893173159346177
+    - 87893173159264257
+    - 87893173159493634
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 175
+    earfcn: 71
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell31:
+    ncgi: 87893173159280641
+    sector:
+      center:
+        lat: 52.482230882327976
+        lng: 13.599757602994686
+      azimuth: 0
+      arc: 120
+      tilt: -7
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159280643
+    - 87893173159280642
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 171
+    earfcn: 72
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell32:
+    ncgi: 87893173159280642
+    sector:
+      center:
+        lat: 52.482230882327976
+        lng: 13.599757602994686
+      azimuth: 120
+      arc: 120
+      tilt: 2
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159280643
+    - 87893173159280641
+    - 87893173159165953
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 194
+    earfcn: 73
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell33:
+    ncgi: 87893173159280643
+    sector:
+      center:
+        lat: 52.482230882327976
+        lng: 13.599757602994686
+      azimuth: 240
+      arc: 120
+      tilt: -6
+      height: 37
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159510018
+    - 87893173159280642
+    - 87893173159362561
+    - 87893173159280641
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 205
+    earfcn: 74
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell34:
+    ncgi: 87893173159297025
+    sector:
+      center:
+        lat: 52.41674760086806
+        lng: 13.312568854511074
+      azimuth: 0
+      arc: 120
+      tilt: 3
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159297026
+    - 87893173159444482
+    - 87893173159215107
+    - 87893173159297027
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 95
+    earfcn: 75
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell35:
+    ncgi: 87893173159297026
+    sector:
+      center:
+        lat: 52.41674760086806
+        lng: 13.312568854511074
+      azimuth: 120
+      arc: 120
+      tilt: -1
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159297027
+    - 87893173159297025
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 261
+    earfcn: 76
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell36:
+    ncgi: 87893173159297027
+    sector:
+      center:
+        lat: 52.41674760086806
+        lng: 13.312568854511074
+      azimuth: 240
+      arc: 120
+      tilt: -9
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159559170
+    - 87893173159297025
+    - 87893173159297026
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 109
+    earfcn: 77
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell37:
+    ncgi: 87893173159313409
+    sector:
+      center:
+        lat: 52.4313169521082
+        lng: 13.352468416061681
+      azimuth: 0
+      arc: 120
+      tilt: -7
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159313411
+    - 87893173159313410
+    - 87893173159460866
+    - 87893173159231491
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 100
+    earfcn: 78
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell38:
+    ncgi: 87893173159313410
+    sector:
+      center:
+        lat: 52.4313169521082
+        lng: 13.352468416061681
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116803
+    - 87893173159313411
+    - 87893173159313409
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 79
+    earfcn: 79
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell39:
+    ncgi: 87893173159313411
+    sector:
+      center:
+        lat: 52.4313169521082
+        lng: 13.352468416061681
+      azimuth: 240
+      arc: 120
+      tilt: 0
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159575554
+    - 87893173159411713
+    - 87893173159313410
+    - 87893173159313409
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 122
+    earfcn: 80
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell40:
+    ncgi: 87893173159329793
+    sector:
+      center:
+        lat: 52.45324360176664
+        lng: 13.40018521534433
+      azimuth: 0
+      arc: 120
+      tilt: 2
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159477250
+    - 87893173159247875
+    - 87893173159329794
+    - 87893173159329795
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 204
+    earfcn: 81
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell41:
+    ncgi: 87893173159329794
+    sector:
+      center:
+        lat: 52.45324360176664
+        lng: 13.40018521534433
+      azimuth: 120
+      arc: 120
+      tilt: -7
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159133187
+    - 87893173159198721
+    - 87893173159329795
+    - 87893173159329793
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 228
+    earfcn: 82
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell42:
+    ncgi: 87893173159329795
+    sector:
+      center:
+        lat: 52.45324360176664
+        lng: 13.40018521534433
+      azimuth: 240
+      arc: 120
+      tilt: 2
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591938
+    - 87893173159329793
+    - 87893173159329794
+    - 87893173159428097
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 10
+    earfcn: 83
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell43:
+    ncgi: 87893173159346177
+    sector:
+      center:
+        lat: 52.47168020957144
+        lng: 13.457478042157081
+      azimuth: 0
+      arc: 120
+      tilt: -9
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159493634
+    - 87893173159346179
+    - 87893173159264259
+    - 87893173159346178
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 147
+    earfcn: 84
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell44:
+    ncgi: 87893173159346178
+    sector:
+      center:
+        lat: 52.47168020957144
+        lng: 13.457478042157081
+      azimuth: 120
+      arc: 120
+      tilt: -9
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159346177
+    - 87893173159149571
+    - 87893173159215105
+    - 87893173159346179
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 69
+    earfcn: 85
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell45:
+    ncgi: 87893173159346179
+    sector:
+      center:
+        lat: 52.47168020957144
+        lng: 13.457478042157081
+      azimuth: 240
+      arc: 120
+      tilt: 1
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608322
+    - 87893173159444481
+    - 87893173159346177
+    - 87893173159346178
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 260
+    earfcn: 86
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell46:
+    ncgi: 87893173159362561
+    sector:
+      center:
+        lat: 52.48556243212037
+        lng: 13.495782504808348
+      azimuth: 0
+      arc: 120
+      tilt: 3
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159362563
+    - 87893173159510018
+    - 87893173159362562
+    - 87893173159280643
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 149
+    earfcn: 87
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell47:
+    ncgi: 87893173159362562
+    sector:
+      center:
+        lat: 52.48556243212037
+        lng: 13.495782504808348
+      azimuth: 120
+      arc: 120
+      tilt: 2
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159362561
+    - 87893173159165955
+    - 87893173159362563
+    - 87893173159231489
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 292
+    earfcn: 88
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell48:
+    ncgi: 87893173159362563
+    sector:
+      center:
+        lat: 52.48556243212037
+        lng: 13.495782504808348
+      azimuth: 240
+      arc: 120
+      tilt: 13
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159362562
+    - 87893173159460865
+    - 87893173159362561
+    - 87893173159624706
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 146
+    earfcn: 89
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell49:
+    ncgi: 87893173159378945
+    sector:
+      center:
+        lat: 52.49916842329999
+        lng: 13.554600261516713
+      azimuth: 0
+      arc: 120
+      tilt: -15
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159526402
+    - 87893173159378947
+    - 87893173159378946
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 242
+    earfcn: 90
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell50:
+    ncgi: 87893173159378946
+    sector:
+      center:
+        lat: 52.49916842329999
+        lng: 13.554600261516713
+      azimuth: 120
+      arc: 120
+      tilt: 13
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159378945
+    - 87893173159247873
+    - 87893173159182339
+    - 87893173159378947
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 223
+    earfcn: 91
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell51:
+    ncgi: 87893173159378947
+    sector:
+      center:
+        lat: 52.49916842329999
+        lng: 13.554600261516713
+      azimuth: 240
+      arc: 120
+      tilt: -9
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159477249
+    - 87893173159378946
+    - 87893173159378945
+    - 87893173159641090
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 78
+    earfcn: 92
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell52:
+    ncgi: 87893173159395329
+    sector:
+      center:
+        lat: 52.524599799153066
+        lng: 13.595320049944696
+      azimuth: 0
+      arc: 120
+      tilt: -11
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159395331
+    - 87893173159395330
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 26
+    earfcn: 93
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell53:
+    ncgi: 87893173159395330
+    sector:
+      center:
+        lat: 52.524599799153066
+        lng: 13.595320049944696
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159395331
+    - 87893173159264257
+    - 87893173159395329
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 125
+    earfcn: 94
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell54:
+    ncgi: 87893173159395331
+    sector:
+      center:
+        lat: 52.524599799153066
+        lng: 13.595320049944696
+      azimuth: 240
+      arc: 120
+      tilt: 4
+      height: 36
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159395330
+    - 87893173159657474
+    - 87893173159493633
+    - 87893173159395329
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 274
+    earfcn: 95
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell55:
+    ncgi: 87893173159411713
+    sector:
+      center:
+        lat: 52.43424430588953
+        lng: 13.250148158143826
+      azimuth: 0
+      arc: 120
+      tilt: 12
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159575554
+    - 87893173159411715
+    - 87893173159313411
+    - 87893173159411714
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 136
+    earfcn: 96
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell56:
+    ncgi: 87893173159411714
+    sector:
+      center:
+        lat: 52.43424430588953
+        lng: 13.250148158143826
+      azimuth: 120
+      arc: 120
+      tilt: 2
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159411715
+    - 87893173159411713
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 132
+    earfcn: 97
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell57:
+    ncgi: 87893173159411715
+    sector:
+      center:
+        lat: 52.43424430588953
+        lng: 13.250148158143826
+      azimuth: 240
+      arc: 120
+      tilt: 14
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159690242
+    - 87893173159411713
+    - 87893173159411714
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 171
+    earfcn: 98
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell58:
+    ncgi: 87893173159428097
+    sector:
+      center:
+        lat: 52.45259455497323
+        lng: 13.303288551532379
+      azimuth: 0
+      arc: 120
+      tilt: 4
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591938
+    - 87893173159428098
+    - 87893173159428099
+    - 87893173159329795
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 270
+    earfcn: 99
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell59:
+    ncgi: 87893173159428098
+    sector:
+      center:
+        lat: 52.45259455497323
+        lng: 13.303288551532379
+      azimuth: 120
+      arc: 120
+      tilt: -13
+      height: 24
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159198723
+    - 87893173159428099
+    - 87893173159428097
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 93
+    earfcn: 100
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell60:
+    ncgi: 87893173159428099
+    sector:
+      center:
+        lat: 52.45259455497323
+        lng: 13.303288551532379
+      azimuth: 240
+      arc: 120
+      tilt: 5
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159542785
+    - 87893173159428098
+    - 87893173159428097
+    - 87893173159706626
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 276
+    earfcn: 101
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell61:
+    ncgi: 87893173159444481
+    sector:
+      center:
+        lat: 52.464761187651376
+        lng: 13.356433688040564
+      azimuth: 0
+      arc: 120
+      tilt: 11
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159346179
+    - 87893173159444482
+    - 87893173159444483
+    - 87893173159608322
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 260
+    earfcn: 102
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell62:
+    ncgi: 87893173159444482
+    sector:
+      center:
+        lat: 52.464761187651376
+        lng: 13.356433688040564
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159297025
+    - 87893173159444483
+    - 87893173159444481
+    - 87893173159215107
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 17
+    earfcn: 103
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell63:
+    ncgi: 87893173159444483
+    sector:
+      center:
+        lat: 52.464761187651376
+        lng: 13.356433688040564
+      azimuth: 240
+      arc: 120
+      tilt: -6
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159444482
+    - 87893173159559169
+    - 87893173159444481
+    - 87893173159723010
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 99
+    earfcn: 104
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell64:
+    ncgi: 87893173159460865
+    sector:
+      center:
+        lat: 52.48580048456239
+        lng: 13.40136276509273
+      azimuth: 0
+      arc: 120
+      tilt: 14
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159460867
+    - 87893173159362563
+    - 87893173159624706
+    - 87893173159460866
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 191
+    earfcn: 105
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell65:
+    ncgi: 87893173159460866
+    sector:
+      center:
+        lat: 52.48580048456239
+        lng: 13.40136276509273
+      azimuth: 120
+      arc: 120
+      tilt: 4
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159231491
+    - 87893173159460865
+    - 87893173159313409
+    - 87893173159460867
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 200
+    earfcn: 106
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell66:
+    ncgi: 87893173159460867
+    sector:
+      center:
+        lat: 52.48580048456239
+        lng: 13.40136276509273
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159460866
+    - 87893173159460865
+    - 87893173159739394
+    - 87893173159575553
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 198
+    earfcn: 107
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell67:
+    ncgi: 87893173159477249
+    sector:
+      center:
+        lat: 52.50190056579942
+        lng: 13.454784966832541
+      azimuth: 0
+      arc: 120
+      tilt: -3
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159477251
+    - 87893173159641090
+    - 87893173159477250
+    - 87893173159378947
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 246
+    earfcn: 108
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell68:
+    ncgi: 87893173159477250
+    sector:
+      center:
+        lat: 52.50190056579942
+        lng: 13.454784966832541
+      azimuth: 120
+      arc: 120
+      tilt: 4
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159329793
+    - 87893173159247875
+    - 87893173159477249
+    - 87893173159477251
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 157
+    earfcn: 109
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell69:
+    ncgi: 87893173159477251
+    sector:
+      center:
+        lat: 52.50190056579942
+        lng: 13.454784966832541
+      azimuth: 240
+      arc: 120
+      tilt: -4
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591937
+    - 87893173159477250
+    - 87893173159755778
+    - 87893173159477249
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 220
+    earfcn: 110
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell70:
+    ncgi: 87893173159493633
+    sector:
+      center:
+        lat: 52.517497357642995
+        lng: 13.500018912681378
+      azimuth: 0
+      arc: 120
+      tilt: -7
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159493634
+    - 87893173159657474
+    - 87893173159395331
+    - 87893173159493635
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 13
+    earfcn: 111
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell71:
+    ncgi: 87893173159493634
+    sector:
+      center:
+        lat: 52.517497357642995
+        lng: 13.500018912681378
+      azimuth: 120
+      arc: 120
+      tilt: 7
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159493635
+    - 87893173159493633
+    - 87893173159264259
+    - 87893173159346177
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 118
+    earfcn: 112
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell72:
+    ncgi: 87893173159493635
+    sector:
+      center:
+        lat: 52.517497357642995
+        lng: 13.500018912681378
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159493633
+    - 87893173159493634
+    - 87893173159772162
+    - 87893173159608321
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 258
+    earfcn: 113
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell73:
+    ncgi: 87893173159510017
+    sector:
+      center:
+        lat: 52.540117138933454
+        lng: 13.550704149027993
+      azimuth: 0
+      arc: 120
+      tilt: -2
+      height: 37
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159510019
+    - 87893173159673858
+    - 87893173159510018
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 182
+    earfcn: 114
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell74:
+    ncgi: 87893173159510018
+    sector:
+      center:
+        lat: 52.540117138933454
+        lng: 13.550704149027993
+      azimuth: 120
+      arc: 120
+      tilt: -2
+      height: 31
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159510019
+    - 87893173159510017
+    - 87893173159280643
+    - 87893173159362561
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 90
+    earfcn: 115
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell75:
+    ncgi: 87893173159510019
+    sector:
+      center:
+        lat: 52.540117138933454
+        lng: 13.550704149027993
+      azimuth: 240
+      arc: 120
+      tilt: 8
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159788546
+    - 87893173159624705
+    - 87893173159510018
+    - 87893173159510017
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 223
+    earfcn: 116
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell76:
+    ncgi: 87893173159526401
+    sector:
+      center:
+        lat: 52.55828791658591
+        lng: 13.599046311171392
+      azimuth: 0
+      arc: 120
+      tilt: -3
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159526402
+    - 87893173159526403
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 51
+    earfcn: 117
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell77:
+    ncgi: 87893173159526402
+    sector:
+      center:
+        lat: 52.55828791658591
+        lng: 13.599046311171392
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159378945
+    - 87893173159526401
+    - 87893173159526403
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 295
+    earfcn: 118
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell78:
+    ncgi: 87893173159526403
+    sector:
+      center:
+        lat: 52.55828791658591
+        lng: 13.599046311171392
+      azimuth: 240
+      arc: 120
+      tilt: -13
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159526401
+    - 87893173159804930
+    - 87893173159641089
+    - 87893173159526402
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 158
+    earfcn: 119
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell79:
+    ncgi: 87893173159542785
+    sector:
+      center:
+        lat: 52.454486780674216
+        lng: 13.20147640907149
+      azimuth: 0
+      arc: 120
+      tilt: 8
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159542786
+    - 87893173159706626
+    - 87893173159542787
+    - 87893173159428099
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 91
+    earfcn: 120
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell80:
+    ncgi: 87893173159542786
+    sector:
+      center:
+        lat: 52.454486780674216
+        lng: 13.20147640907149
+      azimuth: 120
+      arc: 120
+      tilt: 1
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159542787
+    - 87893173159542785
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 100
+    earfcn: 121
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell81:
+    ncgi: 87893173159542787
+    sector:
+      center:
+        lat: 52.454486780674216
+        lng: 13.20147640907149
+      azimuth: 240
+      arc: 120
+      tilt: 4
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159542786
+    - 87893173159542785
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 81
+    earfcn: 122
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell82:
+    ncgi: 87893173159559169
+    sector:
+      center:
+        lat: 52.472706640824896
+        lng: 13.250261779949229
+      azimuth: 0
+      arc: 120
+      tilt: -6
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159559171
+    - 87893173159723010
+    - 87893173159559170
+    - 87893173159444483
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 18
+    earfcn: 123
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell83:
+    ncgi: 87893173159559170
+    sector:
+      center:
+        lat: 52.472706640824896
+        lng: 13.250261779949229
+      azimuth: 120
+      arc: 120
+      tilt: 8
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159559171
+    - 87893173159297027
+    - 87893173159559169
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 84
+    earfcn: 124
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell84:
+    ncgi: 87893173159559171
+    sector:
+      center:
+        lat: 52.472706640824896
+        lng: 13.250261779949229
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159821314
+    - 87893173159559170
+    - 87893173159559169
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 83
+    earfcn: 125
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell85:
+    ncgi: 87893173159575553
+    sector:
+      center:
+        lat: 52.4825433756786
+        lng: 13.309451687434056
+      azimuth: 0
+      arc: 120
+      tilt: 7
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159739394
+    - 87893173159460867
+    - 87893173159575555
+    - 87893173159575554
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 288
+    earfcn: 126
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell86:
+    ncgi: 87893173159575554
+    sector:
+      center:
+        lat: 52.4825433756786
+        lng: 13.309451687434056
+      azimuth: 120
+      arc: 120
+      tilt: 4
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159575553
+    - 87893173159575555
+    - 87893173159411713
+    - 87893173159313411
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 249
+    earfcn: 127
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell87:
+    ncgi: 87893173159575555
+    sector:
+      center:
+        lat: 52.4825433756786
+        lng: 13.309451687434056
+      azimuth: 240
+      arc: 120
+      tilt: 9
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159837698
+    - 87893173159575553
+    - 87893173159690241
+    - 87893173159575554
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 24
+    earfcn: 128
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell88:
+    ncgi: 87893173159591937
+    sector:
+      center:
+        lat: 52.50008307806123
+        lng: 13.352623429328245
+      azimuth: 0
+      arc: 120
+      tilt: -9
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591938
+    - 87893173159755778
+    - 87893173159591939
+    - 87893173159477251
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 87
+    earfcn: 129
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell89:
+    ncgi: 87893173159591938
+    sector:
+      center:
+        lat: 52.50008307806123
+        lng: 13.352623429328245
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 37
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591939
+    - 87893173159329795
+    - 87893173159591937
+    - 87893173159428097
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 208
+    earfcn: 130
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell90:
+    ncgi: 87893173159591939
+    sector:
+      center:
+        lat: 52.50008307806123
+        lng: 13.352623429328245
+      azimuth: 240
+      arc: 120
+      tilt: -11
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591938
+    - 87893173159706625
+    - 87893173159854082
+    - 87893173159591937
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 138
+    earfcn: 131
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell91:
+    ncgi: 87893173159608321
+    sector:
+      center:
+        lat: 52.52432839771005
+        lng: 13.408975003575556
+      azimuth: 0
+      arc: 120
+      tilt: -6
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608322
+    - 87893173159493635
+    - 87893173159772162
+    - 87893173159608323
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 259
+    earfcn: 132
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell92:
+    ncgi: 87893173159608322
+    sector:
+      center:
+        lat: 52.52432839771005
+        lng: 13.408975003575556
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608321
+    - 87893173159346179
+    - 87893173159444481
+    - 87893173159608323
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 141
+    earfcn: 133
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell93:
+    ncgi: 87893173159608323
+    sector:
+      center:
+        lat: 52.52432839771005
+        lng: 13.408975003575556
+      azimuth: 240
+      arc: 120
+      tilt: -13
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608322
+    - 87893173159608321
+    - 87893173159723009
+    - 87893173159870466
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 53
+    earfcn: 134
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell94:
+    ncgi: 87893173159624705
+    sector:
+      center:
+        lat: 52.54031917722309
+        lng: 13.458111075281002
+      azimuth: 0
+      arc: 120
+      tilt: 15
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159624707
+    - 87893173159788546
+    - 87893173159624706
+    - 87893173159510019
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 2
+    earfcn: 135
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell95:
+    ncgi: 87893173159624706
+    sector:
+      center:
+        lat: 52.54031917722309
+        lng: 13.458111075281002
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159460865
+    - 87893173159624707
+    - 87893173159624705
+    - 87893173159362563
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 6
+    earfcn: 136
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell96:
+    ncgi: 87893173159624707
+    sector:
+      center:
+        lat: 52.54031917722309
+        lng: 13.458111075281002
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159739393
+    - 87893173159624705
+    - 87893173159624706
+    - 87893173159886850
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 264
+    earfcn: 137
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell97:
+    ncgi: 87893173159641089
+    sector:
+      center:
+        lat: 52.5514302368561
+        lng: 13.502498020452956
+      azimuth: 0
+      arc: 120
+      tilt: 0
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159641090
+    - 87893173159526403
+    - 87893173159804930
+    - 87893173159641091
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 241
+    earfcn: 138
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell98:
+    ncgi: 87893173159641090
+    sector:
+      center:
+        lat: 52.5514302368561
+        lng: 13.502498020452956
+      azimuth: 120
+      arc: 120
+      tilt: 4
+      height: 44
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159378947
+    - 87893173159641089
+    - 87893173159641091
+    - 87893173159477249
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 281
+    earfcn: 139
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell99:
+    ncgi: 87893173159641091
+    sector:
+      center:
+        lat: 52.5514302368561
+        lng: 13.502498020452956
+      azimuth: 240
+      arc: 120
+      tilt: 6
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159641090
+    - 87893173159755777
+    - 87893173159641089
+    - 87893173159903234
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 95
+    earfcn: 140
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell100:
+    ncgi: 87893173159657473
+    sector:
+      center:
+        lat: 52.57583535448031
+        lng: 13.556102385197084
+      azimuth: 0
+      arc: 120
+      tilt: -5
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159657475
+    - 87893173159657474
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 74
+    earfcn: 141
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell101:
+    ncgi: 87893173159657474
+    sector:
+      center:
+        lat: 52.57583535448031
+        lng: 13.556102385197084
+      azimuth: 120
+      arc: 120
+      tilt: -6
+      height: 48
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159657475
+    - 87893173159395331
+    - 87893173159493633
+    - 87893173159657473
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 62
+    earfcn: 142
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell102:
+    ncgi: 87893173159657475
+    sector:
+      center:
+        lat: 52.57583535448031
+        lng: 13.556102385197084
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159919618
+    - 87893173159657473
+    - 87893173159772161
+    - 87893173159657474
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 17
+    earfcn: 143
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell103:
+    ncgi: 87893173159673857
+    sector:
+      center:
+        lat: 52.593895406222906
+        lng: 13.609494262817345
+      azimuth: 0
+      arc: 120
+      tilt: -2
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159673859
+    - 87893173159673858
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 75
+    earfcn: 144
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell104:
+    ncgi: 87893173159673858
+    sector:
+      center:
+        lat: 52.593895406222906
+        lng: 13.609494262817345
+      azimuth: 120
+      arc: 120
+      tilt: -15
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159673859
+    - 87893173159510017
+    - 87893173159673857
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 248
+    earfcn: 145
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell105:
+    ncgi: 87893173159673859
+    sector:
+      center:
+        lat: 52.593895406222906
+        lng: 13.609494262817345
+      azimuth: 240
+      arc: 120
+      tilt: 13
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159788545
+    - 87893173159673858
+    - 87893173159673857
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 231
+    earfcn: 146
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell106:
+    ncgi: 87893173159690241
+    sector:
+      center:
+        lat: 52.4811034283498
+        lng: 13.207850320659063
+      azimuth: 0
+      arc: 120
+      tilt: 12
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159690243
+    - 87893173159837698
+    - 87893173159575555
+    - 87893173159690242
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 299
+    earfcn: 147
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell107:
+    ncgi: 87893173159690242
+    sector:
+      center:
+        lat: 52.4811034283498
+        lng: 13.207850320659063
+      azimuth: 120
+      arc: 120
+      tilt: 3
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159690243
+    - 87893173159690241
+    - 87893173159411715
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 177
+    earfcn: 148
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell108:
+    ncgi: 87893173159690243
+    sector:
+      center:
+        lat: 52.4811034283498
+        lng: 13.207850320659063
+      azimuth: 240
+      arc: 120
+      tilt: -15
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159690241
+    - 87893173159690242
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 209
+    earfcn: 149
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell109:
+    ncgi: 87893173159706625
+    sector:
+      center:
+        lat: 52.506866283310885
+        lng: 13.264610121000482
+      azimuth: 0
+      arc: 120
+      tilt: 9
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159591939
+    - 87893173159854082
+    - 87893173159706627
+    - 87893173159706626
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 159
+    earfcn: 150
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell110:
+    ncgi: 87893173159706626
+    sector:
+      center:
+        lat: 52.506866283310885
+        lng: 13.264610121000482
+      azimuth: 120
+      arc: 120
+      tilt: -2
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159706625
+    - 87893173159706627
+    - 87893173159542785
+    - 87893173159428099
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 50
+    earfcn: 151
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell111:
+    ncgi: 87893173159706627
+    sector:
+      center:
+        lat: 52.506866283310885
+        lng: 13.264610121000482
+      azimuth: 240
+      arc: 120
+      tilt: -13
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159706626
+    - 87893173159706625
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 115
+    earfcn: 152
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell112:
+    ncgi: 87893173159723009
+    sector:
+      center:
+        lat: 52.518441134227466
+        lng: 13.30953401859561
+      azimuth: 0
+      arc: 120
+      tilt: -11
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159723011
+    - 87893173159608323
+    - 87893173159870466
+    - 87893173159723010
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 147
+    earfcn: 153
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell113:
+    ncgi: 87893173159723010
+    sector:
+      center:
+        lat: 52.518441134227466
+        lng: 13.30953401859561
+      azimuth: 120
+      arc: 120
+      tilt: -2
+      height: 47
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159723009
+    - 87893173159444483
+    - 87893173159559169
+    - 87893173159723011
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 26
+    earfcn: 154
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell114:
+    ncgi: 87893173159723011
+    sector:
+      center:
+        lat: 52.518441134227466
+        lng: 13.30953401859561
+      azimuth: 240
+      arc: 120
+      tilt: -15
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159821313
+    - 87893173159723010
+    - 87893173159723009
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 49
+    earfcn: 155
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell115:
+    ncgi: 87893173159739393
+    sector:
+      center:
+        lat: 52.53941976328878
+        lng: 13.356724008868351
+      azimuth: 0
+      arc: 120
+      tilt: -6
+      height: 35
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159739395
+    - 87893173159886850
+    - 87893173159624707
+    - 87893173159739394
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 8
+    earfcn: 156
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell116:
+    ncgi: 87893173159739394
+    sector:
+      center:
+        lat: 52.53941976328878
+        lng: 13.356724008868351
+      azimuth: 120
+      arc: 120
+      tilt: 9
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159739393
+    - 87893173159460867
+    - 87893173159739395
+    - 87893173159575553
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 248
+    earfcn: 157
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell117:
+    ncgi: 87893173159739395
+    sector:
+      center:
+        lat: 52.53941976328878
+        lng: 13.356724008868351
+      azimuth: 240
+      arc: 120
+      tilt: 3
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159739394
+    - 87893173159739393
+    - 87893173159837697
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 175
+    earfcn: 158
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell118:
+    ncgi: 87893173159755777
+    sector:
+      center:
+        lat: 52.55613590693082
+        lng: 13.405851421287506
+      azimuth: 0
+      arc: 120
+      tilt: 12
+      height: 50
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159903234
+    - 87893173159641091
+    - 87893173159755778
+    - 87893173159755779
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 144
+    earfcn: 159
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell119:
+    ncgi: 87893173159755778
+    sector:
+      center:
+        lat: 52.55613590693082
+        lng: 13.405851421287506
+      azimuth: 120
+      arc: 120
+      tilt: -11
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159755779
+    - 87893173159477251
+    - 87893173159591937
+    - 87893173159755777
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 160
+    earfcn: 160
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell120:
+    ncgi: 87893173159755779
+    sector:
+      center:
+        lat: 52.55613590693082
+        lng: 13.405851421287506
+      azimuth: 240
+      arc: 120
+      tilt: 14
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159854081
+    - 87893173159755777
+    - 87893173159755778
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 140
+    earfcn: 161
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell121:
+    ncgi: 87893173159772161
+    sector:
+      center:
+        lat: 52.574510149666715
+        lng: 13.45278118470072
+      azimuth: 0
+      arc: 120
+      tilt: 0
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159772162
+    - 87893173159772163
+    - 87893173159657475
+    - 87893173159919618
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 203
+    earfcn: 162
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell122:
+    ncgi: 87893173159772162
+    sector:
+      center:
+        lat: 52.574510149666715
+        lng: 13.45278118470072
+      azimuth: 120
+      arc: 120
+      tilt: -9
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608321
+    - 87893173159493635
+    - 87893173159772161
+    - 87893173159772163
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 219
+    earfcn: 163
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell123:
+    ncgi: 87893173159772163
+    sector:
+      center:
+        lat: 52.574510149666715
+        lng: 13.45278118470072
+      azimuth: 240
+      arc: 120
+      tilt: 1
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159772161
+    - 87893173159870465
+    - 87893173159772162
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 115
+    earfcn: 164
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell124:
+    ncgi: 87893173159788545
+    sector:
+      center:
+        lat: 52.58554059303679
+        lng: 13.511751410299707
+      azimuth: 0
+      arc: 120
+      tilt: 4
+      height: 39
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159673859
+    - 87893173159788546
+    - 87893173159788547
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 120
+    earfcn: 165
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell125:
+    ncgi: 87893173159788546
+    sector:
+      center:
+        lat: 52.58554059303679
+        lng: 13.511751410299707
+      azimuth: 120
+      arc: 120
+      tilt: 15
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159624705
+    - 87893173159788545
+    - 87893173159788547
+    - 87893173159510019
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 196
+    earfcn: 166
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell126:
+    ncgi: 87893173159788547
+    sector:
+      center:
+        lat: 52.58554059303679
+        lng: 13.511751410299707
+      azimuth: 240
+      arc: 120
+      tilt: 5
+      height: 28
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159788546
+    - 87893173159886849
+    - 87893173159788545
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 108
+    earfcn: 167
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell127:
+    ncgi: 87893173159804929
+    sector:
+      center:
+        lat: 52.610477195577715
+        lng: 13.550283839006198
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 33
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159804930
+    - 87893173159804931
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 277
+    earfcn: 168
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell128:
+    ncgi: 87893173159804930
+    sector:
+      center:
+        lat: 52.610477195577715
+        lng: 13.550283839006198
+      azimuth: 120
+      arc: 120
+      tilt: 3
+      height: 23
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159804931
+    - 87893173159526403
+    - 87893173159804929
+    - 87893173159641089
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 148
+    earfcn: 169
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell129:
+    ncgi: 87893173159804931
+    sector:
+      center:
+        lat: 52.610477195577715
+        lng: 13.550283839006198
+      azimuth: 240
+      arc: 120
+      tilt: 0
+      height: 42
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159804930
+    - 87893173159804929
+    - 87893173159903233
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 134
+    earfcn: 170
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell130:
+    ncgi: 87893173159821313
+    sector:
+      center:
+        lat: 52.52205150765001
+        lng: 13.210154794159862
+      azimuth: 0
+      arc: 120
+      tilt: 7
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159723011
+    - 87893173159821314
+    - 87893173159821315
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 177
+    earfcn: 171
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell131:
+    ncgi: 87893173159821314
+    sector:
+      center:
+        lat: 52.52205150765001
+        lng: 13.210154794159862
+      azimuth: 120
+      arc: 120
+      tilt: 0
+      height: 45
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159821313
+    - 87893173159559171
+    - 87893173159821315
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 202
+    earfcn: 172
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell132:
+    ncgi: 87893173159821315
+    sector:
+      center:
+        lat: 52.52205150765001
+        lng: 13.210154794159862
+      azimuth: 240
+      arc: 120
+      tilt: -14
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159821314
+    - 87893173159821313
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 238
+    earfcn: 173
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell133:
+    ncgi: 87893173159837697
+    sector:
+      center:
+        lat: 52.53308694123013
+        lng: 13.259835048748553
+      azimuth: 0
+      arc: 120
+      tilt: -2
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159837698
+    - 87893173159739395
+    - 87893173159837699
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 110
+    earfcn: 174
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell134:
+    ncgi: 87893173159837698
+    sector:
+      center:
+        lat: 52.53308694123013
+        lng: 13.259835048748553
+      azimuth: 120
+      arc: 120
+      tilt: 9
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159837697
+    - 87893173159575555
+    - 87893173159690241
+    - 87893173159837699
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 106
+    earfcn: 175
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell135:
+    ncgi: 87893173159837699
+    sector:
+      center:
+        lat: 52.53308694123013
+        lng: 13.259835048748553
+      azimuth: 240
+      arc: 120
+      tilt: -2
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159837698
+    - 87893173159837697
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 73
+    earfcn: 176
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell136:
+    ncgi: 87893173159854081
+    sector:
+      center:
+        lat: 52.555825493034924
+        lng: 13.304170602872329
+      azimuth: 0
+      arc: 120
+      tilt: 4
+      height: 30
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159854083
+    - 87893173159755779
+    - 87893173159854082
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 221
+    earfcn: 177
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell137:
+    ncgi: 87893173159854082
+    sector:
+      center:
+        lat: 52.555825493034924
+        lng: 13.304170602872329
+      azimuth: 120
+      arc: 120
+      tilt: 13
+      height: 25
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159706625
+    - 87893173159591939
+    - 87893173159854081
+    - 87893173159854083
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 88
+    earfcn: 178
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell138:
+    ncgi: 87893173159854083
+    sector:
+      center:
+        lat: 52.555825493034924
+        lng: 13.304170602872329
+      azimuth: 240
+      arc: 120
+      tilt: -3
+      height: 41
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159854082
+    - 87893173159854081
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 235
+    earfcn: 179
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell139:
+    ncgi: 87893173159870465
+    sector:
+      center:
+        lat: 52.569319733890715
+        lng: 13.356222250529118
+      azimuth: 0
+      arc: 120
+      tilt: -14
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159870467
+    - 87893173159772163
+    - 87893173159870466
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 190
+    earfcn: 180
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell140:
+    ncgi: 87893173159870466
+    sector:
+      center:
+        lat: 52.569319733890715
+        lng: 13.356222250529118
+      azimuth: 120
+      arc: 120
+      tilt: 3
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159608323
+    - 87893173159870465
+    - 87893173159870467
+    - 87893173159723009
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 267
+    earfcn: 181
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell141:
+    ncgi: 87893173159870467
+    sector:
+      center:
+        lat: 52.569319733890715
+        lng: 13.356222250529118
+      azimuth: 240
+      arc: 120
+      tilt: 5
+      height: 49
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159870466
+    - 87893173159870465
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 275
+    earfcn: 182
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell142:
+    ncgi: 87893173159886849
+    sector:
+      center:
+        lat: 52.58615441402789
+        lng: 13.400701564068656
+      azimuth: 0
+      arc: 120
+      tilt: -12
+      height: 38
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159788547
+    - 87893173159886850
+    - 87893173159886851
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 215
+    earfcn: 183
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell143:
+    ncgi: 87893173159886850
+    sector:
+      center:
+        lat: 52.58615441402789
+        lng: 13.400701564068656
+      azimuth: 120
+      arc: 120
+      tilt: 12
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159886849
+    - 87893173159886851
+    - 87893173159624707
+    - 87893173159739393
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 39
+    earfcn: 184
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell144:
+    ncgi: 87893173159886851
+    sector:
+      center:
+        lat: 52.58615441402789
+        lng: 13.400701564068656
+      azimuth: 240
+      arc: 120
+      tilt: -7
+      height: 20
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159886850
+    - 87893173159886849
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 77
+    earfcn: 185
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell145:
+    ncgi: 87893173159903233
+    sector:
+      center:
+        lat: 52.60787565171131
+        lng: 13.448255297924497
+      azimuth: 0
+      arc: 120
+      tilt: -11
+      height: 22
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159903234
+    - 87893173159804931
+    - 87893173159903235
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 68
+    earfcn: 186
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell146:
+    ncgi: 87893173159903234
+    sector:
+      center:
+        lat: 52.60787565171131
+        lng: 13.448255297924497
+      azimuth: 120
+      arc: 120
+      tilt: 11
+      height: 29
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159641091
+    - 87893173159903233
+    - 87893173159903235
+    - 87893173159755777
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 185
+    earfcn: 187
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell147:
+    ncgi: 87893173159903235
+    sector:
+      center:
+        lat: 52.60787565171131
+        lng: 13.448255297924497
+      azimuth: 240
+      arc: 120
+      tilt: -4
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159903234
+    - 87893173159903233
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 125
+    earfcn: 188
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell148:
+    ncgi: 87893173159919617
+    sector:
+      center:
+        lat: 52.62169650076504
+        lng: 13.502357253584325
+      azimuth: 0
+      arc: 120
+      tilt: 8
+      height: 34
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159919618
+    - 87893173159919619
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 45
+    earfcn: 189
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell149:
+    ncgi: 87893173159919618
+    sector:
+      center:
+        lat: 52.62169650076504
+        lng: 13.502357253584325
+      azimuth: 120
+      arc: 120
+      tilt: 1
+      height: 32
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159772161
+    - 87893173159919619
+    - 87893173159919617
+    - 87893173159657475
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 122
+    earfcn: 190
+    celltype: 0
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell150:
+    ncgi: 87893173159919619
+    sector:
+      center:
+        lat: 52.62169650076504
+        lng: 13.502357253584325
+      azimuth: 240
+      arc: 120
+      tilt: 1
+      height: 27
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159919618
+    - 87893173159919617
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 216
+    earfcn: 191
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm:
+    id: 1
+    description: kpm service model
+    version: 1.0.0
+  kpm2:
+    id: 4
+    description: kpm2 service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
+    version: 1.0.0
+  rcpre2:
+    id: 3
+    description: rcpre2 service model
+    version: 1.0.0
+ueCount: 100
+ueCountPerCell: 15
+plmnID: "314628"
+plmnNumber: 1279014
+apiKey: ""
