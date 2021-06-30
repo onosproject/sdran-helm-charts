@@ -124,64 +124,17 @@ grafana:
       domain: aether-roc-gui
       root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
       serve_from_sub_path: true
-    auth.ldap:
-      enabled: true
-      config_file: /etc/grafana/ldap.toml
     auth.generic_oauth:
       enabled: true
       client_id: aether-roc-gui
-      client_secret: YWV0aGVyLXJvYy1ndWkK
+#      client_secret: YWV0aGVyLXJvYy1ndWkK
       scopes: "openid profile email groups"
-#      empty_scopes: false
+      empty_scopes: false
       auth_url: "http://dex-ldap-umbrella:32000/auth"
       token_url: "http://dex-ldap-umbrella:32000/token"
       api_url: "http://dex-ldap-umbrella:32000/userinfo"
-      allowed_domains: dex-ldap-umbrella aether-roc-gui localhost
+      allowed_domains: opennetworking.org
       allow_sign_up: true
-#      tls_skip_verify_insecure = false
-#      tls_client_cert =
-#      tls_client_key =
-#      tls_client_ca =
-  ldap:
-    enabled: true
-    config: |-
-      verbose_logging = true
-      [[servers]]
-      host = "dex-ldap-umbrella-openldap"
-      port = 389
-      use_ssl = false
-      start_tls = false
-      ssl_skip_verify = false
-      bind_dn = "cn=admin,dc=opennetworking,dc=org"
-      bind_password = 'password'
-      search_filter = "(cn=%s)"
-      search_base_dns = ["cn=users,dc=opennetworking,dc=org"]
-
-      group_search_filter = "(&(objectClass=posixGroup)(memberUid=%s))"
-      group_search_base_dns = ["cn=groups,dc=opennetworking,dc=org"]
-      group_search_filter_user_attribute = "uid"
-
-      [servers.attributes]
-      member_of = "memberOf"
-      email = "mail"
-      first_name = "sn"
-      surname = "givenName"
-      username = "cn"
-
-      [[servers.group_mappings]]
-      group_dn = "cn=AetherROCAdmin,cn=groups,dc=opennetworking,dc=org"
-      org_role = "Admin"
-      org_id = 1
-
-      [[servers.group_mappings]]
-      group_dn = "cn=acme,cn=groups,dc=opennetworking,dc=org"
-      org_role = "Viewer"
-      org_id = 2
-
-      [[servers.group_mappings]]
-      group_dn = "cn=starbucks,cn=groups,dc=opennetworking,dc=org"
-      org_role = "Viewer"
-      org_id = 3
 
 prometheus:
   pushgateway:
