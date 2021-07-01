@@ -65,7 +65,7 @@ spec:
         - name: post-install
           configMap:
             name: {{ template "aether-roc-api.fullname" . }}-grafana-post-install
-            defaultMode: 0744
+            defaultMode: 0555
         - name: dashboards-starbucks
           configMap:
             name: {{ template "aether-roc-api.fullname" . }}-dashboards-starbucks
