@@ -9,5 +9,5 @@ metadata:
   name: {{ template "aether-roc-gui.fullname" . }}-service-role
 rules:
   - apiGroups: [""] # "" indicates the core API group
-    resources: ["services"]
+    resources: ["secrets"]
     verbs: ["get", "watch", "list"]
