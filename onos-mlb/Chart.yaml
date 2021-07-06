@@ -3,15 +3,16 @@
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
 
 apiVersion: v2
-name: sdcore-adapter
+name: onos-mlb
+description: ONOS MLB xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 3.0.5
-appVersion: v0.1.23
-description: ONOS SD-Core Adapter
+version: 0.0.1
+appVersion: v0.0.1
 keywords:
   - onos
   - sdn
+  - ric
 home: https://onosproject.org
 maintainers:
   - name: ONOS Support

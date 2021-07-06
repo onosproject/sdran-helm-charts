@@ -1,0 +1,200 @@
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "5153"
+spec:
+  kind:
+    name: e2node
+  aspects:
+    onos.topo.E2Node:
+      service_models:
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "5154"
+spec:
+  kind:
+    name: e2node
+  aspects:
+    onos.topo.E2Node:
+      service_models:
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "5155"
+spec:
+  kind:
+    name: e2node
+  aspects:
+    onos.topo.E2Node:
+      service_models:
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "1454c001"
+spec:
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.486405
+      lng: 13.412234
+    onos.topo.E2Cell:
+      earfcn: 42
+      cell_type: FEMTO
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: 1
+      height: 43
+      azimuth: 0
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c001-1454c003"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c001"
+  target:
+    name: "1454c003"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c001-1454c002"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c001"
+  target:
+    name: "1454c002"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "1454c002"
+spec:
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.486405
+      lng: 13.412234
+    onos.topo.E2Cell:
+      earfcn: 43
+      cell_type: FEMTO
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: -10
+      height: 28
+      azimuth: 120
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c002-1454c001"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c002"
+  target:
+    name: "1454c001"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c002-1454c003"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c002"
+  target:
+    name: "1454c003"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: "1454c003"
+spec:
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.486405
+      lng: 13.412234
+    onos.topo.E2Cell:
+      earfcn: 44
+      cell_type: FEMTO
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: -10
+      height: 22
+      azimuth: 240
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c003-1454c001"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c003"
+  target:
+    name: "1454c001"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "1454c003-1454c002"
+spec:
+  kind:
+    name: neighbors
+  source:
+    name: "1454c003"
+  target:
+    name:
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "5153-1454c001"
+spec:
+  kind:
+    name: contains
+  source:
+    name: "5153"
+  target:
+    name: "1454c001"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "5154-1454c002"
+spec:
+  kind:
+    name: contains
+  source:
+    name: "5154"
+  target:
+    name: "1454c002"
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: "5155-1454c003"
+spec:
+  kind:
+    name: contains
+  source:
+    name: "5155"
+  target:
+    name: "1454c003"

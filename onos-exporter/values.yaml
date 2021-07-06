@@ -12,7 +12,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-exporter
-  tag: v0.1.3
+  tag: v0.1.4
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -30,6 +30,7 @@ config:
     e2tEndpoint: "onos-e2t:5150"
     xappPciEndpoint: "onos-pci:5150"
     xappKpimonEndpoint: "onos-kpimon:5150"
+    topoEndpoint: "onos-topo:5150"
     
 resources: {}
 

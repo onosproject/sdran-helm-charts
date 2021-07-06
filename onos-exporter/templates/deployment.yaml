@@ -41,6 +41,7 @@ spec:
             - "-e2tEndpoint={{ index .Values "config" "onos-exporter" "e2tEndpoint" }}"
             - "-xappPciEndpoint={{ index .Values "config" "onos-exporter" "xappPciEndpoint" }}"
             - "-xappKpimonEndpoint={{ index .Values "config" "onos-exporter" "xappKpimonEndpoint" }}"
+            - "-topoEndpoint={{ index .Values "config" "onos-exporter" "topoEndpoint" }}"
           resources:
       {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

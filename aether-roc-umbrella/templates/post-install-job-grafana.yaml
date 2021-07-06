@@ -1,0 +1,75 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{ .Release.Name }}"
+  labels:
+    app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+    app.kubernetes.io/instance: {{ .Release.Name | quote }}
+    app.kubernetes.io/version: {{ .Chart.AppVersion }}
+    helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+  annotations:
+    # This is what defines this resource as a hook. Without this line, the
+    # job is considered part of the release.
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "-5"
+    {{- if .Values.grafana.tidyUpPostInstall }}
+    "helm.sh/hook-delete-policy": hook-succeeded
+    {{- end}}
+spec:
+  template:
+    metadata:
+      name: "{{ .Release.Name }}"
+      labels:
+        app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+        app.kubernetes.io/instance: {{ .Release.Name | quote }}
+        helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: post-install-job
+          image: "onosproject/onos-cli:latest"
+          env:
+            - name: GF_SECURITY_ADMIN_USER
+              valueFrom:
+                secretKeyRef:
+                  name: aether-roc-umbrella-grafana
+                  key: admin-user
+            - name: GF_SECURITY_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: aether-roc-umbrella-grafana
+                  key: admin-password
+          command: ["/usr/local/bin/grafana-post-install.sh"]
+          args:
+            - "$(GF_SECURITY_ADMIN_USER)"
+            - "$(GF_SECURITY_ADMIN_PASSWORD)"
+            - "{{ .Chart.Name }}"
+            {{- range $org := .Values.grafana.orgs }}
+            - {{ $org | quote }}
+            {{- end}}
+          volumeMounts:
+            - name: post-install
+              mountPath: /usr/local/bin
+              readOnly: true
+            - name: dashboards-starbucks
+              mountPath: /usr/local/dashboards/Starbucks
+              readOnly: true
+            - name: dashboards-acme-inc
+              mountPath: /usr/local/dashboards/Acme_Inc
+              readOnly: true
+      volumes:
+        - name: post-install
+          configMap:
+            name: {{ template "aether-roc-api.fullname" . }}-grafana-post-install
+            defaultMode: 0555
+        - name: dashboards-starbucks
+          configMap:
+            name: {{ template "aether-roc-api.fullname" . }}-dashboards-starbucks
+        - name: dashboards-acme-inc
+          configMap:
+            name: {{ template "aether-roc-api.fullname" . }}-dashboards-acme-inc
+
