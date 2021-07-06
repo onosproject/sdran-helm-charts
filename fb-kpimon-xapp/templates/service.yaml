@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "fb-kpimon-xapp.fullname" . }}
+  labels:
+    app: {{ template "fb-kpimon-xapp.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "fb-kpimon-xapp.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "fb-kpimon-xapp.fullname" . }}
+    app: facebook
+    type: kpimon
+    resource: {{ template "fb-kpimon-xapp.fullname" . }}
+  {{- include "fb-kpimon-xapp.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: http
+      port: 8080

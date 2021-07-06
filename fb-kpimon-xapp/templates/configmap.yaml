@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "fb-kpimon-xapp.fullname" . }}-config
+  labels:
+    app: {{ template "fb-kpimon-xapp.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  config.json: |-
+{{ .Files.Get "files/configs/config.json" | indent 4}}
