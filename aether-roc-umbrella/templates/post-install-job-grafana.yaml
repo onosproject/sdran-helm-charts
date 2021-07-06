@@ -56,10 +56,10 @@ spec:
               mountPath: /usr/local/bin
               readOnly: true
             - name: dashboards-starbucks
-              mountPath: /usr/local/dashboards/Starbucks
+              mountPath: /usr/local/dashboards/starbucks
               readOnly: true
-            - name: dashboards-acme-inc
-              mountPath: /usr/local/dashboards/Acme_Inc
+            - name: dashboards-acme
+              mountPath: /usr/local/dashboards/acme
               readOnly: true
       volumes:
         - name: post-install
@@ -69,7 +69,7 @@ spec:
         - name: dashboards-starbucks
           configMap:
             name: {{ template "aether-roc-api.fullname" . }}-dashboards-starbucks
-        - name: dashboards-acme-inc
+        - name: dashboards-acme
           configMap:
-            name: {{ template "aether-roc-api.fullname" . }}-dashboards-acme-inc
+            name: {{ template "aether-roc-api.fullname" . }}-dashboards-acme
 
