@@ -114,8 +114,8 @@ sdcore-adapter-v3:
 
 grafana:
   orgs:
-    - "Acme Inc"
-    - "Starbucks"
+    - "acme"
+    - "starbucks"
   tidyUpPostInstall: true
   grafana.ini:
     log:

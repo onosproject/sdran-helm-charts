@@ -8,6 +8,146 @@ metadata:
   name: {{ .Release.Name }}-dashboards-starbucks
   namespace: {{ .Release.Namespace }}
 data:
+  vcs_starbucks_all.json: |-
+    {
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
+          {
+            "datasource": "datasource-starbucks",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 1,
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
+              }
+            },
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_jitter{vcs_id=~\"starbucks.*\"})/count(vcs_jitter{vcs_id=~\"starbucks.*\"})",
+                "format": "time_series",
+                "interval": "",
+                "legendFormat": "Jitter (ms)",
+                "queryType": "randomWalk",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_latency{vcs_id=~\"starbucks.*\"})/count(vcs_latency{vcs_id=~\"starbucks.*\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Latency (ms)",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_throughput{vcs_id=~\"starbucks.*\"})/count(vcs_throughput{vcs_id=~\"starbucks.*\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Throughput (kb/s)",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS Starbucks All",
+            "type": "timeseries"
+          }
+        ],
+        "schemaVersion": 30,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-6h",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "VCS Starbucks All",
+        "uid": "vcs_starbucks_all",
+        "version": 2
+      },
+      "folderUid": "starbucks",
+      "message": "Made changes to Starbucks"
+    }
   vcs_starbucks_newyork_cameras.json: |-
     {
       "dashboard": {
@@ -25,13 +165,13 @@ data:
           ]
         },
         "description": "",
-        "editable": true,
+        "editable": false,
         "gnetId": null,
         "graphTooltip": 0,
         "links": [],
         "panels": [
           {
-            "datasource": "datasource-Starbucks",
+            "datasource": "datasource-starbucks",
             "description": "",
             "fieldConfig": {
               "defaults": {
@@ -89,7 +229,7 @@ data:
               "x": 0,
               "y": 0
             },
-            "id": 2,
+            "id": 1,
             "links": [],
             "options": {
               "legend": {
@@ -147,7 +287,7 @@ data:
         "uid": "vcs_starbucks_newyork_cameras",
         "version": 1
       },
-      "folderUid": "Starbucks",
+      "folderUid": "starbucks",
       "message": "Made changes to Starbucks"
     }
   vcs_starbucks_seattle_cameras.json: |-
@@ -167,13 +307,13 @@ data:
           ]
         },
         "description": "",
-        "editable": true,
+        "editable": false,
         "gnetId": null,
         "graphTooltip": 0,
         "links": [],
         "panels": [
           {
-            "datasource": "datasource-Starbucks",
+            "datasource": "datasource-starbucks",
             "description": "",
             "fieldConfig": {
               "defaults": {
@@ -231,7 +371,7 @@ data:
               "x": 0,
               "y": 0
             },
-            "id": 2,
+            "id": 1,
             "links": [],
             "options": {
               "legend": {
@@ -289,16 +429,156 @@ data:
         "uid": "vcs_starbucks_seattle_cameras",
         "version": 1
       },
-      "folderUid": "Starbucks",
+      "folderUid": "starbucks",
       "message": "Made changes to Starbucks"
     }
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-dashboards-acme-inc
+  name: {{ .Release.Name }}-dashboards-acme
   namespace: {{ .Release.Namespace }}
 data:
+  vcs_acme_all.json: |-
+    {
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
+          {
+            "datasource": "datasource-acme",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "line",
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "none"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 1,
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
+              }
+            },
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_jitter{vcs_id=~\"acme.*\"})/count(vcs_jitter{vcs_id=~\"acme.*\"})",
+                "format": "time_series",
+                "interval": "",
+                "legendFormat": "Jitter (ms)",
+                "queryType": "randomWalk",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_latency{vcs_id=~\"acme.*\"})/count(vcs_latency{vcs_id=~\"acme.*\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Latency (ms)",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(vcs_throughput{vcs_id=~\"acme.*\"})/count(vcs_throughput{vcs_id=~\"acme.*\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Throughput (kb/s)",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS Acme All",
+            "type": "timeseries"
+          }
+        ],
+        "schemaVersion": 30,
+        "style": "dark",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-6h",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "VCS Acme All",
+        "uid": "vcs_acme_all",
+        "version": 1
+      },
+      "folderUid": "acme",
+      "message": "Made changes to Acme"
+    }
   vcs_acme_chicago_robots.json: |-
     {
       "dashboard": {
@@ -316,13 +596,13 @@ data:
           ]
         },
         "description": "",
-        "editable": true,
+        "editable": false,
         "gnetId": null,
         "graphTooltip": 0,
         "links": [],
         "panels": [
           {
-            "datasource": "datasource-Acme_Inc",
+            "datasource": "datasource-acme",
             "description": "",
             "fieldConfig": {
               "defaults": {
@@ -380,7 +660,7 @@ data:
               "x": 0,
               "y": 0
             },
-            "id": 2,
+            "id": 1,
             "links": [],
             "options": {
               "legend": {
@@ -395,14 +675,14 @@ data:
             "targets": [
               {
                 "exemplar": true,
-                "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_jitter{vcs_id=\"starbucks_acme_robots\"}",
                 "interval": "",
                 "legendFormat": "Jitter (ms)",
                 "refId": "A"
               },
               {
                 "exemplar": true,
-                "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_latency{vcs_id=\"starbucks_acme_robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Latency (ms)",
@@ -410,7 +690,7 @@ data:
               },
               {
                 "exemplar": true,
-                "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_throughput{vcs_id=\"starbucks_acme_robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Throughput (kb/s)",
@@ -438,6 +718,6 @@ data:
         "uid": "vcs_acme_chicago_robots",
         "version": 1
       },
-      "folderUid": "Acme_Inc",
+      "folderUid": "acme",
       "message": "Made changes to Acme"
     }
