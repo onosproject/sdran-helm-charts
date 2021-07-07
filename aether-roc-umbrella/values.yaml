@@ -147,6 +147,7 @@ prometheus:
     prometheus.yml:
       scrape_configs:
         - job_name: sdcore-exporter
+          scrape_interval: 2s
           static_configs:
             - targets:
                 - sdcore-adapter-v3-exporter:2112
@@ -330,6 +331,7 @@ onos-config:
 
           ip_domains[ip_domain] {
             ip_domain := input.ip_domain.ip_domain[_]
+            ["AetherROCAdmin", ip_domain.enterprise][_] == input.groups[i]
           }
 
           networks[network] {
