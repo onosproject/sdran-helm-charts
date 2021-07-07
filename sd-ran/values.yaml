@@ -70,6 +70,8 @@ import:
     enabled: false
   onos-mho:
     enabled: false
+  onos-mlb:
+    enabled: false
   ah-eson-test-server:
     enabled: false
   fluent-bit:
