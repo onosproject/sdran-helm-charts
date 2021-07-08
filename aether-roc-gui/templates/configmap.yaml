@@ -11,8 +11,53 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-{{- range $key, $value := .Values.Nginx.templates }}
-  {{ $key }}: |-
-{{ $valueWithDefault := default "" $value -}}
-{{ tpl $valueWithDefault $ | indent 4 }}
-{{- end -}}
+  server-block.conf: |-
+    server {
+        listen {{.Values.Nginx.port}};
+        ssl_certificate /usr/share/certs/aether-roc-gui.crt;
+        ssl_certificate_key /usr/share/certs/aether-roc-gui.key;
+        {{- if .Values.grafana.proxyEnabled }}
+        location /grafana/ {
+            proxy_pass {{ .Values.grafana.protocol }}://{{ .Values.grafana.service }}:{{ .Values.grafana.port }}/;
+            proxy_http_version 1.1;
+            proxy_redirect off;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-NginX-Proxy true;
+            proxy_hide_header 'X-Frame-Options';
+            add_header X-Frame-Options SAMEORIGIN;
+        }{{end}}
+        {{- if .Values.prometheus.proxyEnabled }}
+        location /prometheus/ {
+            proxy_pass {{ .Values.prometheus.protocol }}://{{ .Values.prometheus.service }}:{{ .Values.prometheus.port }}/;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            add_header X-Frame-Options SAMEORIGIN;
+        }{{end}}
+        location / {
+          root /usr/share/nginx/html;
+        }
+        location /rs/nav/uiextensions {
+          root /usr/share/nginx/html;
+        }
+        location /kubernetes-api/ {
+            proxy_pass http://localhost:8001/;
+            proxy_http_version 1.1;
+        }
+        {{- range $key, $value := .Values.aetherservices }}
+        location /{{ $key }}/ {
+            proxy_pass {{ $value.protocol}}://{{$key}}:{{ $value.http }}/;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_connect_timeout       {{ $value.streamTimeout }};
+            proxy_send_timeout          {{ $value.streamTimeout }};
+            proxy_read_timeout          {{ $value.streamTimeout }};
+            send_timeout                {{ $value.streamTimeout }};
+        }
+        {{ end }}
+    }
+
