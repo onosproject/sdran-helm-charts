@@ -675,14 +675,14 @@ data:
             "targets": [
               {
                 "exemplar": true,
-                "expr": "vcs_jitter{vcs_id=\"starbucks_acme_robots\"}",
+                "expr": "vcs_jitter{vcs_id=\"acme_chicago_robots\"}",
                 "interval": "",
                 "legendFormat": "Jitter (ms)",
                 "refId": "A"
               },
               {
                 "exemplar": true,
-                "expr": "vcs_latency{vcs_id=\"starbucks_acme_robots\"}",
+                "expr": "vcs_latency{vcs_id=\"acme_chicago_robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Latency (ms)",
@@ -690,7 +690,7 @@ data:
               },
               {
                 "exemplar": true,
-                "expr": "vcs_throughput{vcs_id=\"starbucks_acme_robots\"}",
+                "expr": "vcs_throughput{vcs_id=\"acme_chicago_robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Throughput (kb/s)",
