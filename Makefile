@@ -21,7 +21,7 @@ version_check: build-tools # @HELP run the version checker on the charts
 	./../build-tools/chart_single_check
 
 test: # @HELP run the integration tests
-test: license_check version_check deps
+test: license_check version_check deps deps-roc
 	./build/bin/run-sd-ran-test
 
 publish: build-tools # @HELP publish version on sdrancharts.onosproject.org
