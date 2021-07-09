@@ -4,6 +4,7 @@ module network {
 
   import aether-types{ prefix at; }
   import enterprise{ prefix ent; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -17,7 +18,7 @@ module network {
   }
 
   typedef network-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -65,7 +66,8 @@ module network {
       leaf enterprise {
         type leafref {
           path "/ent:enterprise/ent:enterprise/ent:id";
-        }              
+        }
+        mandatory true;
         description
           "Link to enterprise that owns this Network. If this is set to None, then the Network is globally provided by Aether.";
       }      

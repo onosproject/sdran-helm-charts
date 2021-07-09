@@ -84,7 +84,7 @@ module aether-types {
   typedef mtu {
       // TODO: Aether-roc-api fails on uint16. AETHER-1859.
       type uint32 {
-        range 0..65535;
+        range 68..65535;
       }
       default 1492;
   }

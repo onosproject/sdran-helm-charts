@@ -5,6 +5,7 @@ module application {
   import ietf-inet-types{ prefix ietf; }
   import aether-types{ prefix at; }
   import enterprise{ prefix ent; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -19,7 +20,7 @@ module application {
   }
 
   typedef application-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -90,7 +91,8 @@ module application {
       leaf enterprise {
         type leafref {
           path "/ent:enterprise/ent:enterprise/ent:id";
-        }              
+        }
+        mandatory true;
         description
           "Link to enterprise that owns this Application. May be set to None if the application is global to all Enterprises.";
       }

@@ -3,6 +3,7 @@ module traffic-class {
   prefix tp;
 
   import aether-types{ prefix at; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -16,7 +17,7 @@ module traffic-class {
   }
 
   typedef traffic-class-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }

@@ -4,6 +4,7 @@ module template {
 
   import aether-types{ prefix at; }
   import traffic-class{ prefix tc; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -18,7 +19,7 @@ module template {
   }
 
   typedef template-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }

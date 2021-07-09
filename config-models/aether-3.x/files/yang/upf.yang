@@ -4,6 +4,7 @@ module upf {
 
   import ietf-inet-types { prefix inet; }
   import enterprise{ prefix ent; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -15,7 +16,7 @@ module upf {
   }
 
   typedef upf-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -69,7 +70,8 @@ module upf {
       leaf enterprise {
         type leafref {
           path "/ent:enterprise/ent:enterprise/ent:id";
-        }              
+        }
+        mandatory true;
         description
           "Link to enterprise that owns this Access Point List";
       }      
