@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
-
+{{ if .Values.import.grafana.enabled }}
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -73,3 +73,4 @@ spec:
           configMap:
             name: {{ template "aether-roc-api.fullname" . }}-dashboards-acme
 
+  {{end}}
