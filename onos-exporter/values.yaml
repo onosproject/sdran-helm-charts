@@ -31,6 +31,7 @@ config:
     xappPciEndpoint: "onos-pci:5150"
     xappKpimonEndpoint: "onos-kpimon:5150"
     topoEndpoint: "onos-topo:5150"
+    uenibEndpoint: "onos-uenib:5150"
     
 resources: {}
 
