@@ -41,6 +41,16 @@ service:
 config:
   mho:
     e2tEndpoint: "onos-e2t:5150"
+    config_json:
+        reportingPeriod: 1000
+        periodic: true
+        uponRcvMeasReport: true
+        uponChangeRrcStatus: true
+        A3OffsetRange: 1
+        HysteresisRange: 2
+        CellIndividualOffset: 18
+        FrequencyOffset: 19
+        TimeToTrigger: 0
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -17,4 +17,5 @@ data:
 {{ toYaml .Values.logging | indent 4 }}
 {{- end}}
   config.json: |-
-{{ .Files.Get "files/configs/config.json" | indent 4}}
+{{ .Values.config.mho.config_json | toPrettyJson | indent 4 }}
+
