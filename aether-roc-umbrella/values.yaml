@@ -124,6 +124,11 @@ grafana:
       domain: aether-roc-gui
       root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana/"
       serve_from_sub_path: true
+    auth.anonymous:
+      enabled: true
+      org_role: Viewer
+      # Hide the Grafana version text from the footer and help tooltip for unauthenticated users (default: false)
+      hide_version: true
     auth.generic_oauth:
       enabled: true
       client_id: aether-roc-gui
@@ -157,40 +162,7 @@ prometheus:
 sdcore-test-dummy:
   service:
     type: ClusterIP
-  serverBlock: |-
-    log_format client '$remote_addr - $remote_user $request_time $upstream_response_time '
-                      '[$time_local] "$request" $status $body_bytes_sent $request_body "$http_referer" '
-                      '"$http_user_agent" "$http_x_forwarded_for"';
-
-    server {
-      listen 0.0.0.0:8080;
-      default_type application/json;
-      access_log /opt/bitnami/nginx/logs/access.log client;
-
-      # You can provide a special subPath or the root
-      location = /v1/config {
-        root /;
-        proxy_pass http://127.0.0.1:8080/post_dummy;
-      }
-      location = /v1/config/policies {
-        root /;
-        proxy_pass http://127.0.0.1:8080/post_dummy;
-      }
-      location = /v1/config/imsis {
-        root /;
-        proxy_pass http://127.0.0.1:8080/post_dummy;
-      }
-      location /v1/config/5g {
-        rewrite ^/v1/config/5g/.* /v1/config/5g break;
-        proxy_pass http://127.0.0.1:8080/post_dummy;
-      }
-      location = /post_dummy {
-        # turn off logging here to avoid double logging
-        access_log off;
-        return 200;
-      }
-      error_page  405     =200 $uri;
-    }
+  existingServerBlockConfigmap: aether-roc-umbrella-sdcore-test-dummy
 
 # ONOS-CONFIG
 onos-config:
