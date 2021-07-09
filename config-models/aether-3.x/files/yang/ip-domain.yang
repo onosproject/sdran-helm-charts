@@ -5,6 +5,7 @@ module ip-domain {
   import ietf-inet-types { prefix inet; }
   import aether-types { prefix at; }
   import enterprise{ prefix ent; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -19,7 +20,7 @@ module ip-domain {
   }
 
   typedef ip-domain-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -84,7 +85,8 @@ module ip-domain {
       leaf enterprise {
         type leafref {
           path "/ent:enterprise/ent:enterprise/ent:id";
-        }              
+        }
+        mandatory true;
         description
           "Link to enterprise that owns this Access Point List";
       }         

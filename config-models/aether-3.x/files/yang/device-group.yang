@@ -4,6 +4,7 @@ module device-group {
 
   import ip-domain{ prefix ipd; }
   import site{ prefix st; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -24,7 +25,7 @@ module device-group {
   }
 
   typedef device-group-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }  
@@ -78,7 +79,8 @@ module device-group {
       leaf site {
         type leafref {
           path "/st:site/st:site/st:id";
-        }          
+        }
+        mandatory true;
         description
           "Link to site";
       }        

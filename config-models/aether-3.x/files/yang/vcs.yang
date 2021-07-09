@@ -9,6 +9,7 @@ module vcs {
   import aether-types{ prefix at; }
   import device-group{ prefix dg; }
   import traffic-class{ prefix tc; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -22,7 +23,7 @@ module vcs {
   }
 
   typedef vcs-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -82,6 +83,7 @@ module vcs {
           type leafref {
             path "/app:application/app:application/app:id";
           }
+          mandatory true;
           description
             "Link to application";
         }

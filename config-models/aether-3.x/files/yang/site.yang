@@ -4,6 +4,7 @@ module site {
 
   import enterprise{ prefix ent; }
   import network{ prefix net; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -16,7 +17,7 @@ module site {
   }
 
   typedef site-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
@@ -61,6 +62,7 @@ module site {
         type string {
           length 1..100;
         }
+        mandatory true;
         description "description of this site";
       }         
     }

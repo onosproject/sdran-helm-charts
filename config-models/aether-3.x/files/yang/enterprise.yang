@@ -3,6 +3,7 @@ module enterprise {
   prefix ent;
 
   import connectivity-service { prefix cs; }
+  import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -16,7 +17,7 @@ module enterprise {
   }
 
   typedef enterprise-id {
-        type string {
+        type yg:yang-identifier {
             length 1..32;
         }
   }
