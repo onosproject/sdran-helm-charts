@@ -18,3 +18,4 @@ data:
 {{- end}}
   config.json: |-
 {{ .Values.config.mho.config_json | toPrettyJson | indent 4 }}
+
