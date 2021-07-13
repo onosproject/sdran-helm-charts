@@ -2,6 +2,7 @@ module site {
   namespace "http://opennetworking.org/aether/site";
   prefix st;
 
+  import aether-types{ prefix at; }
   import enterprise{ prefix ent; }
   import network{ prefix net; }
   import ietf-yang-types{ prefix yg; }
@@ -50,6 +51,40 @@ module site {
           "Link to enterprise that owns this site";
       }
 
+      container imsi-definition {
+        leaf mcc {
+          type at:mcc;
+          description "mobile country code";
+        }
+        leaf mnc {
+          type at:mcc;
+          description "mobile network code";
+        }
+        leaf enterprise {
+          type at:ent;
+          description "enterprise-specific identifier";
+        }
+        leaf format {
+          type string {
+            length 15;
+          }
+          default "CCCNNNEEESSSSSS";
+          description "IMSI format specifier, describes how fields are packed into an IMSI. Must be exactly 15 characters long";
+          // Format specifiers:
+          //   C = MCC
+          //   N = MNC
+          //   E = Enterprise
+          //   0 = Forced Zero
+          //   S = Subscriber ID
+          // default is
+          //   3 digit MCC
+          //   3 digit MNC
+          //   3 digit enterprise ID
+          //   5 digit subscriber ID
+        }
+      }
+
+      // DEPRECATED
       leaf network {
         type leafref {
           path "/net:network/net:network/net:id";
