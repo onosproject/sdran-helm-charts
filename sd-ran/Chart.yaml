@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.1.81
+version: 1.1.82
 appVersion: v1.1.2
 keywords:
   - onos
@@ -67,6 +67,10 @@ dependencies:
     condition: import.onos-pci.enabled
     repository: "@sdran"
     version: 0.6.14
+  - name: fb-kpimon-xapp
+    condition: import.fb-kpimon-xapp.enabled
+    repository: "@sdran"
+    version: 0.0.1
   - name: fb-ah-xapp
     condition: import.fb-ah-xapp.enabled
     repository: "@sdran"
