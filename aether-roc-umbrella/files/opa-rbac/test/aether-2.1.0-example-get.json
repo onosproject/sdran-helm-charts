@@ -1,0 +1,906 @@
+{
+  "groups": [
+    "mixedGroup",
+    "AetherROCAdmin",
+    "EnterpriseAdmin"
+  ],
+  "access_profile": {
+    "access_profile": [
+      {
+        "description": "access profile that allows all access",
+        "display_name": "Access All",
+        "filter": "null",
+        "id": "access_all",
+        "type": "allow_all"
+      },
+      {
+        "description": "access profile that only allows access to the apps network",
+        "display_name": "Only Apps Network",
+        "filter": "only^apps^network",
+        "id": "apps_only",
+        "type": "specific_network"
+      },
+      {
+        "description": "exclude an app from contacting a specific destination",
+        "display_name": "Exclude App By Name",
+        "filter": "exclude_app_name",
+        "id": "excluding_app",
+        "type": "excluding_this_app"
+      },
+      {
+        "description": "access profile that allows Internet access only",
+        "display_name": "Internet Access Only",
+        "filter": "No^private^network",
+        "id": "internet_only",
+        "type": "internet_only"
+      },
+      {
+        "description": "access profile that allows intranet access only",
+        "display_name": "Private Network Only",
+        "filter": "only^private^network",
+        "id": "intranet_only",
+        "type": "intranet_only"
+      },
+      {
+        "description": "access profile that allows internet only",
+        "display_name": "Access Profile 1",
+        "filter": "null",
+        "id": "profile_access_demo_1",
+        "type": "allow_all"
+      },
+      {
+        "description": "allow an app to contact a specific destination",
+        "display_name": "Allow App By Name",
+        "filter": "allow_app_name",
+        "id": "specific_app",
+        "type": "specific_destination_only"
+      }
+    ]
+  },
+  "apn_profile": {
+    "apn_profile": [
+      {
+        "apn_name": "internet",
+        "description": "Ciena Internet APN config",
+        "display_name": "Ciena Internet",
+        "dns_primary": "10.24.7.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_ciena",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Cornell1 Internet APN config",
+        "display_name": "Cornell1 Internet",
+        "dns_primary": "10.68.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_cornell1",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Default Internet APN config",
+        "display_name": "Default Internet",
+        "dns_primary": "1.1.1.1",
+        "dns_secondary": "8.8.8.8",
+        "gx_enabled": true,
+        "id": "apn_internet_default",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Intel Internet APN config",
+        "display_name": "Intel Internet",
+        "dns_primary": "10.212.74.139",
+        "dns_secondary": "10.212.87.15",
+        "gx_enabled": true,
+        "id": "apn_internet_intel",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "ONF Menlo Internet APN config",
+        "display_name": "ONF Menlo Internet",
+        "dns_primary": "10.53.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_menlo",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Princeton1 Internet APN config",
+        "display_name": "Princeton1 Internet",
+        "dns_primary": "10.70.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_princeton1",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Stanford1 Internet APN config",
+        "display_name": "Stanford1 Internet",
+        "dns_primary": "10.65.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_stanford1",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Stanford2 Internet APN config",
+        "display_name": "Stanford2 Internet",
+        "dns_primary": "10.67.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_stanford2",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "Telefonica Internet APN config",
+        "display_name": "Telefonica Internet",
+        "dns_primary": "10.82.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_tef",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "ONF Tucson Internet APN config",
+        "display_name": "ONF Tucson Internet",
+        "dns_primary": "10.59.128.11",
+        "dns_secondary": "1.1.1.1",
+        "gx_enabled": true,
+        "id": "apn_internet_tucson",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "the default APN profile",
+        "display_name": "APN Profile 1",
+        "dns_primary": "8.8.8.4",
+        "dns_secondary": "8.8.8.8",
+        "gx_enabled": true,
+        "id": "apn_profile1",
+        "mtu": 1460,
+        "service_group": "internet"
+      },
+      {
+        "apn_name": "internet",
+        "description": "the default APN profile",
+        "display_name": "APN Profile 1",
+        "dns_primary": "8.8.4.4",
+        "dns_secondary": "8.8.8.8",
+        "gx_enabled": true,
+        "id": "profile_apn_demo_1",
+        "mtu": 1460,
+        "service_group": "internet"
+      }
+    ]
+  },
+  "connectivity_service": {
+    "connectivity_service": [
+      {
+        "description": "Connectivity service endpoints",
+        "display_name": "Connectivity Service 1",
+        "hss_endpoint": "http://aether_roc_umbrella_sdcore_test_dummy/v1/config/imsis",
+        "id": "connectivity_service_demo_1",
+        "pcrf_endpoint": "http://aether_roc_umbrella_sdcore_test_dummy/v1/config/policies",
+        "spgwc_endpoint": "http://aether_roc_umbrella_sdcore_test_dummy/v1/config"
+      },
+      {
+        "description": "Connectivity service endpoints",
+        "display_name": "Connectivity Service v1",
+        "hss_endpoint": "http://aether_roc_umbrella_sdcore_test_dummy/v1/config",
+        "id": "connectivity_service_v1",
+        "spgwc_endpoint": "http://aether_roc_umbrella_sdcore_test_dummy/v1/config"
+      }
+    ]
+  },
+  "enterprise": {
+    "enterprise": [
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Aether _ Ciena",
+        "display_name": "Aether _ Ciena",
+        "id": "aether_ciena"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Aether _ Intel",
+        "display_name": "Aether _ Intel",
+        "id": "aether_intel"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Aether _ NTT",
+        "display_name": "Aether _ NTT",
+        "id": "aether_ntt"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Aether _ Open Networking Foundation",
+        "display_name": "Aether _ ONF",
+        "id": "aether_onf"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Aether _ Telefonica",
+        "display_name": "Aether _ Telefonica",
+        "id": "aether_tef"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_demo_1",
+            "enabled": true
+          }
+        ],
+        "description": "Enterprise configuration",
+        "display_name": "Enterprise 1",
+        "id": "enterprise_demo_1"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Pronto _ Cornell",
+        "display_name": "Pronto _ Cornell",
+        "id": "pronto_cornell"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Pronto _ Princeton",
+        "display_name": "Pronto _ Princeton",
+        "id": "pronto_princeton"
+      },
+      {
+        "connectivity_service": [
+          {
+            "connectivity_service": "connectivity_service_v1",
+            "enabled": true
+          }
+        ],
+        "description": "Pronto _ Stanford",
+        "display_name": "Pronto _ Stanford",
+        "id": "pronto_stanford"
+      }
+    ]
+  },
+  "qos_profile": {
+    "qos_profile": [
+      {
+        "apn_ambr": {
+          "downlink": 12345678,
+          "uplink": 12345678
+        },
+        "description": "qos profile for demo",
+        "display_name": "QOS Profile 1",
+        "id": "profile_qos_demo_1"
+      },
+      {
+        "apn_ambr": {
+          "downlink": 12345678,
+          "uplink": 12345678
+        },
+        "description": "low bitrate internet service",
+        "display_name": "QOS Profile 1",
+        "id": "qos_profile1"
+      }
+    ]
+  },
+  "security_profile": {
+    "security_profile": [
+      {
+        "description": "default security profile",
+        "display_name": "Default Security Profile",
+        "id": "profile_security_default_1",
+        "key": "000102030405060708090a0b0c0d0e0f",
+        "opc": "69d5c2eb2e2e624750541d3bbc692ba5",
+        "sqn": 135
+      },
+      {
+        "description": "security profile for demo",
+        "display_name": "Security Profile 1",
+        "id": "profile_security_demo_1",
+        "key": "465b5ce8b199b49faa5f0a2ee238a6bc",
+        "opc": "d4416644f6154936193433dd20a0ace0",
+        "sqn": 96
+      },
+      {
+        "description": "NTT security profile",
+        "display_name": "NTT Security Profile",
+        "id": "profile_security_ntt_1",
+        "key": "ACB9E480B30DC12C6BDD26BE882D2940",
+        "opc": "F5929B14A34AD906BC44D205242CD182",
+        "sqn": 135
+      },
+      {
+        "description": "Telefonica security profile",
+        "display_name": "Telefonica Security Profile",
+        "id": "profile_security_tef_1",
+        "key": "83BBE53DFA050D9648C1D14937FC1AC3",
+        "opc": "346EF56C902AF38E5E4C4E3A0B0C2497",
+        "sqn": 135
+      }
+    ]
+  },
+  "service_group": {
+    "service_group": [
+      {
+        "description": "Internet service",
+        "id": "internet",
+        "service_policies": [
+          {
+            "kind": "default",
+            "service_policy": "be_internet_access"
+          }
+        ]
+      },
+      {
+        "description": "Menlo high definition camera service",
+        "id": "iot_hd_camera_menlo",
+        "service_policies": [
+          {
+            "kind": "default",
+            "service_policy": "video_non_gbr_1"
+          }
+        ]
+      }
+    ]
+  },
+  "service_policy": {
+    "service_policy": [
+      {
+        "ambr": {
+          "downlink": 20000000,
+          "uplink": 100000
+        },
+        "arp": 1,
+        "id": "be_internet_access",
+        "qci": 9,
+        "rules": [
+          {
+            "enabled": true,
+            "rule": "best_effort_internet_access"
+          }
+        ]
+      },
+      {
+        "ambr": {
+          "downlink": 20000000,
+          "uplink": 100000
+        },
+        "arp": 1,
+        "id": "video_non_gbr_1",
+        "qci": 7,
+        "rules": [
+          {
+            "enabled": true,
+            "rule": "video_non_gbr_1"
+          }
+        ]
+      }
+    ]
+  },
+  "service_rule": {
+    "service_rule": [
+      {
+        "charging_rule_name": "best_effort_internet_access",
+        "description": "rule for enabling best effort internet",
+        "flow": {
+          "specification": "permit out ip 0.0.0.0/0 to assigned"
+        },
+        "id": "best_effort_internet_access",
+        "qos": {
+          "aggregate_maximum_bitrate": {
+            "downlink": 10240000,
+            "uplink": 1024000
+          },
+          "arp": {
+            "preemption_capability": true,
+            "preemption_vulnerability": true,
+            "priority": 1
+          },
+          "guaranteed_bitrate": {
+            "downlink": 1,
+            "uplink": 1
+          },
+          "maximum_requested_bandwidth": {
+            "downlink": 5120000,
+            "uplink": 512000
+          },
+          "qci": 9
+        }
+      },
+      {
+        "charging_rule_name": "video_non_gbr_1",
+        "description": "rule for non_gbr video",
+        "flow": {
+          "specification": "permit out ip 0.0.0.0/0 to assigned"
+        },
+        "id": "video_non_gbr_1",
+        "qos": {
+          "aggregate_maximum_bitrate": {
+            "downlink": 5555,
+            "uplink": 4444
+          },
+          "arp": {
+            "preemption_capability": true,
+            "preemption_vulnerability": true,
+            "priority": 1
+          },
+          "guaranteed_bitrate": {
+            "downlink": 2222,
+            "uplink": 1111
+          },
+          "maximum_requested_bandwidth": {
+            "downlink": 3456,
+            "uplink": 2345
+          },
+          "qci": 9
+        }
+      }
+    ]
+  },
+  "subscriber": {
+    "ue": [
+      {
+        "display_name": "Telefonica subscriber match rule",
+        "enabled": true,
+        "enterprise": "aether_tef",
+        "id": "0debf047_8416_4539_9abf_02a0d7e7f9a3",
+        "imsi_range_from": "722070000002441",
+        "imsi_range_to": "722070000002450",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_tef",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_tef_1",
+          "up_profile": "tef"
+        },
+        "serving_plmn": {
+          "mcc": 722,
+          "mnc": 7,
+          "tac": 110
+        }
+      },
+      {
+        "display_name": "Stanford2 subscriber match rule",
+        "enabled": true,
+        "enterprise": "pronto_stanford",
+        "id": "1c6852e6_5b12_413a_9fa5_c631c644136c",
+        "imsi_range_from": "315010202000001",
+        "imsi_range_to": "315010202000020",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_stanford2",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "stanford2"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 603
+        }
+      },
+      {
+        "display_name": "Princeton1 subscriber match rule",
+        "enabled": true,
+        "enterprise": "pronto_princeton",
+        "id": "30f77900_18b1_480c_a419_031956d83a9c",
+        "imsi_range_from": "315010204000001",
+        "imsi_range_to": "315010204000020",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_princeton1",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "princeton1"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 605
+        }
+      },
+      {
+        "display_name": "Stanford1 subscriber match rule",
+        "enabled": true,
+        "enterprise": "pronto_stanford",
+        "id": "415d0496_6926_4a49_b0f1_69ef1742fd5d",
+        "imsi_range_from": "315010201000001",
+        "imsi_range_to": "315010201000020",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_stanford1",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "stanford1"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 601
+        }
+      },
+      {
+        "display_name": "Ciena subscriber match rule",
+        "enabled": true,
+        "enterprise": "aether_ciena",
+        "id": "4c814a64_c592_468e_9435_b60f225f97ff",
+        "imsi_range_from": "315010101000001",
+        "imsi_range_to": "315010101000010",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_ciena",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "ciena"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 5
+        }
+      },
+      {
+        "display_name": "Cornell1 subscriber match rule",
+        "enabled": true,
+        "enterprise": "pronto_cornell",
+        "id": "554b4c5b_de49_4868_ba7e_f428aefc0984",
+        "imsi_range_from": "315010203000001",
+        "imsi_range_to": "315010203000020",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_cornell1",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "cornell1"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 607
+        }
+      },
+      {
+        "display_name": "Subscriber Match Rule 1",
+        "enabled": true,
+        "enterprise": "enterprise_demo_1",
+        "id": "5fc0bfc8_4ecc_11eb_b8e7_6f6e6f732d63",
+        "imsi_range_from": "208014567891200",
+        "imsi_range_to": "208014567891300",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "profile_access_demo_1",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "profile_apn_demo_1",
+          "qos_profile": "profile_qos_demo_1",
+          "security_profile": "profile_security_demo_1",
+          "up_profile": "profile_up_demo_1"
+        },
+        "serving_plmn": {
+          "mcc": 208,
+          "mnc": 10,
+          "tac": 1
+        }
+      },
+      {
+        "id": "8d92f0cf_d83d_482c_866d_f53ee1426622",
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": false
+            }
+          ],
+          "apn_profile": "apn_internet_intel",
+          "qos_profile": "profile_qos_demo_1",
+          "security_profile": "profile_security_ntt_1",
+          "up_profile": "cornell1"
+        }
+      },
+      {
+        "display_name": "Intel subscriber match rule 1",
+        "enabled": true,
+        "enterprise": "aether_intel",
+        "id": "c6711eb4_5210_4d94_b83c_0f890dc21c31",
+        "imsi_range_from": "315010888812341",
+        "imsi_range_to": "315010888812346",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_intel",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "intel"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 101
+        }
+      },
+      {
+        "display_name": "ONF Tucson subscriber match rule",
+        "enabled": true,
+        "enterprise": "aether_onf",
+        "id": "cbdb20c1_c3d7_47e3_a1a1_7465c8ad6ff1",
+        "imsi_range_from": "315010999912301",
+        "imsi_range_to": "315010999912303",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_tucson",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "tucson"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 222
+        }
+      },
+      {
+        "display_name": "NTT subscriber match rule",
+        "enabled": true,
+        "enterprise": "aether_ntt",
+        "id": "e8b4f8ea_cd9c_4ae7_a1df_15ee82cc4dc6",
+        "imsi_range_from": "999002999970951",
+        "imsi_range_to": "999002999971950",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_default",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_ntt_1",
+          "up_profile": "ntt"
+        },
+        "serving_plmn": {
+          "mcc": 999,
+          "mnc": 2,
+          "tac": 1
+        }
+      },
+      {
+        "display_name": "ONF Menlo subscriber match rule",
+        "enabled": true,
+        "enterprise": "aether_onf",
+        "id": "f2ba8cc0_e593_403b_a130_f18a99018f6e",
+        "imsi_range_from": "315010999912341",
+        "imsi_range_to": "315010999912356",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_menlo",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "menlo"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 203
+        }
+      },
+      {
+        "display_name": "Intel subscriber match rule 2",
+        "enabled": true,
+        "enterprise": "aether_intel",
+        "id": "f5a0929f_b4a4_4f34_8bd5_52c57eeb4a50",
+        "imsi_range_from": "315010102000001",
+        "imsi_range_to": "315010102000002",
+        "priority": 5,
+        "profiles": {
+          "access_profile": [
+            {
+              "access_profile": "access_all",
+              "allowed": true
+            }
+          ],
+          "apn_profile": "apn_internet_intel",
+          "qos_profile": "qos_profile1",
+          "security_profile": "profile_security_default_1",
+          "up_profile": "intel"
+        },
+        "serving_plmn": {
+          "mcc": 315,
+          "mnc": 10,
+          "tac": 101
+        }
+      }
+    ]
+  },
+  "up_profile": {
+    "up_profile": [
+      {
+        "access_control": "none",
+        "description": "User plane profile for Ciena",
+        "display_name": "Ciena",
+        "id": "ciena",
+        "user_plane": "pfcp_agent.omec.svc.prd.ciena.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Cornell1",
+        "display_name": "Cornell1",
+        "id": "cornell1",
+        "user_plane": "pfcp_agent.omec.svc.prd.cornell1.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Intel",
+        "display_name": "Intel",
+        "id": "intel",
+        "user_plane": "upf.omec.svc.prd.intel.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for ONF Menlo",
+        "display_name": "ONF Menlo",
+        "id": "menlo",
+        "user_plane": "pfcp_agent.omec.svc.prd.menlo.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for NTT",
+        "display_name": "NTT",
+        "id": "ntt",
+        "user_plane": "upf.omec.svc.prd.ntt.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Princeton1",
+        "display_name": "Princeton1",
+        "id": "princeton1",
+        "user_plane": "pfcp_agent.omec.svc.prd.princeton1.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "user_plane profile for spgwu1",
+        "display_name": "UP Profile 1",
+        "id": "profile_up_demo_1",
+        "user_plane": "upf_headless"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Stanford1",
+        "display_name": "Stanford1",
+        "id": "stanford1",
+        "user_plane": "pfcp_agent.omec.svc.prd.stanford1.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Stanford2",
+        "display_name": "Stanford2",
+        "id": "stanford2",
+        "user_plane": "pfcp_agent.omec.svc.prd.stanford2.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for Telefonica",
+        "display_name": "Telefonica",
+        "id": "tef",
+        "user_plane": "upf.omec.svc.prd.tef.aetherproject.net"
+      },
+      {
+        "access_control": "none",
+        "description": "User plane profile for ONF Tucson",
+        "display_name": "ONF Tucson",
+        "id": "tucson",
+        "user_plane": "upf.omec.svc.prd.tucson.aetherproject.net"
+      }
+    ]
+  }
+}

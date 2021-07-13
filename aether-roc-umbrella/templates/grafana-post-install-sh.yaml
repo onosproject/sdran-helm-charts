@@ -27,28 +27,29 @@ data:
       ORGASCII=${org//[^a-zA-Z0-9]/_}
       SUCCESS=-1
       ORGID=-1
-      echo "Calling /usr/bin/curl -H "Content-Type: application/json" -d '{"name":"$org"}' http://$ADMINUSER:####@$SERVICE/api/orgs"
-      while [ $SUCCESS -ne 0 ];
-      do
-        DATA={\"name\":\"$org\"}
-        echo "Creating Org $org"
-        /usr/bin/curl -o /tmp/curlout -H "Content-Type: application/json" -d "$DATA" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/orgs
-        SUCCESS=`echo $?`
-        echo "SUCCESS $SUCCESS"
-        if [ $SUCCESS -ne 0 ]
-        then
-          sleep $SLEEP
-          echo "Waiting $SLEEP seconds for Grafana to start"
-        else
-          ORGID=$(grep -o "[0-9]*" /tmp/curlout)
-          echo "Successful! Result $ORGID"
-        fi
-      done
+      # Commented out for the moment - see aether-roc-gui/docs/grafana.md
+      #      echo "Calling /usr/bin/curl -H "Content-Type: application/json" -d '{"name":"$org"}' http://$ADMINUSER:####@$SERVICE/api/orgs"
+      #      while [ $SUCCESS -ne 0 ];
+      #      do
+      #        DATA={\"name\":\"$org\"}
+      #        echo "Creating Org $org"
+      #        /usr/bin/curl -o /tmp/curlout -H "Content-Type: application/json" -d "$DATA" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/orgs
+      #        SUCCESS=`echo $?`
+      #        echo "SUCCESS $SUCCESS"
+      #        if [ $SUCCESS -ne 0 ]
+      #        then
+      #          sleep $SLEEP
+      #          echo "Waiting $SLEEP seconds for Grafana to start"
+      #        else
+      #          ORGID=$(grep -o "[0-9]*" /tmp/curlout)
+      #          echo "Successful! Result $ORGID"
+      #        fi
+      #      done
 
-      echo "Calling /api/user/using/$ORGID"
-      /usr/bin/curl -s -X POST http://$ADMINUSER:$ADMINPASS@$SERVICE/api/user/using/$ORGID
-      SUCCESS=`echo $?`
-      echo "SUCCESS $SUCCESS"
+      #      echo "Calling /api/user/using/$ORGID"
+      #      /usr/bin/curl -s -X POST http://$ADMINUSER:$ADMINPASS@$SERVICE/api/user/using/$ORGID
+      #      SUCCESS=`echo $?`
+      #      echo "SUCCESS $SUCCESS"
 
       echo "Creating folder in $org"
       FOLDER={\"uid\":\"$ORGASCII\",\"title\":\"$ORGASCII\"}

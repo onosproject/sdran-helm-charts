@@ -1,0 +1,28 @@
+{
+  "groups": [
+    "mixedGroup",
+    "AetherROCAdmin"
+  ],
+  "template": {
+    "template": [
+      {
+        "description": "do",
+        "display-name": "laborum fugiat",
+        "downlink": 322694552,
+        "id": "aliquip",
+        "sd": 14628949,
+        "sst": 1,
+        "uplink": 1607714163
+      },
+      {
+        "description": "do",
+        "display-name": "quattro fugiat",
+        "downlink": 322694552,
+        "id": "quattro",
+        "sd": 14628949,
+        "sst": 1,
+        "uplink": 1607714163
+      }
+    ]
+  }
+}

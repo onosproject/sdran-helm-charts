@@ -31,7 +31,7 @@ spec:
       restartPolicy: Never
       containers:
         - name: post-install-job
-          image: "onosproject/onos-cli:latest"
+          image: "onosproject/onos-cli:v0.7.28"
           env:
             - name: GF_SECURITY_ADMIN_USER
               valueFrom:
