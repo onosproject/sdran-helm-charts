@@ -55,9 +55,6 @@ func (s *AetherRocUmbrellaSuite) TestInstall(t *testing.T) {
 		SetUsername(username).
 		SetPassword(password).
 		WithTimeout(15*time.Minute).
-		Set("onos-ric.service.external.nodePort", 0).
-		Set("onos-ric-ho.service.external.nodePort", 0).
-		Set("onos-ric-mlb.service.external.nodePort", 0).
 		Set("import.onos-gui.enabled", false).
 		Set("import.aether-roc-gui.v2_1.enabled", false).
 		Set("import.aether-roc-gui.v3.enabled", false).

@@ -1,0 +1,18 @@
+{
+  "imsis": [
+    "170029313275060",
+    "170029313275061",
+    "170029313275070",
+    "170029313275071",
+    "170029313275072",
+    "170029313275073"
+  ],
+  "ip-domain-name": "starbucks-newyork",
+  "site-info": "starbucks-newyork",
+  "ip-domain-expanded": {
+    "dnn": "Internet",
+    "ue-ip-pool": "254.186.117.251/31",
+    "dns-primary": "8.8.8.1",
+    "mtu": 57600
+  }
+}

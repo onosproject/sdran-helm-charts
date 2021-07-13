@@ -1,0 +1,44 @@
+{
+  "slice-id": {
+    "sst": 79,
+    "sd": 2973238
+  },
+  "qos": {
+    "uplink": 13227287,
+    "downlink": 28492626,
+    "traffic-class": "class-2"
+  },
+  "site-device-group": [
+    "acme-chicago-robots"
+  ],
+  "site-info": {
+    "site-name": "acme-chicago",
+    "plmn": {
+      "mcc": "123",
+      "mnc": "456"
+    },
+    "gNodeBs": [
+      {
+        "name": "ap2.chicago.acme.com",
+        "tac": 8002
+      }
+    ],
+    "upf": {
+      "upf-name": "chicago.robots-upf.acme.com",
+      "upf-port": 6161
+    }
+  },
+  "deny-applications": [
+    "acme-dataacquisition"
+  ],
+  "permit-applications": [],
+  "applications-information": [
+    {
+      "app-name": "acme-dataacquisition",
+      "endpoint": "da.acme.com/32",
+      "start-port": 7588,
+      "end-port": 7585,
+      "protocol": 6
+    }
+  ]
+}

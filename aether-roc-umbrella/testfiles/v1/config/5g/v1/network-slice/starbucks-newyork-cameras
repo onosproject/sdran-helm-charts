@@ -1,0 +1,44 @@
+{
+  "slice-id": {
+    "sst": 127,
+    "sd": 8284729
+  },
+  "qos": {
+    "uplink": 38997335,
+    "downlink": 948091966,
+    "traffic-class": "class-1"
+  },
+  "site-device-group": [
+    "starbucks-newyork-cameras"
+  ],
+  "site-info": {
+    "site-name": "starbucks-newyork",
+    "plmn": {
+      "mcc": "21",
+      "mnc": "32"
+    },
+    "gNodeBs": [
+      {
+        "name": "ap2.newyork.starbucks.com",
+        "tac": 8002
+      }
+    ],
+    "upf": {
+      "upf-name": "newyork.cameras-upf.starbucks.com",
+      "upf-port": 6161
+    }
+  },
+  "deny-applications": [],
+  "permit-applications": [
+    "starbucks-nvr"
+  ],
+  "applications-information": [
+    {
+      "app-name": "starbucks-nvr",
+      "endpoint": "nvr.starbucks.com/32",
+      "start-port": 3330,
+      "end-port": 3316,
+      "protocol": 17
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slice-id": {
+    "sst": 79,
+    "sd": 2973238
+  },
+  "qos": {
+    "uplink": 13227287,
+    "downlink": 28492626,
+    "traffic-class": "class-2"
+  },
+  "site-device-group": [
+    "starbucks-seattle-cameras"
+  ],
+  "site-info": {
+    "site-name": "starbucks-seattle",
+    "plmn": {
+      "mcc": "265",
+      "mnc": "122"
+    },
+    "gNodeBs": [
+      {
+        "name": "ap2.seattle.starbucks.com",
+        "tac": 87475
+      },
+      {
+        "name": "ap1.seattle.starbucks.com",
+        "tac": 654
+      }
+    ],
+    "upf": {
+      "upf-name": "seattle.cameras-upf.starbucks.com",
+      "upf-port": 9229
+    }
+  },
+  "deny-applications": [
+    "starbucks-nvr"
+  ],
+  "permit-applications": [],
+  "applications-information": [
+    {
+      "app-name": "starbucks-nvr",
+      "endpoint": "nvr.starbucks.com/32",
+      "start-port": 3330,
+      "end-port": 3316,
+      "protocol": 17
+    }
+  ]
+}
