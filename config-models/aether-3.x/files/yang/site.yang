@@ -4,7 +4,6 @@ module site {
 
   import aether-types{ prefix at; }
   import enterprise{ prefix ent; }
-  import network{ prefix net; }
   import ietf-yang-types{ prefix yg; }
 
   organization "Open Networking Foundation.";
@@ -87,15 +86,6 @@ module site {
           //   5 digit subscriber ID
         }
       }
-
-      // DEPRECATED
-      leaf network {
-        type leafref {
-          path "/net:network/net:network/net:id";
-        }          
-        description
-          "Link to network for this vcs";
-      }      
 
       leaf description {
         type string {

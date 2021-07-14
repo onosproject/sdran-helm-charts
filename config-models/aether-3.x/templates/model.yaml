@@ -43,10 +43,6 @@ spec:
     organization: Open Networking Foundation
     revision: 2021-06-02
     file: ip-domain.yang
-  - name: network
-    organization: Open Networking Foundation
-    revision: 2021-06-02
-    file: network.yang
   - name: site
     organization: Open Networking Foundation
     revision: 2021-06-02
