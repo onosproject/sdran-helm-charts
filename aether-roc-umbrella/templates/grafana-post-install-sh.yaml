@@ -5,7 +5,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "aether-roc-api.fullname" . }}-grafana-post-install
+  name: {{ .Release.Name }}-grafana-post-install
   labels:
     app: {{ template "aether-roc-api.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"

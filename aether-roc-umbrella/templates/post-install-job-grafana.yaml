@@ -36,18 +36,18 @@ spec:
             - name: GF_SECURITY_ADMIN_USER
               valueFrom:
                 secretKeyRef:
-                  name: aether-roc-umbrella-grafana
+                  name: {{ .Release.Name }}-grafana
                   key: admin-user
             - name: GF_SECURITY_ADMIN_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: aether-roc-umbrella-grafana
+                  name: {{ .Release.Name }}-grafana
                   key: admin-password
           command: ["/usr/local/bin/grafana-post-install.sh"]
           args:
             - "$(GF_SECURITY_ADMIN_USER)"
             - "$(GF_SECURITY_ADMIN_PASSWORD)"
-            - "{{ .Chart.Name }}"
+            - "{{ .Release.Name }}"
             {{- range $org := .Values.grafana.orgs }}
             - {{ $org | quote }}
             {{- end}}
@@ -64,13 +64,13 @@ spec:
       volumes:
         - name: post-install
           configMap:
-            name: {{ template "aether-roc-api.fullname" . }}-grafana-post-install
+            name: {{ .Release.Name }}-grafana-post-install
             defaultMode: 0555
         - name: dashboards-starbucks
           configMap:
-            name: {{ template "aether-roc-api.fullname" . }}-dashboards-starbucks
+            name: {{ .Release.Name }}-dashboards-starbucks
         - name: dashboards-acme
           configMap:
-            name: {{ template "aether-roc-api.fullname" . }}-dashboards-acme
+            name: {{ .Release.Name }}-dashboards-acme
 
   {{end}}
