@@ -85,14 +85,14 @@ module: site
      +--rw site* [id]
         +--rw id                 site-id
         +--rw display-name?      string
-        +--rw enterprise?        -> /ent:enterprise/enterprise/id
+        +--rw enterprise         -> /ent:enterprise/enterprise/id
         +--rw imsi-definition
         |  +--rw mcc           at:mcc
         |  +--rw mnc           at:mnc
         |  +--rw enterprise    at:ent
         |  +--rw format        string
         +--rw network?           -> /net:network/network/id
-        +--rw description        string
+        +--rw description?       string
 
 module: template
   +--rw template

@@ -49,6 +49,7 @@ module site {
         }              
         description
           "Link to enterprise that owns this site";
+        mandatory true;          
       }
 
       container imsi-definition {
@@ -100,7 +101,6 @@ module site {
         type string {
           length 1..100;
         }
-        mandatory true;
         description "description of this site";
       }         
     }
