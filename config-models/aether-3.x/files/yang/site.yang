@@ -55,21 +55,24 @@ module site {
         leaf mcc {
           type at:mcc;
           description "mobile country code";
+          mandatory true;
         }
         leaf mnc {
-          type at:mcc;
+          type at:mnc;
           description "mobile network code";
+          mandatory true;
         }
         leaf enterprise {
           type at:ent;
           description "enterprise-specific identifier";
+          mandatory true;
         }
         leaf format {
           type string {
             length 15;
           }
-          default "CCCNNNEEESSSSSS";
-          description "IMSI format specifier, describes how fields are packed into an IMSI. Must be exactly 15 characters long";
+          mandatory true;
+          description "IMSI format specifier, describes how fields are packed into an IMSI. Must be exactly 15 characters long. For example, CCCNNNEEESSSSSS.";
           // Format specifiers:
           //   C = MCC
           //   N = MNC
