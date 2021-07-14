@@ -70,16 +70,6 @@ module: ip-domain
         +--rw description?     string
         +--rw enterprise       -> /ent:enterprise/enterprise/id
 
-module: network
-  +--rw network
-     +--rw network* [id]
-        +--rw id              network-id
-        +--rw display-name?   string
-        +--rw mcc             at:mcc
-        +--rw mnc             at:mnc
-        +--rw description?    string
-        +--rw enterprise      -> /ent:enterprise/enterprise/id
-
 module: site
   +--rw site
      +--rw site* [id]
@@ -91,7 +81,6 @@ module: site
         |  +--rw mnc           at:mnc
         |  +--rw enterprise    at:ent
         |  +--rw format        string
-        +--rw network?           -> /net:network/network/id
         +--rw description?       string
 
 module: template
