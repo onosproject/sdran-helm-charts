@@ -29,6 +29,12 @@ module aether-types {
       }
   }
 
+  typedef ent {
+      type uint32 {
+        range 0..999;
+      }
+  }  
+
   typedef sst {
       // TODO: Aether-roc-api fails on uint8. AETHER-1859.
       type uint32 {
