@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 31,
   "links": [],
   "panels": [
     {
@@ -39,7 +38,9 @@
       "dashes": false,
       "datasource": null,
       "fieldConfig": {
-        "defaults": {},
+        "defaults": {
+          "custom": {}
+        },
         "overrides": []
       },
       "fill": 1,
@@ -68,7 +69,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -106,7 +107,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "onos kpimon",
+      "title": "RRC-Connected User Allocation Per Cell ID (ONOS)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -151,7 +152,9 @@
       "datasource": null,
       "description": "",
       "fieldConfig": {
-        "defaults": {},
+        "defaults": {
+          "custom": {}
+        },
         "overrides": []
       },
       "fill": 1,
@@ -180,7 +183,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -264,10 +267,60 @@
           "color": {
             "mode": "thresholds"
           },
+          "custom": {},
           "mappings": [],
           "thresholds": {
-            "mode": "absolute",
-            "steps": []
+            "mode": "percentage",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "super-light-green",
+                "value": 0
+              },
+              {
+                "color": "#6ED0E0",
+                "value": 10
+              },
+              {
+                "color": "#EF843C",
+                "value": 20
+              },
+              {
+                "color": "#E24D42",
+                "value": 30
+              },
+              {
+                "color": "#1F78C1",
+                "value": 40
+              },
+              {
+                "color": "#BA43A9",
+                "value": 50
+              },
+              {
+                "color": "#705DA0",
+                "value": 60
+              },
+              {
+                "color": "#508642",
+                "value": 70
+              },
+              {
+                "color": "#CCA300",
+                "value": 80
+              },
+              {
+                "color": "#447EBC",
+                "value": 90
+              },
+              {
+                "color": "#C15C17",
+                "value": 100
+              }
+            ]
           }
         },
         "overrides": []
@@ -281,7 +334,7 @@
       "id": 24,
       "options": {
         "displayMode": "basic",
-        "orientation": "auto",
+        "orientation": "vertical",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -292,10 +345,12 @@
         "showUnfilled": false,
         "text": {}
       },
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
+          "exemplar": false,
           "expr": "sum (onos_xappkpimon_rrc_conn_avg) by (cellid)",
+          "hide": false,
           "interval": "",
           "legendFormat": "{{cellid}}",
           "refId": "A"
@@ -327,7 +382,9 @@
       "dashes": false,
       "datasource": null,
       "fieldConfig": {
-        "defaults": {},
+        "defaults": {
+          "custom": {}
+        },
         "overrides": []
       },
       "fill": 1,
@@ -356,7 +413,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -368,7 +425,7 @@
         {
           "expr": "onos_xapppci_conflicts",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{cellid}}",
           "refId": "A"
         }
       ],
@@ -376,7 +433,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "onos pci conflicts",
+      "title": "Resolved conflicts per cell ID",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -435,6 +492,7 @@
       "datasource": null,
       "fieldConfig": {
         "defaults": {
+          "custom": {},
           "unit": "short"
         },
         "overrides": []
@@ -465,7 +523,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -477,7 +535,7 @@
         {
           "expr": "onos_e2t_connections",
           "interval": "",
-          "legendFormat": "ID:{{id}} / PLMNID:{{plmnid}}",
+          "legendFormat": "E2ID:{{e2id}} / PLMNID:{{plmnid}}",
           "refId": "A"
         }
       ],
@@ -546,6 +604,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -574,7 +633,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "alias": "",
@@ -616,6 +675,7 @@
           "color": {
             "mode": "thresholds"
           },
+          "custom": {},
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
@@ -646,7 +706,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "targets": [
         {
           "expr": "count (onos_topo_relations) by (kind)",
@@ -661,13 +721,15 @@
       "type": "stat"
     },
     {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
       "datasource": null,
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
+          "color": {},
+          "custom": {},
           "thresholds": {
             "mode": "absolute",
             "steps": []
@@ -675,29 +737,42 @@
         },
         "overrides": []
       },
+      "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
         "x": 0,
         "y": 47
       },
+      "hiddenSeries": false,
       "id": 19,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "auto"
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "total": false,
+        "values": false
       },
-      "pluginVersion": "7.5.5",
+      "lines": false,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
       "targets": [
         {
           "expr": "onos_topo_entities",
@@ -706,21 +781,61 @@
           "refId": "A"
         }
       ],
+      "thresholds": [],
       "timeFrom": null,
+      "timeRegions": [],
       "timeShift": null,
       "title": "List of Entities (kind: entity ID)",
-      "type": "stat"
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:117",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:118",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "aliasColors": {},
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
       "decimals": null,
       "description": "",
       "fieldConfig": {
-        "defaults": {},
+        "defaults": {
+          "custom": {}
+        },
         "overrides": []
       },
       "fill": 1,
@@ -751,7 +866,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.5.5",
+      "pluginVersion": "7.4.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -852,5 +967,5 @@
   "timezone": "UTC",
   "title": "SD-RAN KPIs",
   "uid": "iRDGSNqMk",
-  "version": 2
+  "version": 1
 }
