@@ -13,10 +13,10 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - kpm
     - rcpre2
     - kpm2
     - mho
+    - kpm
     cells:
     - 87893173159116801
     - 87893173159116802
@@ -38,7 +38,7 @@ cells:
     neighbors:
     - 87893173159116803
     - 87893173159116802
-    txpowerdb: 40
+    txpowerdb: 11
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -48,9 +48,11 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 206
+    pci: 99
     earfcn: 42
     celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
   cell2:
     ncgi: 87893173159116802
     sector:
@@ -66,7 +68,7 @@ cells:
     neighbors:
     - 87893173159116801
     - 87893173159116803
-    txpowerdb: 40
+    txpowerdb: 11
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -78,7 +80,9 @@ cells:
         reportonleave: false
     pci: 99
     earfcn: 43
-    celltype: 2
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
   cell3:
     ncgi: 87893173159116803
     sector:
@@ -94,7 +98,7 @@ cells:
     neighbors:
     - 87893173159116801
     - 87893173159116802
-    txpowerdb: 40
+    txpowerdb: 11
     measurementparams:
       timetotrigger: 0
       frequencyoffset: 0
@@ -104,9 +108,11 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 99
+    pci: 5
     earfcn: 44
-    celltype: 3
+    celltype: 1
+    rrcidlecount: 0
+    rrcconnectedcount: 0
 controllers:
   e2t-1:
     id: e2t-1
@@ -130,6 +136,7 @@ servicemodels:
     description: rcpre2 service model
     version: 1.0.0
 ueCount: 5
+ueCountPerCell: 15
 plmnID: "314628"
 plmnNumber: 1279014
 apiKey: ""
