@@ -22,7 +22,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-uenib
-  tag: v0.0.3
+  tag: v0.0.5
   pullPolicy: IfNotPresent
   pullSecrets: []
 
