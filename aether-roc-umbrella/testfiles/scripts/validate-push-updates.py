@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# This script expects the sdcore-adapter logs on stdin.
+# It extracts all Push Updates from the logs and stores the path name and pushed JSON.
+# It then compares each JSON blob to the stored JSON under base_file_dir.
+
 import json, re, sys, pprint
 from deepdiff import DeepDiff
 
@@ -11,17 +15,17 @@ base_file_dir = sys.argv[1]
 
 lines = sys.stdin.read()
 
+# Extract all Push Updates from the sdcore-adapter logs, which can span multiple lines
 match = re.findall(r'Push Update endpoint=http://aether-roc-umbrella-sdcore-test-dummy/(\S+) data=(.*?^})', lines, re.DOTALL|re.MULTILINE)
 
 pp = pprint.PrettyPrinter(indent=4)
-
 for (f, j) in match:
 
     with open("%s/%s" % (base_file_dir, f)) as target_json:
         target = json.load(target_json)
-
     actual = json.loads(j)
 
+    # Semantically compare the JSON in the logs to the saved JSON
     ddiff = DeepDiff(target, actual, ignore_order=True)
 
     if len(ddiff) > 0:

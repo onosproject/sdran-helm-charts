@@ -2,6 +2,10 @@
 
 # Usage: roc-sanity-test.sh <NAMESPACE>
 
+# This script pushes some test data into the ROC, collects the sdcore-adapter logs,
+# and pipes them to another script for validating the Push Update messages in the logs.
+# It assumes that no other data has been already pushed to the ROC.
+
 NAMESPACE=$1
 TMPDIR=/tmp
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
