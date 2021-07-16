@@ -41,9 +41,10 @@ spec:
             - "--ca-path=/etc/onos/certs/tls.cacrt"
             - "--key-path=/etc/onos/certs/tls.key"
             - "--cert-path=/etc/onos/certs/tls.crt"
+            - "--topo-endpoint={{ .Values.config.ric.topoEndpoint }}"
             - "--e2t-endpoint={{ .Values.config.ric.e2tEndpoint }}"
-            - "--e2sub-endpoint={{ .Values.config.ric.e2subEndpoint }}"
             - "--eson-endpoint={{ .Values.config.esonEndpoint }}"
+            - "--path={{ .Values.config.servicePath }}"
 {{- if .Values.config.esonSubscribeEnabled }}
             - "--pci-subscribe-delay=0"
 {{- end }}
@@ -52,6 +53,9 @@ spec:
 {{- end }}
 {{- if .Values.config.processingDelay }}
             - "--processing-delay={{ .Values.config.processingDelay }}"
+{{- end }}
+{{- if .Values.config.capacityUpdatePeriod }}
+            - "--mlb-update-capacity-period={{ .Values.config.capacityUpdatePeriod }}"
 {{- end }}
           ports:
             - name: http
@@ -79,8 +83,8 @@ spec:
               mountPath: /etc/onos/certs
               readOnly: true
             - name: config
-              mountPath: /etc/onos/config
-              readOnly: true
+              mountPath: {{ .Values.config.servicePath }}
+              readOnly: false
           resources:
       {{- toYaml .Values.resources | nindent 12 }}
       volumes:

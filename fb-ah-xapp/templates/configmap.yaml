@@ -11,3 +11,6 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
+data:
+  config.json: |-
+{{ .Files.Get "files/configs/config.json" | indent 4}}
