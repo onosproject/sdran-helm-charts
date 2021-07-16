@@ -67,6 +67,10 @@ dependencies:
     condition: import.onos-pci.enabled
     repository: "@sdran"
     version: 0.6.14
+  - name: fb-kpimon-xapp
+    condition: import.fb-kpimon-xapp.enabled
+    repository: "@sdran"
+    version: 0.0.1
   - name: fb-ah-xapp
     condition: import.fb-ah-xapp.enabled
     repository: "@sdran"
