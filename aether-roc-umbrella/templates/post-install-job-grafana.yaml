@@ -43,11 +43,13 @@ spec:
                 secretKeyRef:
                   name: {{ .Release.Name }}-grafana
                   key: admin-password
-          command: ["/usr/local/bin/grafana-post-install.sh"]
+          command: ["/usr/local/bin/grafana-create-orgs.sh"]
           args:
             - "$(GF_SECURITY_ADMIN_USER)"
             - "$(GF_SECURITY_ADMIN_PASSWORD)"
             - "{{ .Release.Name }}"
+            - "{{ .Release.Name }}-grafana"
+            - "/usr/local/dashboards"
             {{- range $org := .Values.grafana.orgs }}
             - {{ $org | quote }}
             {{- end}}
