@@ -8,7 +8,7 @@ metadata:
   name: {{ .Release.Name }}-dashboards-starbucks
   namespace: {{ .Release.Namespace }}
 data:
-  vcs_starbucks_all.json: |-
+  vcs-starbucks-all.json: |-
     {
       "dashboard": {
         "annotations": {
@@ -142,13 +142,13 @@ data:
         "timepicker": {},
         "timezone": "",
         "title": "VCS Starbucks All",
-        "uid": "vcs_starbucks_all",
+        "uid": "vcs-starbucks-all",
         "version": 2
       },
       "folderUid": "starbucks",
       "message": "Made changes to Starbucks"
     }
-  vcs_starbucks_newyork_cameras.json: |-
+  vcs-starbucks-newyork-cameras.json: |-
     {
       "dashboard": {
         "annotations": {
@@ -244,14 +244,14 @@ data:
             "targets": [
               {
                 "exemplar": true,
-                "expr": "vcs_jitter{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_jitter{vcs_id=\"starbucks-newyork-cameras\"}",
                 "interval": "",
                 "legendFormat": "Jitter (ms)",
                 "refId": "A"
               },
               {
                 "exemplar": true,
-                "expr": "vcs_latency{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_latency{vcs_id=\"starbucks-newyork-cameras\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Latency (ms)",
@@ -259,7 +259,7 @@ data:
               },
               {
                 "exemplar": true,
-                "expr": "vcs_throughput{vcs_id=\"starbucks_newyork_cameras\"}",
+                "expr": "vcs_throughput{vcs_id=\"starbucks-newyork-cameras\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Throughput (kb/s)",
@@ -284,13 +284,13 @@ data:
         "timepicker": {},
         "timezone": "",
         "title": "VCS New York Cameras",
-        "uid": "vcs_starbucks_newyork_cameras",
+        "uid": "vcs-starbucks-newyork-cameras",
         "version": 1
       },
       "folderUid": "starbucks",
       "message": "Made changes to Starbucks"
     }
-  vcs_starbucks_seattle_cameras.json: |-
+  vcs-starbucks-seattle-cameras.json: |-
     {
       "dashboard": {
         "annotations": {
@@ -386,14 +386,14 @@ data:
             "targets": [
               {
                 "exemplar": true,
-                "expr": "vcs_jitter{vcs_id=\"starbucks_seattle_cameras\"}",
+                "expr": "vcs_jitter{vcs_id=\"starbucks-seattle-cameras\"}",
                 "interval": "",
                 "legendFormat": "Jitter (ms)",
                 "refId": "A"
               },
               {
                 "exemplar": true,
-                "expr": "vcs_latency{vcs_id=\"starbucks_seattle_cameras\"}",
+                "expr": "vcs_latency{vcs_id=\"starbucks-seattle-cameras\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Latency (ms)",
@@ -401,7 +401,7 @@ data:
               },
               {
                 "exemplar": true,
-                "expr": "vcs_throughput{vcs_id=\"starbucks_seattle_cameras\"}",
+                "expr": "vcs_throughput{vcs_id=\"starbucks-seattle-cameras\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Throughput (kb/s)",
@@ -426,7 +426,287 @@ data:
         "timepicker": {},
         "timezone": "",
         "title": "VCS Seattle Cameras",
-        "uid": "vcs_starbucks_seattle_cameras",
+        "uid": "vcs-starbucks-seattle-cameras",
+        "version": 1
+      },
+      "folderUid": "starbucks",
+      "message": "Made changes to Starbucks"
+    }
+  starbucks-newyork-cameras-ue-connectivity.json: |-
+    {
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
+          {
+            "datasource": "datasource-starbucks",
+            "description": "Stacked time-series of UE's connected to slice by active, inactive and idle",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "bars",
+                  "fillOpacity": 56,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "normal"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 1,
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
+              }
+            },
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-newyork-cameras\",state=\"active\"})",
+                "interval": "",
+                "legendFormat": "Active",
+                "queryType": "randomWalk",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-newyork-cameras\",state=\"inactive\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Inactive",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-newyork-cameras\",state=\"idle\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Idle",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS starbucks-newyork-cameras UE Connectivity Stacked",
+            "type": "timeseries"
+          }
+        ],
+        "schemaVersion": 30,
+        "style": "light",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-15m",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "starbucks-newyork-cameras UE Connectivity",
+        "uid": "starbucks-newyork-cameras-ue-conn",
+        "version": 1
+      },
+      "folderUid": "starbucks",
+      "message": "Made changes to Starbucks"
+    }
+  starbucks-seattle-cameras-ue-connectivity.json: |-
+    {
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
+          {
+            "datasource": "datasource-starbucks",
+            "description": "Stacked time-series of UE's connected to slice by active, inactive and idle",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "bars",
+                  "fillOpacity": 56,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "normal"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 1,
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
+              }
+            },
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-seattle-cameras\",state=\"active\"})",
+                "interval": "",
+                "legendFormat": "Active",
+                "queryType": "randomWalk",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-seattle-cameras\",state=\"inactive\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Inactive",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"starbucks-seattle-cameras\",state=\"idle\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Idle",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS starbucks-seattle-cameras UE Connectivity Stacked",
+            "type": "timeseries"
+          }
+        ],
+        "schemaVersion": 30,
+        "style": "light",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-15m",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "starbucks-seattle-cameras UE Connectivity",
+        "uid": "starbucks-seattle-cameras-ue-conn",
         "version": 1
       },
       "folderUid": "starbucks",
@@ -439,7 +719,7 @@ metadata:
   name: {{ .Release.Name }}-dashboards-acme
   namespace: {{ .Release.Namespace }}
 data:
-  vcs_acme_all.json: |-
+  vcs-acme-all.json: |-
     {
       "dashboard": {
         "annotations": {
@@ -573,13 +853,13 @@ data:
         "timepicker": {},
         "timezone": "",
         "title": "VCS Acme All",
-        "uid": "vcs_acme_all",
+        "uid": "vcs-acme-all",
         "version": 1
       },
       "folderUid": "acme",
       "message": "Made changes to Acme"
     }
-  vcs_acme_chicago_robots.json: |-
+  vcs-acme-chicago-robots.json: |-
     {
       "dashboard": {
         "annotations": {
@@ -675,14 +955,14 @@ data:
             "targets": [
               {
                 "exemplar": true,
-                "expr": "vcs_jitter{vcs_id=\"acme_chicago_robots\"}",
+                "expr": "vcs_jitter{vcs_id=\"acme-chicago-robots\"}",
                 "interval": "",
                 "legendFormat": "Jitter (ms)",
                 "refId": "A"
               },
               {
                 "exemplar": true,
-                "expr": "vcs_latency{vcs_id=\"acme_chicago_robots\"}",
+                "expr": "vcs_latency{vcs_id=\"acme-chicago-robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Latency (ms)",
@@ -690,7 +970,7 @@ data:
               },
               {
                 "exemplar": true,
-                "expr": "vcs_throughput{vcs_id=\"acme_chicago_robots\"}",
+                "expr": "vcs_throughput{vcs_id=\"acme-chicago-robots\"}",
                 "hide": false,
                 "interval": "",
                 "legendFormat": "Throughput (kb/s)",
@@ -703,7 +983,7 @@ data:
         ],
         "refresh": "",
         "schemaVersion": 30,
-        "style": "dark",
+        "style": "light",
         "tags": [],
         "templating": {
           "list": []
@@ -715,9 +995,149 @@ data:
         "timepicker": {},
         "timezone": "",
         "title": "VCS Chicago Robots",
-        "uid": "vcs_acme_chicago_robots",
+        "uid": "vcs-acme-chicago-robots",
         "version": 1
       },
       "folderUid": "acme",
       "message": "Made changes to Acme"
+    }
+  acme-chicago-robots-ue-connectivity.json: |-
+    {
+      "dashboard": {
+        "annotations": {
+          "list": [
+            {
+              "builtIn": 1,
+              "datasource": "-- Grafana --",
+              "enable": true,
+              "hide": true,
+              "iconColor": "rgba(0, 211, 255, 1)",
+              "name": "Annotations & Alerts",
+              "type": "dashboard"
+            }
+          ]
+        },
+        "editable": false,
+        "gnetId": null,
+        "graphTooltip": 0,
+        "links": [],
+        "panels": [
+          {
+            "datasource": "datasource-acme",
+            "description": "Stacked time-series of UE's connected to slice by active, inactive and idle",
+            "fieldConfig": {
+              "defaults": {
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "custom": {
+                  "axisLabel": "",
+                  "axisPlacement": "auto",
+                  "barAlignment": 0,
+                  "drawStyle": "bars",
+                  "fillOpacity": 56,
+                  "gradientMode": "none",
+                  "hideFrom": {
+                    "legend": false,
+                    "tooltip": false,
+                    "viz": false
+                  },
+                  "lineInterpolation": "linear",
+                  "lineWidth": 1,
+                  "pointSize": 5,
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "showPoints": "auto",
+                  "spanNulls": false,
+                  "stacking": {
+                    "group": "A",
+                    "mode": "normal"
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 9,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 1,
+            "options": {
+              "legend": {
+                "calcs": [],
+                "displayMode": "list",
+                "placement": "bottom"
+              },
+              "tooltip": {
+                "mode": "single"
+              }
+            },
+            "targets": [
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"acme-chicago-robots\",state=\"active\"})",
+                "interval": "",
+                "legendFormat": "Active",
+                "queryType": "randomWalk",
+                "refId": "A"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"acme-chicago-robots\",state=\"inactive\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Inactive",
+                "refId": "B"
+              },
+              {
+                "exemplar": true,
+                "expr": "sum(smf_pdu_session_profile{slice=\"acme-chicago-robots\",state=\"idle\"})",
+                "hide": false,
+                "interval": "",
+                "legendFormat": "Idle",
+                "refId": "C"
+              }
+            ],
+            "title": "VCS acme-chicago-robots UE Connectivity Stacked",
+            "type": "timeseries"
+          }
+        ],
+        "schemaVersion": 30,
+        "style": "light",
+        "tags": [],
+        "templating": {
+          "list": []
+        },
+        "time": {
+          "from": "now-15m",
+          "to": "now"
+        },
+        "timepicker": {},
+        "timezone": "",
+        "title": "Acme Chicago Robots UE Connectivity",
+        "uid": "acme-chicago-robots-ue-conn",
+        "version": 1
+      },
+      "folderUid": "acme",
+      "message": "Made changes to Acme2"
     }

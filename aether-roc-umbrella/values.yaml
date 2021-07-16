@@ -141,9 +141,9 @@ grafana:
 ##      client_secret: YWV0aGVyLXJvYy1ndWkK
 #      scopes: "openid profile email groups"
 #      empty_scopes: false
-#      auth_url: "http://dex-ldap-umbrella:32000/auth"
-#      token_url: "http://dex-ldap-umbrella:32000/token"
-#      api_url: "http://dex-ldap-umbrella:32000/userinfo"
+#      auth_url: "http://dex-ldap-umbrella:5556/auth"
+#      token_url: "http://dex-ldap-umbrella:5556/token"
+#      api_url: "http://dex-ldap-umbrella:5556/userinfo"
 #      allowed_domains: opennetworking.org
 #      allow_sign_up: true
 
