@@ -24,4 +24,3 @@ spec:
   ports:
     - name: http
       port: 8080
-

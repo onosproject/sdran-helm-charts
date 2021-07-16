@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/fb-ah-xapp
-  tag: 0.0.1
+  tag: 0.0.2
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -21,15 +21,18 @@ fullnameOverride: "fb-ah-xapp"
 storage: {}
 
 config:
+  servicePath: "/etc/onos/config"
   ric:
     e2tEndpoint: "onos-e2t:5150"
-    e2subEndpoint: "onos-e2sub:5150"
+    topoEndpoint: "onos-topo:5150"
   esonEndpoint: "ah-eson-test-server:51050"
   esonSubscribeEnabled: true
   # 0 or unspecified means report triggered upon change
   indicationTriggerPeriodicSeconds: 0
   # 0 or unspecified means no artificial delay in processing indication messages (useful for demo)
   processingDelay: 0
+  # period of update of capacity information to eson (seconds)
+  capacityUpdatePeriod: 10
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -48,4 +51,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
