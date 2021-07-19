@@ -42,7 +42,7 @@ spec:
             - "--key-path=/etc/onos/certs/tls.key"
             - "--cert-path=/etc/onos/certs/tls.crt"
             - "--e2t-endpoint={{ .Values.config.ric.e2tEndpoint }}"
-            - "--path={{ .Values.config.servicePath }}"
+            - "--path={{ .Values.config.servicePath }}/config.json"
             - "--topo-endpoint={{ .Values.config.ric.topoEndpoint }}"
           ports:
             - name: http
