@@ -84,10 +84,7 @@ onos-topo:
 onos-gui: {}
 
 # ONOS-CLI
-onos-cli:
-  postInstall:
-    topo: spgw-1-topo-entities.json
-# Use "--set onos-cli.postInstall=null" to disable
+onos-cli: {}
 
 # Aether ROC API
 aether-roc-api: {}
@@ -114,8 +111,11 @@ sdcore-adapter-v3:
 
 grafana:
   orgs:
-    - "acme"
-    - "starbucks"
+    acme:
+      - acme-chicago-robots
+    starbucks:
+      - starbucks-newyork-cameras
+      - starbucks-seattle-cameras
   tidyUpPostInstall: true
   grafana.ini:
     log:

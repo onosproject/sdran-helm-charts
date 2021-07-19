@@ -6,6 +6,8 @@
 # script to create Grafana Orgs
 # Usage:
 # grafana-create-orgs.sh <ADMINUSER> <ADMINPASS> <umbrella-chart-name> <grafana-server> <dashboard-folder> orgs...
+# where org is a quoted string containing org name and then in square brackets a list of vcs
+# e.g. "acme[acme-chicago-robots acme-chicago-cameras]"
 set -e
 #set -x
 set -o pipefail
@@ -26,18 +28,20 @@ shift
 shift
 shift
 shift
-for org in "$@"
+for orgWithVcs in "$@"
 do
-  ORGASCII=${org//[^a-zA-Z0-9]/_}
-  echo "Creating $org as $ORGASCII"
+  ORGASCII=${orgWithVcs%%\[*\]} # Drop the [*] off the end
+  echo "Creating $orgWithVcs as $ORGASCII"
+  VCSLIST=${orgWithVcs##$ORGASCII\[} # Drop the org[ off the front
+  VCSLIST=${VCSLIST%\]} # Drop the ] off the end
   SUCCESS=-1
   ORGID=-1
   # Commented out for the moment - keeping everything in the Main Org. - see aether-roc-gui/docs/grafana.md
-  #      echo "Calling /usr/bin/curl -H "Content-Type: application/json" -d '{"name":"$org"}' http://$ADMINUSER:####@$SERVICE/api/orgs"
+  #      echo "Calling /usr/bin/curl -H "Content-Type: application/json" -d '{"name":"$ORGASCII"}' http://$ADMINUSER:####@$SERVICE/api/orgs"
   #      while [ $SUCCESS -ne 0 ];
   #      do
-  #        DATA={\"name\":\"$org\"}
-  #        echo "Creating Org $org"
+  #        DATA={\"name\":\"$ORGASCII\"}
+  #        echo "Creating Org $ORGASCII"
   #        /usr/bin/curl -o /tmp/curlout -H "Content-Type: application/json" -d "$DATA" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/orgs
   #        SUCCESS=`echo $?`
   #        echo "SUCCESS $SUCCESS"
@@ -56,33 +60,22 @@ do
   #      SUCCESS=`echo $?`
   #      echo "SUCCESS $SUCCESS"
 
-  echo "Creating folder in $org"
+  echo "Creating folder in $ORGASCII"
   FOLDER={\"uid\":\"$ORGASCII\",\"title\":\"$ORGASCII\"}
   /usr/bin/curl -o /tmp/curlout -H "Content-Type: application/json" -d "$FOLDER" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/folders
   SUCCESS="$?"
   echo "SUCCESS $SUCCESS"
   cat /tmp/curlout
 
-  echo "Creating datasource in $org"
+  echo "Creating datasource in $ORGASCII"
   DATASOURCE={\"name\":\"datasource-$ORGASCII\",\"type\":\"prometheus\",\"url\":\"http://$SOURCE\",\"access\":\"proxy\",\"basicAuth\":false}
   /usr/bin/curl -s -o /tmp/curlout -H "Content-Type: application/json" -d "$DATASOURCE" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/datasources
   SUCCESS=`echo $?`
   echo "SUCCESS $SUCCESS"
   cat /tmp/curlout
 
-  echo "Creating dashboards in $org"
-  for f in $DASHBOARDS/$ORGASCII/*.json; do
-    if [ -f "$f" ]; then
-      echo "Creating Dashboard from $f"
-      DASHBOARD=$(cat $f)
-      /usr/bin/curl -s -o /tmp/curlout -H "Content-Type: application/json" -d "$DASHBOARD" http://$ADMINUSER:$ADMINPASS@$SERVICE/api/dashboards/db
-      SUCCESS=`echo $?`
-      echo "SUCCESS $SUCCESS"
-      cat /tmp/curlout
-    else
-      echo "No dashboards found"
-    fi
-  done
+  echo "now create Dashboards with "$VCSLIST
+  grafana-create-vcs.sh $ADMINUSER $ADMINPASS $SERVICE $DASHBOARDS $ORGASCII $VCSLIST
 
 done
 
