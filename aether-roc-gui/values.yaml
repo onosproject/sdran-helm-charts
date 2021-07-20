@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/aether-roc-gui
-  tag: v0.7.7
+  tag: v0.7.8
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -35,8 +35,8 @@ ports:
     containerPort: 80
     protocol: TCP
 
-# Enable by giving a value like http://dex-ldap-umbrella:32000
-# make sure this is reachable at http://dex-ldap-umbrella:32000/.well-known/openid-configuration
+# Enable by giving a value like http://dex-ldap-umbrella:5556
+# make sure this is reachable at http://dex-ldap-umbrella:5556/.well-known/openid-configuration
 openidc:
   issuer:
 
