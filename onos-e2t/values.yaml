@@ -116,6 +116,8 @@ logging:
       output:
         stdout:
           sink: stdout
+    atomix:
+      level: error
   sinks:
     stdout:
       type: stdout
