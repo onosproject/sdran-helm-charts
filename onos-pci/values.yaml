@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-pci
-  tag: v0.1.17
+  tag: v0.1.18
   pullPolicy: IfNotPresent
   pullSecrets: []
 
