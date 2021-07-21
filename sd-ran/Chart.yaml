@@ -37,7 +37,7 @@ dependencies:
   - name: onos-uenib
     condition: import.onos-uenib.enabled
     repository: "@sdran"
-    version: 1.0.4
+    version: 1.0.5
   - name: onos-config
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
