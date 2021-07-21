@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaiue: docker.io/onosproject/oai-ue:v0.1.4
+    oaiue: docker.io/onosproject/oai-ue:v0.1.6
   pullPolicy: IfNotPresent
 
 # Specify annotations (e.g., fluentbit/logging custom parser)
