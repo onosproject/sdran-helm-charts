@@ -33,10 +33,11 @@
     },
     {
       "aliasColors": {},
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -52,7 +53,7 @@
         "y": 1
       },
       "hiddenSeries": false,
-      "id": 8,
+      "id": 28,
       "legend": {
         "avg": false,
         "current": false,
@@ -62,7 +63,7 @@
         "total": false,
         "values": false
       },
-      "lines": true,
+      "lines": false,
       "linewidth": 1,
       "nullPointMode": "null",
       "options": {
@@ -75,7 +76,7 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": false,
+      "stack": true,
       "steppedLine": false,
       "targets": [
         {
@@ -204,7 +205,7 @@
             }
           ],
           "exemplar": true,
-          "expr": "fb_xappkpimon_rrc_conn_avg",
+          "expr": "xappkpimon_rrc_conn_avg",
           "interval": "",
           "legendFormat": "{{cellid}}",
           "metrics": [
@@ -260,115 +261,13 @@
       }
     },
     {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {},
-          "mappings": [],
-          "thresholds": {
-            "mode": "percentage",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "super-light-green",
-                "value": 0
-              },
-              {
-                "color": "#6ED0E0",
-                "value": 10
-              },
-              {
-                "color": "#EF843C",
-                "value": 20
-              },
-              {
-                "color": "#E24D42",
-                "value": 30
-              },
-              {
-                "color": "#1F78C1",
-                "value": 40
-              },
-              {
-                "color": "#BA43A9",
-                "value": 50
-              },
-              {
-                "color": "#705DA0",
-                "value": 60
-              },
-              {
-                "color": "#508642",
-                "value": 70
-              },
-              {
-                "color": "#CCA300",
-                "value": 80
-              },
-              {
-                "color": "#447EBC",
-                "value": 90
-              },
-              {
-                "color": "#C15C17",
-                "value": 100
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 0,
-        "y": 10
-      },
-      "id": 24,
-      "options": {
-        "displayMode": "basic",
-        "orientation": "vertical",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": false,
-        "text": {}
-      },
-      "pluginVersion": "7.4.5",
-      "targets": [
-        {
-          "exemplar": false,
-          "expr": "sum (onos_xappkpimon_rrc_conn_avg) by (cellid)",
-          "hide": false,
-          "interval": "",
-          "legendFormat": "{{cellid}}",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Number of users (in RRC connected mode) per cell ID",
-      "type": "bargauge"
-    },
-    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 10
       },
       "id": 12,
       "panels": [],
@@ -377,7 +276,7 @@
     },
     {
       "aliasColors": {},
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
@@ -393,7 +292,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 11
       },
       "hiddenSeries": false,
       "id": 6,
@@ -419,7 +318,7 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "spaceLength": 10,
-      "stack": false,
+      "stack": true,
       "steppedLine": false,
       "targets": [
         {
@@ -449,14 +348,17 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:239",
+          "decimals": 0,
           "format": "short",
-          "label": null,
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": null,
           "show": true
         },
         {
+          "$$hashKey": "object:240",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -477,7 +379,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 20
       },
       "id": 10,
       "panels": [],
@@ -486,7 +388,7 @@
     },
     {
       "aliasColors": {},
-      "bars": false,
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
@@ -503,7 +405,7 @@
         "h": 9,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 4,
@@ -535,7 +437,7 @@
         {
           "expr": "onos_e2t_connections",
           "interval": "",
-          "legendFormat": "E2ID:{{e2id}} / PLMNID:{{plmnid}}",
+          "legendFormat": "NodeID: {{nodeid}}",
           "refId": "A"
         }
       ],
@@ -590,7 +492,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 38
+        "y": 30
       },
       "id": 17,
       "panels": [],
@@ -617,7 +519,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 39
+        "y": 31
       },
       "id": 22,
       "options": {
@@ -688,7 +590,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 39
+        "y": 31
       },
       "id": 20,
       "options": {
@@ -743,7 +645,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 47
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 19,
@@ -844,7 +746,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 47
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 26,
