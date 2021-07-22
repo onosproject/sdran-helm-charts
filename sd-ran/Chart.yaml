@@ -33,7 +33,7 @@ dependencies:
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
-    version: 1.0.15
+    version: 1.0.16
   - name: onos-uenib
     condition: import.onos-uenib.enabled
     repository: "@sdran"
