@@ -41,7 +41,7 @@ dependencies:
   - name: onos-config
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
-    version: 1.1.26
+    version: 1.2.3
   - name: config-model-ric
     condition: onos-config.models.ric.v1.enabled
     repository: "@sdran"
