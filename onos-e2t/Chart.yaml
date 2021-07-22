@@ -8,7 +8,7 @@ description: ONOS E2 Termination
 kubeVersion: ">=1.17.0"
 type: application
 version: 1.0.45
-appVersion: v0.7.37
+appVersion: v0.7.38
 keywords:
   - onos
   - sdn
