@@ -50,7 +50,7 @@ cells:
         reportonleave: false
     pci: 99
     earfcn: 42
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell2:
@@ -66,8 +66,8 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
     - 87893173159116803
+    - 87893173159116801
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -78,9 +78,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 206
+    pci: 99
     earfcn: 43
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell3:
@@ -108,9 +108,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 99
+    pci: 206
     earfcn: 44
-    celltype: 1
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
 controllers:
