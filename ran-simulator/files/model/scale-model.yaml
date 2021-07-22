@@ -226,11 +226,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116802
-    - 87893173159116806
+    - 87893173159165953
     - 87893173159116803
-    - 87893173159116804
-    - 87893173159182338
+    - 87893173159116806
+    - 87893173159133190
+    - 87893173159149574
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -241,9 +241,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 201
+    pci: 66
     earfcn: 42
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell2:
@@ -260,10 +260,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159116803
-    - 87893173159116804
-    - 87893173159116805
-    - 87893173159149572
-    - 87893173159116801
+    - 87893173159297027
+    - 87893173159116806
+    - 87893173159215107
+    - 87893173159280643
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -274,7 +274,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 169
+    pci: 354
     earfcn: 43
     celltype: 0
     rrcidlecount: 0
@@ -292,11 +292,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
-    - 87893173159116802
+    - 87893173159149572
+    - 87893173159182339
     - 87893173159116806
+    - 87893173159116802
     - 87893173159116804
-    - 87893173159116805
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -307,9 +307,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 367
+    pci: 201
     earfcn: 44
-    celltype: 0
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell4:
@@ -325,11 +325,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116802
     - 87893173159116801
-    - 87893173159116806
-    - 87893173159116803
+    - 87893173159165955
     - 87893173159116805
+    - 87893173159116803
+    - 87893173159116806
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -340,9 +340,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 132
+    pci: 64
     earfcn: 45
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell5:
@@ -358,11 +358,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
+    - 87893173159247876
     - 87893173159116802
-    - 87893173159116806
-    - 87893173159116803
     - 87893173159116804
+    - 87893173159116801
+    - 87893173159116803
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -373,9 +373,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 223
+    pci: 129
     earfcn: 46
-    celltype: 3
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell6:
@@ -391,11 +391,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116803
+    - 87893173159116802
     - 87893173159116804
-    - 87893173159133189
-    - 87893173159165953
-    - 87893173159116805
+    - 87893173159215109
+    - 87893173159297028
+    - 87893173159116801
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -406,7 +406,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 153
+    pci: 267
     earfcn: 47
     celltype: 2
     rrcidlecount: 0
@@ -424,11 +424,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133188
-    - 87893173159198722
-    - 87893173159133190
-    - 87893173159133189
+    - 87893173159280642
+    - 87893173159198721
     - 87893173159133187
+    - 87893173159182338
+    - 87893173159133186
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -439,7 +439,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 144
+    pci: 207
     earfcn: 48
     celltype: 2
     rrcidlecount: 0
@@ -457,11 +457,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133188
-    - 87893173159133190
-    - 87893173159133185
-    - 87893173159133189
+    - 87893173159149571
+    - 87893173159116802
     - 87893173159133187
+    - 87893173159198722
+    - 87893173159133189
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -472,9 +472,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 30
+    pci: 343
     earfcn: 49
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell9:
@@ -490,11 +490,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133188
-    - 87893173159133190
-    - 87893173159133185
-    - 87893173159133189
+    - 87893173159198723
+    - 87893173159165954
     - 87893173159133186
+    - 87893173159133188
+    - 87893173159133189
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -505,9 +505,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 148
+    pci: 73
     earfcn: 50
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell10:
@@ -523,11 +523,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159182340
+    - 87893173159231491
+    - 87893173159264259
+    - 87893173159133187
     - 87893173159133186
-    - 87893173159165954
-    - 87893173159182339
-    - 87893173159133190
-    - 87893173159133185
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -538,9 +538,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 267
+    pci: 334
     earfcn: 51
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell11:
@@ -556,11 +556,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116806
-    - 87893173159264259
     - 87893173159133188
-    - 87893173159133190
     - 87893173159133185
+    - 87893173159198725
+    - 87893173159116806
+    - 87893173159133190
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -571,9 +571,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 30
+    pci: 378
     earfcn: 52
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell12:
@@ -589,11 +589,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264258
     - 87893173159133188
-    - 87893173159215109
-    - 87893173159133185
     - 87893173159133189
+    - 87893173159133185
+    - 87893173159149574
+    - 87893173159198726
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -604,9 +604,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 294
+    pci: 259
     earfcn: 53
-    celltype: 1
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell13:
@@ -623,8 +623,8 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159149573
-    - 87893173159149572
     - 87893173159149570
+    - 87893173159149572
     - 87893173159149574
     - 87893173159149571
     txpowerdb: 11
@@ -637,9 +637,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 334
+    pci: 231
     earfcn: 54
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell14:
@@ -655,11 +655,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159149572
-    - 87893173159149573
-    - 87893173159149569
     - 87893173159149574
     - 87893173159149571
+    - 87893173159149569
+    - 87893173159149573
+    - 87893173159297026
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -670,9 +670,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 51
+    pci: 399
     earfcn: 55
-    celltype: 3
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell15:
@@ -689,10 +689,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159149574
-    - 87893173159149572
-    - 87893173159149573
+    - 87893173159215107
     - 87893173159149569
-    - 87893173159149570
+    - 87893173159149573
+    - 87893173159133186
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -703,9 +703,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 204
+    pci: 271
     earfcn: 56
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell16:
@@ -721,11 +721,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159149573
-    - 87893173159116802
+    - 87893173159133187
+    - 87893173159165954
+    - 87893173159231490
     - 87893173159149569
-    - 87893173159149570
-    - 87893173159149574
+    - 87893173159149573
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -736,9 +736,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 343
+    pci: 352
     earfcn: 57
-    celltype: 0
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell17:
@@ -754,11 +754,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159149572
-    - 87893173159149569
-    - 87893173159215108
-    - 87893173159116801
+    - 87893173159133189
     - 87893173159149570
+    - 87893173159149572
+    - 87893173159149574
+    - 87893173159280644
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -769,9 +769,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 336
+    pci: 46
     earfcn: 58
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell18:
@@ -787,11 +787,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159149572
-    - 87893173159149573
-    - 87893173159149569
     - 87893173159149570
+    - 87893173159149572
+    - 87893173159133190
     - 87893173159149571
+    - 87893173159215110
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -802,9 +802,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 138
+    pci: 394
     earfcn: 59
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell19:
@@ -820,10 +820,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159297028
     - 87893173159165954
-    - 87893173159165958
-    - 87893173159116806
-    - 87893173159247875
+    - 87893173159116801
+    - 87893173159231489
     - 87893173159165955
     txpowerdb: 11
     measurementparams:
@@ -835,9 +835,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 78
+    pci: 4
     earfcn: 60
-    celltype: 0
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell20:
@@ -853,10 +853,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159165958
+    - 87893173159231490
+    - 87893173159133187
     - 87893173159165955
-    - 87893173159165957
-    - 87893173159133188
+    - 87893173159165953
     - 87893173159165956
     txpowerdb: 11
     measurementparams:
@@ -868,9 +868,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 48
+    pci: 172
     earfcn: 61
-    celltype: 3
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell21:
@@ -886,11 +886,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159182340
+    - 87893173159231491
     - 87893173159165954
-    - 87893173159165958
-    - 87893173159165957
-    - 87893173159165956
     - 87893173159165953
+    - 87893173159165956
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -901,9 +901,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 207
+    pci: 57
     earfcn: 62
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell22:
@@ -919,11 +919,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159231491
-    - 87893173159165953
     - 87893173159165954
-    - 87893173159165958
     - 87893173159165955
+    - 87893173159165953
+    - 87893173159165958
+    - 87893173159231492
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -934,7 +934,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 309
+    pci: 348
     earfcn: 63
     celltype: 2
     rrcidlecount: 0
@@ -952,11 +952,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159165954
+    - 87893173159231493
+    - 87893173159247877
     - 87893173159165958
-    - 87893173159165955
-    - 87893173159165956
-    - 87893173159247876
+    - 87893173159182341
+    - 87893173159264260
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -967,9 +967,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 352
+    pci: 367
     earfcn: 64
-    celltype: 0
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell24:
@@ -985,11 +985,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182341
-    - 87893173159231489
-    - 87893173159165957
+    - 87893173159215109
+    - 87893173159280645
+    - 87893173159165954
     - 87893173159165955
-    - 87893173159165956
+    - 87893173159165953
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1000,9 +1000,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 378
+    pci: 204
     earfcn: 65
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell25:
@@ -1018,10 +1018,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182340
-    - 87893173159264258
+    - 87893173159182339
     - 87893173159182342
-    - 87893173159198725
+    - 87893173159133190
+    - 87893173159149574
     - 87893173159182341
     txpowerdb: 11
     measurementparams:
@@ -1033,9 +1033,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 187
+    pci: 285
     earfcn: 66
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell26:
@@ -1051,11 +1051,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159198723
-    - 87893173159182340
-    - 87893173159149573
-    - 87893173159182342
-    - 87893173159215108
+    - 87893173159182337
+    - 87893173159198722
+    - 87893173159297027
+    - 87893173159133185
+    - 87893173159182339
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1066,9 +1066,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 163
+    pci: 207
     earfcn: 67
-    celltype: 3
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell27:
@@ -1084,11 +1084,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159116803
+    - 87893173159149572
+    - 87893173159182342
+    - 87893173159247875
     - 87893173159182341
-    - 87893173159133188
-    - 87893173159182338
-    - 87893173159182337
-    - 87893173159182340
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1099,9 +1099,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 265
+    pci: 138
     earfcn: 68
-    celltype: 2
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell28:
@@ -1117,11 +1117,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159165955
     - 87893173159182338
     - 87893173159182337
-    - 87893173159116805
-    - 87893173159165954
-    - 87893173159182342
+    - 87893173159133188
+    - 87893173159182339
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1132,9 +1132,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 90
+    pci: 82
     earfcn: 69
-    celltype: 1
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell29:
@@ -1150,11 +1150,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182337
-    - 87893173159182340
-    - 87893173159182342
-    - 87893173159165958
+    - 87893173159247877
     - 87893173159182339
+    - 87893173159182342
+    - 87893173159165957
+    - 87893173159264260
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1165,9 +1165,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 399
+    pci: 273
     earfcn: 70
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell30:
@@ -1183,11 +1183,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182339
-    - 87893173159182338
     - 87893173159182337
-    - 87893173159182340
-    - 87893173159264260
+    - 87893173159247878
+    - 87893173159198725
+    - 87893173159231494
+    - 87893173159182339
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1198,9 +1198,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 285
+    pci: 120
     earfcn: 71
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell31:
@@ -1216,11 +1216,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159133185
+    - 87893173159198725
     - 87893173159198723
     - 87893173159198724
-    - 87893173159297027
-    - 87893173159198726
-    - 87893173159198725
+    - 87893173159280642
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1231,7 +1231,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 420
+    pci: 169
     earfcn: 72
     celltype: 2
     rrcidlecount: 0
@@ -1249,11 +1249,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159182338
+    - 87893173159133186
+    - 87893173159297027
     - 87893173159198725
-    - 87893173159133185
     - 87893173159198723
-    - 87893173159215107
-    - 87893173159198724
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1264,9 +1264,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 120
+    pci: 226
     earfcn: 73
-    celltype: 1
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell33:
@@ -1282,11 +1282,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182338
+    - 87893173159215108
     - 87893173159198724
-    - 87893173159198721
     - 87893173159198726
-    - 87893173159149573
+    - 87893173159198721
+    - 87893173159133187
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1297,9 +1297,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 259
+    pci: 175
     earfcn: 74
-    celltype: 0
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell34:
@@ -1315,11 +1315,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159198722
-    - 87893173159133189
-    - 87893173159165953
     - 87893173159198723
-    - 87893173159247874
+    - 87893173159280644
+    - 87893173159198726
+    - 87893173159198721
+    - 87893173159264259
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1330,9 +1330,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 4
+    pci: 261
     earfcn: 75
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell35:
@@ -1348,11 +1348,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280644
-    - 87893173159198722
-    - 87893173159182337
     - 87893173159198723
     - 87893173159198724
+    - 87893173159198726
+    - 87893173159215109
+    - 87893173159198721
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1363,9 +1363,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 426
+    pci: 381
     earfcn: 76
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell36:
@@ -1381,11 +1381,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159198721
-    - 87893173159198725
+    - 87893173159182337
     - 87893173159198722
-    - 87893173159264257
-    - 87893173159297028
+    - 87893173159247873
+    - 87893173159198725
+    - 87893173159133190
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1396,9 +1396,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 231
+    pci: 78
     earfcn: 77
-    celltype: 3
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell37:
@@ -1414,11 +1414,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159149569
     - 87893173159215106
-    - 87893173159215110
-    - 87893173159215107
+    - 87893173159297025
+    - 87893173159280641
     - 87893173159215108
-    - 87893173159215109
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1429,9 +1429,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 87
+    pci: 336
     earfcn: 78
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell38:
@@ -1447,11 +1447,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159297026
+    - 87893173159149570
     - 87893173159215108
-    - 87893173159149569
-    - 87893173159215109
-    - 87893173159215110
     - 87893173159215107
+    - 87893173159215110
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1462,9 +1462,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 180
+    pci: 141
     earfcn: 79
-    celltype: 1
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell39:
@@ -1481,10 +1481,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159215108
-    - 87893173159198722
-    - 87893173159215109
-    - 87893173159215106
+    - 87893173159149571
     - 87893173159215110
+    - 87893173159215109
+    - 87893173159280643
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1495,7 +1495,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 249
+    pci: 144
     earfcn: 80
     celltype: 3
     rrcidlecount: 0
@@ -1513,11 +1513,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159149573
-    - 87893173159215105
-    - 87893173159215109
-    - 87893173159215106
-    - 87893173159133185
+    - 87893173159247875
+    - 87893173159198723
+    - 87893173159280644
+    - 87893173159215107
+    - 87893173159215110
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1528,9 +1528,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 348
+    pci: 180
     earfcn: 81
-    celltype: 3
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell41:
@@ -1546,11 +1546,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159215108
-    - 87893173159133190
-    - 87893173159215106
-    - 87893173159182337
-    - 87893173159215110
+    - 87893173159297028
+    - 87893173159280645
+    - 87893173159215105
+    - 87893173159231489
+    - 87893173159149573
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1561,9 +1561,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 46
+    pci: 148
     earfcn: 82
-    celltype: 2
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell42:
@@ -1579,11 +1579,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159215109
     - 87893173159215106
-    - 87893173159297028
-    - 87893173159215107
-    - 87893173159198726
+    - 87893173159280646
+    - 87893173159297029
+    - 87893173159215108
+    - 87893173159149574
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1594,9 +1594,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 82
+    pci: 132
     earfcn: 83
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell43:
@@ -1612,11 +1612,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264260
-    - 87893173159165958
+    - 87893173159297028
+    - 87893173159231491
     - 87893173159231490
-    - 87893173159231492
-    - 87893173159231494
+    - 87893173159165953
+    - 87893173159231493
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1627,9 +1627,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 141
+    pci: 285
     earfcn: 84
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell44:
@@ -1645,11 +1645,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159149572
     - 87893173159231493
-    - 87893173159182341
-    - 87893173159231489
+    - 87893173159231494
     - 87893173159231492
-    - 87893173159231491
+    - 87893173159247875
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1660,7 +1660,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 348
+    pci: 57
     earfcn: 85
     celltype: 0
     rrcidlecount: 0
@@ -1678,11 +1678,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159231489
-    - 87893173159231490
-    - 87893173159165956
-    - 87893173159231492
+    - 87893173159133188
+    - 87893173159231493
     - 87893173159231494
+    - 87893173159231492
+    - 87893173159247876
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1693,9 +1693,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 22
+    pci: 43
     earfcn: 86
-    celltype: 1
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell46:
@@ -1711,11 +1711,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159231489
-    - 87893173159231490
     - 87893173159231491
+    - 87893173159231490
+    - 87893173159231489
+    - 87893173159165956
     - 87893173159231494
-    - 87893173159231493
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1726,9 +1726,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 273
+    pci: 309
     earfcn: 87
-    celltype: 1
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell47:
@@ -1744,11 +1744,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159231489
-    - 87893173159231490
     - 87893173159231492
+    - 87893173159165957
     - 87893173159231491
-    - 87893173159231494
+    - 87893173159231490
+    - 87893173159231489
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1759,9 +1759,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 373
+    pci: 211
     earfcn: 88
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell48:
@@ -1777,10 +1777,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159198725
     - 87893173159231493
-    - 87893173159247877
-    - 87893173159231489
-    - 87893173159231490
+    - 87893173159182342
+    - 87893173159165958
     - 87893173159231492
     txpowerdb: 11
     measurementparams:
@@ -1792,9 +1792,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 271
+    pci: 51
     earfcn: 89
-    celltype: 2
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell49:
@@ -1810,11 +1810,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247877
+    - 87893173159133190
     - 87893173159247875
-    - 87893173159247876
-    - 87893173159247878
-    - 87893173159280645
+    - 87893173159280646
+    - 87893173159297029
+    - 87893173159149574
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1825,9 +1825,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 226
+    pci: 87
     earfcn: 90
-    celltype: 1
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell50:
@@ -1843,11 +1843,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247877
+    - 87893173159116801
+    - 87893173159182338
     - 87893173159247873
-    - 87893173159247875
-    - 87893173159280644
-    - 87893173159264259
+    - 87893173159165953
+    - 87893173159247878
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1858,9 +1858,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 117
+    pci: 259
     earfcn: 91
-    celltype: 1
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell51:
@@ -1876,11 +1876,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247874
+    - 87893173159247878
+    - 87893173159149572
     - 87893173159247877
-    - 87893173159247873
-    - 87893173159116806
-    - 87893173159247876
+    - 87893173159182339
+    - 87893173159198723
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1891,9 +1891,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 289
+    pci: 370
     earfcn: 92
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell52:
@@ -1909,11 +1909,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247878
-    - 87893173159247874
-    - 87893173159247877
+    - 87893173159182340
+    - 87893173159231491
     - 87893173159247873
-    - 87893173159247875
+    - 87893173159116805
+    - 87893173159247878
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1924,9 +1924,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 169
+    pci: 187
     earfcn: 93
-    celltype: 1
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell53:
@@ -1942,11 +1942,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247873
     - 87893173159247875
-    - 87893173159231494
+    - 87893173159165957
+    - 87893173159182341
     - 87893173159247876
-    - 87893173159247878
+    - 87893173159247874
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1957,9 +1957,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 46
+    pci: 345
     earfcn: 94
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell54:
@@ -1975,11 +1975,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159247877
-    - 87893173159247873
     - 87893173159247875
+    - 87893173159264261
     - 87893173159247876
     - 87893173159247874
+    - 87893173159247873
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -1990,9 +1990,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 4
+    pci: 199
     earfcn: 95
-    celltype: 3
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell55:
@@ -2008,11 +2008,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264259
-    - 87893173159264261
-    - 87893173159297028
-    - 87893173159264262
+    - 87893173159133190
+    - 87893173159149574
     - 87893173159264260
+    - 87893173159264261
+    - 87893173159198726
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2023,9 +2023,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 394
+    pci: 249
     earfcn: 96
-    celltype: 2
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell56:
@@ -2041,11 +2041,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159215109
     - 87893173159264261
-    - 87893173159133190
-    - 87893173159264257
-    - 87893173159182337
+    - 87893173159264260
+    - 87893173159247874
+    - 87893173159280643
+    - 87893173159264259
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2056,7 +2056,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 126
+    pci: 373
     earfcn: 97
     celltype: 3
     rrcidlecount: 0
@@ -2075,10 +2075,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159198724
-    - 87893173159247874
-    - 87893173159264262
-    - 87893173159264260
     - 87893173159264258
+    - 87893173159264257
+    - 87893173159231490
+    - 87893173159149573
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2089,7 +2089,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 381
+    pci: 117
     earfcn: 98
     celltype: 2
     rrcidlecount: 0
@@ -2107,11 +2107,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264261
-    - 87893173159264257
-    - 87893173159264262
     - 87893173159264258
-    - 87893173159182342
+    - 87893173159264257
+    - 87893173159264259
+    - 87893173159116805
+    - 87893173159264262
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2122,9 +2122,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 57
+    pci: 348
     earfcn: 99
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell59:
@@ -2140,11 +2140,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264257
-    - 87893173159264262
+    - 87893173159231494
+    - 87893173159182342
     - 87893173159264260
     - 87893173159264258
-    - 87893173159264259
+    - 87893173159264257
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2155,9 +2155,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 370
+    pci: 163
     earfcn: 100
-    celltype: 1
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell60:
@@ -2173,11 +2173,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159264259
-    - 87893173159264261
-    - 87893173159264257
+    - 87893173159247873
+    - 87893173159280646
+    - 87893173159297029
     - 87893173159264260
-    - 87893173159264258
+    - 87893173159264261
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2188,7 +2188,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 160
+    pci: 426
     earfcn: 101
     celltype: 1
     rrcidlecount: 0
@@ -2206,9 +2206,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280643
-    - 87893173159297029
     - 87893173159280645
+    - 87893173159297030
+    - 87893173159215105
     - 87893173159280646
     - 87893173159280644
     txpowerdb: 11
@@ -2221,7 +2221,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 129
+    pci: 153
     earfcn: 102
     celltype: 3
     rrcidlecount: 0
@@ -2239,11 +2239,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280643
-    - 87893173159280645
     - 87893173159280646
-    - 87893173159297027
+    - 87893173159280644
+    - 87893173159280643
     - 87893173159198721
+    - 87893173159280645
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2254,9 +2254,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 211
+    pci: 4
     earfcn: 103
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell63:
@@ -2272,11 +2272,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280645
-    - 87893173159280646
+    - 87893173159182338
+    - 87893173159198722
+    - 87893173159297027
     - 87893173159280641
-    - 87893173159280644
-    - 87893173159280642
+    - 87893173159280646
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2289,7 +2289,7 @@ cells:
         reportonleave: false
     pci: 325
     earfcn: 104
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell64:
@@ -2305,11 +2305,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159182337
+    - 87893173159198724
+    - 87893173159280642
     - 87893173159280643
-    - 87893173159280645
-    - 87893173159247874
-    - 87893173159280646
+    - 87893173159264259
+    - 87893173159231490
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2320,9 +2320,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 345
+    pci: 22
     earfcn: 105
-    celltype: 2
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell65:
@@ -2338,10 +2338,10 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280643
+    - 87893173159116806
+    - 87893173159165958
     - 87893173159280646
-    - 87893173159280641
-    - 87893173159247873
+    - 87893173159264261
     - 87893173159280644
     txpowerdb: 11
     measurementparams:
@@ -2353,7 +2353,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 207
+    pci: 90
     earfcn: 106
     celltype: 0
     rrcidlecount: 0
@@ -2371,11 +2371,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159280644
-    - 87893173159280642
-    - 87893173159280643
-    - 87893173159280645
     - 87893173159280641
+    - 87893173159297029
+    - 87893173159280644
+    - 87893173159215110
+    - 87893173159280642
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2386,9 +2386,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 66
+    pci: 417
     earfcn: 107
-    celltype: 1
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell67:
@@ -2404,11 +2404,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159297029
     - 87893173159297028
-    - 87893173159297027
     - 87893173159297030
+    - 87893173159215105
     - 87893173159297026
+    - 87893173159297027
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2419,9 +2419,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 256
+    pci: 289
     earfcn: 108
-    celltype: 3
+    celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell68:
@@ -2437,11 +2437,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159297027
-    - 87893173159297025
     - 87893173159297030
-    - 87893173159297028
-    - 87893173159297029
+    - 87893173159149570
+    - 87893173159297027
+    - 87893173159215106
+    - 87893173159297025
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2452,7 +2452,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 394
+    pci: 169
     earfcn: 109
     celltype: 1
     rrcidlecount: 0
@@ -2470,11 +2470,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159280643
+    - 87893173159116802
+    - 87893173159247874
+    - 87893173159264258
     - 87893173159297028
-    - 87893173159297029
-    - 87893173159198721
-    - 87893173159297025
-    - 87893173159297030
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2485,7 +2485,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 73
+    pci: 394
     earfcn: 110
     celltype: 1
     rrcidlecount: 0
@@ -2503,11 +2503,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159215109
+    - 87893173159297030
+    - 87893173159231489
+    - 87893173159165953
     - 87893173159297026
-    - 87893173159264257
-    - 87893173159297029
-    - 87893173159215110
-    - 87893173159297027
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2518,9 +2518,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 57
+    pci: 223
     earfcn: 111
-    celltype: 1
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell71:
@@ -2536,11 +2536,11 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159297026
+    - 87893173159215110
+    - 87893173159198726
     - 87893173159297028
-    - 87893173159297027
-    - 87893173159280641
-    - 87893173159297025
+    - 87893173159297030
+    - 87893173159247873
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2551,7 +2551,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 64
+    pci: 313
     earfcn: 112
     celltype: 3
     rrcidlecount: 0
@@ -2570,10 +2570,10 @@ cells:
     maxues: 99999
     neighbors:
     - 87893173159297028
-    - 87893173159297029
+    - 87893173159297026
     - 87893173159297027
     - 87893173159297025
-    - 87893173159297026
+    - 87893173159280641
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -2584,9 +2584,9 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 199
+    pci: 160
     earfcn: 113
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
 controllers:

@@ -13,10 +13,10 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - kpm2
-    - mho
     - kpm
     - rcpre2
+    - kpm2
+    - mho
     cells:
     - 87893173159116801
     - 87893173159116802
@@ -27,10 +27,10 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - kpm2
-    - mho
     - kpm
     - rcpre2
+    - kpm2
+    - mho
     cells:
     - 87893173159133185
     - 87893173159133186
@@ -52,6 +52,7 @@ cells:
     neighbors:
     - 87893173159116802
     - 87893173159116803
+    - 87893173159133185
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -62,7 +63,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 480
+    pci: 148
     earfcn: 42
     celltype: 3
     rrcidlecount: 0
@@ -80,8 +81,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
     - 87893173159116803
+    - 87893173159133186
+    - 87893173159116801
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -92,7 +94,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 44
+    pci: 218
     earfcn: 43
     celltype: 2
     rrcidlecount: 0
@@ -110,6 +112,7 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159133187
     - 87893173159116801
     - 87893173159116802
     txpowerdb: 11
@@ -142,6 +145,7 @@ cells:
     neighbors:
     - 87893173159133186
     - 87893173159133187
+    - 87893173159116801
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -152,7 +156,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 44
+    pci: 115
     earfcn: 45
     celltype: 0
     rrcidlecount: 0
@@ -170,8 +174,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133185
     - 87893173159133187
+    - 87893173159116802
+    - 87893173159133185
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -182,7 +187,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 480
+    pci: 115
     earfcn: 46
     celltype: 2
     rrcidlecount: 0
@@ -200,6 +205,7 @@ cells:
     color: green
     maxues: 99999
     neighbors:
+    - 87893173159116803
     - 87893173159133185
     - 87893173159133186
     txpowerdb: 11
@@ -212,7 +218,7 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 148
+    pci: 480
     earfcn: 47
     celltype: 2
     rrcidlecount: 0
