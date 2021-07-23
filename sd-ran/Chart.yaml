@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.1.100
+version: 1.1.101
 appVersion: v1.1.2
 keywords:
   - onos
@@ -74,7 +74,7 @@ dependencies:
   - name: fb-ah-xapp
     condition: import.fb-ah-xapp.enabled
     repository: "@sdran"
-    version: 0.0.2
+    version: 0.0.3
   - name: fb-ah-gui
     condition: import.fb-ah-gui.enabled
     repository: "@sdran"
@@ -90,7 +90,7 @@ dependencies:
   - name: ah-eson-test-server
     condition: import.ah-eson-test-server.enabled
     repository: "@sdran"
-    version: 0.0.1
+    version: 0.0.2
   - name: fluent-bit
     condition: import.fluent-bit.enabled
     version: 0.15.4
