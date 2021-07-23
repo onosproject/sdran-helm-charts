@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/fb-kpimon-xapp
-  tag: 0.0.1
+  tag: 0.0.2
   pullPolicy: IfNotPresent
   pullSecrets: []
 
