@@ -7,8 +7,8 @@ name: fb-ah-gui
 description: FB AirHop GUI
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.3
-appVersion: 0.0.3
+version: 0.0.4
+appVersion: 0.0.2
 keywords:
   - fb
 home: https://connectivity.fb.com/
