@@ -36,7 +36,9 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          #args:
+          args:
+            - "main.py"
+            - "--gmaps_api_key={{ .Values.config.gmapsApiKey }}"
           ports:
             - name: http
               containerPort: {{ .Values.service.http.port }}
