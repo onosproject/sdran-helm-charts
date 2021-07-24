@@ -20,6 +20,9 @@ fullnameOverride: "fb-ah-gui"
 
 storage: {}
 
+config:
+  gmapsApiKey: ""
+
 service:
   http:
     port: 8080
