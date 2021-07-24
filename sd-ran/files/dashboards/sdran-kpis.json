@@ -205,7 +205,7 @@
             }
           ],
           "exemplar": true,
-          "expr": "xappkpimon_rrc_conn_avg",
+          "expr": "fb_xappkpimon_rrc_conn_avg",
           "interval": "",
           "legendFormat": "{{cellid}}",
           "metrics": [
@@ -239,6 +239,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:35",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -247,6 +248,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:36",
           "format": "short",
           "label": null,
           "logBase": 1,
