@@ -30,10 +30,17 @@ shift
 shift
 for orgWithVcs in "$@"
 do
-  ORGASCII=${orgWithVcs%%\[*\]} # Drop the [*] off the end
+  ORGASCII=${orgWithVcs%%map\[*\]} # Drop the [*] off the end
   echo "Creating $orgWithVcs as $ORGASCII"
-  VCSLIST=${orgWithVcs##$ORGASCII\[} # Drop the org[ off the front
-  VCSLIST=${VCSLIST%\]} # Drop the ] off the end
+  VCSLIST=${orgWithVcs##${ORGASCII}map\[*\]\ vcs:\[} # Drop everything off the front until "] vcs:["
+  VCSLIST=${VCSLIST%\]\]} # Drop the ]] off the end
+  DGLIST=${orgWithVcs##${ORGASCII}map\[devicegroup:\[} # Drop everything off the front until "devicegroup:[map["
+  DGLIST=${DGLIST%\]\ vcs:*\]\]}
+  DGLIST1=${DGLIST//" map["/";map["} # Replace all occurrence of " map["
+  IFS=';' read -r -a DGARRAY <<< $DGLIST1
+  for idx in ${!DGARRAY[@]}; do
+    DGARRAY[$idx]=${DGARRAY[$idx]// /;} # Replace all instances of space with ;
+  done
   SUCCESS=-1
   ORGID=-1
   # Commented out for the moment - keeping everything in the Main Org. - see aether-roc-gui/docs/grafana.md
@@ -76,6 +83,7 @@ do
 
   echo "now create Dashboards with "$VCSLIST
   grafana-create-vcs.sh $ADMINUSER $ADMINPASS $SERVICE $DASHBOARDS $ORGASCII $VCSLIST
+  grafana-create-device-group.sh $ADMINUSER $ADMINPASS $SERVICE $DASHBOARDS $ORGASCII $DGARRAY
 
 done
 
