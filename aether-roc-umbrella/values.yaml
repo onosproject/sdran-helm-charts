@@ -112,10 +112,27 @@ sdcore-adapter-v3:
 grafana:
   orgs:
     acme:
-      - acme-chicago-robots
+      vcs:
+        - acme-chicago-robots
+      devicegroup:
+        - acme-chicago-robots:
+            production: "0-3"
+            warehouse: "10-12"
     starbucks:
-      - starbucks-newyork-cameras
-      - starbucks-seattle-cameras
+      vcs:
+        - starbucks-newyork-cameras
+        - starbucks-seattle-cameras
+      devicegroup:
+        - starbucks-newyork-cameras:
+            front: "40-41"
+            store: "50-55"
+        - starbucks-seattle-pos:
+            tills: "20-22"
+            store: "30-34"
+        - starbucks-seattle-cameras:
+            counter: "0-3"
+            store: "10-14"
+
   tidyUpPostInstall: true
   grafana.ini:
     log:
