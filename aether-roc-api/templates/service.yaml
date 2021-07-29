@@ -45,3 +45,4 @@ spec:
   ports:
     - name: webhook
       port: 80
+      targetPort: {{ .Values.websocketsidecar.port }}
