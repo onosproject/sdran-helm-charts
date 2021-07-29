@@ -7,7 +7,7 @@ name: aether-roc-api
 description: Aether ROC API
 kubeVersion: ">=1.15.0"
 type: application
-version: 1.1.1
+version: 1.1.2
 appVersion: v0.7.1
 keywords:
   - aether
