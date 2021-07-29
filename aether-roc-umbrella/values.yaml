@@ -171,7 +171,56 @@ prometheus:
     enabled: false
   kubeStateMetrics:
     enabled: false
+  alertmanager:
+    configMapOverrideName: alertmanager
+    webhook_url: "http://aether-roc-api-websocket/webhook"
   serverFiles:
+    alerting_rules.yml:
+     groups:
+       - name: UeAlerts
+         rules:
+           - alert: UeThroughputLow
+             expr: ue_throughput < 9000
+             for: 1m
+             labels:
+               severity: info
+             annotations:
+               description: 'UE {{ $labels.id }} on VCS {{ $labels.slice }} throughput has been low for more than 1 minutes.'
+               summary: 'UE Instance {{ $labels.id }} on VCS {{ $labels.slice }} throughput low'
+           - alert: UeLatencyHigh
+             expr: ue_latency > 8
+             for: 1m
+             labels:
+               severity: info
+             annotations:
+               description: 'UE {{ $labels.id }} on VCS {{ $labels.slice }} latency has been high for more than 1 minutes.'
+               summary: 'UE {{ $labels.id }} on VCS {{ $labels.slice }} latency high'
+       - name: VcsAlerts
+         rules:
+           - alert: VcsThroughputLow
+             expr: vcs_throughput < 9000
+             for: 1m
+             labels:
+               severity: info
+             annotations:
+               description: 'VCS {{ $labels.vcs_id }} throughput has been low for more than 1 minutes.'
+               summary: 'VCS {{ $labels.vcs_id }} throughput low'
+           - alert: VcsLatencyHigh
+             expr: vcs_latency > 30
+             for: 1m
+             labels:
+               severity: warn
+             annotations:
+               description: 'VCS {{ $labels.vcs_id }} latency has been high for more than 1 minutes.'
+               summary: 'VCS {{ $labels.vcs_id }} latency high'
+           - alert: VcsJitterHigh
+             expr: vcs_jitter > 8
+             for: 1m
+             labels:
+               severity: page
+             annotations:
+               description: 'VCS {{ $labels.vcs_id }} jitter has been high for more than 1 minutes.'
+               summary: 'VCS {{ $labels.vcs_id }} jitter high'
     prometheus.yml:
       scrape_configs:
         - job_name: sdcore-exporter
