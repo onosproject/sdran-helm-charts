@@ -57,6 +57,12 @@ spec:
 {{- if .Values.config.capacityUpdatePeriod }}
             - "--mlb-update-capacity-period={{ .Values.config.capacityUpdatePeriod }}"
 {{- end }}
+{{- if .Values.config.pciDisableControl }}
+            - "--pci-disable-control"
+{{- end }}
+{{- if .Values.config.mlbDisableControl }}
+            - "--mlb-disable-control"
+{{- end }}
           ports:
             - name: http
               containerPort: 8080

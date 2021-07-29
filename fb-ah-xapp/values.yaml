@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/fb-ah-xapp
-  tag: 0.0.4
+  tag: 0.0.5
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -33,6 +33,12 @@ config:
   processingDelay: 0
   # period of update of capacity information to eson (seconds)
   capacityUpdatePeriod: 10
+  # when airhop change requests are received, do not send pci e2 control messages
+  #   (curl -X POST host:8080/pci?items=0x13842601454c003,164 still works)
+  pciDisableControl: false
+  # when airhop change requests are received, do not send mlb (ocn) e2 control messages
+  #   (curl -X POST host:8080/cio?items=0x1384274550001,0x1384274550003,5 still works)
+  mlbDisableControl: false
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
