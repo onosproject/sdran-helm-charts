@@ -16,6 +16,14 @@ data:
         listen {{.Values.Nginx.port}};
         ssl_certificate /usr/share/certs/aether-roc-gui.crt;
         ssl_certificate_key /usr/share/certs/aether-roc-gui.key;
+        {{- if .Values.websocket.proxyEnabled }}
+        location /ws {
+            proxy_pass {{ .Values.websocket.protocol }}://{{ .Values.websocket.service }}:{{ .Values.websocket.port }}/ws;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header Host $host;
+        }{{end}}
         {{- if .Values.grafana.proxyEnabled }}
         location /grafana/ {
             proxy_pass {{ .Values.grafana.protocol }}://{{ .Values.grafana.service }}:{{ .Values.grafana.port }}/;
