@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/aether-roc-gui
-  tag: v0.7.11
+  tag: v0.7.12
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -63,6 +63,12 @@ aetherservices:
     http: 8181
     protocol: http
     streamTimeout: 3600
+
+websocket:
+  proxyEnabled: false
+  service: aether-roc-api-websocket
+  protocol: http
+  port: 80
 
 grafana:
   proxyEnabled: false
