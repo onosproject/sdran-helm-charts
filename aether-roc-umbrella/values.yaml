@@ -91,6 +91,8 @@ aether-roc-api: {}
 
 # Aether ROC GUI
 aether-roc-gui-v3:
+  websocket:
+    proxyEnabled: true
   grafana:
     proxyEnabled: true
     service: aether-roc-umbrella-grafana # the grafana hostname - use FQDN for other namespaces
@@ -186,7 +188,7 @@ prometheus:
                severity: info
              annotations:
                description: 'UE {{ $labels.id }} on VCS {{ $labels.slice }} throughput has been low for more than 1 minutes.'
-               summary: 'UE Instance {{ $labels.id }} on VCS {{ $labels.slice }} throughput low'
+               summary: 'UE {{ $labels.id }} on VCS {{ $labels.slice }} throughput low'
            - alert: UeLatencyHigh
              expr: ue_latency > 8
              for: 1m

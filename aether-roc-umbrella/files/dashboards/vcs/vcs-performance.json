@@ -93,17 +93,17 @@
         "targets": [
           {
             "exemplar": true,
-            "expr": "vcs_jitter{vcs_id=\"$VCS\"}",
+            "expr": "vcs_jitter{vcs_id=\"$VCS\"}*1000",
             "interval": "",
-            "legendFormat": "Jitter (ms)",
+            "legendFormat": "Jitter (µs)",
             "refId": "A"
           },
           {
             "exemplar": true,
-            "expr": "vcs_latency{vcs_id=\"$VCS\"}",
+            "expr": "vcs_latency{vcs_id=\"$VCS\"}*1000",
             "hide": false,
             "interval": "",
-            "legendFormat": "Latency (ms)",
+            "legendFormat": "Latency (µs)",
             "refId": "B"
           },
           {
