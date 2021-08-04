@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: subscriber-proxy
+kubeVersion: ">=1.17.0"
+type: application
+version: 3.0.9
+appVersion: v1.0.0
+description: Subscriber-Proxy
+keywords:
+  - onos
+  - sdn
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org
