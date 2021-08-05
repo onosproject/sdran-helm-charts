@@ -43,7 +43,12 @@ module ip-domain {
             length 1..80;
         }
         description "display name to use in GUI or CLI";
-      }     
+      }
+
+      leaf dnn {
+        type at:dnn;
+        description "DNN/APN";
+      }      
 
       leaf dns-primary {
         type inet:ip-address;

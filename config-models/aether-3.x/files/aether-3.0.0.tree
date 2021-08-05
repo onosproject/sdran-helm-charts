@@ -62,6 +62,7 @@ module: ip-domain
      +--rw ip-domain* [id]
         +--rw id               ip-domain-id
         +--rw display-name?    string
+        +--rw dnn?             at:dnn
         +--rw dns-primary?     inet:ip-address
         +--rw dns-secondary?   inet:ip-address
         +--rw subnet           inet:ipv4-prefix

@@ -35,6 +35,12 @@ module aether-types {
       }
   }  
 
+  typedef dnn {
+      type string {
+        length 0..32;
+      }
+  }  
+
   typedef sst {
       // TODO: Aether-roc-api fails on uint8. AETHER-1859.
       type uint32 {
