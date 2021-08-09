@@ -10,6 +10,7 @@ module vcs {
   import device-group{ prefix dg; }
   import traffic-class{ prefix tc; }
   import ietf-yang-types{ prefix yg; }
+  import enterprise{ prefix ent; }
 
   organization "Open Networking Foundation.";
   contact "Scott Baker";
@@ -116,11 +117,18 @@ module vcs {
       }
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this vcs";
       }
+
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }
+        mandatory true;
+        description
+          "Link to enterprise that owns this VCS";
+      }      
 
       // the following are populated from the template
       leaf sst {

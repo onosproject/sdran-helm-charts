@@ -58,9 +58,7 @@ module traffic-class {
       }      
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this traffic class";
       }
     }

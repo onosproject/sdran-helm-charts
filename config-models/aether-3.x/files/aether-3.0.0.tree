@@ -7,7 +7,7 @@ module: ap-list
         |  +--rw tac        at:tac
         |  +--rw enable?    boolean
         +--rw display-name?    string
-        +--rw description?     string
+        +--rw description?     at:description
         +--rw enterprise       -> /ent:enterprise/enterprise/id
 
 module: application
@@ -15,7 +15,7 @@ module: application
      +--rw application* [id]
         +--rw id              application-id
         +--rw display-name?   string
-        +--rw description?    string
+        +--rw description?    at:description
         +--rw endpoint* [name]
         |  +--rw name          string
         |  +--rw address       ietf:host
@@ -29,7 +29,7 @@ module: connectivity-service
      +--rw connectivity-service* [id]
         +--rw id                  connectivity-service-id
         +--rw display-name?       string
-        +--rw description?        string
+        +--rw description?        at:description
         +--rw spgwc-endpoint?     inet:uri
         +--rw hss-endpoint?       inet:uri
         +--rw pcrf-endpoint?      inet:uri
@@ -39,6 +39,7 @@ module: device-group
   +--rw device-group
      +--rw device-group* [id]
         +--rw id              device-group-id
+        +--rw description?    at:description
         +--rw display-name?   string
         +--rw imsis* [name]
         |  +--rw name               string
@@ -52,7 +53,7 @@ module: enterprise
      +--rw enterprise* [id]
         +--rw id                      enterprise-id
         +--rw display-name?           string
-        +--rw description?            string
+        +--rw description?            at:description
         +--rw connectivity-service* [connectivity-service]
            +--rw connectivity-service    -> /cs:connectivity-service/connectivity-service/id
            +--rw enabled?                boolean
@@ -68,7 +69,7 @@ module: ip-domain
         +--rw subnet           inet:ipv4-prefix
         +--rw admin-status?    at:admin-status
         +--rw mtu?             at:mtu
-        +--rw description?     string
+        +--rw description?     at:description
         +--rw enterprise       -> /ent:enterprise/enterprise/id
 
 module: site
@@ -82,7 +83,7 @@ module: site
         |  +--rw mnc           at:mnc
         |  +--rw enterprise    at:ent
         |  +--rw format        string
-        +--rw description?       string
+        +--rw description?       at:description
 
 module: template
   +--rw template
@@ -94,7 +95,7 @@ module: template
         +--rw uplink?          uint32
         +--rw downlink?        uint32
         +--rw traffic-class?   -> /tc:traffic-class/traffic-class/id
-        +--rw description?     string
+        +--rw description?     at:description
 
 module: traffic-class
   +--rw traffic-class
@@ -104,7 +105,7 @@ module: traffic-class
         +--rw pelr?           at:pelr
         +--rw pdb?            at:pdb
         +--rw qci?            at:qci
-        +--rw description?    string
+        +--rw description?    at:description
 
 module: upf
   +--rw upf
@@ -113,7 +114,7 @@ module: upf
         +--rw address         inet:host
         +--rw port            uint32
         +--rw display-name?   string
-        +--rw description?    string
+        +--rw description?    at:description
         +--rw enterprise      -> /ent:enterprise/enterprise/id
 
 module: vcs
@@ -130,7 +131,8 @@ module: vcs
         |  +--rw allow?         boolean
         +--rw upf?             -> /upf:upf/upf/id
         +--rw ap?              -> /apl:ap-list/ap-list/id
-        +--rw description?     string
+        +--rw description?     at:description
+        +--rw enterprise       -> /ent:enterprise/enterprise/id
         +--rw sst              at:sst
         +--rw sd               at:sd
         +--rw uplink?          uint32

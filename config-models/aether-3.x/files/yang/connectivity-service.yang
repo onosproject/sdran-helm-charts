@@ -2,6 +2,7 @@ module connectivity-service {
   namespace "http://opennetworking.org/aether/connectivity-service";
   prefix cs;
 
+  import aether-types { prefix at; }
   import ietf-inet-types { prefix inet; }
   import ietf-yang-types{ prefix yg; }
 
@@ -43,9 +44,7 @@ module connectivity-service {
       }     
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this connectivity service";
       }
 

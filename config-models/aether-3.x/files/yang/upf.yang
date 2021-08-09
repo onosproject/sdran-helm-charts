@@ -2,6 +2,7 @@ module upf {
   namespace "http://opennetworking.org/aether/upf";
   prefix upf;
 
+  import aether-types { prefix at; }
   import ietf-inet-types { prefix inet; }
   import enterprise{ prefix ent; }
   import ietf-yang-types{ prefix yg; }
@@ -58,9 +59,7 @@ module upf {
       }
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this UPF";
       }
 
