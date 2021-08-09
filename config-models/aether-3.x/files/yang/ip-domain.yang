@@ -79,9 +79,7 @@ module ip-domain {
       }           
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this ip domain";
       }
 
@@ -93,7 +91,7 @@ module ip-domain {
         }
         mandatory true;
         description
-          "Link to enterprise that owns this Access Point List";
+          "Link to enterprise that owns this IP-Domain";
       }         
     }
   } 

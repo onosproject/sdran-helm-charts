@@ -100,4 +100,10 @@ module aether-types {
       }
       default 1492;
   }
+
+  typedef description {
+    type string {
+      length 1..1024;
+    }
+  }
 }

@@ -2,6 +2,7 @@ module enterprise {
   namespace "http://opennetworking.org/aether/enterprise";
   prefix ent;
 
+  import aether-types { prefix at; }
   import connectivity-service { prefix cs; }
   import ietf-yang-types{ prefix yg; }
 
@@ -43,9 +44,7 @@ module enterprise {
       }     
 
       leaf description {
-        type string {
-          length 1..100;
-        }
+        type at:description;
         description "description of this enterprise";
       }
 

@@ -2,6 +2,7 @@ module device-group {
   namespace "http://opennetworking.org/aether/device-group";
   prefix dg;
 
+  import aether-types { prefix at; }
   import ip-domain{ prefix ipd; }
   import site{ prefix st; }
   import ietf-yang-types{ prefix yg; }
@@ -41,6 +42,11 @@ module device-group {
       leaf id {
         type device-group-id;
         description "ID for this device group.";
+      }
+
+      leaf description {
+        type at:description;
+        description "description of this device group";
       }
 
       leaf display-name {
@@ -83,7 +89,7 @@ module device-group {
         mandatory true;
         description
           "Link to site";
-      }        
+      }
     }
   } 
 }
