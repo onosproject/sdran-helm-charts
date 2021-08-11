@@ -139,9 +139,8 @@ upfs[upf] {
 }
 
 vcss[vcs] {
-    vcs := input.vcs.vcs[i]
-    application := applications
-    vcs.application[_].application == application[_].id
+    vcs := input.vcs.vcs[_]
+    ["AetherROCAdmin", vcs.enterprise][_] == input.groups[i]
 }
 
 can_update_enterprise = true {
