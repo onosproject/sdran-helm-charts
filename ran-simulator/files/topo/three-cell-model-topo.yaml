@@ -1,8 +1,9 @@
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
-  name: "5153"
+  name: e2.1.5153
 spec:
+  uri: e2:1/5153
   kind:
     name: e2node
   aspects:
@@ -12,52 +13,9 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
-  name: "1454c001"
+  name: e2.1.5153.2
 spec:
-  kind:
-    name: e2cell
-  aspects:
-    onos.topo.Location:
-      lat: 52.486405
-      lng: 13.412234
-    onos.topo.E2Cell:
-      earfcn: 42
-      cell_type: OUTDOOR_SMALL
-    onos.topo.Coverage:
-      arc_width: 120
-      tilt: 1
-      height: 43
-      azimuth: 0
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "1454c001-neighbors-1454c002"
-spec:
-  kind:
-    name: neighbors
-  source:
-    name: "1454c001"
-  target:
-    name: "1454c002"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Relation
-metadata:
-  name: "1454c001-neighbors-1454c003"
-spec:
-  kind:
-    name: neighbors
-  source:
-    name: "1454c001"
-  target:
-    name: "1454c003"
----
-apiVersion: topo.onosproject.org/v1beta1
-kind: Entity
-metadata:
-  name: "1454c002"
-spec:
+  uri: e2:1/5153/2
   kind:
     name: e2cell
   aspects:
@@ -76,32 +34,35 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "1454c002-neighbors-1454c001"
+  name: rid.1d37e3e7-cde9-4017-aa1f-8408d8a22a1e
 spec:
+  uri: rid:1d37e3e7-cde9-4017-aa1f-8408d8a22a1e
   kind:
     name: neighbors
   source:
-    name: "1454c002"
+    uri: e2:1/5153/2
   target:
-    name: "1454c001"
+    uri: e2:1/5153/1
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "1454c002-neighbors-1454c003"
+  name: rid.add20028-f589-4aa0-8ab7-45ed22965c71
 spec:
+  uri: rid:add20028-f589-4aa0-8ab7-45ed22965c71
   kind:
     name: neighbors
   source:
-    name: "1454c002"
+    uri: e2:1/5153/2
   target:
-    name: "1454c003"
+    uri: e2:1/5153/3
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Entity
 metadata:
-  name: "1454c003"
+  name: e2.1.5153.3
 spec:
+  uri: e2:1/5153/3
   kind:
     name: e2cell
   aspects:
@@ -120,60 +81,112 @@ spec:
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "1454c003-neighbors-1454c001"
+  name: rid.090fa13a-f6d3-4d1e-b4bd-b0401a3b18ae
 spec:
+  uri: rid:090fa13a-f6d3-4d1e-b4bd-b0401a3b18ae
   kind:
     name: neighbors
   source:
-    name: "1454c003"
+    uri: e2:1/5153/3
   target:
-    name: "1454c001"
+    uri: e2:1/5153/1
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "1454c003-neighbors-1454c002"
+  name: rid.d1d01880-fca2-4e6f-9846-bdae0bf75283
 spec:
+  uri: rid:d1d01880-fca2-4e6f-9846-bdae0bf75283
   kind:
     name: neighbors
   source:
-    name: "1454c003"
+    uri: e2:1/5153/3
   target:
-    name: "1454c002"
+    uri: e2:1/5153/2
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: e2.1.5153.1
+spec:
+  uri: e2:1/5153/1
+  kind:
+    name: e2cell
+  aspects:
+    onos.topo.Location:
+      lat: 52.486405
+      lng: 13.412234
+    onos.topo.E2Cell:
+      earfcn: 42
+      cell_type: OUTDOOR_SMALL
+    onos.topo.Coverage:
+      arc_width: 120
+      tilt: 1
+      height: 43
+      azimuth: 0
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "5153-contains-1454c001"
+  name: rid.204ca824-8829-4f0a-930f-45dfb13be2e1
 spec:
+  uri: rid:204ca824-8829-4f0a-930f-45dfb13be2e1
   kind:
-    name: contains
+    name: neighbors
   source:
-    name: "5153"
+    uri: e2:1/5153/1
   target:
-    name: "1454c001"
+    uri: e2:1/5153/2
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "5153-contains-1454c002"
+  name: rid.ee304ce7-6937-4ebf-8737-69f1591e6300
 spec:
+  uri: rid:ee304ce7-6937-4ebf-8737-69f1591e6300
   kind:
-    name: contains
+    name: neighbors
   source:
-    name: "5153"
+    uri: e2:1/5153/1
   target:
-    name: "1454c002"
+    uri: e2:1/5153/3
 ---
 apiVersion: topo.onosproject.org/v1beta1
 kind: Relation
 metadata:
-  name: "5153-contains-1454c003"
+  name: rid.c30b60ed-66ac-4f72-9573-b015c1c369a7
 spec:
+  uri: rid:c30b60ed-66ac-4f72-9573-b015c1c369a7
   kind:
     name: contains
   source:
-    name: "5153"
+    uri: e2:1/5153
   target:
-    name: "1454c003"
+    uri: e2:1/5153/1
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: rid.a577cb96-7f7b-4bb4-9b3b-d9ffed006310
+spec:
+  uri: rid:a577cb96-7f7b-4bb4-9b3b-d9ffed006310
+  kind:
+    name: contains
+  source:
+    uri: e2:1/5153
+  target:
+    uri: e2:1/5153/2
+---
+apiVersion: topo.onosproject.org/v1beta1
+kind: Relation
+metadata:
+  name: rid.1ebc6b51-568f-40fb-81ea-05d928f1f220
+spec:
+  uri: rid:1ebc6b51-568f-40fb-81ea-05d928f1f220
+  kind:
+    name: contains
+  source:
+    uri: e2:1/5153
+  target:
+    uri: e2:1/5153/3
 ---

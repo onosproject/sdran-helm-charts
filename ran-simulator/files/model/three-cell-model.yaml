@@ -13,10 +13,10 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - kpm
     - rcpre2
     - kpm2
     - mho
+    - kpm
     cells:
     - 87893173159116801
     - 87893173159116802
