@@ -17,6 +17,7 @@ kind: Entity
 metadata:
   name: connectivity-service-v2
 spec:
+  uri: connectivity-service-v2
   kind:
     name: aether
   aspects:
@@ -36,6 +37,7 @@ kind: Entity
 metadata:
   name: connectivity-service-v3
 spec:
+  uri: connectivity-service-v3
   kind:
     name: aether
   aspects:
