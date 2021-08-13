@@ -22,7 +22,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-e2t
-  tag: v0.8.0
+  tag: v0.8.1
   pullPolicy: IfNotPresent
   pullSecrets: []
 
