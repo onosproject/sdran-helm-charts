@@ -76,9 +76,6 @@ spec:
         - name: logconfig
           configMap:
             name: {{ template "subscriber-proxy.fullname" . }}-logconfig
-        - name: targetconfig
-          configMap:
-            name: {{ template "subscriber-proxy.fullname" . }}-targetconfig
         - name: secret
           secret:
             secretName: {{ template "subscriber-proxy.fullname" . }}-secret
