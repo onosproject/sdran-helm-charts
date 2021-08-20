@@ -63,6 +63,8 @@ import:
       enabled: true
     v3:
       enabled: true
+  subscriber-proxy:
+    enabled: true
   sdcore-test-dummy:
     enabled: true
   grafana:
@@ -104,6 +106,12 @@ aether-roc-gui-v3:
 sdcore-adapter-v21:
   nameOverride: sdcore-adapter-v21
   fullnameOverride: sdcore-adapter-v21
+  prometheusEnabled: false
+
+# Subscriber Proxy
+subscriber-proxy:
+  nameOverride: subscriber-proxy
+  fullnameOverride: subscriber-proxy
   prometheusEnabled: false
 
 sdcore-adapter-v3:
