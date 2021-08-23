@@ -37,12 +37,13 @@ store:
     image:
       registry: ""
       repository: atomix/atomix-raft-storage-node
-      tag: v0.6.6
+      tag: ""
       pullPolicy: IfNotPresent
       pullSecrets: []
     clusters: 1
     replicas: 1
     partitions: 1
+    raft: {}
     persistence:
       storageClass: ""
       storageSize: 1Gi
