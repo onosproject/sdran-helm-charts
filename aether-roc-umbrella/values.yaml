@@ -64,7 +64,7 @@ import:
     v3:
       enabled: true
   subscriber-proxy:
-    enabled: false
+    enabled: true
   sdcore-test-dummy:
     enabled: true
   grafana:
