@@ -42,22 +42,30 @@ apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
   name: e2t
+spec:
+  aspects: {}
 ---
 # A topology kind representing one entity controlling another, e.g. E2T and E2NODE E2 connection relation
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
   name: controls
+spec:
+  aspects: {}
 ---
 # A topology kind representing one entity containing another, logically or physically, e.g. node-cell containment relation
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
   name: contains
+spec:
+  aspects: {}
 ---
 # A topology kind representing a neighbor relation, e.g. E2CELL neighboring another E2CELL
 apiVersion: topo.onosproject.org/v1beta1
 kind: Kind
 metadata:
   name: neighbors
+spec:
+  aspects: {}
 ---
