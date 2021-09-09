@@ -43,9 +43,7 @@ module upf {
       }
 
       leaf port {
-        // TODO: Aether-roc-api fails on ietf:port-number. AETHER-1859.
-        // type ietf:port-number;
-        type uint32;
+        type inet:port-number;
         mandatory true;
         description
             "Port for UPF";
