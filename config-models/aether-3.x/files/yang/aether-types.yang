@@ -15,7 +15,7 @@ module aether-types {
 
   typedef mcc {
       type string {
-        pattern '[0-9]{3}}';
+        pattern '[0-9]{3}';
       }
   }
 
