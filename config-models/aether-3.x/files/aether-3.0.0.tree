@@ -19,8 +19,8 @@ module: application
         +--rw endpoint* [name]
         |  +--rw name          string
         |  +--rw address       ietf:host
-        |  +--rw port-start    uint32
-        |  +--rw port-end?     uint32
+        |  +--rw port-start    ietf:port-number
+        |  +--rw port-end?     ietf:port-number
         |  +--rw protocol?     at:protocol
         +--rw enterprise      -> /ent:enterprise/enterprise/id
 
@@ -112,7 +112,7 @@ module: upf
      +--rw upf* [id]
         +--rw id              upf-id
         +--rw address         inet:host
-        +--rw port            uint32
+        +--rw port            inet:port-number
         +--rw display-name?   string
         +--rw description?    at:description
         +--rw enterprise      -> /ent:enterprise/enterprise/id
