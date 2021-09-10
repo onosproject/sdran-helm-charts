@@ -1,0 +1,77 @@
+module onf-upf {
+  namespace "http://opennetworking.org/aether/upf";
+  prefix upf;
+
+  import ietf-inet-types { prefix inet; }
+  import ietf-yang-types{ prefix yg; }  
+  import onf-aether-types { prefix at; }
+  import onf-enterprise{ prefix ent; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "A Aether UPF List is a named User Plane Function.";
+
+  revision "2021-06-02" {
+    description "An Aether User Plane Function";
+    reference "RFC 6087";
+  }
+
+  typedef upf-id {
+        type yg:yang-identifier {
+            length 1..32;
+        }
+  }
+
+  container upf {
+    description "The top level container";
+
+    list upf {
+      key "id";
+      description
+        "A list of named upfs.";
+
+      leaf id {
+        type upf-id;
+        description "ID for this upf.";
+      }
+
+      leaf address {
+        type inet:host;
+        mandatory true;
+        description
+          "Address of UPF";
+      }
+
+      leaf port {
+        type inet:port-number;
+        mandatory true;
+        description
+            "Port for UPF";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf description {
+        type at:description;
+        description "description of this UPF";
+      }
+
+      // UPFs are always owned by an Enterprise, since they typically exist on the
+      // Enterprise's edge. TODO: Consider whether they should be owned by a Site
+      // instead of Enterprise.
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }
+        mandatory true;
+        description
+          "Link to enterprise that owns this Access Point List";
+      }      
+    }
+  } 
+}
