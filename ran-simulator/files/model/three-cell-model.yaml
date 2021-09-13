@@ -16,7 +16,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159116801
     - 87893173159116802
@@ -119,10 +118,6 @@ controllers:
     address: onos-e2t
     port: 36421
 servicemodels:
-  kpm:
-    id: 1
-    description: kpm service model
-    version: 1.0.0
   kpm2:
     id: 4
     description: kpm2 service model

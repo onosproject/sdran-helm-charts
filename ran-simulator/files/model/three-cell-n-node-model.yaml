@@ -13,7 +13,6 @@ nodes:
     controllers:
       - e2t-1
     servicemodels:
-      - kpm
       - rcpre2
       - kpm2
       - mho
@@ -24,7 +23,6 @@ nodes:
     controllers:
       - e2t-1
     servicemodels:
-      - kpm
       - rcpre2
       - kpm2
       - mho
@@ -35,7 +33,6 @@ nodes:
     controllers:
       - e2t-1
     servicemodels:
-      - kpm
       - rcpre2
       - kpm2
       - mho
@@ -132,10 +129,6 @@ controllers:
     address: onos-e2t
     port: 36421
 servicemodels:
-  kpm:
-    id: 1
-    description: kpm service model
-    version: 1.0.0
   kpm2:
     id: 4
     description: kpm2 service model

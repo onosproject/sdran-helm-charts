@@ -16,7 +16,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159116801
     - 87893173159116802
@@ -33,7 +32,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159133185
     - 87893173159133186
@@ -50,7 +48,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159149569
     - 87893173159149570
@@ -67,7 +64,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159165953
     - 87893173159165954
@@ -84,7 +80,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159182337
     - 87893173159182338
@@ -101,7 +96,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159198721
     - 87893173159198722
@@ -118,7 +112,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159215105
     - 87893173159215106
@@ -135,7 +128,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159231489
     - 87893173159231490
@@ -152,7 +144,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159247873
     - 87893173159247874
@@ -169,7 +160,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159264257
     - 87893173159264258
@@ -186,7 +176,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159280641
     - 87893173159280642
@@ -203,7 +192,6 @@ nodes:
     - rcpre2
     - kpm2
     - mho
-    - kpm
     cells:
     - 87893173159297025
     - 87893173159297026
@@ -2595,10 +2583,6 @@ controllers:
     address: onos-e2t
     port: 36421
 servicemodels:
-  kpm:
-    id: 1
-    description: kpm service model
-    version: 1.0.0
   kpm2:
     id: 4
     description: kpm2 service model
