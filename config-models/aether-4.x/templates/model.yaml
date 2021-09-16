@@ -17,47 +17,47 @@ spec:
   - name: connectivity-service
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: connectivity-service.yang
+    file: onf-connectivity-service.yang
   - name: enterprise
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: enterprise.yang
+    file: onf-enterprise.yang
   - name: aether-types
     organization: Open Networking Foundation
     revision: 2021-09-10
-    file: aether-types.yang
+    file: onf-aether-types.yang
   - name: application
     organization: Open Networking Foundation
     revision: 2021-09-10
-    file: application.yang
+    file: onf-application.yang
   - name: device-group
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: device-group.yang
+    file: onf-device-group.yang
   - name: ip-domain
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: ip-domain.yang
+    file: onf-ip-domain.yang
   - name: site
     organization: Open Networking Foundation
     revision: 2021-09-10
-    file: site.yang
+    file: onf-site.yang
   - name: upf-list
     organization: Open Networking Foundation
-    revision: 2021-06-02
-    file: upf.yang
+    revision: 2021-09-16
+    file: onf-upf.yang
   - name: vcs
     organization: Open Networking Foundation
     revision: 2021-09-10
-    file: vcs.yang
+    file: onf-vcs.yang
   - name: template
     organization: Open Networking Foundation
     revision: 2021-09-10
-    file: template.yang
+    file: onf-template.yang
   - name: traffic-class
     organization: Open Networking Foundation
     revision: 2021-06-02
-    file: traffic-class.yang    
+    file: onf-traffic-class.yang    
   files:
     {{- range $path, $_  := $.Files.Glob "files/yang/*.yang" }}
     {{ base $path }}: |

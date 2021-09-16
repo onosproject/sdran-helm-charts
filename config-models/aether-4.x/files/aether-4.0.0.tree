@@ -88,7 +88,7 @@ module: onf-template
         +--rw display-name?    string
         +--rw sst?             at:sst
         +--rw sd?              at:sd
-        +--rw ue
+        +--rw device
         |  +--rw mbr
         |     +--rw uplink?     at:bitrate
         |     +--rw downlink?   at:bitrate
@@ -111,12 +111,13 @@ module: onf-traffic-class
 module: onf-upf
   +--rw upf
      +--rw upf* [id]
-        +--rw id              upf-id
-        +--rw address         inet:host
-        +--rw port            inet:port-number
-        +--rw display-name?   string
-        +--rw description?    at:description
-        +--rw enterprise      -> /ent:enterprise/enterprise/id
+        +--rw id                 upf-id
+        +--rw address            inet:host
+        +--rw port               inet:port-number
+        +--rw config-endpoint?   inet:uri
+        +--rw display-name?      string
+        +--rw description?       at:description
+        +--rw enterprise         -> /ent:enterprise/enterprise/id
 
 module: onf-vcs
   +--rw vcs
@@ -135,7 +136,7 @@ module: onf-vcs
         +--rw enterprise       -> /ent:enterprise/enterprise/id
         +--rw sst              at:sst
         +--rw sd               at:sd
-        +--rw ue
+        +--rw device
         |  +--rw mbr
         |     +--rw uplink?     at:bitrate
         |     +--rw downlink?   at:bitrate

@@ -1,7 +1,7 @@
 Differences from Aether-3.0.0
 
 VCS and Template:
-  * Containerized UE MBR Uplink and Download to ue.mbr.uplink and ue.mbr.downlink
+  * Containerized device MBR Uplink and Download to device.mbr.uplink and device.mbr.downlink
   * Added slice.mbr.uplink and slice.mbr.downlink
   * Remove link to AP-List
   * All bitrates are now uint64 and have units "bps"
@@ -21,4 +21,7 @@ Traffic-Class:
 AP-List
   * Removed; contents added to slice
 
+UPF:
+  * Added config-endpoint
+	
 Models prefixed with onf- throughout.
