@@ -1,0 +1,61 @@
+module onf-traffic-class {
+  namespace "http://opennetworking.org/aether/traffic-class";
+  prefix tp;
+
+  import ietf-yang-types{ prefix yg; }
+  import onf-aether-types{ prefix at; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "The aether traffic class associates qos constants
+     with a named class of service";
+
+  revision "2021-09-10" {
+    description "An Aether Traffic Class";
+    reference "RFC 6087";
+  }
+
+  typedef traffic-class-id {
+        type yg:yang-identifier {
+            length 1..32;
+        }
+  }
+
+  container traffic-class {
+    description "The top level container";
+
+    list traffic-class {
+      key "id";
+      description
+        "List of traffic class";
+
+      leaf id {
+        type traffic-class-id;
+        description "ID for this traffic class.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      leaf arp {
+        type at:arp;
+        description "Allocation and Retention Priority. 1 is the highest. 15 is the lowest.";
+      }        
+
+      leaf qci {
+        type at:qci;
+        description "QOS Class Identifier";
+      }      
+
+      leaf description {
+        type at:description;
+        description "description of this traffic class";
+      }
+    }
+  } 
+}

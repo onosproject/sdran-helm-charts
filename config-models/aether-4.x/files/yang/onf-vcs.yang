@@ -1,0 +1,184 @@
+module onf-vcs {
+  namespace "http://opennetworking.org/aether/vcs";
+  prefix sl;
+
+  import ietf-yang-types{ prefix yg; }
+  import onf-aether-types{ prefix at; }
+  import onf-application{ prefix app; }
+  import onf-device-group{ prefix dg; }
+  import onf-enterprise{ prefix ent; }
+  import onf-template{ prefix vt; }
+  import onf-traffic-class{ prefix tc; }
+  import onf-upf { prefix upf; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description 
+    "An Aether Virtual Cellular Service (VCS) is
+     used to connect UE devices with applications";
+
+  revision "2021-09-10" {
+    description "An Aether Virtual Cellular Service";
+    reference "RFC 6087";
+  }
+
+  typedef vcs-id {
+        type yg:yang-identifier {
+            length 1..32;
+        }
+  }
+
+  container vcs {
+    description "The top level container";
+
+    list vcs {
+      key "id";
+      description
+        "List of virtual cellular services";
+
+      leaf id {
+        type vcs-id;
+        description "ID for this vcs.";
+      }
+
+      leaf display-name {
+        type string {
+            length 1..80;
+        }
+        description "display name to use in GUI or CLI";
+      }
+
+      list device-group {
+        key "device-group";   
+        leaf device-group {
+          type leafref {
+            path "/dg:device-group/dg:device-group/dg:id";
+          }          
+          description
+            "Link to device group";          
+        }
+        leaf enable {
+          type boolean;
+          default true;
+          description
+            "Enable this device group";
+        }
+        description
+          "A list of device groups. Groups will only participate in
+           the VCS if the enable field is set to True";
+      }         
+
+      leaf template {
+        type leafref {
+          path "/vt:template/vt:template/vt:id";
+        }          
+        description
+          "Link to user vcs template that was used to initialize
+           this VCS";
+      }
+
+      list application {
+        key "application";   
+        leaf application {
+          type leafref {
+            path "/app:application/app:application/app:id";
+          }
+          mandatory true;
+          description
+            "Link to application";
+        }
+        leaf allow {
+          type boolean;
+          default true;
+          description
+            "Allow or deny this application";
+        }
+        description
+          "An ordered list of applications to allow and deny. The deny rules
+           will be executed first, followed by the allow rules. The first rule
+           to match is returned. An implicit DENY ALL lies at the end.";
+      }      
+
+      leaf upf {
+        type leafref {
+          path "/upf:upf/upf:upf/upf:id";
+        }          
+        description
+          "Link to user plane that implements this vcf";
+      }
+
+      leaf description {
+        type at:description;
+        description "description of this vcs";
+      }
+
+      leaf enterprise {
+        type leafref {
+          path "/ent:enterprise/ent:enterprise/ent:id";
+        }
+        mandatory true;
+        description
+          "Link to enterprise that owns this VCS";
+      }      
+
+      // the following are populated from the template
+      leaf sst {
+        type at:sst;
+        mandatory true;
+        description "Slice/Service type. Immutable.";
+      }
+      
+      leaf sd {
+        type at:sd;
+        mandatory true;
+        description "Slice differentiator. Immutable.";
+      }
+
+      container ue {
+        description "Per-UE QOS Settings";
+        container mbr {
+          description "Maximum bitrate";
+          leaf uplink {
+            type at:bitrate;
+            units bps;
+            description "Per-UE mbr uplink data rate in mbps";
+          }
+
+          leaf downlink {
+            type at:bitrate;
+            units bps;
+            description "Per-UE mbr downlink data rate in mbps";
+          }
+        }
+      }
+
+      container slice {
+        description "Per-Slice QOS Settings";
+        container mbr {
+          description "Maximum bitrate";
+          leaf uplink {
+            type at:bitrate;
+            units bps;
+            description "Per-Slice mbr uplink data rate in mbps";
+          }
+
+          leaf downlink {
+            type at:bitrate;
+            units bps;
+            description "Per-Slice mbr downlink data rate in mbps";
+          }
+        }
+      }
+
+      leaf traffic-class {
+        type leafref {
+          path "/tc:traffic-class/tc:traffic-class/tc:id";
+        }
+        mandatory true;
+        description
+          "Link to traffic class";
+      }
+      // end of items populated from the template
+    }
+  } 
+}

@@ -1,0 +1,116 @@
+module onf-aether-types {
+  namespace "http://opennetworking.org/aether/aether-types";
+  prefix at;
+
+  import ietf-inet-types { prefix inet; }
+
+  organization "Open Networking Foundation.";
+  contact "Scott Baker";
+  description "A set of base types for aether modeling.";
+
+  revision "2021-09-10" {
+    description "Aether Base Types";
+    reference "RFC 6087";
+  }
+
+  typedef bitrate {
+      type uint64 {
+      }
+  }
+
+  typedef mcc {
+      type string {
+        pattern '[0-9]{3}';
+      }
+  }
+
+  typedef mnc {
+      type string {
+        pattern '[0-9]{2,3}';
+      }
+  }
+
+  typedef tac {
+      type string {
+        length 4..8;
+        pattern '[0-9A-F\.]*';
+      }
+  }
+
+  typedef ent {
+      type uint32 {
+        range 0..999;
+      }
+  }  
+
+  typedef dnn {
+      type string {
+        length 1..32;
+      }
+  }  
+
+  typedef sst {
+      type uint8 {
+        range 1..255;
+      }
+  }
+
+  typedef sd {
+      type uint32 {
+        range 0..16777215;
+      }
+  }
+
+  typedef qci {
+      type uint8 {
+        range 1..32;
+      }
+  }
+
+  typedef arp {
+      type uint8 {
+        range 1..15;
+      }
+  }  
+
+  typedef pelr {
+      type int8 {
+        range 0..10;
+      }
+  }
+
+  typedef pdb {
+      type uint16 {
+        range 0..1000;
+      }
+  }  
+
+  // "TCP" or "UDP"
+  typedef protocol {
+      type string {
+        length 3;
+        pattern "TCP|UDP";
+      }
+      default "TCP";
+  }
+
+  // "ENABLE" | "MAINTENTANCE" | "DISABLE"
+  typedef admin-status {
+      type string {
+        length 0..16;
+        pattern "ENABLE|MAINTENANCE|DISABLE";
+      }
+      default "ENABLE";
+  }  
+
+  typedef mtu {
+      type inet:port-number;
+      default 1492;
+  }
+
+  typedef description {
+    type string {
+      length 1..1024;
+    }
+  }
+}

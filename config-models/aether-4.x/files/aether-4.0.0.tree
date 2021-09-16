@@ -1,0 +1,146 @@
+module: onf-application
+  +--rw application
+     +--rw application* [id]
+        +--rw id              application-id
+        +--rw display-name?   string
+        +--rw description?    at:description
+        +--rw endpoint* [name]
+        |  +--rw name          string
+        |  +--rw address       ietf:host
+        |  +--rw port-start    ietf:port-number
+        |  +--rw port-end?     ietf:port-number
+        |  +--rw protocol?     at:protocol
+        +--rw enterprise      -> /ent:enterprise/enterprise/id
+        +--rw mbr
+           +--rw uplink?     at:bitrate
+           +--rw downlink?   at:bitrate
+
+module: onf-connectivity-service
+  +--rw connectivity-service
+     +--rw connectivity-service* [id]
+        +--rw id                  connectivity-service-id
+        +--rw display-name?       string
+        +--rw description?        at:description
+        +--rw spgwc-endpoint?     inet:uri
+        +--rw hss-endpoint?       inet:uri
+        +--rw pcrf-endpoint?      inet:uri
+        +--rw core-5g-endpoint?   inet:uri
+
+module: onf-device-group
+  +--rw device-group
+     +--rw device-group* [id]
+        +--rw id              device-group-id
+        +--rw description?    at:description
+        +--rw display-name?   string
+        +--rw imsis* [name]
+        |  +--rw name               string
+        |  +--rw imsi-range-from?   uint64
+        |  +--rw imsi-range-to?     uint64
+        +--rw ip-domain?      -> /ipd:ip-domain/ip-domain/id
+        +--rw site            -> /st:site/site/id
+
+module: onf-enterprise
+  +--rw enterprise
+     +--rw enterprise* [id]
+        +--rw id                      enterprise-id
+        +--rw display-name?           string
+        +--rw description?            at:description
+        +--rw connectivity-service* [connectivity-service]
+           +--rw connectivity-service    -> /cs:connectivity-service/connectivity-service/id
+           +--rw enabled?                boolean
+
+module: onf-ip-domain
+  +--rw ip-domain
+     +--rw ip-domain* [id]
+        +--rw id               ip-domain-id
+        +--rw display-name?    string
+        +--rw dnn?             at:dnn
+        +--rw dns-primary?     inet:ip-address
+        +--rw dns-secondary?   inet:ip-address
+        +--rw subnet           inet:ipv4-prefix
+        +--rw admin-status?    at:admin-status
+        +--rw mtu?             at:mtu
+        +--rw description?     at:description
+        +--rw enterprise       -> /ent:enterprise/enterprise/id
+
+module: onf-site
+  +--rw site
+     +--rw site* [id]
+        +--rw id                 site-id
+        +--rw display-name?      string
+        +--rw small-cell* [name]
+        |  +--rw name       yg:yang-identifier
+        |  +--rw address?   inet:host
+        |  +--rw tac        at:tac
+        |  +--rw enable?    boolean
+        +--rw enterprise         -> /ent:enterprise/enterprise/id
+        +--rw imsi-definition
+        |  +--rw mcc           at:mcc
+        |  +--rw mnc           at:mnc
+        |  +--rw enterprise    at:ent
+        |  +--rw format        string
+        +--rw description?       at:description
+
+module: onf-template
+  +--rw template
+     +--rw template* [id]
+        +--rw id               template-id
+        +--rw display-name?    string
+        +--rw sst?             at:sst
+        +--rw sd?              at:sd
+        +--rw ue
+        |  +--rw mbr
+        |     +--rw uplink?     at:bitrate
+        |     +--rw downlink?   at:bitrate
+        +--rw slice
+        |  +--rw mbr
+        |     +--rw uplink?     at:bitrate
+        |     +--rw downlink?   at:bitrate
+        +--rw traffic-class?   -> /tc:traffic-class/traffic-class/id
+        +--rw description?     at:description
+
+module: onf-traffic-class
+  +--rw traffic-class
+     +--rw traffic-class* [id]
+        +--rw id              traffic-class-id
+        +--rw display-name?   string
+        +--rw arp?            at:arp
+        +--rw qci?            at:qci
+        +--rw description?    at:description
+
+module: onf-upf
+  +--rw upf
+     +--rw upf* [id]
+        +--rw id              upf-id
+        +--rw address         inet:host
+        +--rw port            inet:port-number
+        +--rw display-name?   string
+        +--rw description?    at:description
+        +--rw enterprise      -> /ent:enterprise/enterprise/id
+
+module: onf-vcs
+  +--rw vcs
+     +--rw vcs* [id]
+        +--rw id               vcs-id
+        +--rw display-name?    string
+        +--rw device-group* [device-group]
+        |  +--rw device-group    -> /dg:device-group/device-group/id
+        |  +--rw enable?         boolean
+        +--rw template?        -> /vt:template/template/id
+        +--rw application* [application]
+        |  +--rw application    -> /app:application/application/id
+        |  +--rw allow?         boolean
+        +--rw upf?             -> /upf:upf/upf/id
+        +--rw description?     at:description
+        +--rw enterprise       -> /ent:enterprise/enterprise/id
+        +--rw sst              at:sst
+        +--rw sd               at:sd
+        +--rw ue
+        |  +--rw mbr
+        |     +--rw uplink?     at:bitrate
+        |     +--rw downlink?   at:bitrate
+        +--rw slice
+        |  +--rw mbr
+        |     +--rw uplink?     at:bitrate
+        |     +--rw downlink?   at:bitrate
+        +--rw traffic-class    -> /tc:traffic-class/traffic-class/id

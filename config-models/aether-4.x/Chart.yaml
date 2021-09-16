@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+
+apiVersion: v2
+name: config-model-aether
+version: 4.0.1
+kubeVersion: ">=1.18.0"
+appVersion: 4.0.0
+description: Aether config model
+keywords:
+  - onos
+  - sdn
+  - config
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org
