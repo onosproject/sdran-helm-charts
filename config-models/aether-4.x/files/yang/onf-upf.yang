@@ -11,7 +11,7 @@ module onf-upf {
   contact "Scott Baker";
   description "A Aether UPF List is a named User Plane Function.";
 
-  revision "2021-06-02" {
+  revision "2021-09-16" {
     description "An Aether User Plane Function";
     reference "RFC 6087";
   }
@@ -48,6 +48,11 @@ module onf-upf {
         description
             "Port for UPF";
       }
+
+      leaf config-endpoint {
+        type inet:uri;
+        description "url for configuring the UPF";
+      }         
 
       leaf display-name {
         type string {

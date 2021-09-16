@@ -10,7 +10,7 @@ module onf-application {
   organization "Open Networking Foundation.";
   contact "Scott Baker";
   description 
-    "An Aether Application is an application that UE devices may
+    "An Aether Application is an application that devices may
      connect to. Includes a set of endpoints where services are
      provided.";
 

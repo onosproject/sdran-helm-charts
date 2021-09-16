@@ -54,20 +54,20 @@ module onf-template {
         description "Slice differentiator";
       }
 
-      container ue {
-        description "Per-UE QOS Settings";
+      container device {
+        description "Per-device QOS Settings";
         container mbr {
           description "Maximum bitrate";
           leaf uplink {
             type at:bitrate;
             units bps;
-            description "Per-UE mbr uplink data rate in mbps";
+            description "Per-device mbr uplink data rate in mbps";
           }
 
           leaf downlink {
             type at:bitrate;
             units bps;
-            description "Per-UE mbr downlink data rate in mbps";
+            description "Per-device mbr downlink data rate in mbps";
           }
         }
       }

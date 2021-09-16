@@ -15,7 +15,7 @@ module onf-vcs {
   contact "Scott Baker";
   description 
     "An Aether Virtual Cellular Service (VCS) is
-     used to connect UE devices with applications";
+     used to connect devices with applications";
 
   revision "2021-09-10" {
     description "An Aether Virtual Cellular Service";
@@ -134,20 +134,20 @@ module onf-vcs {
         description "Slice differentiator. Immutable.";
       }
 
-      container ue {
-        description "Per-UE QOS Settings";
+      container device {
+        description "Per-device QOS Settings";
         container mbr {
           description "Maximum bitrate";
           leaf uplink {
             type at:bitrate;
             units bps;
-            description "Per-UE mbr uplink data rate in mbps";
+            description "Per-device mbr uplink data rate in mbps";
           }
 
           leaf downlink {
             type at:bitrate;
             units bps;
-            description "Per-UE mbr downlink data rate in mbps";
+            description "Per-device mbr downlink data rate in mbps";
           }
         }
       }

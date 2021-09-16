@@ -38,7 +38,7 @@ bumponosdeps: # @HELP update "onosproject" go dependencies and push patch to git
 	./../build-tools/bump-onos-deps ${VERSION}
 
 clean-roc: # @HELP clean up temporary files for ROC umbrella.
-	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock
+	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock aether-roc-umbrella/tmpcharts
 
 deps-roc: # @HELP build dependencies for ROC Umbrella local charts.
 deps-roc: clean-roc
