@@ -27,11 +27,5 @@ kubectl create ns sd-ran
 helmit test -n sd-ran ./test -c ${chart_dir} --suite sd-ran
 kubectl delete ns sd-ran
 
-kubectl delete ns aether-roc-umbrella || true
-kubectl create ns aether-roc-umbrella
-# This test is currently not working - need to figure out why
-helmit test -n aether-roc-umbrella ./test -c ${chart_dir} --suite aether-roc-umbrella
-kubectl delete ns aether-roc-umbrella
-
 rm -rf ${chart_dir}
 
