@@ -38,12 +38,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - "kpimon/main.py"
-            - "--ca-path=/etc/onos/certs/tls.cacrt"
-            - "--key-path=/etc/onos/certs/tls.key"
-            - "--cert-path=/etc/onos/certs/tls.crt"
-            - "--e2t-endpoint={{ .Values.config.ric.e2tEndpoint }}"
             - "--path={{ .Values.config.servicePath }}/config.json"
-            - "--topo-endpoint={{ .Values.config.ric.topoEndpoint }}"
+            - "--ric-config={{ .Values.config.configPath }}/onos.json"
           ports:
             - name: http
               containerPort: 8080
@@ -72,6 +68,12 @@ spec:
             - name: config
               mountPath: {{ .Values.config.servicePath }}
               readOnly: false
+            - name: onos
+              mountPath: {{ .Values.config.configPath }}
+              readOnly: false
+            - name: staticfiles
+              mountPath: /tmp
+              readOnly: false
           resources:
       {{- toYaml .Values.resources | nindent 12 }}
       volumes:
@@ -81,6 +83,13 @@ spec:
         - name: config
           configMap:
             name: {{ template "fb-kpimon-xapp.fullname" . }}-config
+        - name: onos
+          configMap:
+            name: {{ template "fb-kpimon-xapp.fullname" . }}-config
+        - name: staticfiles
+          hostPath:
+            path: /tmp
+            type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:
       {{- toYaml . | nindent 8 }}
