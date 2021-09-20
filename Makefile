@@ -21,7 +21,7 @@ version_check: build-tools # @HELP run the version checker on the charts
 	./../build-tools/chart_single_check
 
 test: # @HELP run the integration tests
-test: license_check version_check deps deps-roc
+test: license_check version_check deps
 	./build/bin/run-sd-ran-test
 
 publish: build-tools # @HELP publish version on sdrancharts.onosproject.org
@@ -36,13 +36,6 @@ build-tools: # @HELP install the ONOS build tools if needed
 
 bumponosdeps: # @HELP update "onosproject" go dependencies and push patch to git.
 	./../build-tools/bump-onos-deps ${VERSION}
-
-clean-roc: # @HELP clean up temporary files for ROC umbrella.
-	rm -rf aether-roc-umbrella/charts aether-roc-umbrella/Chart.lock aether-roc-umbrella/tmpcharts
-
-deps-roc: # @HELP build dependencies for ROC Umbrella local charts.
-deps-roc: clean-roc
-	helm dep build aether-roc-umbrella
 
 clean: # @HELP clean up temporary files for SD-RAN umbrella.
 	rm -rf sd-ran/charts sd-ran/Chart.lock
