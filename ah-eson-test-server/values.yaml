@@ -9,7 +9,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/ah-eson-test-server
-  tag: 0.0.2
+  tag: 0.0.3
   pullPolicy: IfNotPresent
   pullSecrets: []
 
