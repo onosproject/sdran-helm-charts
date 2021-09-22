@@ -10,7 +10,7 @@ replicaCount: 1
 
 image:
   repository: onosproject/fb-ah-xapp
-  tag: 0.0.5
+  tag: 0.0.9
   pullPolicy: IfNotPresent
   pullSecrets: []
 
