@@ -7,8 +7,8 @@ name: ah-eson-test-server
 description: FB ah-eson-test-server
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.3
-appVersion: 0.0.3
+version: 0.0.2
+appVersion: 0.0.2
 keywords:
   - onos
   - sdn
