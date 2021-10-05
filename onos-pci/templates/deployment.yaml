@@ -19,6 +19,8 @@ spec:
   {{- include "onos-pci.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        proxy.onosproject.org/inject: "true"
       labels:
         name: {{ template "onos-pci.fullname" . }}
         app: onos
