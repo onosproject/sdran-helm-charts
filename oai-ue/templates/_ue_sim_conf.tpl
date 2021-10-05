@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-1.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
 
 {{- $mcc := index .Values "config" "oai-enb-cu" "plmnID" "mcc" -}}
 {{- $mnc := index .Values "config" "oai-enb-cu" "plmnID" "mnc" -}}

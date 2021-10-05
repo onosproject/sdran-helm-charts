@@ -10,7 +10,7 @@ jenkins-test: jenkins_version_check license_check # @HELP run the jenkins verifi
 
 license_check: # @HELP examine and ensure license headers exist
 	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
-	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0 --skipped-dir ${SKIPPED_DIRS}
+	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-Only-1.0 --skipped-dir ${SKIPPED_DIRS}
 
 jenkins_version_check: build-tools # @HELP run the version checker on the charts
 	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./../build-tools/chart_version_check
