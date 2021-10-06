@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-rsm.fullname" . }}
+  labels:
+    app: {{ template "onos-rsm.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-rsm.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-rsm.fullname" . }}
+    app: onos
+    type: rsm
+    resource: {{ template "onos-rsm.fullname" . }}
+  {{- include "onos-rsm.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+    - name: grpc
+      port: {{ .Values.service.grpc.port}}
+    - name: gnmi
+      port: {{.Values.service.gnmi.port}}
+
+  {{- if .Values.service.exporter.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-rsm.fullname" . }}-external
+  labels:
+    app: {{ template "onos-rsm.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-rsm.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "onos-rsm.fullname" . }}
+    app: onos
+    type: rsm
+    resource: {{ template "onos-rsm.fullname" . }}
+  {{- include "onos-rsm.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+      nodePort: {{ .Values.service.exporter.nodePort.port }}
+      protocol: TCP
+  {{- end }}
+---
+
