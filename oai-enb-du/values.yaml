@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaidu: docker.io/onosproject/oai-enb-du:v0.1.6
+    oaidu: docker.io/onosproject/oai-enb-du:v0.1.7
   pullPolicy: IfNotPresent
 
 # Specify annotations (e.g., fluentbit/logging custom parser)
@@ -75,3 +75,9 @@ config:
         address: 127.0.0.4
         portc: 50000
         portd: 50010
+  onos-e2t:
+    enabled: yes
+    networks:
+      e2:
+        address: 127.0.0.1
+        port: 36421

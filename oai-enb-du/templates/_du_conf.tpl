@@ -12,10 +12,15 @@ Active_eNBs = ( "eNB-Eurecom-DU");
   (
   {
     ////////// Identification parameters:
-      eNB_CU_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
+      eNB_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
+
+      RIC : {
+            remote_ipv4_addr = {{ index .Values "config" "onos-e2t" "networks" "e2" "address" | quote }};
+            remote_port = {{ index .Values "config" "onos-e2t" "networks" "e2" "port" }};
+            enabled = "yes";
+      };
 
       eNB_name  = "eNB-Eurecom-DU";
-
       // Tracking area code, 0x0000 and 0xfffe are reserved values
     tracking_area_code = {{ index .Values "config" "oai-enb-cu" "tac" }};
     plmn_list = ( { mcc = {{ index .Values "config" "oai-enb-cu" "plmnID" "mcc" }}; mnc = {{ index .Values "config" "oai-enb-cu" "plmnID" "mnc" }}; mnc_length = {{ index .Values "config" "oai-enb-cu" "plmnID" "length" }}; } )
