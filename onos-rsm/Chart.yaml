@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: v2
+name: onos-rsm
+description: ONOS RSM xAPP
+kubeVersion: ">=1.17.0"
+type: application
+version: 0.1.0
+appVersion: v0.1.0
+keywords:
+  - onos
+  - sdn
+  - ric
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org
