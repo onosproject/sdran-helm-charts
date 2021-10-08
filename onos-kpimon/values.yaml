@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-kpimon
-  tag: v0.2.0
+  tag: v0.2.4
   pullPolicy: IfNotPresent
   pullSecrets: []
 
