@@ -19,6 +19,8 @@ spec:
   {{- include "onos-mlb.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        proxy.onosproject.org/inject: "true"
       labels:
         name: {{ template "onos-mlb.fullname" . }}
         app: onos
