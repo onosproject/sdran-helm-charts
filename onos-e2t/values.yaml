@@ -22,7 +22,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-e2t
-  tag: v0.9.4
+  tag: v0.9.3
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -52,7 +52,7 @@ servicemodels:
     version: 1.0.0
     image:
       repository: onosproject/service-model-docker-e2sm_kpm-1.0.0
-      tag: v0.7.61
+      tag: v0.7.63
       pullPolicy: IfNotPresent
   - name: e2sm_rc_pre
     version: 1.0.0
