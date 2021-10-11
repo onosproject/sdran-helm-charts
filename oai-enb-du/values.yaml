@@ -49,7 +49,7 @@ config:
     networks:
       f1:
         interface: eno1
-        address: 127.0.0.3
+        address: 127.0.0.3/24
         portc: 500
         portd: 600
       nfapi:
@@ -66,7 +66,7 @@ config:
       length: 2
     networks:
       f1:
-        address: 127.0.0.2
+        address: 127.0.0.2/24
         portc: 501
         portd: 601
   oai-ue:
@@ -79,5 +79,5 @@ config:
     enabled: yes
     networks:
       e2:
-        address: 127.0.0.1
+        address: 127.0.0.1/24
         port: 36421
