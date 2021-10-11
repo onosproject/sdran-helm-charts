@@ -15,7 +15,7 @@ Active_eNBs = ( "eNB-Eurecom-DU");
       eNB_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
 
       RIC : {
-            remote_ipv4_addr = {{ index .Values "config" "onos-e2t" "networks" "e2" "address" | quote }};
+            remote_ipv4_addr = {{ (split "/" (index .Values "config" "onos-e2t" "networks" "e2" "address"))._0 | quote }};
             remote_port = {{ index .Values "config" "onos-e2t" "networks" "e2" "port" }};
             enabled = "yes";
       };
@@ -84,8 +84,8 @@ Active_eNBs = ( "eNB-Eurecom-DU");
   remote_s_portd   = {{ index .Values "config" "oai-ue" "networks" "nfapi" "portd"}};
   tr_n_preference  = "f1";
   local_n_if_name  = {{ index .Values "config" "oai-enb-du" "networks" "f1" "interface" | quote }};
-  remote_n_address = {{ index .Values "config" "oai-enb-cu" "networks" "f1" "address" | quote }};
-  local_n_address  = {{ index .Values "config" "oai-enb-du" "networks" "f1" "address" | quote }};
+  remote_n_address = {{ (split "/" (index .Values "config" "oai-enb-cu" "networks" "f1" "address"))._0 | quote }};
+  local_n_address  = {{ (split "/" (index .Values "config" "oai-enb-du" "networks" "f1" "address"))._0 | quote }};
   local_n_portc    = {{ index .Values "config" "oai-enb-du" "networks" "f1" "portc" }};
   remote_n_portc   = {{ index .Values "config" "oai-enb-cu" "networks" "f1" "portc" }};
   local_n_portd    = {{ index .Values "config" "oai-enb-du" "networks" "f1" "portd" }};
