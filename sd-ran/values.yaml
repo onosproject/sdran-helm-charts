@@ -52,6 +52,8 @@ import:
     enabled: false
   onos-pci:
     enabled: false
+  onos-rsm:
+    enabled: false
   fb-kpimon-xapp:
     enabled: false
   fb-ah-xapp:
