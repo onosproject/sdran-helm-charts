@@ -7,8 +7,8 @@ name: onos-rsm
 description: ONOS RSM xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.1.1
-appVersion: v0.1.1
+version: 0.1.2
+appVersion: v0.1.2
 keywords:
   - onos
   - sdn
