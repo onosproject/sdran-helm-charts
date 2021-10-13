@@ -19,7 +19,13 @@ eNBs =
 (
   {
     ////////// Identification parameters:
-    eNB_CU_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
+    eNB_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
+
+      RIC : {
+            remote_ipv4_addr = {{ (split "/" (index .Values "config" "onos-e2t" "networks" "e2" "address"))._0 | quote }};
+            remote_port = {{ index .Values "config" "onos-e2t" "networks" "e2" "port" }};
+            enabled = "yes";
+      };
 
     eNB_name  = "eNB-Eurecom-DU";
 
@@ -77,8 +83,8 @@ MACRLCs = (
     tr_s_preference  = "local_L1";
     tr_n_preference  = "f1";
     local_n_if_name  = {{ index .Values "config" "oai-enb-du" "networks" "f1" "interface" | quote }};
-    remote_n_address = {{ index .Values "config" "oai-enb-cu" "networks" "f1" "address" | quote }};
-    local_n_address  = {{ index .Values "config" "oai-enb-du" "networks" "f1" "address" | quote }};
+    remote_n_address = {{ (split "/" (index .Values "config" "oai-enb-cu" "networks" "f1" "address"))._0 | quote }};
+    local_n_address  = {{ (split "/" (index .Values "config" "oai-enb-du" "networks" "f1" "address"))._0 | quote }};
     local_n_portc    = 500;
     remote_n_portc   = 501;
     local_n_portd    = 600;
