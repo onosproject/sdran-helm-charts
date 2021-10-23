@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/ran-simulator
-  tag: v0.8.15
+  tag: v0.8.16
   pullPolicy: IfNotPresent
   pullSecrets: []
 
