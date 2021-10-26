@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ template "fb-kpimon-xapp.fullname" . }}
+  labels:
+    app: {{ template "fb-kpimon-xapp.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "fb-kpimon-xapp.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "fb-kpimon-xapp.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - port: http
+    path: /metrics
+    scheme: HTTP
