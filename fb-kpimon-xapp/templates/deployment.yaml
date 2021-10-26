@@ -19,6 +19,8 @@ spec:
   {{- include "fb-kpimon-xapp.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      annotations:
+        proxy.onosproject.org/inject: "true"
       labels:
         name: {{ template "fb-kpimon-xapp.fullname" . }}
         app: facebook
