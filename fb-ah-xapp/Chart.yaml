@@ -7,8 +7,8 @@ name: fb-ah-xapp
 description: FB AirHop eSON xApp Adapter
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.9
-appVersion: 0.0.9
+version: 0.0.13
+appVersion: v0.0.13
 keywords:
   - onos
   - sdn
