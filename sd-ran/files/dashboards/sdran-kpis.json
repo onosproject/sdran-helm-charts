@@ -90,9 +90,9 @@
               "type": "date_histogram"
             }
           ],
-          "expr": "sum (onos_xappkpimon_rrc_conn_avg) by (cellid)",
+          "expr": "sum (onos_xappkpimon_rrc_conn_avg) by (cell_id)",
           "interval": "",
-          "legendFormat": "{{cellid}}",
+          "legendFormat": "{{cell_id}}",
           "metrics": [
             {
               "id": "1",
@@ -394,6 +394,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": null,
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "custom": {},
@@ -412,10 +413,12 @@
       "hiddenSeries": false,
       "id": 4,
       "legend": {
+        "alignAsTable": true,
         "avg": false,
         "current": false,
         "max": false,
         "min": false,
+        "rightSide": true,
         "show": true,
         "total": false,
         "values": false
@@ -437,9 +440,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "onos_e2t_connections",
+          "expr": "onos_e2t_subscriptions",
           "interval": "",
-          "legendFormat": "NodeID: {{nodeid}}",
+          "legendFormat": "NodeID: {{node_id}} - {{service_model_name}} - {{status_phase}} - {{status_state}}",
           "refId": "A"
         }
       ],
@@ -447,7 +450,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "List of Connections",
+      "title": "List of Subscriptions",
       "tooltip": {
         "shared": true,
         "sort": 1,
@@ -679,7 +682,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "onos_topo_entities",
+          "expr": "sum without(aspects) (onos_topo_entities)",
           "interval": "",
           "legendFormat": "{{kind}}: {{entityid}}",
           "refId": "A"
@@ -840,7 +843,7 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {

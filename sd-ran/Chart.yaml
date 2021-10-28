@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.2.213
+version: 1.2.214
 appVersion: v1.2.0
 keywords:
   - onos
@@ -105,5 +105,5 @@ dependencies:
     repository: https://prometheus-community.github.io/helm-charts
   - name: onos-exporter
     condition: import.onos-exporter.enabled
-    version: 0.2.5
+    version: 0.3.1
     repository: "@sdran"
