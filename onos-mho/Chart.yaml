@@ -7,8 +7,8 @@ name: onos-mho
 description: ONOS MHO xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.1.5
-appVersion: v0.1.7
+version: 0.1.6
+appVersion: v0.1.8
 keywords:
   - onos
   - sdn
