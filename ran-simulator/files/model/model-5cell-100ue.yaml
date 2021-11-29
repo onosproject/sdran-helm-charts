@@ -1,0 +1,222 @@
+layout:
+  center:
+    lat: 12.968
+    lng: 77.749
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+  routeEndPoints:
+  -
+    start:
+      lat: 12.96
+      lng: 77.71
+    end:
+      lat: 12.96
+      lng: 77.78
+
+wayPointRoute: true
+directRoute: true
+nodes:
+  node1:
+    gnbid: 20819
+    controllers:
+    - e2t-1
+    servicemodels:
+    - mho
+    - rcpre2
+    - kpm2
+    cells:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116804
+    - 87893173159116805
+    status: stopped
+cells:
+  cell1:
+    ncgi: 87893173159116801
+    sector:
+      center:
+        lat: 12.968594534825176
+        lng: 77.74938583374025
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 20
+    neighbors:
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116804
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 118
+    earfcn: 42
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell2:
+    ncgi: 87893173159116802
+    sector:
+      center:
+        lat: 12.968594534825176
+        lng: 77.75299072265626
+      azimuth: 0
+      arc: 120
+      tilt: -15
+      height: 46
+    color: green
+    maxues: 20
+    neighbors:
+    - 87893173159116801
+    - 87893173159116803
+    - 87893173159116804
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 119
+    earfcn: 43
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell3:
+    ncgi: 87893173159116803
+    sector:
+      center:
+        lat: 12.970267357681905
+        lng: 77.75367736816408
+      azimuth: 0
+      arc: 120
+      tilt: -10
+      height: 40
+    color: green
+    maxues: 20
+    neighbors:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116804
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 120
+    earfcn: 44
+    celltype: 3
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell4:
+    ncgi: 87893173159116804
+    sector:
+      center:
+        lat: 12.97060192090343
+        lng: 77.75110244750978
+      azimuth: 0
+      arc: 120
+      tilt: -15
+      height: 35
+    color: green
+    maxues: 20
+    neighbors:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 121
+    earfcn: 45
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  cell5:
+    ncgi: 87893173159116805
+    sector:
+      center:
+        lat: 12.970434639348912
+        lng: 77.74904251098634
+      azimuth: 120
+      arc: 120
+      tilt: 10
+      height: 49
+    color: green
+    maxues: 20
+    neighbors:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116804
+    txpowerdb: 40 
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 122
+    earfcn: 46
+    celltype: 3
+    rrcidlecount: 0 
+    rrcconnectedcount: 0
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm2:
+    id: 4
+    description: kpm2 service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
+    version: 1.0.0
+  rcpre2:
+    id: 3
+    description: rcpre2 service model
+    version: 1.0.0
+#rrcStateChangesDisabled: true
+initialRrcState: "idle"
+ueCount: 100
+ueCountPerCell: 20
+plmnID: "314628"
+plmnNumber: 1279014
+apiKey: ""
