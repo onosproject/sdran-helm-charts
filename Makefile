@@ -14,11 +14,9 @@ license_check: # @HELP examine and ensure license headers exist
 
 jenkins_version_check: build-tools # @HELP run the version checker on the charts
 	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./../build-tools/chart_version_check
-	./../build-tools/chart_single_check
 
 version_check: build-tools # @HELP run the version checker on the charts
 	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
-	./../build-tools/chart_single_check
 
 test: # @HELP run the integration tests
 test: license_check version_check deps
