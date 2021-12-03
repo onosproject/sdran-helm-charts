@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
 
 apiVersion: v2
-name: config-model-ric
-version: 1.0.2
+name: config-model-ric-1-0-0
+version: 1.0.3
 kubeVersion: ">=1.18.0"
 appVersion: 1.0.0
 description: RIC config model
