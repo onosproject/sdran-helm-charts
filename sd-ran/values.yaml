@@ -36,6 +36,8 @@ import:
     enabled: true
   onos-e2t:
     enabled: true
+  onos-a1t:
+    enabled: true
   onos-o1t:
     enabled: false
   onos-config:
