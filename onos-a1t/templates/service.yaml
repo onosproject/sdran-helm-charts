@@ -1,0 +1,85 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-a1t.fullname" . }}
+  labels:
+    app: {{ template "onos-a1t.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-a1t.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    name: {{ template "onos-a1t.fullname" . }}
+    app: onos
+    type: a1t
+    resource: {{ template "onos-a1t.fullname" . }}
+  {{- include "onos-a1t.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+    - name: grpc
+      port: {{ .Values.service.grpc.port}}
+    - name: gnmi
+      port: {{.Values.service.gnmi.port}}
+    - name: a1ap
+      port: {{ .Values.service.a1ap.port }}
+
+{{- if .Values.service.exporter.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-a1t.fullname" . }}-exporter
+  labels:
+    app: {{ template "onos-a1t.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-a1t.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "onos-a1t.fullname" . }}
+    app: onos
+    type: a1t
+    resource: {{ template "onos-a1t.fullname" . }}
+  {{- include "onos-a1t.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: exporter
+      port: {{ .Values.service.exporter.port }}
+      nodePort: {{ .Values.service.exporter.nodePort.port }}
+      protocol: TCP
+{{- end }}
+---
+{{- if .Values.service.a1ap.nodePort.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "onos-a1t.fullname" . }}-external
+  labels:
+    app: {{ template "onos-a1t.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+  {{- include "onos-a1t.labels" . | nindent 4 }}
+spec:
+  type: NodePort
+  selector:
+    name: {{ template "onos-a1t.fullname" . }}
+    app: onos
+    type: a1t
+    resource: {{ template "onos-a1t.fullname" . }}
+  {{- include "onos-a1t.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: a1ap
+      port: {{ .Values.service.a1ap.port }}
+      nodePort: {{ .Values.service.a1ap.nodePort.port }}
+      protocol: TCP
+{{- end }}
+
