@@ -1,7 +1,7 @@
 layout:
   center:
-    lat: 12.968
-    lng: 77.749
+    lat: 19.92693502
+    lng: 84.58270105
   zoom: 0
   locationsscale: 1.25
   fademap: false
@@ -10,12 +10,23 @@ layout:
   routeEndPoints:
   -
     start:
-      lat: 12.96
-      lng: 77.71
+      lat: 19.926786252501
+      lng: 84.58232554493128
     end:
-      lat: 12.96
-      lng: 77.78
-
+      lat: 19.92700563347541
+      lng: 84.58291831313768
+    start:
+      lat: 19.92686190114727
+      lng: 84.58211901483219
+    end:
+      lat: 19.92731579226444
+      lng: 84.58271178303862
+    start:
+      lat: 19.926869466009904
+      lng: 84.58293440639216
+    end:
+      lat: 19.927257795138786
+      lng: 84.58228531179508
 wayPointRoute: true
 directRoute: true
 nodes:
@@ -31,7 +42,27 @@ nodes:
     - 87893173159116801
     - 87893173159116802
     - 87893173159116803
+    status: stopped
+  node2:
+    gnbid: 20820
+    controllers:
+    - e2t-1
+    servicemodels:
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
     - 87893173159116804
+    status: stopped
+  node3:
+    gnbid: 20821
+    controllers:
+    - e2t-1
+    servicemodels:
+    - rcpre2
+    - kpm2
+    - mho
+    cells:
     - 87893173159116805
     status: stopped
 cells:
@@ -39,8 +70,8 @@ cells:
     ncgi: 87893173159116801
     sector:
       center:
-        lat: 12.968594534825176
-        lng: 77.74938583374025
+        lat: 19.92687955249285
+        lng: 84.58238723574007
       azimuth: 0
       arc: 120
       tilt: 1
@@ -71,9 +102,9 @@ cells:
     ncgi: 87893173159116802
     sector:
       center:
-        lat: 12.968594534825176
-        lng: 77.75299072265626
-      azimuth: 0
+        lat: 19.92687955249285
+        lng: 84.58238723574007
+      azimuth: 120
       arc: 120
       tilt: -15
       height: 46
@@ -103,9 +134,9 @@ cells:
     ncgi: 87893173159116803
     sector:
       center:
-        lat: 12.970267357681905
-        lng: 77.75367736816408
-      azimuth: 0
+        lat: 19.92687955249285
+        lng: 84.58238723574007
+      azimuth: 240
       arc: 120
       tilt: -10
       height: 40
@@ -135,9 +166,9 @@ cells:
     ncgi: 87893173159116804
     sector:
       center:
-        lat: 12.97060192090343
-        lng: 77.75110244750978
-      azimuth: 0
+        lat: 19.926960244333287
+        lng: 84.58287003337426
+      azimuth: 10
       arc: 120
       tilt: -15
       height: 35
@@ -167,9 +198,9 @@ cells:
     ncgi: 87893173159116805
     sector:
       center:
-        lat: 12.970434639348912
-        lng: 77.74904251098634
-      azimuth: 120
+        lat: 19.927161973754096
+        lng: 84.58254548607572
+      azimuth: 270
       arc: 120
       tilt: 10
       height: 49
@@ -213,7 +244,7 @@ servicemodels:
     id: 3
     description: rcpre2 service model
     version: 1.0.0
-#rrcStateChangesDisabled: true
+rrcStateChangesDisabled: false
 initialRrcState: "idle"
 ueCount: 100
 ueCountPerCell: 20
