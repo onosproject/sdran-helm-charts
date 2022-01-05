@@ -4,7 +4,7 @@ SKIPPED_DIRS=ran-simulator/files
 
 all: test
 
-jenkins-test: jenkins_version_check license_check # @HELP run the jenkins verification tests
+jenkins-test: jenkins_version_check license_check deps # @HELP run the jenkins verification tests
 	docker pull quay.io/helmpack/chart-testing:v2.4.0
 	docker run --rm --name ct --volume `pwd`:/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-e2sub,charts/onos-e2t,charts/ran-simulator,charts/onos-kpimon --debug --validate-maintainers=false"
 
