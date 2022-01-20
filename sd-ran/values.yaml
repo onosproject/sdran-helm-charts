@@ -37,7 +37,7 @@ import:
   onos-e2t:
     enabled: true
   onos-a1t:
-    enabled: true
+    enabled: false
   onos-o1t:
     enabled: false
   onos-config:
@@ -154,26 +154,26 @@ onos-e2t:
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_rc_pre-1.0.0
-        tag: v0.8.0
+        tag: latest
         pullPolicy: IfNotPresent
-    - name: e2sm_kpm_v2
-      version: 1.0.0
-      image:
-        repository: onosproject/service-model-docker-e2sm_kpm_v2-1.0.0
-        tag: v0.8.0
-        pullPolicy: IfNotPresent
-    - name: e2sm_mho
-      version: 1.0.0
-      image:
-        repository: onosproject/service-model-docker-e2sm_mho-1.0.0
-        tag: v0.8.0
-        pullPolicy: IfNotPresent
-    - name: e2sm_rsm
-      version: 1.0.0
-      image:
-        repository: onosproject/service-model-docker-e2sm_rsm-1.0.0
-        tag: v0.8.0
-        pullPolicy: IfNotPresent
+#    - name: e2sm_kpm_v2
+#      version: 1.0.0
+#      image:
+#        repository: onosproject/service-model-docker-e2sm_kpm_v2-1.0.0
+#        tag: latest
+#        pullPolicy: IfNotPresent
+#    - name: e2sm_mho
+#      version: 1.0.0
+#      image:
+#        repository: onosproject/service-model-docker-e2sm_mho-1.0.0
+#        tag: latest
+#        pullPolicy: IfNotPresent
+#    - name: e2sm_rsm
+#      version: 1.0.0
+#      image:
+#        repository: onosproject/service-model-docker-e2sm_rsm-1.0.0
+#        tag: latest
+#        pullPolicy: IfNotPresent
 
 
 onos-cli:

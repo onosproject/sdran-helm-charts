@@ -1,0 +1,39 @@
+dependencies:
+- name: onos-topo
+  repository: https://charts.onosproject.org
+  version: 1.0.8
+- name: config-model-aether
+  repository: https://sdrancharts.onosproject.org
+  version: 1.0.3
+- name: config-model-aether
+  repository: https://sdrancharts.onosproject.org
+  version: 2.0.1
+- name: config-model-aether
+  repository: https://sdrancharts.onosproject.org
+  version: 2.1.2
+- name: config-model-aether
+  repository: https://sdrancharts.onosproject.org
+  version: 2.2.2
+- name: onos-config
+  repository: https://charts.onosproject.org
+  version: 1.1.21
+- name: onos-gui
+  repository: https://charts.onosproject.org
+  version: 1.0.8
+- name: onos-cli
+  repository: https://charts.onosproject.org
+  version: 1.0.12
+- name: aether-roc-api
+  repository: https://sdrancharts.onosproject.org
+  version: 1.0.1
+- name: aether-roc-gui
+  repository: https://sdrancharts.onosproject.org
+  version: 1.0.2
+- name: sdcore-adapter
+  repository: https://sdrancharts.onosproject.org
+  version: 0.0.17
+- name: nginx
+  repository: https://charts.bitnami.com/bitnami
+  version: 8.9.0
+digest: sha256:e34b543e5069b833ba4d67cf45d54e6dd168cc515a8204834eca9edd20210d88
+generated: "2021-05-28T17:06:47.552312612+02:00"
