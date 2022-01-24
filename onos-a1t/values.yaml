@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
 
-# Default values for onos-rsm.
+# Default values for onos-a1t.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -15,14 +15,14 @@ replicaCount: 1
 
 image:
   registry: ""
-  repository: onosproject/onos-rsm
-  tag: v0.1.10
+  repository: onosproject/onos-a1t
+  tag: v0.1.0
   pullPolicy: IfNotPresent
   pullSecrets: []
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: "onos-rsm"
+fullnameOverride: "onos-a1t"
 
 storage: {}
 
@@ -32,6 +32,11 @@ service:
     port: 5150
   gnmi:
     port: 9339
+  a1ap:
+    port: 9639
+    nodePort:
+      enabled: true
+      port: 31963
   exporter:
     port: 7001
     nodePort:
@@ -39,12 +44,10 @@ service:
       port: 31701
 
 config:
-  rsm:
-    e2tEndpoint: "onos-e2t:5150"
-    config_json:
-      report_period:
-        interval: 1000 # ms
-
+  a1t:
+    a1ap:
+      port: 5150
+      baseURL: "0.0.0.0:9639"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

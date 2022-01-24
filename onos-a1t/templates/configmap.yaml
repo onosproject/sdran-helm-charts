@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "onos-a1t.fullname" . }}-config
+  labels:
+    app: {{ template "onos-a1t.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  logging.yaml: |-
+{{- if .Values.logging }}
+{{ toYaml .Values.logging | indent 4 }}
+{{- end}}
+  config.json: |-
+{{ .Values.config.a1t.config_json | toPrettyJson | indent 4 }}

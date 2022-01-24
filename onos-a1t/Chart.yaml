@@ -3,12 +3,12 @@
 # SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
 
 apiVersion: v2
-name: onos-rsm
-description: ONOS RSM xAPP
+name: onos-a1t
+description: ONOS A1 Termination
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.1.5
-appVersion: v0.1.10
+version: 0.1.0
+appVersion: v0.1.0
 keywords:
   - onos
   - sdn
