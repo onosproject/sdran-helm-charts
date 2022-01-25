@@ -64,6 +64,8 @@ import:
     enabled: false
   onos-mlb:
     enabled: false
+  onos-rsm:
+    enabled: false
   ah-eson-test-server:
     enabled: false
   fluent-bit:
