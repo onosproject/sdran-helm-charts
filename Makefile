@@ -26,7 +26,7 @@ publish: build-tools # @HELP publish version on sdrancharts.onosproject.org
 	./../build-tools/publish-version ${VERSION}
 
 jenkins-publish: build-tools # @HELP publish version on github
-	cd .. && GO111MODULE=on go get github.com/mikefarah/yq/v4
+	cd .. && GO111MODULE=on go get github.com/mikefarah/yq/v4@v4.16.2
 	./../build-tools/release-chart-merge-commit https://sdrancharts.onosproject.org ${WEBSITE_USER} ${WEBSITE_PASSWORD}
 
 build-tools: # @HELP install the ONOS build tools if needed
