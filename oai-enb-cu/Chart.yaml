@@ -7,8 +7,8 @@ name: oai-enb-cu
 description: OAI CU Chart
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.1.10
-appVersion: v0.1.7
+version: 0.1.11
+appVersion: v0.1.9
 keywords:
   - onos
   - oai
