@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+# SPDX-License-Identifier: Apache-2.0
 
 apiVersion: v2
 name: onos-ric
 description: ONOS Radio Access Network Intelligent Controller
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.19
+version: 0.0.20
 appVersion: v0.6.20
 keywords:
   - onos

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 ## SD-RAN Umbrella chart
 
 SD-RAN™ is building open source components for the mobile RAN space, complementing O-RAN’s focus on architecture and interfaces by building and trialing O-RAN compliant open source components. This will foster the creation of true multi-vendor RAN solutions and help invigorate innovation across the RAN ecosystem.

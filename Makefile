@@ -1,6 +1,8 @@
-.PHONY: all test clean
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
 
-SKIPPED_DIRS=ran-simulator/files
+.PHONY: all test clean
 
 all: test
 
@@ -10,7 +12,7 @@ jenkins-test: jenkins_version_check license_check deps # @HELP run the jenkins v
 
 license_check: # @HELP examine and ensure license headers exist
 	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
-	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-Only-1.0 --skipped-dir ${SKIPPED_DIRS}
+	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate SPDX-Apache-2.0
 
 jenkins_version_check: build-tools # @HELP run the version checker on the charts
 	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./../build-tools/chart_version_check

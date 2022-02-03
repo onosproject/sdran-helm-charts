@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # ONOS SDRAN Helm charts
 [![Build Status](https://travis-ci.com/onosproject/sdran-helm-charts.svg?token=GojsizpApAX76HQhL5pw&branch=master)](https://travis-ci.com/onosproject/sdran-helm-charts)
 [![Integration Test Status](https://img.shields.io/travis/onosproject/onos-test?label=integration-tests&logo=integration-tests)](https://travis-ci.com/onosproject/onos-test)

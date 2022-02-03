@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+# SPDX-License-Identifier: Apache-2.0
 
 apiVersion: v2
 name: onos-mlb
 description: ONOS MLB xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.2.0
+version: 0.2.1
 appVersion: v0.1.9
 keywords:
   - onos

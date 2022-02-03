@@ -1,13 +1,13 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+# SPDX-License-Identifier: Apache-2.0
 
 apiVersion: v2
 name: ah-eson-test-server
 description: FB ah-eson-test-server
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.3
+version: 0.0.4
 appVersion: 0.0.3
 keywords:
   - onos
