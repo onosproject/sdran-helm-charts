@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
 # Copyright 2020-present Open Networking Foundation.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
