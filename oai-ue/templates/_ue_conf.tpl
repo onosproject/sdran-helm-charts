@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+# SPDX-License-Identifier: Apache-2.0
 
 {{- $maxpdschReferenceSignalPower := index .Values "config" "oai-ue" "radio" "max_pdschReferenceSignalPower" }}
 {{- $maxrxgain := index .Values "config" "oai-ue" "radio" "max_rxgain" }}

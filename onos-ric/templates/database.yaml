@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
-# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+# SPDX-License-Identifier: Apache-2.0
 
 {{- if .Values.storage.consensus.enabled }}
 {{- $name := ternary .Values.storage.consensus.name (printf "%s-consensus-db" (include "onos-ric.fullname" .)) (not (eq .Values.storage.consensus.name "")) }}
