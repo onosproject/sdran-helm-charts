@@ -63,7 +63,7 @@ servicemodels:
   - name: e2sm_mho
     version: 1.0.0
     image:
-      repository: onosproject/service-model-docker-e2sm_mho-1.0.0
+      repository: onosproject/service-model-docker-e2sm_mho_go-1.0.0
       tag: v0.8.4
       pullPolicy: IfNotPresent
   - name: e2sm_rsm
