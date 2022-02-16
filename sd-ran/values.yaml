@@ -137,15 +137,11 @@ onos-config:
   store:
     consensus:
       enabled: false
-  models:
-    ric:
-      v1:
-        enabled: true
-
-onos-ric:
-  storage:
-    consensus:
-      enabled: false
+  modelPlugins:
+  - name: ric
+    image: onosproject/ric:0.0.2-ric-1.0.0
+    endpoint: localhost
+    port: 5152
 
 onos-e2t:
   store:
