@@ -23,7 +23,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "$es_datasource",
+        "datasource": "$opensearch",
         "description": "",
         "fieldConfig": {
           "defaults": {
@@ -172,7 +172,7 @@
         "bars": false,
         "dashLength": 10,
         "dashes": false,
-        "datasource": "${es_datasource}",
+        "datasource": "${opensearch}",
         "description": "",
         "fieldConfig": {
           "defaults": {
@@ -301,7 +301,7 @@
         }
       },
       {
-        "datasource": "$es_datasource",
+        "datasource": "$opensearch",
         "description": "",
         "fieldConfig": {
           "defaults": {
@@ -869,8 +869,8 @@
         {
           "current": {
             "selected": false,
-            "text": "sdran-es",
-            "value": "sdran-es"
+            "text": "opensearch",
+            "value": "opensearch"
           },
           "description": null,
           "error": null,
@@ -878,9 +878,9 @@
           "includeAll": false,
           "label": null,
           "multi": false,
-          "name": "es_datasource",
+          "name": "opensearch",
           "options": [],
-          "query": "elasticsearch",
+          "query": "opensearch",
           "refresh": 1,
           "regex": "",
           "skipUrlSync": false,
@@ -991,7 +991,7 @@
               "$__all"
             ]
           },
-          "datasource": "${es_datasource}",
+          "datasource": "${opensearch}",
           "definition": "{\"find\": \"terms\", \"field\": \"kubernetes.container_name.keyword\",\"query\":\"kubernetes.namespace_name.keyword:$namespace AND kubernetes.pod_name.keyword:$pod\"}\t",
           "description": null,
           "error": null,
@@ -1023,7 +1023,7 @@
               "$__all"
             ]
           },
-          "datasource": "${es_datasource}",
+          "datasource": "${opensearch}",
           "definition": "{\"find\": \"terms\", \"field\": \"logLevel.keyword\",\"query\":\"kubernetes.namespace_name.keyword:$namespace AND kubernetes.pod_name.keyword:$pod AND kubernetes.container_name.keyword:$container\"}",
           "description": null,
           "error": null,
