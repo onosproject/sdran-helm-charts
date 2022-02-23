@@ -15,7 +15,7 @@ data:
   datasources-{{ .Release.Name }}.yaml: |-
     apiVersion: 1
     datasources:
-{{- range index .Values "prometheus-stack" "prometheusDatasources" }}
+{{- range index .Values "grafana" "prometheus-datasources" }}
     - name: {{ .name }}
       type: prometheus
       access: proxy
@@ -24,18 +24,21 @@ data:
       isDefault: false
       url: {{ .endpoint }}
 {{- end }}
-{{- range index .Values "prometheus-stack" "elasticsearchDatasources" }}
+{{- range index .Values "grafana" "opensearch-datasources" }}
     - name: {{ .name }}
       url: {{ .endpoint }}
-      type: elasticsearch
+      type: grafana-opensearch-datasource
       access: proxy
-      database: "[fluentbit-]YYYY.MM.DD"
+      database: 'fluentbit-*'
+      basicAuth: true
+      basicAuthUser: "admin"
+      basicAuthPassword: "admin"
       jsonData:
-        interval: Daily
         timeField: "@timestamp"
-        esVersion: 70
         logMessageField: log
         logLevelField: logLevel
+        pplEnabled: true
+        tlsSkipVerify: true
 {{- end }}
 
 {{- end }}

@@ -9,7 +9,6 @@ metadata:
   labels:
     app: {{ template "onos-exporter.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
-    release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
   {{- include "onos-exporter.labels" . | nindent 4 }}
 spec:

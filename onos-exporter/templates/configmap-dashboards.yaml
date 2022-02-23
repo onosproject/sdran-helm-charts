@@ -11,7 +11,7 @@ metadata:
   labels:
      grafana_dashboard: "1"
 data:
-{{- range index .Values "prometheus-stack" "grafanaDashboards" }}
+{{- range index .Values "grafana" "dashboards" }}
 {{- $dashboard := printf "files/dashboards/%s" . }}
 {{ ($.Files.Glob $dashboard).AsConfig | indent 2 }}
 {{- end }}

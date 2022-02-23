@@ -7,7 +7,7 @@ name: onos-exporter
 description: ONOS KPIs Exporter
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.4.1
+version: 0.4.2
 appVersion: v0.2.0
 keywords:
   - onos
@@ -17,3 +17,20 @@ home: https://onosproject.org
 maintainers:
   - name: ONOS Support
     email: support@opennetworking.org
+dependencies:
+  - name: fluent-bit
+    condition: import.fluent-bit.enabled
+    version: 0.15.4
+    repository: https://fluent.github.io/helm-charts
+  - name: opensearch
+    condition: import.opensearch.enabled
+    version: 1.8.0
+    repository: https://opensearch-project.github.io/helm-charts/
+  - name: opensearch-dashboards
+    condition: import.opensearch.enabled
+    version: 1.2.1
+    repository: https://opensearch-project.github.io/helm-charts/
+  - name: kube-prometheus-stack
+    condition: import.prometheus-stack.enabled
+    version: 32.2.1
+    repository: https://prometheus-community.github.io/helm-charts

@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.3.221
+version: 1.3.222
 appVersion: v1.3.0
 keywords:
   - onos
@@ -94,19 +94,7 @@ dependencies:
     condition: import.ah-eson-test-server.enabled
     repository: file://../ah-eson-test-server
     version: 0.0.4
-  - name: fluent-bit
-    condition: import.fluent-bit.enabled
-    version: 0.15.4
-    repository: https://fluent.github.io/helm-charts
-#  - name: opendistro-es
-#    condition: import.opendistro-es.enabled
-#    version: 1.13.0
-#    repository: https://lukasmrtvy.github.io/opendistro/
-  - name: kube-prometheus-stack
-    condition: import.prometheus-stack.enabled
-    version: 14.5.0
-    repository: https://prometheus-community.github.io/helm-charts
   - name: onos-exporter
     condition: import.onos-exporter.enabled
-    version: 0.4.1
+    version: 0.4.2
     repository: file://../onos-exporter
