@@ -15,7 +15,7 @@ import:
   opensearch:
     enabled: false
   prometheus-stack:
-    enabled: true
+    enabled: false
 
 image:
   registry: ""
