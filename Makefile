@@ -8,8 +8,7 @@ jenkins-test: jenkins_version_check license_check # @HELP run the jenkins verifi
 	docker pull quay.io/helmpack/chart-testing:v2.4.0
 	docker run --rm --name ct --volume `pwd`:/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-e2sub,charts/onos-e2t,charts/ran-simulator,charts/onos-kpimon --debug --validate-maintainers=false"
 
-license_check: # @HELP examine and ensure license headers exist
-	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
+license_check: build-tools # @HELP examine and ensure license headers exist
 	./../build-tools/licensing/boilerplate.py -v --rootdir=${CURDIR} --boilerplate LicenseRef-ONF-Member-1.0 --skipped-dir ${SKIPPED_DIRS}
 
 jenkins_version_check: build-tools # @HELP run the version checker on the charts
@@ -32,7 +31,7 @@ jenkins-publish: build-tools # @HELP publish version on github
 	./../build-tools/release-chart-merge-commit https://sdrancharts.onosproject.org ${WEBSITE_USER} ${WEBSITE_PASSWORD}
 
 build-tools: # @HELP install the ONOS build tools if needed
-	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git; fi
+	@if [ ! -d "../build-tools" ]; then cd .. && git clone https://github.com/onosproject/build-tools.git && cd build-tools && git checkout -b v1-pub v1-pub; fi
 
 bumponosdeps: # @HELP update "onosproject" go dependencies and push patch to git.
 	./../build-tools/bump-onos-deps ${VERSION}
