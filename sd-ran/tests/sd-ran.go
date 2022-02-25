@@ -65,7 +65,6 @@ func (s *SDRANSuite) TestInstall(t *testing.T) {
 		Set("onos-topo.image.tag", "latest").
 		Set("onos-config.image.tag", "latest").
 		Set("onos-e2t.image.tag", "latest").
-		Set("onos-e2sub.image.tag", "latest").
 		Set("ran-simulator.image.tag", "latest").
 		Set("onos-config.plugin.compiler.target", "github.com/onosproject/onos-config@master").
 		Set("global.image.registry", registry)
