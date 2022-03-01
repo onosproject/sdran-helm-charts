@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
-#
-# SPDX-License-Identifier: Apache-2.0
-
 layout:
   center:
     lat: 52.52
@@ -15,32 +11,32 @@ nodes:
   node1:
     gnbid: 20819
     controllers:
-    - e2t-1
+      - e2t-1
     servicemodels:
-    - mho
-    - rcpre2
-    - kpm2
+      - rcpre2
+      - kpm2
+      - mho
     cells:
-    - 87893173159116801
-    - 87893173159116802
-    - 87893173159116803
+      - 221910583884431361
+      - 221910583884431362
+      - 221910583884431363
     status: stopped
   node2:
     gnbid: 20820
     controllers:
-    - e2t-1
+      - e2t-1
     servicemodels:
-    - mho
-    - rcpre2
-    - kpm2
+      - rcpre2
+      - kpm2
+      - mho
     cells:
-    - 87893173159133185
-    - 87893173159133186
-    - 87893173159133187
+      - 221910583884447745
+      - 221910583884447746
+      - 221910583884447747
     status: stopped
 cells:
   cell1:
-    ncgi: 87893173159116801
+    ncgi: 221910583884431361
     sector:
       center:
         lat: 52.486405366824926
@@ -52,9 +48,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116802
-    - 87893173159116803
-    - 87893173159133185
+      - 221910583884431363
+      - 221910583884447745
+      - 221910583884431362
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -67,11 +63,11 @@ cells:
         reportonleave: false
     pci: 218
     earfcn: 42
-    celltype: 2
+    celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell2:
-    ncgi: 87893173159116802
+    ncgi: 221910583884431362
     sector:
       center:
         lat: 52.486405366824926
@@ -83,9 +79,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
-    - 87893173159116803
-    - 87893173159133186
+      - 221910583884431363
+      - 221910583884447746
+      - 221910583884431361
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -96,13 +92,13 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 148
+    pci: 218
     earfcn: 43
     celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell3:
-    ncgi: 87893173159116803
+    ncgi: 221910583884431363
     sector:
       center:
         lat: 52.486405366824926
@@ -114,9 +110,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116801
-    - 87893173159116802
-    - 87893173159133187
+      - 221910583884447747
+      - 221910583884431361
+      - 221910583884431362
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -127,13 +123,13 @@ cells:
       eventa3params:
         a3offset: 0
         reportonleave: false
-    pci: 480
+    pci: 148
     earfcn: 44
     celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell4:
-    ncgi: 87893173159133185
+    ncgi: 221910583884447745
     sector:
       center:
         lat: 52.50431527434924
@@ -145,9 +141,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159133187
-    - 87893173159116801
-    - 87893173159133186
+      - 221910583884447746
+      - 221910583884447747
+      - 221910583884431361
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -160,11 +156,11 @@ cells:
         reportonleave: false
     pci: 115
     earfcn: 45
-    celltype: 2
+    celltype: 0
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell5:
-    ncgi: 87893173159133186
+    ncgi: 221910583884447746
     sector:
       center:
         lat: 52.50431527434924
@@ -176,9 +172,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116802
-    - 87893173159133185
-    - 87893173159133187
+      - 221910583884447745
+      - 221910583884447747
+      - 221910583884431362
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -191,11 +187,11 @@ cells:
         reportonleave: false
     pci: 480
     earfcn: 46
-    celltype: 3
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
   cell6:
-    ncgi: 87893173159133187
+    ncgi: 221910583884447747
     sector:
       center:
         lat: 52.50431527434924
@@ -207,9 +203,9 @@ cells:
     color: green
     maxues: 99999
     neighbors:
-    - 87893173159116803
-    - 87893173159133185
-    - 87893173159133186
+      - 221910583884431363
+      - 221910583884447745
+      - 221910583884447746
     txpowerdb: 11
     measurementparams:
       timetotrigger: 0
@@ -222,7 +218,7 @@ cells:
         reportonleave: false
     pci: 148
     earfcn: 47
-    celltype: 0
+    celltype: 2
     rrcidlecount: 0
     rrcconnectedcount: 0
 controllers:
@@ -243,8 +239,9 @@ servicemodels:
     id: 3
     description: rcpre2 service model
     version: 1.0.0
+
 ueCount: 10
 ueCountPerCell: 15
 plmnID: "314628"
-plmnNumber: 1279014
+plmnNumber: 3229224
 apiKey: ""
