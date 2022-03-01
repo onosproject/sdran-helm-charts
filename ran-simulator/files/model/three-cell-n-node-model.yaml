@@ -146,6 +146,6 @@ servicemodels:
     description: rcpre2 service model
     version: 1.0.0
 ueCount: 10
-plmnID: "314628"
+plmnID: "138426"
 plmnNumber: 1279014
 apiKey: ""
