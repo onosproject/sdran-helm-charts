@@ -136,6 +136,6 @@ servicemodels:
     version: 1.0.0
 ueCount: 5
 ueCountPerCell: 15
-plmnID: "314628"
+plmnID: "138426"
 plmnNumber: 1279014
 apiKey: ""

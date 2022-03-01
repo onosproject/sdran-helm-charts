@@ -252,6 +252,6 @@ rrcStateChangesDisabled: false
 initialRrcState: "idle"
 ueCount: 100
 ueCountPerCell: 20
-plmnID: "314628"
+plmnID: "138426"
 plmnNumber: 1279014
 apiKey: ""
