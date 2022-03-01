@@ -1,7 +1,7 @@
 image:
-  repository: rimedo-labs/rimedo-ts
+  repository: onosproject/rimedo-ts
   pullPolicy: IfNotPresent
-  tag: v0.0.1
+  tag: v0.0.4
 
 service:
   grpc:
