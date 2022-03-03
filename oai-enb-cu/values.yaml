@@ -11,7 +11,7 @@ replicaCount: 1
 
 images:
   tags:
-    oaicucp: docker.io/onosproject/oai-enb-cu:v0.1.9
+    oaicucp: docker.io/onosproject/oai-enb-cu:v0.1.10
   pullPolicy: IfNotPresent
 
 # Specify annotations (e.g., fluentbit/logging custom parser)
@@ -78,4 +78,4 @@ config:
     networks:
       e2:
         address: 127.0.0.1/24
-        port: 36421
+        port: 36402
