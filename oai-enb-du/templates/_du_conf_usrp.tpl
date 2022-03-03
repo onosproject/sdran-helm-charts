@@ -89,6 +89,7 @@ MACRLCs = (
     remote_n_portc   = 501;
     local_n_portd    = 600;
     remote_n_portd   = 601;
+    puSch10xSnr      = 160;
   }
 );
 
