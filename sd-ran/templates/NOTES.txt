@@ -11,11 +11,3 @@ To learn more about the release, try:
 You can attach to:
 * Onos CLI pod with
 $ kubectl -n {{.Release.Namespace}} exec -it $(kubectl -n {{.Release.Namespace}} get pods -l type=cli -o name) -- /bin/sh
-* SD-RAN GUI at http://<server_IP>:31180
-* Prometheus at http://<server_IP>:31301/targets
-* Grafana at http://<server_IP>:31300 (admin/strongpassword)
-
-If you are using KinD as a Kubernetes server, you will have to use a "port-forward" to access the GUI, Grafana and Prometheus e.g.
-$ kubectl -n {{.Release.Namespace}} port-forward $(kubectl -n {{.Release.Namespace}} get pods -l type=gui -o name) 8182:80
-and then access the GUI at
-* http://localhost:8182
