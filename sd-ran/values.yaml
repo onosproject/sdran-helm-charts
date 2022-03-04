@@ -74,6 +74,9 @@ import:
     enabled: false
   onos-exporter:
     enabled: false
+  opensearch:
+    enabled: false
+
 
 # NEM-Monitoring
 nem-monitoring:
