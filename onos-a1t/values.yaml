@@ -16,7 +16,7 @@ replicaCount: 1
 image:
   registry: ""
   repository: onosproject/onos-a1t
-  tag: '{{ .Chart.AppVersion }}'
+  tag: v0.1.10
   pullPolicy: IfNotPresent
   pullSecrets: []
 
