@@ -1,0 +1,8 @@
+image:
+  repository: onosproject/rimedo-ts
+  pullPolicy: IfNotPresent
+  tag: v0.0.3
+
+service:
+  grpc:
+    port: 5150
