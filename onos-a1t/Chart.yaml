@@ -7,8 +7,8 @@ name: onos-a1t
 description: ONOS A1 Termination
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.1.2
-appVersion: v0.1.4
+version: 0.1.3
+appVersion: v0.1.10
 keywords:
   - onos
   - sdn
