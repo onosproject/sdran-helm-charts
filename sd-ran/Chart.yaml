@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.3.229
+version: 1.3.230
 appVersion: v1.3.0
 keywords:
   - onos
@@ -94,6 +94,10 @@ dependencies:
     condition: import.ah-eson-test-server.enabled
     repository: file://../ah-eson-test-server
     version: 0.0.4
+  - name: rimedo-ts
+    condition: import.rimedo-ts.enabled
+    repository: file://../rimedo-ts
+    version: 0.0.3
   - name: onos-exporter
     condition: import.onos-exporter.enabled
     version: 0.4.3

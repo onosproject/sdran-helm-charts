@@ -68,6 +68,8 @@ import:
     enabled: false
   ah-eson-test-server:
     enabled: false
+  rimedo-ts:
+    enabled: false
   onos-exporter:
     enabled: false
 
