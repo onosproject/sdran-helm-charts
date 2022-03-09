@@ -66,7 +66,7 @@ import:
     enabled: false
   fluent-bit:
     enabled: false
-  opendistro-es:
+  opensearch:
     enabled: false
   prometheus-stack:
     enabled: false
@@ -202,24 +202,9 @@ prometheus-stack:
     - sdran.json
     - sdran-kpis.json
 
-opendistro-es:
-  elasticsearch:
-    config:
-      opendistro_security.disabled: true
-    master:
-      persistence:
-        enabled: false
-    data:
-      persistence:
-        enabled: false
-  kibana:
-    # image: amazon/opendistro-for-elasticsearch-kibana-no-security
-    # imagePullPolicy: IfNotPresent
-    externalPort: 5601
-    config:
-      elasticsearch.hosts: http://sd-ran-opendistro-es-client-service:9200
-      elasticsearch.requestTimeout: 360000
-      server.ssl.enabled: false
+opensearch:
+  persistence:
+    enabled: false
 
 fluent-bit:
   config:
