@@ -64,6 +64,6 @@ onos-mlb image name
 {{- if .Values.global.image.tag -}}
 {{- .Values.global.image.tag -}}
 {{- else -}}
-{{- .Values.image.tag -}}
+{{- tpl .Values.image.tag . -}}
 {{- end -}}
 {{- end -}}
