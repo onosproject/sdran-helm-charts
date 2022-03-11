@@ -18,6 +18,8 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: "fb-kpimon-xapp"
 
+enable-prometheus: false
+
 config:
   servicePath: "/etc/onos/config"
   configPath: "/etc/fb/config"
