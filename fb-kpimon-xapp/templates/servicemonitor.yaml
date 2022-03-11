@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
+{{- if index .Values "enable-prometheus" }}
+
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
@@ -20,3 +22,5 @@ spec:
   - port: http
     path: /metrics
     scheme: HTTP
+
+{{- end }}
