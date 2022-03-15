@@ -14,10 +14,10 @@ jenkins-test: jenkins_version_check license deps # @HELP run the jenkins verific
 	docker run --rm --name ct --volume `pwd`:/charts quay.io/helmpack/chart-testing:v3.0.0-beta.1 sh -c "ct lint --charts charts/onos-e2t,charts/ran-simulator,charts/onos-kpimon --debug --validate-maintainers=false"
 
 jenkins_version_check: # @HELP run the version checker on the charts
-	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./../build-tools/chart_version_check
+	export COMPARISON_BRANCH=origin/master && export WORKSPACE=`pwd` && ./build/build-tools/chart_version_check
 
 version_check: # @HELP run the version checker on the charts
-	COMPARISON_BRANCH=master ./../build-tools/chart_version_check
+	COMPARISON_BRANCH=master ./build/build-tools/chart_version_check
 
 test: # @HELP run the integration tests
 test: license version_check deps
