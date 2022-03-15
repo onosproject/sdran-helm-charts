@@ -33,7 +33,7 @@ dependencies:
   - name: onos-o1t
     condition: import.onos-o1t.enabled
     repository: file://../onos-o1t
-    version: 0.3.0
+    version: 0.3.1
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
@@ -69,11 +69,11 @@ dependencies:
   - name: fb-kpimon-xapp
     condition: import.fb-kpimon-xapp.enabled
     repository: file://../fb-kpimon-xapp
-    version: 0.0.8
+    version: 0.0.9
   - name: fb-ah-xapp
     condition: import.fb-ah-xapp.enabled
     repository: file://../fb-ah-xapp
-    version: 0.0.15
+    version: 0.0.16
   - name: fb-ah-gui
     condition: import.fb-ah-gui.enabled
     repository: file://../fb-ah-gui
@@ -93,7 +93,7 @@ dependencies:
   - name: ah-eson-test-server
     condition: import.ah-eson-test-server.enabled
     repository: file://../ah-eson-test-server
-    version: 0.0.4
+    version: 0.0.5
   - name: rimedo-ts
     condition: import.rimedo-ts.enabled
     repository: file://../rimedo-ts

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
 {{/* vim: set filetype=mustache: */}}
 {{/*
 Expand the name of the chart.
