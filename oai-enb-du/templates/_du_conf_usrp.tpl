@@ -22,7 +22,7 @@ eNBs =
     eNB_ID = {{ index .Values "config" "oai-enb-cu" "enbID" }};
 
       RIC : {
-            remote_ipv4_addr = {{ (split "/" (index .Values "config" "onos-e2t" "networks" "e2" "address"))._0 | quote }};
+            remote_ipv4_addr = "<RIC_IP>";
             remote_port = {{ index .Values "config" "onos-e2t" "networks" "e2" "port" }};
             enabled = "yes";
       };

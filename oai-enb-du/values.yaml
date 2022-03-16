@@ -79,5 +79,6 @@ config:
     enabled: yes
     networks:
       e2:
+        host: "" # should be empty if DU could not resolve e2t's host name; otherwise, write e2t's host name, e.g., onos-e2t.riab.svc.cluster.local
         address: 127.0.0.1/24
         port: 36421
