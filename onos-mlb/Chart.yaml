@@ -7,8 +7,8 @@ name: onos-mlb
 description: ONOS MLB xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.3.1
-appVersion: v0.2.2
+version: 0.3.2
+appVersion: v0.3.0
 keywords:
   - onos
   - sdn

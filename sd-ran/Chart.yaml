@@ -7,7 +7,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.102
+version: 1.4.103
 appVersion: v1.4.0
 keywords:
   - onos
@@ -25,7 +25,7 @@ dependencies:
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: file://../onos-e2t
-    version: 1.4.1
+    version: 1.4.2
   - name: onos-a1t
     condition: import.onos-a1t.enabled
     repository: file://../onos-a1t
@@ -61,11 +61,11 @@ dependencies:
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: file://../onos-kpimon
-    version: 0.9.1
+    version: 0.9.2
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.1
+    version: 0.9.2
   - name: fb-kpimon-xapp
     condition: import.fb-kpimon-xapp.enabled
     repository: file://../fb-kpimon-xapp
@@ -81,15 +81,15 @@ dependencies:
   - name: onos-mho
     condition: import.onos-mho.enabled
     repository: file://../onos-mho
-    version: 0.3.1
+    version: 0.3.2
   - name: onos-rsm
     condition: import.onos-rsm.enabled
     repository: file://../onos-rsm
-    version: 0.2.1
+    version: 0.2.2
   - name: onos-mlb
     condition: import.onos-mlb.enabled
     repository: file://../onos-mlb
-    version: 0.3.1
+    version: 0.3.2
   - name: ah-eson-test-server
     condition: import.ah-eson-test-server.enabled
     repository: file://../ah-eson-test-server
