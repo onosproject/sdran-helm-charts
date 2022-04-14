@@ -85,3 +85,7 @@ logging:
     stdout:
       type: stdout
       stdout: {}
+
+podSecurityContext:
+  seccompProfile:
+    type: "Unconfined"
