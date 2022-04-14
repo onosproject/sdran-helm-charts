@@ -26,7 +26,6 @@ spec:
         resource: {{ template "onos-uenib.fullname" . }}
         {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
       annotations:
-        seccomp.security.alpha.kubernetes.io/pod: "unconfined"
         broker.atomix.io/inject: "true"
         raft.storage.atomix.io/inject: "true"
     spec:
