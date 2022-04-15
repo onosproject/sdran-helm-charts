@@ -7,7 +7,7 @@ name: onos-e2t
 description: ONOS E2 Termination
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.4
+version: 1.4.5
 appVersion: v0.11.2
 keywords:
   - onos
