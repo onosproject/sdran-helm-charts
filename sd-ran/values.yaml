@@ -175,7 +175,6 @@ onos-e2t:
         tag: v0.8.10
         pullPolicy: IfNotPresent
 
-
 onos-cli:
   postInstall:
     placeholder: true

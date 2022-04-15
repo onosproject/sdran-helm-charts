@@ -77,7 +77,7 @@ servicemodels:
     image:
       repository: onosproject/service-model-docker-e2sm_rc-1.0.0
       tag: v0.8.10
-      pullPolicy: IfNotPresent    
+      pullPolicy: IfNotPresent
 #  - name: e2sm_ni
 #    version: 1.0.0
 #    image:
