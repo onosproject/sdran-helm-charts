@@ -7,8 +7,8 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.112
-appVersion: v1.4.0
+version: 1.4.113
+appVersion: v1.5.0
 keywords:
   - onos
   - sdn
@@ -18,10 +18,6 @@ maintainers:
   - name: ONOS Support
     email: support@opennetworking.org
 dependencies:
-  - name: nem-monitoring
-    condition: import.nem-monitoring.enabled
-    repository: https://charts.opencord.org
-    version: 1.3.20
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: file://../onos-e2t
