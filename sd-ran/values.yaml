@@ -48,8 +48,6 @@ import:
     enabled: false
   onos-gui:
     enabled: false
-  nem-monitoring:
-    enabled: false
   onos-kpimon:
     enabled: false
   onos-pci:
@@ -72,52 +70,6 @@ import:
     enabled: false
   onos-exporter:
     enabled: false
-
-# NEM-Monitoring
-nem-monitoring:
-  prometheus:
-    serverFiles:
-      prometheus.yml:
-        scrape_configs:
-          - job_name: 'onos-ric'
-            metrics_path: /metrics
-            scrape_interval: 1s
-            static_configs:
-              - targets:
-                  - onos-ric.micro-onos.svc.cluster.local:7000
-          - job_name: 'onos-ric-ho'
-            metrics_path: /metrics
-            scrape_interval: 1s
-            static_configs:
-              - targets:
-                  - onos-ric-ho.micro-onos.svc.cluster.local:7001
-          - job_name: 'onos-ric-mlb'
-            metrics_path: /metrics
-            scrape_interval: 1s
-            static_configs:
-              - targets:
-                  - onos-ric-mlb.micro-onos.svc.cluster.local:7002
-          - job_name: 'ran-simulator'
-            metrics_path: /metrics
-            scrape_interval: 1s
-            static_configs:
-              - targets:
-                  - ran-simulator.micro-onos.svc.cluster.local:9090
-  dashboards:
-    nodeExporter: false
-    sdran: true
-  kpi_exporter:
-    enabled: false
-  grafana:
-    datasources:
-      datasources.yaml:
-        apiVersion: 1
-        datasources:
-          - name: Prometheus
-            type: prometheus
-            url: http://sd-ran-prometheus-server
-            access: proxy
-            isDefault: true
 
 onos-topo:
   store:
