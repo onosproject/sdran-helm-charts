@@ -7,8 +7,8 @@ name: fb-kpimon-xapp
 description: FB kpimon python xApp
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.0.9
-appVersion: v0.0.19
+version: 0.0.10
+appVersion: v0.0.26
 keywords:
   - onos
   - sdn
