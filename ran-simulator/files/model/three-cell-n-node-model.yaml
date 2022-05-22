@@ -20,6 +20,7 @@ nodes:
       - rcpre2
       - kpm2
       - mho
+      - rc
     cells:
       - 87893173159116801
   node2:
@@ -30,6 +31,7 @@ nodes:
       - rcpre2
       - kpm2
       - mho
+      - rc
     cells:
       - 87893173159116802
   node3:
@@ -40,6 +42,7 @@ nodes:
       - rcpre2
       - kpm2
       - mho
+      - rc
     cells:
       - 87893173159116803
 cells:
@@ -144,6 +147,10 @@ servicemodels:
   rcpre2:
     id: 3
     description: rcpre2 service model
+    version: 1.0.0
+  rc:
+    id: 6
+    description: RAN Control service model
     version: 1.0.0
 ueCount: 10
 plmnID: "138426"
