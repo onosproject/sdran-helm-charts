@@ -18,6 +18,7 @@ nodes:
     - e2t-1
     servicemodels:
     - rcpre2
+    - rc
     - kpm2
     - mho
     cells:
@@ -133,6 +134,10 @@ servicemodels:
   rcpre2:
     id: 3
     description: rcpre2 service model
+    version: 1.0.0
+  rc:
+    id: 6
+    description: RAN Control service model
     version: 1.0.0
 ueCount: 5
 ueCountPerCell: 15
