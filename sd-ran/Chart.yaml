@@ -61,7 +61,7 @@ dependencies:
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.4
+    version: 0.9.5
   - name: fb-kpimon-xapp
     condition: import.fb-kpimon-xapp.enabled
     repository: file://../fb-kpimon-xapp
