@@ -18,6 +18,7 @@ nodes:
     - e2t-1
     servicemodels:
     - rcpre2
+    - rc
     - kpm2
     - mho
     cells:
@@ -82,7 +83,7 @@ cells:
         a3offset: 0
         reportonleave: false
     pci: 206
-    earfcn: 43
+    earfcn: 42
     celltype: 3
     rrcidlecount: 0
     rrcconnectedcount: 0
@@ -112,7 +113,7 @@ cells:
         a3offset: 0
         reportonleave: false
     pci: 99
-    earfcn: 44
+    earfcn: 42
     celltype: 1
     rrcidlecount: 0
     rrcconnectedcount: 0
@@ -133,6 +134,10 @@ servicemodels:
   rcpre2:
     id: 3
     description: rcpre2 service model
+    version: 1.0.0
+  rc:
+    id: 6
+    description: RAN Control service model
     version: 1.0.0
 ueCount: 5
 ueCountPerCell: 15
