@@ -1,0 +1,33 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# A topology kind representing an SD-RAN node
+apiVersion: topo.onosproject.org/v1beta1
+kind: Kind
+metadata:
+  name: o1t
+spec:
+  aspects: {}
+
+---
+# The onos-kpimon Configurable kind
+apiVersion: topo.onosproject.org/v1beta1
+kind: Entity
+metadata:
+  name: kpimon
+spec:
+  uri: kpimon
+  kind:
+    name: o1t
+  aspects:
+    onos.topo.Configurable:
+      address: onos-kpimon:9339
+      version: 1.0.0
+      type: ric
+      target: kpimon
+    onos.topo.TLSOptions:
+      insecure: true
+    onos.topo.Asset:
+      name: kpimon
+    onos.topo.MastershipState: {}
