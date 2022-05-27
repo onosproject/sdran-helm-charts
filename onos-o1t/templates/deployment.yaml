@@ -35,6 +35,9 @@ spec:
             - name: grpc
               containerPort: {{.Values.service.port}}
               protocol: TCP
+            - name: netconf
+              containerPort: {{.Values.service.netconf}}
+              protocol: TCP
           startupProbe:
             tcpSocket:
               port: 5150
