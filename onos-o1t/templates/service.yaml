@@ -19,6 +19,8 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       name: grpc
+    - port: {{ .Values.service.netconf }}
+      name: netconf
 
 ---
 apiVersion: v1
@@ -38,3 +40,5 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       name: grpc
+    - port: {{ .Values.service.netconf }}
+      name: netconf

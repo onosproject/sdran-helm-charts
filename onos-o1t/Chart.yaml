@@ -7,7 +7,7 @@ name: onos-o1t
 description: ONOS O1 Termination
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.3.1
+version: 0.3.2
 appVersion: v0.6.0
 keywords:
   - onos

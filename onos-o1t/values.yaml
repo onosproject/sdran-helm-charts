@@ -37,6 +37,8 @@ service:
   # TODO: External NodePort service should be disabled by default
   external:
     nodePort:
+  netconf:
+    8300
   port:
     5150
   type:
