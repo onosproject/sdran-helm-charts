@@ -87,7 +87,7 @@ onos-config:
       enabled: false
   modelPlugins:
   - name: ric
-    image: onosproject/ric:0.0.2-ric-1.0.0
+    image: onosproject/ric:0.0.6-ric-1.0.0
     endpoint: localhost
     port: 5152
 

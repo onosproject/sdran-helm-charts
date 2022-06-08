@@ -20,7 +20,7 @@ global:
 
 image:
   repository: onosproject/onos-o1t
-  tag: v0.6.0
+  tag: v0.8.1
   registry: ""
   pullPolicy: IfNotPresent
   pullSecrets: []
