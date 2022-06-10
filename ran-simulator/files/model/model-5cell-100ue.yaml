@@ -255,3 +255,7 @@ ueCountPerCell: 20
 plmnID: "138426"
 plmnNumber: 1279014
 apiKey: ""
+guami:
+  amfregionid: 221
+  amfsetid: 819
+  amfpointer: 63

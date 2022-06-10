@@ -7,8 +7,8 @@ name: ran-simulator
 description: ONOS RAN Simulator
 kubeVersion: ">=1.15.0"
 type: application
-version: 1.4.8
-appVersion: v0.10.2
+version: 1.4.9
+appVersion: v0.10.3
 keywords:
   - onos
   - sdn
