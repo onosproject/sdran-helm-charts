@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -7,7 +8,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.122
+version: 1.4.123
 appVersion: v1.5.0
 keywords:
   - onos
@@ -49,7 +50,7 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: file://../ran-simulator
-    version: 1.4.9
+    version: 1.4.10
   - name: onos-cli
     condition: import.onos-cli.enabled
     repository: https://charts.onosproject.org
@@ -61,7 +62,7 @@ dependencies:
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.6
+    version: 0.9.7
   - name: fb-kpimon-xapp
     condition: import.fb-kpimon-xapp.enabled
     repository: file://../fb-kpimon-xapp
