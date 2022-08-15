@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
 # SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -7,8 +8,8 @@ name: onos-kpimon
 description: ONOS KPIMON xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.9.6
-appVersion: v0.4.3
+version: 0.9.7
+appVersion: v0.4.4
 keywords:
   - onos
   - sdn

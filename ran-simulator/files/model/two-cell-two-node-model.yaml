@@ -27,8 +27,7 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - mho
-    - rcpre2
+    - rc
     - kpm2
     cells:
     - 87893173159116801
@@ -38,8 +37,7 @@ nodes:
     controllers:
     - e2t-1
     servicemodels:
-    - mho
-    - rcpre2
+    - rc
     - kpm2
     cells:
     - 87893173159133185
@@ -113,13 +111,9 @@ servicemodels:
     id: 4
     description: kpm2 service model
     version: 1.0.0
-  mho:
-    id: 5
-    description: mho service model
-    version: 1.0.0
-  rcpre2:
-    id: 3
-    description: rcpre2 service model
+  rc:
+    id: 6
+    description: RAN Control service model
     version: 1.0.0
 rrcStateChangesDisabled: true
 initialRrcState: "connected"
