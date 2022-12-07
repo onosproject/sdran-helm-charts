@@ -13,22 +13,39 @@ global:
   image:
     registry: ""
     tag: ""
-  store:
-    consensus:
-      enabled: true
-      name: ""
-      image:
-        registry: ""
-        repository: atomix/atomix-raft-storage-node
-        tag: ""
-        pullPolicy: IfNotPresent
-        pullSecrets: []
-      replicas: 1
-      partitions: 1
-      raft: {}
-      persistence:
-        storageClass: ""
-        storageSize: 1Gi
+  atomix:
+    store:
+      consensus:
+        enabled: true
+        name: ""
+        image:
+          registry: ""
+          repository: atomix/consensus-node
+          tag: ""
+          pullPolicy: ""
+          pullSecrets: []
+        replicas: 3
+        partitions: 30
+        config:
+          server: {}
+          raft: {}
+          logging:
+            loggers:
+              root:
+                level: info
+                output:
+                  stdout:
+                    sink: stdout
+            sinks:
+              stdout:
+                stdout: {}
+        log:
+          storageClass: ""
+          resources:
+            requests:
+              storage: 1Gi
+        securityContext: {}
+
 
 import:
   onos-topo:
@@ -46,8 +63,6 @@ import:
   onos-cli:
     enabled: true
   ran-simulator:
-    enabled: false
-  onos-gui:
     enabled: false
   onos-kpimon:
     enabled: false
@@ -73,19 +88,22 @@ import:
     enabled: false
 
 onos-topo:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
 
 onos-uenib:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
 
 onos-config:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
   modelPlugins:
   - name: ric
     image: onosproject/ric:0.0.6-ric-1.0.0
@@ -93,9 +111,10 @@ onos-config:
     port: 5152
 
 onos-e2t:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
   servicemodels:
     - name: e2sm_rc_pre_go
       version: 1.0.0
