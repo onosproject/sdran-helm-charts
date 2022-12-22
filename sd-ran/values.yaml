@@ -89,9 +89,10 @@ import:
     enabled: false
 
 onos-topo:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
 
 onos-uenib:
   store:
@@ -99,9 +100,10 @@ onos-uenib:
       enabled: false
 
 onos-config:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
   modelPlugins:
   - name: ric
     image: onosproject/ric:0.0.6-ric-1.0.0
@@ -109,9 +111,10 @@ onos-config:
     port: 5152
 
 onos-e2t:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
   servicemodels:
     - name: e2sm_rc_pre_go
       version: 1.0.0
