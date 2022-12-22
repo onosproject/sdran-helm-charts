@@ -86,18 +86,18 @@ registry name
 {{/*
 onos-e2t consensus image name
 */}}
-{{- define "onos-e2t.store.consensus.imagename" -}}
-{{- if or .Values.store.consensus.image.tag .Values.global.store.consensus.image.tag -}}
-{{- if .Values.global.store.consensus.image.registry -}}
-{{- printf "%s/" .Values.global.store.consensus.image.registry -}}
-{{- else if .Values.store.consensus.image.registry -}}
-{{- printf "%s/" .Values.store.consensus.image.registry -}}
+{{- define "onos-e2t.atomix.store.consensus.imagename" -}}
+{{- if or .Values.atomix.store.consensus.image.tag .Values.global.atomix.store.consensus.image.tag -}}
+{{- if .Values.global.atomix.store.consensus.image.registry -}}
+{{- printf "%s/" .Values.global.atomix.store.consensus.image.registry -}}
+{{- else if .Values.atomix.store.consensus.image.registry -}}
+{{- printf "%s/" .Values.atomix.store.consensus.image.registry -}}
 {{- end -}}
-{{- printf "%s:" .Values.store.consensus.image.repository -}}
-{{- if .Values.global.store.consensus.image.tag -}}
-{{- .Values.global.store.consensus.image.tag -}}
+{{- printf "%s:" .Values.atomix.store.consensus.image.repository -}}
+{{- if .Values.global.atomix.store.consensus.image.tag -}}
+{{- .Values.global.atomix.store.consensus.image.tag -}}
 {{- else -}}
-{{- .Values.store.consensus.image.tag -}}
+{{- .Values.atomix.store.consensus.image.tag -}}
 {{- end -}}
 {{- else -}}
 ""
@@ -107,10 +107,18 @@ onos-e2t consensus image name
 {{/*
 onos-e2t consensus store name
 */}}
-{{- define "onos-e2t.store.consensus.name" -}}
-{{- if .Values.store.consensus.name -}}
-{{- printf "%s" .Values.store.consensus.name -}}
+{{- define "onos-e2t.atomix.store.consensus.name" -}}
+{{- if .Values.global.atomix.store.consensus.enabled -}}
+{{- if .Values.global.atomix.store.consensus.name -}}
+{{- printf "%s" .Values.global.atomix.store.consensus.name -}}
+{{- else -}}
+{{- printf "%s-consensus-store" ( include "global.fullname" . ) -}}
+{{- end -}}
+{{- else -}}
+{{- if .Values.atomix.store.consensus.name -}}
+{{- printf "%s" .Values.atomix.store.consensus.name -}}
 {{- else -}}
 {{- printf "%s-consensus-store" ( include "onos-e2t.fullname" . ) -}}
+{{- end -}}
 {{- end -}}
 {{- end -}}
