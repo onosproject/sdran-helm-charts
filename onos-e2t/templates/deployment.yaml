@@ -26,8 +26,8 @@ spec:
         resource: {{ template "onos-e2t.fullname" . }}
         {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
       annotations:
-        broker.atomix.io/inject: "true"
-        raft.storage.atomix.io/inject: "true"
+        proxy.atomix.io/inject: "true"
+        proxy.atomix.io/profile: {{ template "onos-e2t.fullname" . }}
     spec:
       serviceAccountName: {{ template "onos-e2t.fullname" . }}
       securityContext:
