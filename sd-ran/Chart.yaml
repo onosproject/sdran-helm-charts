@@ -34,7 +34,7 @@ dependencies:
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
-    version: 1.4.3
+    version: 1.4.4
   - name: onos-uenib
     condition: import.onos-uenib.enabled
     repository: file://../onos-uenib
@@ -50,7 +50,7 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: file://../ran-simulator
-    version: 1.4.12
+    version: 1.4.13
   - name: onos-cli
     condition: import.onos-cli.enabled
     repository: https://charts.onosproject.org
@@ -58,11 +58,11 @@ dependencies:
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: file://../onos-kpimon
-    version: 0.9.7
+    version: 0.9.8
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.9
+    version: 0.9.10
   - name: fb-kpimon-xapp
     condition: import.fb-kpimon-xapp.enabled
     repository: file://../fb-kpimon-xapp
@@ -78,15 +78,15 @@ dependencies:
   - name: onos-mho
     condition: import.onos-mho.enabled
     repository: file://../onos-mho
-    version: 0.3.5
+    version: 0.3.6
   - name: onos-rsm
     condition: import.onos-rsm.enabled
     repository: file://../onos-rsm
-    version: 0.2.4
+    version: 0.2.5
   - name: onos-mlb
     condition: import.onos-mlb.enabled
     repository: file://../onos-mlb
-    version: 0.3.4
+    version: 0.3.5
   - name: ah-eson-test-server
     condition: import.ah-eson-test-server.enabled
     repository: file://../ah-eson-test-server
