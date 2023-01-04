@@ -95,9 +95,10 @@ onos-topo:
         enabled: false
 
 onos-uenib:
-  store:
-    consensus:
-      enabled: false
+  atomix:
+    store:
+      consensus:
+        enabled: false
 
 onos-config:
   atomix:
