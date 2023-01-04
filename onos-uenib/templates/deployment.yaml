@@ -26,8 +26,8 @@ spec:
         resource: {{ template "onos-uenib.fullname" . }}
         {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
       annotations:
-        broker.atomix.io/inject: "true"
-        raft.storage.atomix.io/inject: "true"
+        proxy.atomix.io/inject: "true"
+        proxy.atomix.io/profile: {{ template "onos-uenib.fullname" . }}
     spec:
       serviceAccountName: {{ template "onos-uenib.fullname" . }}
       securityContext:
