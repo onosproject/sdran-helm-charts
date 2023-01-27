@@ -27,7 +27,7 @@ publish: # @HELP publish version on sdrancharts.onosproject.org
 	./build/build-tools/publish-version ${VERSION}
 
 jenkins-publish: # @HELP publish version on github
-	cd .. && GO111MODULE=on go get github.com/mikefarah/yq/v4@v4.16.2
+	cd .. && GO111MODULE=on go install github.com/mikefarah/yq/v4@v4.16.2
 	./build/build-tools/release-chart-merge-commit https://sdrancharts.onosproject.org ${WEBSITE_USER} ${WEBSITE_PASSWORD}
 
 clean:: # @HELP clean up temporary files for SD-RAN umbrella.
