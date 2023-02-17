@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+layout:
+  center:
+    lat: 52.52
+    lng: 13.405
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+
+nodes:
+  node1:
+    gnbid: 20819
+    controllers:
+    - e2t-1
+    servicemodels:
+    - rc
+    - kpm2
+    cells:
+    - 87893173159116801
+    status: stopped
+cells:
+  cell1:
+    ncgi: 87893173159116801
+    sector:
+      center:
+        lat: 52.486405366824926
+        lng: 13.40
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    txpowerdb: 11
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 218
+    earfcn: 42
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm2:
+    id: 4
+    description: kpm2 service model
+    version: 1.0.0
+  rc:
+    id: 6
+    description: RAN Control service model
+    version: 1.0.0
+
+ueCount: 1
+ueCountPerCell: 15
+plmnID: "138426"
+plmnNumber: 1279014
+apiKey: ""
+guami:
+  amfregionid: 221
+  amfsetid: 819
+  amfpointer: 63
