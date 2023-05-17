@@ -104,21 +104,10 @@ onos-e2t consensus image name
 {{- end -}}
 {{- end -}}
 
-{{/*
-onos-e2t consensus store name
-*/}}
-{{- define "onos-e2t.atomix.store.consensus.name" -}}
+{{- define "onos-e2t.atomix.consensus.cluster.name" -}}
 {{- if .Values.global.atomix.store.consensus.enabled -}}
-{{- if .Values.global.atomix.store.consensus.name -}}
-{{- printf "%s" .Values.global.atomix.store.consensus.name -}}
+{{- include "global.atomix.consensus.cluster.name" . -}}
 {{- else -}}
-{{- printf "%s-consensus-store" ( include "global.fullname" . ) -}}
-{{- end -}}
-{{- else -}}
-{{- if .Values.atomix.store.consensus.name -}}
-{{- printf "%s" .Values.atomix.store.consensus.name -}}
-{{- else -}}
-{{- printf "%s-consensus-store" ( include "onos-e2t.fullname" . ) -}}
-{{- end -}}
+{{- printf "%s-consensus" .Release.Name -}}
 {{- end -}}
 {{- end -}}
