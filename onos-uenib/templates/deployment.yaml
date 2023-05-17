@@ -26,8 +26,8 @@ spec:
         resource: {{ template "onos-uenib.fullname" . }}
         {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
         sidecar.atomix.io/inject: "true"
-        runtime.atomix.io/profile: {{ template "onos-topo.fullname" . }}
-        {{- include "onos-topo.selectorLabels" . | nindent 8 }}
+        runtime.atomix.io/profile: {{ template "onos-uenib.fullname" . }}
+        {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
       annotations:
         {{- if .Values.atomix.sidecar.image.tag }}
         sidecar.atomix.io/image: "{{ .Values.atomix.sidecar.image.repository }}:{{ .Values.atomix.sidecar.image.tag }}"
