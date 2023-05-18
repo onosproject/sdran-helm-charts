@@ -111,3 +111,7 @@ onos-uenib consensus image name
 {{- printf "%s-consensus" .Release.Name -}}
 {{- end -}}
 {{- end -}}
+
+{{- define "onos-uenib.atomix.consensus.store.name" -}}
+{{- printf "%s-consensus" ( include "onos-uenib.fullname" . ) -}}
+{{- end -}}

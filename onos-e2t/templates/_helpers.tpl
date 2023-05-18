@@ -111,3 +111,7 @@ onos-e2t consensus image name
 {{- printf "%s-consensus" .Release.Name -}}
 {{- end -}}
 {{- end -}}
+
+{{- define "onos-e2t.atomix.consensus.store.name" -}}
+{{- printf "%s-consensus" ( include "onos-e2t.fullname" . ) -}}
+{{- end -}}
