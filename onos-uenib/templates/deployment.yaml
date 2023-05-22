@@ -25,9 +25,20 @@ spec:
         type: uenib
         resource: {{ template "onos-uenib.fullname" . }}
         {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
+        sidecar.atomix.io/inject: "true"
+        runtime.atomix.io/profile: {{ template "onos-uenib.fullname" . }}
+        {{- include "onos-uenib.selectorLabels" . | nindent 8 }}
       annotations:
-        proxy.atomix.io/inject: "true"
-        proxy.atomix.io/profile: {{ template "onos-uenib.fullname" . }}
+        {{- if .Values.atomix.sidecar.image.tag }}
+        sidecar.atomix.io/image: "{{ .Values.atomix.sidecar.image.repository }}:{{ .Values.atomix.sidecar.image.tag }}"
+        {{- end }}
+        {{- if .Values.atomix.sidecar.image.pullPolicy }}
+        sidecar.atomix.io/imagePullPolicy: "{{ .Values.atomix.sidecar.image.pullPolicy }}"
+        {{- end }}
+        sidecar.atomix.io/logLevel: {{ .Values.atomix.sidecar.config.logging.level }}
+        {{- with .Values.annotations }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
     spec:
       serviceAccountName: {{ template "onos-uenib.fullname" . }}
       securityContext:
