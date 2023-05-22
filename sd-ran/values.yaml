@@ -121,31 +121,31 @@ onos-e2t:
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_rc_pre_go-1.0.0
-        tag: v0.8.35
+        tag: v0.8.38
         pullPolicy: IfNotPresent
     - name: e2sm_kpm_v2_go
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_kpm_v2_go-1.0.0
-        tag: v0.8.35
+        tag: v0.8.38
         pullPolicy: IfNotPresent
     - name: e2sm_mho_go
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_mho_go-1.0.0
-        tag: v0.8.35
+        tag: v0.8.38
         pullPolicy: IfNotPresent
     - name: e2sm_rsm
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_rsm-1.0.0
-        tag: v0.8.35
+        tag: v0.8.38
         pullPolicy: IfNotPresent
     - name: e2sm_rc
       version: 1.0.0
       image:
         repository: onosproject/service-model-docker-e2sm_rc-1.0.0
-        tag: v0.8.35
+        tag: v0.8.38
         pullPolicy: IfNotPresent
 
 onos-cli:
