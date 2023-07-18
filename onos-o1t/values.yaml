@@ -20,7 +20,7 @@ global:
 
 image:
   repository: onosproject/onos-o1t
-  tag: v0.8.1
+  tag: '{{ .Chart.AppVersion }}'
   registry: ""
   pullPolicy: IfNotPresent
   pullSecrets: []
