@@ -8,7 +8,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.134
+version: 1.4.135
 appVersion: v1.5.0
 keywords:
   - onos
@@ -50,7 +50,7 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: file://../ran-simulator
-    version: 1.4.16
+    version: 1.4.17
   - name: onos-cli
     condition: import.onos-cli.enabled
     repository: https://charts.onosproject.org
