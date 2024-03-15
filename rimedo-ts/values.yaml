@@ -1,6 +1,6 @@
 image:
-  repository: onosproject/rimedo-ts
-  pullPolicy: IfNotPresent
+  repository: localhost:5000/rimedo-ts
+  pullPolicy: Always
   tag: v0.0.5
 
 service:
