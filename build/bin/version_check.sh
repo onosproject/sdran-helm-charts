@@ -22,7 +22,7 @@ function get_changed_charts() {
     do
       chart_dir=$(dirname $chart)
       chart_dir=$(basename $chart_dir)
-      chart_diff=$(git diff -p master --name-only ./$chart_dir)
+      chart_diff=$(git diff -p $COMPARISON_BRANCH --name-only ./$chart_dir)
       if [ -n "$chart_diff" ]
       then
           echo $chart_dir
@@ -37,7 +37,7 @@ function is_unique_version() {
     do
       chart_dir=$(dirname $chart)
       chart_dir=$(basename $chart_dir)
-      chart_diff=$(git diff -p master --name-only ./$chart_dir)
+      chart_diff=$(git diff -p $COMPARISON_BRANCH --name-only ./$chart_dir)
 
       if [ -n "$chart_diff" ]
       then
