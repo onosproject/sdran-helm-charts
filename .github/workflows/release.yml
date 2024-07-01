@@ -18,6 +18,7 @@ jobs:
       - uses: chrisdickinson/setup-yq@latest
       - name: check version
         run: |
+          sudo snap install yq
           export COMPARISON_BRANCH=${{ github.event.before }}
           make check-version
 
