@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
       - name: check version
         run: |
-          sudo apt install yq -y
+          snap install yq
           export COMPARISON_BRANCH=origin/master
           git branch -a
           yq -h
