@@ -22,6 +22,7 @@ jobs:
       - name: check version
         run: |
           export COMPARISON_BRANCH=origin/master
+          git branch -a
           make check-version
   lint:
     runs-on: ubuntu-latest
