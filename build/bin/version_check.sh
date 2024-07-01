@@ -41,7 +41,8 @@ function is_unique_version() {
 
       if [ -n "$chart_diff" ]
       then
-          chart_ver=$(yq e .version ${chart_dir}/Chart.yaml)
+#          chart_ver=$(yq e .version ${chart_dir}/Chart.yaml)
+          chart_ver=$(cat ${chart_dir}/Chart.yaml | yq .version )
 
           is_valid_format $chart_ver
           if [ $? == 1 ]
