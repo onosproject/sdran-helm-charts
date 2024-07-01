@@ -55,10 +55,9 @@ case $INPUT in
     is_unique_version
     ;;
 
-    *)
-      echo -n "unknown input"
-      exit 2
-      ;;
-
-  esac
+  *)
+    echo -n "unknown input"
+    exit 2
+    ;;
+esac
 
