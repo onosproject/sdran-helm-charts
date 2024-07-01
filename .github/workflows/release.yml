@@ -34,9 +34,9 @@ jobs:
         run: |
           sudo snap install yq
           target_charts=$(./build/bin/version_check.sh get_changed_charts)
-          for tc in $target_charts)
-          do
-            tc_ver=$(yq e '.version' ${tc}/Chart.yaml)
+          while IFS= read -r tc
+          do 
+            tc_ver=$(yq e '.version' $tc/Chart.yaml)
             curl -L \
             -X POST \
             -H "Accept: application/vnd.github+json" \
@@ -51,7 +51,7 @@ jobs:
               "prerelease": false,
               "generate_release_notes": true
               }'
-          done
+          done <<< $target_charts
 
   publish-charts:
     runs-on: ubuntu-latest
