@@ -8,7 +8,7 @@ name: onos-pci
 description: ONOS PCI xAPP
 kubeVersion: ">=1.17.0"
 type: application
-version: 0.9.11a
+version: 0.9.11
 appVersion: v0.4.10
 keywords:
   - onos
