@@ -17,6 +17,19 @@ function is_valid_format() {
     return 0
 }
 
+function get_changed_charts() {
+    while IFS= read -r -d '' chart
+    do
+      chart_dir=$(dirname $chart)
+      chart_dir=$(basename $chart_dir)
+      chart_diff=$(git diff -p master --name-only ./$chart_dir)
+      if [ -n "$chart_diff" ]
+      then
+          echo $chart_dir
+      fi
+    done < <(find . -name Chart.yaml -print0)
+}
+
 function is_unique_version() {
     echo "comparison branch $COMPARISON_BRANCH"
 
@@ -24,7 +37,7 @@ function is_unique_version() {
     do
       chart_dir=$(dirname $chart)
       chart_dir=$(basename $chart_dir)
-      chart_diff=$(git diff -p "$COMPARISON_BRANCH" -- "${chart_dir}/Chart.yaml")
+      chart_diff=$(git diff -p master --name-only ./$chart_dir)
 
       if [ -n "$chart_diff" ]
       then
@@ -53,6 +66,10 @@ function is_unique_version() {
 case $INPUT in
   all)
     is_unique_version
+    ;;
+
+  get_changed_charts)
+    get_changed_charts
     ;;
 
   *)
