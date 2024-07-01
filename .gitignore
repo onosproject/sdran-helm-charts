@@ -8,3 +8,5 @@ build/_output
 build/build-tools
 
 venv
+*.tgz
+staging

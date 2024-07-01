@@ -20,9 +20,10 @@ jobs:
           fetch-depth: 0
       - name: check version
         run: |
-          sudo snap install yq
+          sudo snap install yq rsync
           export COMPARISON_BRANCH=origin/master
           git branch -a
+          rsync -h
           make check-version
   lint:
     runs-on: ubuntu-latest
