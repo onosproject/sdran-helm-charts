@@ -20,7 +20,8 @@ jobs:
           fetch-depth: 0
       - uses: chrisdickinson/setup-yq@latest
       - name: check version
-        run: make check-version
+        run: |
+          export COMPARISON_BRANCH=${{ github.event.before }} make check-version
   lint:
     runs-on: ubuntu-latest
     steps:

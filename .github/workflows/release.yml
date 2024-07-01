@@ -17,7 +17,8 @@ jobs:
           fetch-depth: 0
       - uses: chrisdickinson/setup-yq@latest
       - name: check version
-        run: COMPARISON_BRANCH=${{ github.event.before }} make check-version
+        run: |
+          export COMPARISON_BRANCH=${{ github.event.before }} make check-version
 
   tag_versions:
     runs-on: ubuntu-latest
