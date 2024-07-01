@@ -18,9 +18,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: chrisdickinson/setup-yq@latest
       - name: check version
         run: |
+          sudo apt install yq -y
           export COMPARISON_BRANCH=origin/master
           git branch -a
           yq -h
