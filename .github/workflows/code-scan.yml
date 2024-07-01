@@ -21,7 +21,7 @@ jobs:
       - uses: chrisdickinson/setup-yq@latest
       - name: check version
         run: |
-          export COMPARISON_BRANCH=${{ github.event.before }}
+          export COMPARISON_BRANCH=origin/${{ github.event.before }}
           make check-version
   lint:
     runs-on: ubuntu-latest
