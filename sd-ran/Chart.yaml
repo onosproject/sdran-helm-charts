@@ -62,7 +62,7 @@ dependencies:
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.11
+    version: 0.9.12
   - name: onos-mho
     condition: import.onos-mho.enabled
     repository: file://../onos-mho
