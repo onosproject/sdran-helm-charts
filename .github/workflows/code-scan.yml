@@ -23,6 +23,7 @@ jobs:
         run: |
           export COMPARISON_BRANCH=origin/master
           git branch -a
+          yq -h
           make check-version
   lint:
     runs-on: ubuntu-latest
