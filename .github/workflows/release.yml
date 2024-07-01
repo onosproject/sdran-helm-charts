@@ -71,7 +71,7 @@ jobs:
       - name: publish charts
         run: |
           export COMPARISON_BRANCH=${{ github.event.before }}
-          sudo snap install yq
+          sudo snap install yq rsync
           target_charts=$(./build/bin/version_check.sh get_changed_charts)
           rm -rf staging && mkdir -p staging/onos-helm-charts
           while IFS= read -r tc
@@ -86,13 +86,13 @@ jobs:
           rm -rf current-index.yaml
           mv onos-helm-charts/index.yaml .
           cd ..
-
+          chmod -R g+r staging/
       - name: rsync deployments
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avh
-          path: ${{ env.CHARTS_DIR }}/
-          remote_path: /srv/sites/charts.aetherproject.org/
+          switches: -rvzh
+          path: staging/
+          remote_path: /srv/sites/sdrancharts.onosproject.org
           remote_host: static.opennetworking.org
           remote_user: ${{ secrets.JENKINS_USERNAME }}
           remote_key: ${{ secrets.JENKINS_SSHKEY }}
