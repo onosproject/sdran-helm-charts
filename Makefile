@@ -11,7 +11,7 @@ all: dep
 lint: # @HELP run helm lint
 	./build/bin/helm_lint.sh
 
-version-check: # @HELP run the version checker on the charts
+check-version: # @HELP run the version checker on the charts
 	COMPARISON_BRANCH=${COMPARISON_BRANCH} ./build/bin/version_check.sh all
 
 test: # @HELP run the integration tests

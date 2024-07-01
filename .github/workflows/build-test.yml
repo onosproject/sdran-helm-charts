@@ -23,7 +23,7 @@ jobs:
           version: latest
           token: ${{ secrets.GH_ONOS_PAT }}
       - name: build
-        run: make dep
+        run: make deps
   test:
     runs-on: ubuntu-latest
     steps:
