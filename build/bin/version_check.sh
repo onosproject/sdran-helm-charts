@@ -41,7 +41,7 @@ function is_unique_version() {
 
       if [ -n "$chart_diff" ]
       then
-          chart_ver=$(cat ${chart_dir}/Chart.yaml | yq .version)
+          chart_ver=$(yq e .version ${chart_dir}/Chart.yaml)
 
           is_valid_format $chart_ver
           if [ $? == 1 ]
@@ -55,6 +55,7 @@ function is_unique_version() {
               pure_t=$(echo $t | sed s/$chart_dir-//)
               if [ "$pure_t" == "$chart_ver" ]
               then
+                echo Chart $chart_dir version duplicated $chart_ver=$pure_t
                 return 1
               fi
           done
