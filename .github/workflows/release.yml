@@ -32,6 +32,7 @@ jobs:
           fetch-depth: 0
       - name: create release using REST API
         run: |
+          export COMPARISON_BRANCH=${{ github.event.before }}
           sudo snap install yq
           target_charts=$(./build/bin/version_check.sh get_changed_charts)
           while IFS= read -r tc
