@@ -45,9 +45,9 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/${{ github.repository }}/releases \
             -d '{
-              "tag_name": "$tc-$tc_ver",
+              "tag_name": "${tc}-${tc_ver}",
               "target_commitish": "${{ github.event.repository.default_branch }}",
-              "name": "$tc-$tc_ver",
+              "name": "${tc}-${tc_ver}",
               "draft": false,
               "prerelease": false,
               "generate_release_notes": true
