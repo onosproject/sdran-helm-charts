@@ -6,7 +6,7 @@
 
 COMPARISON_BRANCH ?= master
 
-all: dep
+all: deps
 
 lint: # @HELP run helm lint
 	./build/bin/helm_lint.sh
@@ -31,11 +31,3 @@ license: # @HELP run license checks
 	python3 -m pip install --upgrade pip;\
 	python3 -m pip install reuse;\
 	reuse lint
-
-
-publish: # @HELP publish version on sdrancharts.onosproject.org
-	./build/build-tools/publish-version ${VERSION}
-
-jenkins-publish: # @HELP publish version on github
-	cd .. && GO111MODULE=on go install github.com/mikefarah/yq/v4@v4.16.2
-	./build/build-tools/release-chart-merge-commit https://sdrancharts.onosproject.org ${WEBSITE_USER} ${WEBSITE_PASSWORD}
