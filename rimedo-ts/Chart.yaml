@@ -4,7 +4,7 @@ description: RIMEDO-Labs xApp Traffic Steering
 kubeVersion: ">=1.16.0"
 type: application
 version: 0.1.1
-appVersion: v0.1.1
+appVersion: v0.1.3
 home: https://rimedolabs.com
 maintainers:
   - name: Lukasz Kulacz
