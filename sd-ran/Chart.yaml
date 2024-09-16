@@ -8,7 +8,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.141
+version: 1.4.142
 appVersion: v1.5.0
 keywords:
   - onos
@@ -22,27 +22,27 @@ dependencies:
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: file://../onos-e2t
-    version: 1.5.3
+    version: 1.5.4
   - name: onos-a1t
     condition: import.onos-a1t.enabled
     repository: file://../onos-a1t
-    version: 0.2.3
+    version: 0.2.4
   - name: onos-o1t
     condition: import.onos-o1t.enabled
     repository: file://../onos-o1t
-    version: 0.3.4
+    version: 0.3.5
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: https://charts.onosproject.org
-    version: 1.5.1
+    version: 1.5.2
   - name: onos-uenib
     condition: import.onos-uenib.enabled
     repository: file://../onos-uenib
-    version: 1.4.1
-  - name: onos-config
+    version: 1.4.2
+  - name: onos-config 
     condition: import.onos-config.enabled
     repository: https://charts.onosproject.org
-    version: 1.8.12
+    version: 1.8.13
   - name: onos-gui
     condition: import.onos-gui.enabled
     repository: https://charts.onosproject.org
@@ -50,36 +50,36 @@ dependencies:
   - name: ran-simulator
     condition: import.ran-simulator.enabled
     repository: file://../ran-simulator
-    version: 1.4.17
+    version: 1.4.18
   - name: onos-cli
     condition: import.onos-cli.enabled
     repository: https://charts.onosproject.org
-    version: 1.3.16
+    version: 1.3.18
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: file://../onos-kpimon
-    version: 0.9.9
+    version: 0.9.10
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
-    version: 0.9.17
+    version: 0.9.18
   - name: onos-mho
     condition: import.onos-mho.enabled
     repository: file://../onos-mho
-    version: 0.3.8
+    version: 0.3.9
   - name: onos-rsm
     condition: import.onos-rsm.enabled
     repository: file://../onos-rsm
-    version: 0.2.6
+    version: 0.2.7
   - name: onos-mlb
     condition: import.onos-mlb.enabled
     repository: file://../onos-mlb
-    version: 0.3.6
+    version: 0.3.7
   - name: rimedo-ts
     condition: import.rimedo-ts.enabled
     repository: file://../rimedo-ts
-    version: 0.1.1
+    version: 0.1.2
   - name: onos-exporter
     condition: import.onos-exporter.enabled
-    version: 0.5.1
+    version: 0.5.2
     repository: file://../onos-exporter
