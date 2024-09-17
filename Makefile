@@ -23,6 +23,7 @@ clean:: # @HELP clean up temporary files for SD-RAN umbrella.
 deps: # @HELP build dependencies for SD-RAN Umbrella local charts.
 deps: clean
 	helm dep build sd-ran
+	helm dep build onos-exporter
 
 license: # @HELP run license checks
 	rm -rf venv
