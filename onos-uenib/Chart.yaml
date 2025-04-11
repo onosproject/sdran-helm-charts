@@ -8,8 +8,8 @@ name: onos-uenib
 description: ONOS UE-NIB Subsystem
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.4.1
-appVersion: v0.3.3
+version: 1.4.2
+appVersion: v0.3.5
 keywords:
   - onos
   - sdn
