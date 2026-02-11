@@ -18,12 +18,13 @@ test: # @HELP run the integration tests
 test: deps license lint
 
 clean:: # @HELP clean up temporary files for SD-RAN umbrella.
+	rm -rf onos-exporter/charts onos-exporter/Chart.lock
 	rm -rf sd-ran/charts sd-ran/Chart.lock
 
 deps: # @HELP build dependencies for SD-RAN Umbrella local charts.
 deps: clean
-	helm dep build sd-ran
 	helm dep build onos-exporter
+	helm dep build sd-ran
 
 license: # @HELP run license checks
 	rm -rf venv
