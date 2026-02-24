@@ -8,7 +8,7 @@ name: sd-ran
 description: Umbrella chart to deploy all ONOS-RIC and simulator
 kubeVersion: ">=1.17.0"
 type: application
-version: 1.5.1
+version: 1.5.2
 appVersion: v1.5.0
 keywords:
   - onos
@@ -22,11 +22,11 @@ dependencies:
   - name: onos-e2t
     condition: import.onos-e2t.enabled
     repository: file://../onos-e2t
-    version: 1.5.4
+    version: 1.5.6
   - name: onos-a1t
     condition: import.onos-a1t.enabled
     repository: file://../onos-a1t
-    version: 0.2.4
+    version: 0.2.5
   - name: onos-o1t
     condition: import.onos-o1t.enabled
     repository: file://../onos-o1t
@@ -34,15 +34,15 @@ dependencies:
   - name: onos-topo
     condition: import.onos-topo.enabled
     repository: oci://ghcr.io/onosproject/charts
-    version: 1.5.2
+    version: 1.5.3
   - name: onos-uenib
     condition: import.onos-uenib.enabled
     repository: file://../onos-uenib
-    version: 1.4.2
+    version: 1.4.3
   - name: onos-config 
     condition: import.onos-config.enabled
     repository: oci://ghcr.io/onosproject/charts
-    version: 1.8.13
+    version: 1.8.14
   - name: onos-gui
     condition: import.onos-gui.enabled
     repository: oci://ghcr.io/onosproject/charts
@@ -54,11 +54,11 @@ dependencies:
   - name: onos-cli
     condition: import.onos-cli.enabled
     repository: oci://ghcr.io/onosproject/charts
-    version: 1.3.18
+    version: 1.3.19
   - name: onos-kpimon
     condition: import.onos-kpimon.enabled
     repository: file://../onos-kpimon
-    version: 0.9.10
+    version: 0.9.11
   - name: onos-pci
     condition: import.onos-pci.enabled
     repository: file://../onos-pci
